@@ -1,0 +1,11 @@
+.content-full {
+	margin-left: -2rem;
+	margin-right: -2rem;
+}
+
+@media (min-width: 50rem) {
+	.content-full {
+		margin-left: calc(((-100vw / 2) + (40rem / 2)) - 2rem);
+		margin-right: calc(((-100vw / 2) + (40rem / 2)) - 2rem);
+	}
+}

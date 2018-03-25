@@ -1,0 +1,100 @@
+/* Font */
+
+code[class*='language-'],
+pre[class*='language-'] {
+	@apply .font-mono .leading-tight .text-sm;
+	@apply .text-turtle-black;
+}
+
+/* Inline code */
+
+:not(pre) > code[class*='language-'] {
+	@apply .bg-denim-white .text-black;
+	@apply .py-px .px-2;
+}
+
+/* Code blocks */
+
+pre[class*='language-'],
+pre[data-line] {
+	@apply .px-4;
+	@apply .bg-turtle-white;
+	@apply .border-l-2 .border-turtle-dark;
+}
+
+/* Line highlight */
+
+.line-highlight {
+	@apply .bg-code-highlight;
+	@apply .border-r-2 .border-turtle-dark;
+}
+
+.token.bold {
+	font-weight: bold;
+}
+
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+.namespace {
+	opacity: 0.7;
+}
+
+.token.comment,
+.token.block-comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	@apply .text-turtle-dark;
+}
+
+.token.punctuation {
+	@apply .text-black;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.function-name,
+.token.constant,
+.token.symbol,
+.token.deleted,
+.token.regex,
+.token.important {
+	@apply .text-denim-light;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.function,
+.token.builtin,
+.token.inserted {
+	@apply .text-turtle-darker;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.token.variable {
+	@apply .text-turtle-darkest;
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword,
+.token.class-name {
+	@apply .text-denim-dark;
+}
+
+.language-css .token.string,
+.style .token.string {
+	@apply .text-turtle-darker;
+}

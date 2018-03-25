@@ -1,0 +1,41 @@
+/* Tailwind preflight: normalize.css and additional base styles */
+
+@import 'tailwindcss/preflight';
+
+/* Globals */
+
+@import 'globals/a.css';
+@import 'globals/colors.css';
+@import 'globals/hr.css';
+@import 'globals/layout.css';
+@import 'globals/prism-app.css';
+@import 'globals/prism.css';
+@import 'globals/text.css';
+
+/* Components */
+
+@import 'components/button.css';
+@import 'components/input.css';
+@import 'components/link-border.css';
+@import 'components/text-highlight.css';
+
+/* Tailwind components: plugins added to plugin system */
+
+@import 'tailwindcss/components';
+
+/* Tailwind utilities: generated based on tailwind config */
+
+@import 'tailwindcss/utilities';
+
+/* Custom utilities */
+
+@import 'utils/bg-pattern.css';
+@import 'utils/content-empty.css';
+@import 'utils/content-full.css';
+@import 'utils/debug.css';
+@import 'utils/hover-darken.css';
+@import 'utils/hover-dim.css';
+@import 'utils/hover-fly.css';
+@import 'utils/hover-grow.css';
+@import 'utils/transition.css';
+@import 'utils/visited.css';

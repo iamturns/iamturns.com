@@ -1,0 +1,40 @@
+/* PrismJS 1.12.2 */
+
+.code-block {
+	/* Fixes horizontal scroll chopping off line highlighting */
+	position: relative;
+}
+
+code[class*='language-'],
+pre[class*='language-'] {
+	text-align: left;
+	background: none;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	tab-size: 4;
+	hyphens: none;
+}
+
+/* Inline code */
+
+:not(pre) > code[class*='language-'] {
+	white-space: normal;
+}
+
+/* Code blocks */
+
+pre[class*='language-'] {
+	overflow: auto;
+}
+
+/* Line highlights */
+
+.line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	pointer-events: none;
+}

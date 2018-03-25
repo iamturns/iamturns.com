@@ -1,0 +1,8 @@
+body,
+input,
+textarea,
+select,
+button {
+	@apply .bg-turtle-white;
+	@apply .text-turtle-black;
+}

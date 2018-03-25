@@ -1,0 +1,14 @@
+.hover\:grow {
+	@apply .transition;
+
+	transform: translateZ(0);
+}
+
+.hover\:grow:hover,
+.hover\:grow:focus {
+	transform: scale(1.25);
+}
+
+.hover\:grow:active {
+	transform: scale(0.9);
+}

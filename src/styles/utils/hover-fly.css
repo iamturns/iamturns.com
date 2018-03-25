@@ -1,0 +1,11 @@
+.hover-fly {
+	@apply .transition;
+
+	transform: translateY(0);
+
+	&:hover {
+		@apply .shadow-lg;
+
+		transform: translateY(-6px);
+	}
+}

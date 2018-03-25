@@ -1,0 +1,8 @@
+html {
+	@apply .h-full;
+}
+
+body {
+	@apply .relative .min-h-full;
+	@apply .pb-12; /* Room for footer */
+}

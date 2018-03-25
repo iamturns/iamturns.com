@@ -1,0 +1,7 @@
+{
+	"flow.useNPMPackagedFlow": true,
+	"files.associations": {
+		"*.css": "postcss"
+	},
+	"sort-imports.default-sort-style": "module"
+}

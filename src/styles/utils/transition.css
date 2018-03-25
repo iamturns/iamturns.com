@@ -1,0 +1,95 @@
+/* Default */
+
+.transition {
+	transition-duration: 0.25s;
+	transition-property: all;
+	transition-timing-function: ease-in-out;
+}
+
+/* Duration */
+
+.transition-slower {
+	transition-duration: 0.75s;
+}
+
+.transition-slow {
+	transition-duration: 0.5s;
+}
+
+.transition-fast {
+	transition-duration: 0.15s;
+}
+
+.transition-faster {
+	transition-duration: 0.075s;
+}
+
+/* Properties */
+
+.transition-all {
+	transition-property: all;
+}
+
+.transition-none {
+	transition-property: none;
+}
+
+.transition-bg {
+	transition-property: background;
+}
+
+.transition-opacity {
+	transition-property: opacity;
+}
+
+.transition-color {
+	transition-property: color;
+}
+
+.transition-shadow {
+	transition-property: box-shadow;
+}
+
+/* Timing Function */
+
+.transition-linear {
+	transition-timing-function: linear;
+}
+
+.transition-ease {
+	transition-timing-function: ease;
+}
+
+.transition-ease-in {
+	transition-timing-function: ease-in;
+}
+
+.transition-ease-out {
+	transition-timing-function: ease-out;
+}
+
+.transition-ease-in-out {
+	transition-timing-function: ease-in-out;
+}
+
+/* Delays */
+
+.transition-delay {
+	transition-delay: 100ms;
+}
+
+.transition-delay-long {
+	transition-delay: 200ms;
+}
+
+.transition-delay-longer {
+	transition-delay: 300ms;
+}
+
+.transition-delay-longest {
+	transition-delay: 400ms;
+}
+
+.transition-delay-none {
+	transition-delay: unset;
+}

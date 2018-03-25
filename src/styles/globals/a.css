@@ -1,0 +1,10 @@
+a {
+	@apply .no-underline;
+	@apply .text-turtle-darker;
+
+	&:hover,
+	&:focus,
+	&:active {
+		@apply .text-turtle-darkest;
+	}
+}

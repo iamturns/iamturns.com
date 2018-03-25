@@ -1,0 +1,8 @@
+@responsive {
+	.text-highlight {
+		@apply .inline-block;
+		@apply .bg-overlay;
+		@apply .text-black;
+		@apply .p-4;
+	}
+}
