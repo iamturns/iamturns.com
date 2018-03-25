@@ -91,9 +91,12 @@ const Content = (props: PageGoodbyeAngularProps) => (
 		</ContentP>
 		<ContentP>
 			My last Angular project exploded to include a Redux store, HTTP
-			calls through @ngrx/effects, and composing smaller utility functions
-			instead of creating full-blown services. Could any Angular developer
-			jump straight into this setup? Nope.
+			requests piped through{' '}
+			<ContentA to="https://github.com/ngrx/effects">
+				@ngrx/effects
+			</ContentA>, and composing smaller utility functions instead of
+			creating full-blown services. Could any Angular developer jump
+			straight into this setup? Nope.
 		</ContentP>
 		<ContentQuote className="text-lg">
 			“Code written by Angular official maintainers is better quality and
@@ -145,9 +148,7 @@ const Content = (props: PageGoodbyeAngularProps) => (
 		</ContentP>
 		<ContentH2>React reignites the passion</ContentH2>
 		<ContentP>
-			In the past weeks I’ve used{' '}
-			<ContentA to="https://reactjs.org/">React</ContentA> to build this
-			website (powered by{' '}
+			In the past weeks I’ve used React to build this website (powered by{' '}
 			<ContentA to="https://www.gatsbyjs.org/">Gatsby</ContentA>).
 		</ContentP>
 		<ContentP>
