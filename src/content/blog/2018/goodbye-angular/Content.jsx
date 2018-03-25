@@ -18,24 +18,18 @@ const Content = (props: PageGoodbyeAngularProps) => (
 			After all these years, it seemed my passion had dried up. Time for
 			something new.
 		</ContentP>
-
 		<ContentP>
 			It turns out I’m not done with programming; I’m just done with
 			Angular.
 		</ContentP>
-
-		<ContentH2>
-			Oh, Angular… <span className="text-base">*long sigh*</span>
-		</ContentH2>
-
+		<ContentH2>Oh, Angular…</ContentH2>
+		<ContentP className="text-sm">*long sigh*</ContentP>
 		<ContentP>
 			I’ve been deep diving into Angular (v1 and 2+) for three years now.
-			There were some good times, but I often felt frustrated. Coding felt
-			challenging for the <em>wrong</em> reasons.
+			Overall, a frustrating experience. Coding feels challenging for the{' '}
+			<em>wrong</em> reasons.
 		</ContentP>
-
-		<ContentP>A fun list of things that annoyed me:</ContentP>
-
+		<ContentP>A list of things that annoy me daily:</ContentP>
 		<ContentUL>
 			<ContentLI>
 				Pointless template syntax
@@ -46,13 +40,13 @@ const Content = (props: PageGoodbyeAngularProps) => (
 						to use JavaScript — let me use JavaScript!
 					</ContentLI>
 					<ContentLI>
-						True story: adding <code>else</code> to{' '}
-						<code>*ngIf</code> was a “new feature” in Angular v4!
+						Fun fact: adding <code>else</code> to <code>*ngIf</code>{' '}
+						was a “new feature” in Angular v4!
 					</ContentLI>
 				</ContentUL>
 			</ContentLI>
 			<ContentLI>
-				Tweaking code just so AOT compiler could parse it
+				Tweaking code just so AOT compiler can parse it
 			</ContentLI>
 			<ContentLI>
 				Zone.js sucks
@@ -71,54 +65,47 @@ const Content = (props: PageGoodbyeAngularProps) => (
 						etc.
 					</ContentLI>
 					<ContentLI>
-						Many projects succeed without this baggage, is it
-						necessary?
+						A lot to learn, a lot to code, and a lot to maintain
 					</ContentLI>
 					<ContentLI>
-						A lot to learn, a lot to code, and a lot to maintain
+						Many projects succeed without this baggage, is it
+						necessary?
 					</ContentLI>
 				</ContentUL>
 			</ContentLI>
 		</ContentUL>
-
 		<ContentH2>Arguments for Angular</ContentH2>
-
-		<ContentQuote>
+		<ContentQuote className="text-lg">
 			“I just need to learn Angular, then I can easily jump between any
 			Angular project.”
 		</ContentQuote>
-
 		<ContentP>
 			This is a myth. Starting with Angular does not guarantee the entire
 			project remains purely Angular. Every project becomes custom.
 		</ContentP>
-
 		<ContentP>
-			If a 3rd-party plugin is better than the core plugin, developers
-			shift over. Remember when UI-Router landed? Nobody used the official
-			ngRouter.
+			If a 3rd-party library is better than the Angular offering,
+			developers shift over. Remember when UI-Router landed? Nobody used
+			the official ngRouter. This would’ve happened in Angular 2+ too if
+			the community hadn’t already swarmed React.
 		</ContentP>
-
 		<ContentP>
 			My last Angular project exploded to include a Redux store, HTTP
 			calls through @ngrx/effects, and composing smaller utility functions
 			instead of creating full-blown services. Could any Angular developer
 			jump straight into this setup? Nope.
 		</ContentP>
-
-		<ContentQuote>
+		<ContentQuote className="text-lg">
 			“Code written by Angular official maintainers is better quality and
 			more stable than a bunch of random 3rd-party libraries thrown
 			together.”
 		</ContentQuote>
-
 		<ContentP>
-			Angular has settled now, but it had massive breaking changes in the
-			early days. Far from stable.
+			Angular has mostly settled now, but the early days saw huge breaking
+			changes every month or two. It portrayed a lack of vision and focus.
+			This is not stability.
 		</ContentP>
-
-		<ContentP>Also, the official documentation had this gem:</ContentP>
-
+		<ContentP>The official documentation had this gem:</ContentP>
 		<ContentP>
 			<ContentImg image={props.data.imgDocs}>
 				Excerpt from the{' '}
@@ -128,46 +115,39 @@ const Content = (props: PageGoodbyeAngularProps) => (
 				about factory providers.
 			</ContentImg>
 		</ContentP>
-
 		<ContentP>This is not quality.</ContentP>
-
 		<ContentP>
 			The JavaScript community is energetic, active, and passionate. A
 			group of random developers can deliver code that surpasses the
 			efforts of core maintainers.
 		</ContentP>
-
-		<ContentQuote>
+		<ContentQuote className="text-lg">
 			“I like that Angular makes choices for me, I don’t want to pick and
 			choose which libraries to use.”
 		</ContentQuote>
-
 		<ContentP>
 			I get it. You want to style your React project, okay: CSS Modules or
 			Styled Components? Or maybe Glamorous? Oh, Emotion looks nice!
 		</ContentP>
-
 		<ContentP>
-			While relying on whatever Angular provides is initially easier, it
-			may not be the best for your project. Using TypeScript may be
-			overkill, but is forced (the non-TS version of Angular is still
-			undocumented all these years later). Using Promises for HTTP
-			requests may be a better choice than being forced to use RxJS
-			observables.
+			Relying on what Angular provides is initially easier, but it might
+			not be the best for your project. TypeScript is forced on you, but
+			it might be overkill for your needs (the non-TS version of Angular
+			is still undocumented all these years later). RxJS observables for
+			HTTP requests is also mandatory, but using Promises might be a
+			better fit.
 		</ContentP>
-
 		<ContentP>
-			Embrace the light-weight libraries that do one thing, and do it
-			well. Celebrate that the JavaScript community provides you with so
-			many options you can pick-and-choose based on your specific needs.
+			You can easily become locked into poor choices. Embrace the
+			light-weight libraries that do one thing, and do it well. Celebrate
+			that the JavaScript community provides you with so many options you
+			can pick-and-choose based on your specific needs.
 		</ContentP>
-
 		<ContentH2>React reignites the passion</ContentH2>
-
 		<ContentP>
 			In the past weeks I’ve used{' '}
 			<ContentA to="https://reactjs.org/">React</ContentA> to build this
-			blog (powered by{' '}
+			website (powered by{' '}
 			<ContentA to="https://www.gatsbyjs.org/">Gatsby</ContentA>).
 		</ContentP>
 		<ContentP>
@@ -183,22 +163,19 @@ const Content = (props: PageGoodbyeAngularProps) => (
 			it to be. I start with little and build up. I choose the libraries
 			that best fit my needs. Freedom and power.
 		</ContentP>
-
 		<ContentP>
 			I love tying together tiny stateless components. It barely looks
 			like framework specific code, and is super quick to scaffold. And,
-			it‘s pretty fun!
+			it‘s actually fun!
 		</ContentP>
-
 		<ContentP>
 			Relying on <ContentA to="https://prettier.io/">Prettier</ContentA>{' '}
 			to style code for me is a relief. Again, fewer barriers, and more
 			focus on getting the job done.
 		</ContentP>
-
 		<ContentP>
-			I have only scratched the surface of React, but I just can’t deny
-			this feeling. The developer experience is A+ so far. I‘m back in the
+			I have only scratched the surface of React, but I can’t deny this
+			feeling. The developer experience is A+ so far. I‘m back in the
 			game!
 		</ContentP>
 	</div>

@@ -9,8 +9,8 @@ import Content from './Content';
 export const frontmatter = {
 	title: 'Angular Burnout',
 	description:
-		'I dreaded returning to programming during a 3 month travel break. It turns out I’m not done with programming, I’m just done with Angular.',
-	slug: '/angular-burnout-react-saves-the-day',
+		'I dreaded returning to programming during a 3 month travel break. It turns out I’m not done with programming; I’m just done with Angular.',
+	slug: '/angular-burnout',
 	dateCreated: '2018-03-23',
 	dateUpdated: '2018-03-23',
 	type: 'article',
