@@ -1,12 +1,14 @@
 // @flow
 
+import LogRocket from 'logrocket';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
 import GlobalFooter from '../components/GlobalFooter';
 import GlobalHeader from '../components/GlobalHeader';
 import GTMBody from '../components/GTMBody';
-import { GTM_DEVELOP, GTM_ID, GTM_LIVE } from '../config';
+import { GTM_DEVELOP, GTM_ID, GTM_LIVE, LOG_ROCKET_LIVE } from '../config';
+import { isEnvLive } from '../utils/env';
 
 /**
  * IMPORT MAIN.CSS
@@ -18,6 +20,12 @@ import { GTM_DEVELOP, GTM_ID, GTM_LIVE } from '../config';
 // $FlowFixMe
 require('../../build/styles/main.css');
 /* eslint-enable import/no-unresolved */
+
+/* LOG ROCKET */
+
+if (isEnvLive()) {
+	LogRocket.init(LOG_ROCKET_LIVE);
+}
 
 declare var graphql: Function;
 export const pageQuery = graphql`
@@ -138,9 +146,7 @@ const Layout = (props: LayoutProps) => (
 
 			{/* Google Tag Manager */}
 
-			<script>
-				{process.env.NODE_ENV === 'production' ? GTM_LIVE : GTM_DEVELOP}
-			</script>
+			<script>{isEnvLive() ? GTM_LIVE : GTM_DEVELOP}</script>
 
 			{/* Icons */}
 

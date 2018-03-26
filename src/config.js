@@ -21,3 +21,7 @@ export const GTM_DEVELOP = stripIndent(`
 	'https://www.googletagmanager.com/gtm.js?id='+i+dl+ '&gtm_auth=lqQBo_wSyCaf9JaVZSnnSQ&gtm_preview=env-9&gtm_cookies_win=x';f.parentNode.insertBefore(j,f);
 	})(window,document,'script','dataLayer','GTM-PG68LQN');
 `);
+
+export const LOG_ROCKET_LIVE = 'gbbnsg/i-am-turns';
+
+export const LOG_ROCKET_DEVELOP = 'gbbnsg/i-am-live-develop';

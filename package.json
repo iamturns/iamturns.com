@@ -40,6 +40,7 @@
     "gatsby-transformer-javascript-frontmatter": "1.0.8",
     "gatsby-transformer-sharp": "1.6.22",
     "lodash": "4.17.5",
+    "logrocket": "0.6.10",
     "moment": "^2.21.0",
     "react-helmet": "5.2.0",
     "url-join": "4.0.0"
