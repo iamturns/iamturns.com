@@ -109,15 +109,13 @@ const Content = (props: PageGoodbyeAngularProps) => (
 			This is not stability.
 		</ContentP>
 		<ContentP>The official documentation had this gem:</ContentP>
-		<ContentP>
-			<ContentImg image={props.data.imgDocs}>
-				Excerpt from the{' '}
-				<ContentA to="https://github.com/angular/angular/blob/3e34ba01bdbeea237cb7c50e9cea3b0ed3b0606b/aio/content/guide/dependency-injection.md">
-					official Angular docs
-				</ContentA>{' '}
-				about factory providers.
-			</ContentImg>
-		</ContentP>
+		<ContentImg image={props.data.imgDocs}>
+			Excerpt from the{' '}
+			<ContentA to="https://github.com/angular/angular/blob/3e34ba01bdbeea237cb7c50e9cea3b0ed3b0606b/aio/content/guide/dependency-injection.md">
+				official Angular docs
+			</ContentA>{' '}
+			about factory providers.
+		</ContentImg>
 		<ContentP>This is not quality.</ContentP>
 		<ContentP>
 			The JavaScript community is energetic, active, and passionate. A
