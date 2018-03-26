@@ -3,13 +3,13 @@
 import * as React from 'react';
 
 import ArrowLeft from '../../../../vendor/feather-icons-react/ArrowLeft';
+import ContentHeader from '../../../components/ContentHeader';
 import ContentP from '../../../components/ContentP';
 import ContentSubtitle from '../../../components/ContentSubtitle';
-import ContentTitle from '../../../components/ContentTitle';
-import HeadTagsArticle from '../../../components/HeadTagsArticle';
+import HeadTagsContent from '../../../components/HeadTagsContent';
 import Link from '../../../components/Link';
 import PageContainer from '../../../components/PageContainer';
-import type { Article } from '../../../types/Article';
+import type { Content } from '../../../types/Content';
 
 export const frontmatter = {
 	title: 'Yes!',
@@ -18,23 +18,21 @@ export const frontmatter = {
 
 declare var graphql: Function;
 export const pageQuery = graphql`
-	query PageEmailSubscribedQuery($slug: String!) {
-		...CurrentArticle
+	query ContentEmailSubscribedQuery($slug: String!) {
+		...CurrentContent
 	}
 `;
 
-type PageEmailSubscribedProps = {
+type ContentProps = {
 	data: {
-		currentArticle: Article,
+		currentContent: Content,
 	},
 };
 
-const PageEmailSubscribed = ({
-	data: { currentArticle },
-}: PageEmailSubscribedProps) => (
+const ContentEmailSubscribed = ({ data: { currentContent } }: ContentProps) => (
 	<div>
-		<HeadTagsArticle article={currentArticle} />
-		<ContentTitle image={currentArticle.frontmatter.cover} />
+		<HeadTagsContent content={currentContent} />
+		<ContentHeader image={currentContent.frontmatter.cover} />
 		<PageContainer small className="my-12">
 			<ContentSubtitle>That’s us, jumping in the sunset.</ContentSubtitle>
 			<ContentP>That’s what we do now.</ContentP>
@@ -52,4 +50,4 @@ const PageEmailSubscribed = ({
 	</div>
 );
 
-export default PageEmailSubscribed;
+export default ContentEmailSubscribed;

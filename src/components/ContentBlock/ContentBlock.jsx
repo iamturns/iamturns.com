@@ -6,7 +6,7 @@ import * as React from 'react';
 type ContentBlockProps = {
 	children: React.Node,
 	tag?: string, // div (default), h2, p, figure, etc
-	className: ?string,
+	className?: string,
 };
 
 const ContentBlock = ({

@@ -12,10 +12,10 @@ type ContentImgType = 'default' | 'fullwidth' | 'fullscreen';
 
 type ContentImgProps = {
 	image: Image,
-	linkTo: string,
+	linkTo?: string,
 	alt?: string,
-	type: ContentImgType,
-	children: ?React.Node, // Caption
+	type?: ContentImgType, // default = 'default'
+	children?: React.Node, // Caption
 	className?: string,
 	style?: Object,
 	// ...wrapperProps

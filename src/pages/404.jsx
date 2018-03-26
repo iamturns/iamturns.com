@@ -4,8 +4,8 @@ import * as React from 'react';
 
 import ArrowLeft from '../../vendor/feather-icons-react/ArrowLeft';
 import ContentA from '../components/ContentA';
+import ContentHeader from '../components/ContentHeader';
 import ContentP from '../components/ContentP';
-import ContentTitle from '../components/ContentTitle';
 import HeadTags from '../components/HeadTags';
 import Link from '../components/Link';
 import PageContainer from '../components/PageContainer';
@@ -29,7 +29,7 @@ export const pageQuery = graphql`
 	}
 `;
 
-type PageNotFoundProps = {
+type PageProps = {
 	data: {
 		cover: Image,
 	},
@@ -38,7 +38,7 @@ type PageNotFoundProps = {
 	},
 };
 
-const PageNotFound = (props: PageNotFoundProps) => (
+const PageNotFound = (props: PageProps) => (
 	<div>
 		<HeadTags
 			{...getHeadTags({
@@ -46,7 +46,7 @@ const PageNotFound = (props: PageNotFoundProps) => (
 				pageTitle: '404: Not Found',
 			})}
 		/>
-		<ContentTitle image={props.data.cover} title="404: Not found" />
+		<ContentHeader image={props.data.cover} title="404: Not found" />
 		<PageContainer small>
 			<ContentP>Sorry about that.</ContentP>
 			<ContentP>

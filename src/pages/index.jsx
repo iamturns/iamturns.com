@@ -2,27 +2,28 @@
 
 import * as React from 'react';
 
-import ArticleListing from '../components/ArticleListing';
+import ContentListing from '../components/ContentListing';
 import EmailPlease from '../components/EmailPlease';
 import HeadTags from '../components/HeadTags';
 import Hey from '../components/Hey';
 import PageContainer from '../components/PageContainer';
-import type { Article } from '../types/Article';
+import type { Content } from '../types/Content';
 import type { Result } from '../types/Result';
 import getHeadTags from '../utils/head-tags';
+import { getResultAsArray } from '../utils/result';
 import { prefixSiteUrl } from '../utils/url';
 
 declare var graphql: Function;
-export const pageQuery = graphql`
+export const pageQuery: string = graphql`
 	query PageIndexQuery {
-		...Articles
+		...ContentList
 	}
 `;
 
-type PageIndexProps = {
+export type PageProps = {
 	data: {
-		articlesResult: Result<Article>,
-		articlesNerdsResult: Result<Article>,
+		contentListResult: Result<Content>,
+		contentListNerdsResult: Result<Content>,
 	},
 	location: {
 		pathname: string,
@@ -30,9 +31,9 @@ type PageIndexProps = {
 };
 
 const PageIndex = ({
-	data: { articlesResult, articlesNerdsResult },
+	data: { contentListResult, contentListNerdsResult },
 	location: { pathname },
-}: PageIndexProps) => (
+}: PageProps) => (
 	<div>
 		<HeadTags
 			{...getHeadTags({
@@ -43,8 +44,11 @@ const PageIndex = ({
 		<PageContainer className="pt-12">
 			<Hey />
 		</PageContainer>
-		<ArticleListing articles={articlesResult} />
-		<ArticleListing articles={articlesNerdsResult} nerdsOnly />
+		<ContentListing contentList={getResultAsArray(contentListResult)} />
+		<ContentListing
+			contentList={getResultAsArray(contentListNerdsResult)}
+			nerdsOnly
+		/>
 		<PageContainer className="py-12 bg-denim-white">
 			<EmailPlease />
 		</PageContainer>

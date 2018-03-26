@@ -30,7 +30,7 @@ if (isEnvLive()) {
 
 declare var graphql: Function;
 export const pageQuery = graphql`
-	fragment ArticlePreview on JavascriptFrontmatter {
+	fragment ContentPreview on JavascriptFrontmatter {
 		fields {
 			slug
 		}
@@ -49,7 +49,7 @@ export const pageQuery = graphql`
 		}
 	}
 
-	fragment Article on JavascriptFrontmatter {
+	fragment Content on JavascriptFrontmatter {
 		fields {
 			slug
 		}
@@ -76,16 +76,16 @@ export const pageQuery = graphql`
 		}
 	}
 
-	fragment ArticlesResult on JavascriptFrontmatterConnection {
+	fragment ContentListResult on JavascriptFrontmatterConnection {
 		edges {
 			node {
-				...ArticlePreview
+				...ContentPreview
 			}
 		}
 	}
 
-	fragment Articles on RootQueryType {
-		articlesResult: allJavascriptFrontmatter(
+	fragment ContentList on RootQueryType {
+		contentListResult: allJavascriptFrontmatter(
 			filter: {
 				frontmatter: {
 					type: { eq: "article" }
@@ -96,9 +96,9 @@ export const pageQuery = graphql`
 			sort: { order: DESC, fields: [frontmatter___dateCreated] }
 			limit: 5
 		) {
-			...ArticlesResult
+			...ContentListResult
 		}
-		articlesNerdsResult: allJavascriptFrontmatter(
+		contentListNerdsResult: allJavascriptFrontmatter(
 			filter: {
 				frontmatter: {
 					type: { eq: "article" }
@@ -109,13 +109,13 @@ export const pageQuery = graphql`
 			sort: { order: DESC, fields: [frontmatter___dateCreated] }
 			limit: 5
 		) {
-			...ArticlesResult
+			...ContentListResult
 		}
 	}
 
-	fragment CurrentArticle on RootQueryType {
-		currentArticle: javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
-			...Article
+	fragment CurrentContent on RootQueryType {
+		currentContent: javascriptFrontmatter(fields: { slug: { eq: $slug } }) {
+			...Content
 		}
 	}
 `;
