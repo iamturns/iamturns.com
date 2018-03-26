@@ -24,7 +24,8 @@ require('../../build/styles/main.css');
 /* LOG ROCKET */
 
 if (isEnvLive()) {
-	LogRocket.init(LOG_ROCKET_LIVE);
+	// Avoid wasting sessions on bots
+	setTimeout(() => LogRocket.init(LOG_ROCKET_LIVE), 5000);
 }
 
 declare var graphql: Function;
