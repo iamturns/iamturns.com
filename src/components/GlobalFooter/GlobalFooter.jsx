@@ -27,7 +27,7 @@ const GlobalFooter = (props: GlobalFooterProps) => (
 			<FooterLink to="/" currentPath={props.currentPath}>
 				Home
 			</FooterLink>
-			<FooterLink to="/about" currentPath={props.currentPath}>
+			<FooterLink to="/about/" currentPath={props.currentPath}>
 				About
 			</FooterLink>
 		</div>

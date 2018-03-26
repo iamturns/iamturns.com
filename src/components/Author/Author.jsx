@@ -35,7 +35,7 @@ const By = () => (
 );
 
 const Pic = () => (
-	<Link to="/about">
+	<Link to="/about/">
 		<img
 			src={ImgFace}
 			alt="Matt Turnbull"
@@ -49,7 +49,7 @@ const Pic = () => (
 const Name = () => (
 	<div>
 		by{' '}
-		<Link to="/about" className="text-turtle-darkest hover:underline">
+		<Link to="/about/" className="text-turtle-darkest hover:underline">
 			Matt Turnbull
 		</Link>
 	</div>

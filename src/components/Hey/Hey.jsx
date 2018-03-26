@@ -21,7 +21,7 @@ const Hey = () => (
 );
 
 const Pic = () => (
-	<Link to="/about">
+	<Link to="/about/">
 		<img
 			src={ImgFace}
 			srcSet={`${ImgFace2x} 2x`}
@@ -38,7 +38,7 @@ const Info = () => (
 		<div className="text-center pb-4">
 			<h1 className="text-lg">
 				Hey, I&apos;m{' '}
-				<Link to="/about" className="link-border">
+				<Link to="/about/" className="link-border">
 					Matt Turnbull
 				</Link>
 			</h1>
@@ -52,7 +52,7 @@ const Info = () => (
 );
 
 const InfoLink = () => (
-	<Link to="/about" className="flex items-center link-border border-dashed">
+	<Link to="/about/" className="flex items-center link-border border-dashed">
 		<ArrowRight className="w-4 h-4 mr-1" />
 		<div>More</div>
 	</Link>
