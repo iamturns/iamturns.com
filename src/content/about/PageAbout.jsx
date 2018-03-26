@@ -90,41 +90,49 @@ const PageAbout = ({
 			</h2>
 		</PageContainer>
 		<PageContainer small>
-			{/* prettier-ignore */}
-			<div>
-				<ContentP>It gets me out of bed, and keeps me up at night.</ContentP>
+			<ContentP>
+				It gets me out of bed, and keeps me up at night.
+			</ContentP>
 
-				<ContentH3 className="mt-12">Blame it on crabs</ContentH3>
-				<ContentImg image={imgCrab} alt="Hermit crab" />
-				<ContentP>It all started with building a website about hermit crabs at the age of 13.</ContentP>
-				<ContentP>20 years later this passion has driven me to:</ContentP>
-				<ContentUL reset className="my-6">
-					<ContentLI>
-						<EmojiText emoji="🛠️">
-							Create great things with award-winning agencies in London and Melbourne
-						</EmojiText>
-					</ContentLI>
-					<ContentLI>
-						<EmojiText emoji="🤝">
-							Collaborate with talented teams in Berlin, Tel Aviv, and Guangzhou
-						</EmojiText>
-					</ContentLI>
-					<ContentLI>
-						<EmojiText emoji="📈">
-							Deliver a range of digital solutions, from prototypes &amp; MVPs to large-scale enterprise systems
-						</EmojiText>
-					</ContentLI>
-				</ContentUL>
+			<ContentH3 className="mt-12">Blame it on crabs</ContentH3>
+			<ContentImg image={imgCrab} alt="Hermit crab" />
+			<ContentP>
+				It all started with building a website about hermit crabs at the
+				age of 13.
+			</ContentP>
+			<ContentP>20 years later this passion has driven me to:</ContentP>
+			<ContentUL reset className="my-6">
+				<ContentLI>
+					<EmojiText emoji="🛠️">
+						Create great things with award-winning agencies in
+						London and Melbourne
+					</EmojiText>
+				</ContentLI>
+				<ContentLI>
+					<EmojiText emoji="🤝">
+						Collaborate with talented teams in Berlin, Tel Aviv, and
+						Guangzhou
+					</EmojiText>
+				</ContentLI>
+				<ContentLI>
+					<EmojiText emoji="📈">
+						Deliver a range of digital solutions, from prototypes
+						&amp; MVPs to large-scale enterprise systems
+					</EmojiText>
+				</ContentLI>
+			</ContentUL>
 
-				<ContentH2>Now</ContentH2>
-				<LastUpdated dateTime={currentArticle.frontmatter.dateUpdated} className="text-xs" />
-				<EmojiText tag="p" emoji="📍" emojiLabel="Current location: ">
-					Melbourne, Australia
-				</EmojiText>
-				<EmojiText tag="p" emoji="⛰" emojiLabel="Current goal: ">
-					Mission for 2018: earn $2k/mo solo
-				</EmojiText>
-			</div>
+			<ContentH2>Now</ContentH2>
+			<LastUpdated
+				dateTime={currentArticle.frontmatter.dateUpdated}
+				className="text-xs"
+			/>
+			<EmojiText tag="p" emoji="📍" emojiLabel="Current location: ">
+				Melbourne, Australia
+			</EmojiText>
+			<EmojiText tag="p" emoji="⛰" emojiLabel="Current goal: ">
+				Mission for 2018: earn $2k/mo solo
+			</EmojiText>
 		</PageContainer>
 		<PageContainer className="my-8 py-12 bg-pattern">
 			<HeadingBrick>Nerds Only</HeadingBrick>
@@ -177,62 +185,66 @@ const PageAbout = ({
 
 					- Seed your JS with ES6, webpack, babel, karma, jasmine, istanbul, config, git hooks
 					- Code: https://github.com/turnbullm/js-seed
-
-					`}
+				`}
 			/>
 		</PageContainer>
 		<PageContainer small>
-			{/* prettier-ignore */}
-			<div>
-				<ContentImg image={imgCartoon} alt="Matt Turnbull" />
+			<ContentImg image={imgCartoon} alt="Matt Turnbull" />
 
-				<ContentP>Away from the keyboard I love:</ContentP>
+			<ContentP>Away from the keyboard I love:</ContentP>
 
-				<ContentUL reset className="my-6">
-					<ContentLI>
-						<EmojiText emoji="🌏">
-							<ContentA to="https://www.instagram.com/whereareweguys/">Exploring the world with my partner</ContentA>
-						</EmojiText>
-					</ContentLI>
-					<ContentLI>
-						<EmojiText emoji="🤘">
-							Rocking out on drums &amp; guitar
-						</EmojiText>
-					</ContentLI>
-					<ContentLI>
-						<EmojiText emoji="📚">
-							Learning all the things
-						</EmojiText>
-					</ContentLI>
-					<ContentLI>
-						<EmojiText emoji="🙃">
-							Anything ridiculous
-						</EmojiText>
-					</ContentLI>
-				</ContentUL>
+			<ContentUL reset className="my-6">
+				<ContentLI>
+					<EmojiText emoji="🌏">
+						<ContentA to="https://www.instagram.com/whereareweguys/">
+							Exploring the world with my partner
+						</ContentA>
+					</EmojiText>
+				</ContentLI>
+				<ContentLI>
+					<EmojiText emoji="🤘">
+						Rocking out on drums &amp; guitar
+					</EmojiText>
+				</ContentLI>
+				<ContentLI>
+					<EmojiText emoji="📚">Learning all the things</EmojiText>
+				</ContentLI>
+				<ContentLI>
+					<EmojiText emoji="🙃">Anything ridiculous</EmojiText>
+				</ContentLI>
+			</ContentUL>
 
-				<ContentH2>Get in touch</ContentH2>
+			<ContentH2>Get in touch</ContentH2>
 
-				<ContentImg image={IMG_TOUCH} type="fullwidth" />
+			<ContentImg image={IMG_TOUCH} type="fullwidth" />
 
-				<ContentUL className="mt-8">
-					<ContentLI className="my-4">
-						<ContentA to="mailto:matt@iamturns.com">matt@iamturns.com</ContentA>
-					</ContentLI>
-					<ContentLI className="my-4">
-						<ContentA to="https://twitter.com/iamturns">twitter.com/iamturns</ContentA>
-					</ContentLI>
-					<ContentLI className="my-4">
-						<ContentA to="https://www.instagram.com/iamturns/">instagram.com/iamturns</ContentA>
-					</ContentLI>
-					<ContentLI className="my-4">
-						<ContentA to="https://github.com/iamturns">github.com/iamturns</ContentA>
-					</ContentLI>
-					<ContentLI>
-						<ContentA to="https://www.linkedin.com/in/iamturns/">linkedin.com/in/iamturns</ContentA>
-					</ContentLI>
-				</ContentUL>
-			</div>
+			<ContentUL className="mt-8">
+				<ContentLI className="my-4">
+					<ContentA to="mailto:matt@iamturns.com">
+						matt@iamturns.com
+					</ContentA>
+				</ContentLI>
+				<ContentLI className="my-4">
+					<ContentA to="https://twitter.com/iamturns">
+						twitter.com/iamturns
+					</ContentA>
+				</ContentLI>
+				<ContentLI className="my-4">
+					<ContentA to="https://www.instagram.com/iamturns/">
+						instagram.com/iamturns
+					</ContentA>
+				</ContentLI>
+				<ContentLI className="my-4">
+					<ContentA to="https://github.com/iamturns">
+						github.com/iamturns
+					</ContentA>
+				</ContentLI>
+				<ContentLI>
+					<ContentA to="https://www.linkedin.com/in/iamturns/">
+						linkedin.com/in/iamturns
+					</ContentA>
+				</ContentLI>
+			</ContentUL>
 		</PageContainer>
 		<PageContainer className="mt-12 py-12 bg-denim-white">
 			<EmailPlease />
