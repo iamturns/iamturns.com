@@ -4,8 +4,6 @@ import * as React from 'react';
 
 import ArrowLeft from '../../../../vendor/feather-icons-react/ArrowLeft';
 import ContentHeader from '../../../components/ContentHeader';
-import ContentP from '../../../components/ContentP';
-import ContentSubtitle from '../../../components/ContentSubtitle';
 import HeadTagsContent from '../../../components/HeadTagsContent';
 import Link from '../../../components/Link';
 import PageContainer from '../../../components/PageContainer';
@@ -33,19 +31,19 @@ const ContentEmailSubscribed = ({ data: { currentContent } }: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
 		<ContentHeader image={currentContent.frontmatter.cover} />
-		<PageContainer small className="my-12">
-			<ContentSubtitle>That’s us, jumping in the sunset.</ContentSubtitle>
-			<ContentP>That’s what we do now.</ContentP>
-			<ContentP>See you (in your inbox) soon!</ContentP>
-			<ContentP>
+		<PageContainer small className="wysiwyg my-12">
+			<p className="c-subtitle">That’s us, jumping in the sunset.</p>
+			<p>That’s what we do now.</p>
+			<p>See you (in your inbox) soon!</p>
+			<p>
 				Love,<br />Matt
-			</ContentP>
-			<ContentP className="mt-8">
+			</p>
+			<p className="c-p mt-8">
 				<Link to="/" className="button inline-flex items-center">
 					<ArrowLeft className="w-4 h-4 mr-1" />
 					Back to I Am Turns
 				</Link>
-			</ContentP>
+			</p>
 		</PageContainer>
 	</div>
 );

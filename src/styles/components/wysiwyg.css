@@ -1,0 +1,33 @@
+.wysiwyg {
+	p:not([class]) {
+		@apply .c-p;
+	}
+
+	a:not([class]) {
+		@mixin a;
+	}
+
+	h2:not([class]) {
+		@apply .c-h2;
+	}
+
+	h3:not([class]) {
+		@apply .c-h3;
+	}
+
+	ul:not([class]) {
+		@apply .c-list;
+	}
+
+	li:not([class]) {
+		@apply .c-li;
+	}
+
+	blockquote:not([class]) {
+		@mixin blockquote;
+	}
+
+	hr:not([class]) {
+		@apply .c-hr;
+	}
+}

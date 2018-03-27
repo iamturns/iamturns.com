@@ -3,9 +3,7 @@
 import * as React from 'react';
 
 import ArrowLeft from '../../vendor/feather-icons-react/ArrowLeft';
-import ContentA from '../components/ContentA';
 import ContentHeader from '../components/ContentHeader';
-import ContentP from '../components/ContentP';
 import HeadTags from '../components/HeadTags';
 import Link from '../components/Link';
 import PageContainer from '../components/PageContainer';
@@ -47,18 +45,18 @@ const PageNotFound = (props: PageProps) => (
 			})}
 		/>
 		<ContentHeader image={props.data.cover} title="404: Not found" />
-		<PageContainer small>
-			<ContentP>Sorry about that.</ContentP>
-			<ContentP>
+		<PageContainer small className="wysiwyg">
+			<p>Sorry about that.</p>
+			<p>
 				If this is a problem, please{' '}
-				<ContentA to="mailto:matt@iamturns.com">let me know</ContentA>.
-			</ContentP>
-			<ContentP className="mt-8">
+				<Link to="mailto:matt@iamturns.com">let me know</Link>.
+			</p>
+			<p className="mt-8">
 				<Link to="/" className="button inline-flex items-center">
 					<ArrowLeft className="w-4 h-4 mr-1" />
 					Back to I Am Turns
 				</Link>
-			</ContentP>
+			</p>
 		</PageContainer>
 	</div>
 );

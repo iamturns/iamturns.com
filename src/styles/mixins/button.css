@@ -1,0 +1,12 @@
+@define-mixin button {
+	@apply .appearance-none .leading-none;
+	@apply .h-10 .py-2 .px-3;
+	@apply .inline-flex .items-center .justify-center .text-center;
+	@apply .bg-turtle .text-turtle-black;
+	@apply .border .border-turtle-lightest;
+	@apply .rounded;
+
+	&:hover {
+		@apply .bg-turtle-dark .text-black;
+	}
+}

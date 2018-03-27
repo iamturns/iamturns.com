@@ -1,0 +1,19 @@
+@define-mixin visited-turtle-dark {
+	&:visited {
+		@apply .text-turtle-dark .border-turtle-dark;
+
+		&:hover {
+			@apply .text-turtle-dark .border-turtle-dark;
+		}
+	}
+}
+
+@define-mixin visited-turtle-darkest {
+	&:visited {
+		@apply .text-turtle-darkest .border-turtle-darkest;
+
+		&:hover {
+			@apply .text-turtle-darkest .border-turtle-darkest;
+		}
+	}
+}

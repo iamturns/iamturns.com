@@ -1,12 +1,12 @@
-.hover\:darken:hover,
-.hover\:darken:focus {
-	box-shadow: inset 9999px 9999px rgba(0, 0, 0, 0.1);
-}
+.hover\:darken {
+	@apply .transition;
 
-.hover\:darken:active {
-	box-shadow: inset 9999px 9999px rgba(0, 0, 0, 0.2);
-}
+	&:hover,
+	&:focus {
+		box-shadow: inset 9999px 9999px rgba(0, 0, 0, 0.1);
+	}
 
-.darken {
-	box-shadow: inset 9999px 9999px rgba(0, 0, 0, 0.5);
+	&:active {
+		box-shadow: inset 9999px 9999px rgba(0, 0, 0, 0.2);
+	}
 }

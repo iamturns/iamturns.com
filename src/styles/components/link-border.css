@@ -1,10 +1,3 @@
 .link-border {
-	@apply .border-b .border-turtle-darker;
-	@apply .pb-0.5;
-
-	&:hover,
-	&:focus,
-	&:active {
-		@apply .border-turtle-darkest;
-	}
+	@mixin link-border;
 }

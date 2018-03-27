@@ -2,15 +2,8 @@
 
 import * as React from 'react';
 
-import ContentCode from '../../../../components/ContentCode';
-import ContentCodeBlock from '../../../../components/ContentCodeBlock';
-import ContentH2 from '../../../../components/ContentH2';
-import ContentH3 from '../../../../components/ContentH3';
-import ContentHR from '../../../../components/ContentHR';
-import ContentLI from '../../../../components/ContentLI';
-import ContentP from '../../../../components/ContentP';
-import ContentPullQuote from '../../../../components/ContentPullQuote';
-import ContentUL from '../../../../components/ContentUL';
+import Code from '../../../../components/Code';
+import CodeBlock from '../../../../components/CodeBlock';
 import Emoji from '../../../../components/Emoji';
 import LayoutContent from '../../../../components/LayoutContent';
 import type { Content } from '../../../../types/Content';
@@ -58,28 +51,28 @@ const ContentRxjsErrors = (props: ContentProps) => (
 export default ContentRxjsErrors;
 
 const Article = () => (
-	<div>
-		<ContentP>
+	<div className="wysiwyg">
+		<p>
 			I assumed RxJS streams worked like Promises, and I was very wrong.
-		</ContentP>
+		</p>
 
-		<ContentP>Here’s a stream of stuff, with meatballs!</ContentP>
+		<p>Here’s a stream of stuff, with meatballs!</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`const stuff$ = Rx.Observable.of('Spaghetti', 42, 'Meatballs');`}
 		/>
 
-		<ContentP>Let’s make the stuff lowercase:</ContentP>
+		<p>Let’s make the stuff lowercase:</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`const lowercaseStuff$ = stuff$.map(x => x.toLowerCase());`}
 		/>
 
-		<ContentP>Quick quiz: what is logged to console?</ContentP>
+		<p>Quick quiz: what is logged to console?</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`
 				lowercaseStuff$.subscribe(
@@ -90,23 +83,23 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>The answer may surprise you:</ContentP>
+		<p>The answer may surprise you:</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			code={`
 				Success: spaghetti
 				Error: TypeError: x.toLowerCase is not a function
 			`}
 		/>
 
-		<ContentP>
+		<p>
 			Where’s the meatballs?! It seems the error killed the stream. Let’s
 			stop that from happening.
-		</ContentP>
+		</p>
 
-		<ContentH2>Attempt #1: Defensive coding</ContentH2>
+		<h2>Attempt #1: Defensive coding</h2>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`
 				const lowercaseStuff$ = stuff$
@@ -119,9 +112,9 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>Result:</ContentP>
+		<p>Result:</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			code={`
 				Success: spaghetti
 				Success: undefined
@@ -130,31 +123,31 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>Hello meatballs! That was easy!</ContentP>
+		<p>Hello meatballs! That was easy!</p>
 
-		<ContentH3>Hold up…</ContentH3>
+		<h3>Hold up…</h3>
 
-		<ContentP>
+		<p>
 			Maybe the “stream of stuff” is actually a response from a server.
 			You expect to receive nicely structured JSON. Then one day, you
 			don’t.
-		</ContentP>
+		</p>
 
-		<ContentP>
+		<p>
 			Maybe you’re passing the “stuff” into a 3rd party library, and it
 			throws an error.
-		</ContentP>
+		</p>
 
-		<ContentP>
+		<p>
 			Errors will always happen. You can’t code defensively for every
 			unpredictable possibility.
-		</ContentP>
+		</p>
 
-		<ContentP>Let’s try something else.</ContentP>
+		<p>Let’s try something else.</p>
 
-		<ContentH2>Attempt #2: Try / catch</ContentH2>
+		<h2>Attempt #2: Try / catch</h2>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`
 				const lowercaseStuff$ = stuff$
@@ -168,9 +161,9 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>Result:</ContentP>
+		<p>Result:</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			code={`
 				Success: spaghetti
 				Success: undefined
@@ -179,15 +172,15 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>
+		<p>
 			Meatballs! <Emoji>😍</Emoji>
-		</ContentP>
+		</p>
 
-		<ContentP>
+		<p>
 			But, what a nightmare to place this inside <em>every</em> operator:
-		</ContentP>
+		</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`
 				const moreComplexStuff$ = stuff$
@@ -208,11 +201,11 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>We can do better.</ContentP>
+		<p>We can do better.</p>
 
-		<ContentH2>Attempt #3: Catch operator</ContentH2>
+		<h2>Attempt #3: Catch operator</h2>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`
 				const lowercaseStuff$ = stuff$
@@ -221,9 +214,9 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>Result:</ContentP>
+		<p>Result:</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			code={`
 				Success: spaghetti
 				Success: undefined
@@ -231,20 +224,20 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>
+		<p>
 			The error was caught, but the stream completes before the meatballs
 			had a chance.
-		</ContentP>
+		</p>
 
-		<ContentP>
+		<p>
 			<Emoji>🤔</Emoji> Hmm. The catch operator is returning a bran new
 			stream. Maybe the original stream is completing because it’s
 			replaced?
-		</ContentP>
+		</p>
 
-		<ContentH2>Attempt #4: Materialize / dematerialize</ContentH2>
+		<h2>Attempt #4: Materialize / dematerialize</h2>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`
 				const lowercaseStuff$ = stuff$
@@ -260,18 +253,18 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>
+		<p>
 			This looks complex, but it’s behaving similar to the catch operator
 			above. We are watching for an error notification, and then
 			converting it into a next / success notification instead.
-		</ContentP>
+		</p>
 
-		<ContentP>
+		<p>
 			It’s pretty low level, but this time we have no catch operator
 			replacing the main stream. Should be fine.
-		</ContentP>
+		</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			code={`
 				Success: spaghetti
 				Success: undefined
@@ -279,37 +272,37 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>
+		<p>
 			<Emoji>😖</Emoji> No meatballs.
-		</ContentP>
+		</p>
 
-		<ContentP>What is going on?!</ContentP>
+		<p>What is going on?!</p>
 
-		<ContentHR />
+		<hr />
 
-		<ContentH2>Deep in RxJS Land</ContentH2>
+		<h2>Deep in RxJS Land</h2>
 
-		<ContentP>
+		<p>
 			RxJS is internally wrapping code in operators (like{' '}
-			<ContentCode code="map" />, <ContentCode code="filter" />, etc) with
-			a <ContentCode code="try / catch" />. If an error is caught, it will
-			notify subscribers, and then <strong>unsubscribe</strong> the
-			stream. This is <em>hard coded</em> — you have no choice!
-		</ContentP>
+			<Code code="map" />, <Code code="filter" />, etc) with a{' '}
+			<Code code="try / catch" />. If an error is caught, it will notify
+			subscribers, and then <strong>unsubscribe</strong> the stream. This
+			is <em>hard coded</em> — you have no choice!
+		</p>
 
-		<ContentPullQuote>
+		<blockquote className="c-blockquote-pull">
 			If an error is thrown within an operator, the stream will always
 			complete.
-		</ContentPullQuote>
+		</blockquote>
 
-		<ContentH2>Solution</ContentH2>
+		<h2>Solution</h2>
 
-		<ContentP>
+		<p>
 			Create a disposable stream. If an error occurs only the disposable
 			stream dies, and the main stream lives on.
-		</ContentP>
+		</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`
 				const lowercaseStuff$ = stuff$
@@ -322,9 +315,9 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>Result:</ContentP>
+		<p>Result:</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			code={`
 				Success: spaghetti
 				Success: undefined
@@ -333,13 +326,13 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>
+		<p>
 			We have meatballs! <Emoji>😋</Emoji>
-		</ContentP>
+		</p>
 
-		<ContentP>This can be condensed further:</ContentP>
+		<p>This can be condensed further:</p>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`
 				const lowercaseStuff$ = stuff$.switchMap(x =>
@@ -350,18 +343,18 @@ const Article = () => (
 			`}
 		/>
 
-		<ContentP>And here’s a real world scenario:</ContentP>
+		<p>And here’s a real world scenario:</p>
 
-		<ContentUL>
-			<ContentLI>Processing a response from the server</ContentLI>
-			<ContentLI>
+		<ul>
+			<li>Processing a response from the server</li>
+			<li>
 				Keeping the main stream alive (so future responses are processed
 				after an error)
-			</ContentLI>
-			<ContentLI>Performing error handling in the main stream</ContentLI>
-		</ContentUL>
+			</li>
+			<li>Performing error handling in the main stream</li>
+		</ul>
 
-		<ContentCodeBlock
+		<CodeBlock
 			language="js"
 			code={`
 				responseFromServer$

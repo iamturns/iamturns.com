@@ -1,15 +1,7 @@
-.visited-turtle-darkest:visited {
-	@apply .text-turtle-darkest .border-turtle-darkest;
-
-	&:hover {
-		@apply .text-turtle-black .border-turtle-black;
-	}
+.visited-turtle-dark {
+	@mixin visited-turtle-dark;
 }
 
-.visited-turtle-dark:visited {
-	@apply .text-turtle-dark .border-turtle-dark;
-
-	&:hover {
-		@apply .text-turtle-darker .border-turtle-darker;
-	}
+.visited-turtle-darkest {
+	@mixin visited-turtle-darkest;
 }
