@@ -32,13 +32,13 @@ const ContentEmailSubscribed = ({ data: { currentContent } }: ContentProps) => (
 		<HeadTagsContent content={currentContent} />
 		<ContentHeader image={currentContent.frontmatter.cover} />
 		<PageContainer small className="wysiwyg my-12">
-			<p className="c-subtitle">That’s us, jumping in the sunset.</p>
+			<p className="subtitle">That’s us, jumping in the sunset.</p>
 			<p>That’s what we do now.</p>
 			<p>See you (in your inbox) soon!</p>
 			<p>
 				Love,<br />Matt
 			</p>
-			<p className="c-p mt-8">
+			<p className="p mt-8">
 				<Link to="/" className="button inline-flex items-center">
 					<ArrowLeft className="w-4 h-4 mr-1" />
 					Back to I Am Turns

@@ -41,7 +41,7 @@ const ContentNewWebsite = (props: ContentProps) => (
 		contentListNerdsResult={props.data.contentListNerdsResult}
 	>
 		<div className="wysiwyg">
-			<p className="c-subtitle">Welcome!</p>
+			<p className="subtitle">Welcome!</p>
 			<p>There’s not much to see yet, but that will soon change!</p>
 		</div>
 	</LayoutContent>

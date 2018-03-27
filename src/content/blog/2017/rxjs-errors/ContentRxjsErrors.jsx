@@ -290,7 +290,7 @@ const Article = () => (
 			is <em>hard coded</em> — you have no choice!
 		</p>
 
-		<blockquote className="c-blockquote-pull">
+		<blockquote className="blockquote-pull">
 			If an error is thrown within an operator, the stream will always
 			complete.
 		</blockquote>

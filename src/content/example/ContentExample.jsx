@@ -105,7 +105,7 @@ const Article = ({
 	data: { imgSetSize, imgSmall, imgBig, imgFull },
 }: ContentProps) => (
 	<div className="wysiwyg">
-		<p className="c-subtitle">
+		<p className="subtitle">
 			This is a subtitle and it is a little bit longer so that it wraps
 			over a couple of lines you see.
 		</p>
@@ -149,7 +149,7 @@ const Article = ({
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
 		</p>
-		<ul className="c-list-reset">
+		<ul className="list list-reset">
 			<li>
 				<EmojiText emoji="✋">List item 1</EmojiText>
 			</li>
@@ -170,7 +170,7 @@ const Article = ({
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
 		</p>
-		<blockquote className="c-blockquote-pull">
+		<blockquote className="blockquote-pull">
 			This is a pull quote.
 		</blockquote>
 		<p>
@@ -260,7 +260,7 @@ const Article = ({
 			`}
 		/>
 		<h2>Colours</h2>
-		<div className="c-p">
+		<div className="p">
 			<div className="bg-black h-16" />
 			<div className="bg-turtle-black h-16" />
 			<div className="bg-turtle-darkest h-16" />

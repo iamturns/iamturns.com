@@ -1,6 +1,6 @@
 .wysiwyg {
 	p:not([class]) {
-		@apply .c-p;
+		@apply .p;
 	}
 
 	a:not([class]) {
@@ -8,19 +8,19 @@
 	}
 
 	h2:not([class]) {
-		@apply .c-h2;
+		@apply .h2;
 	}
 
 	h3:not([class]) {
-		@apply .c-h3;
+		@apply .h3;
 	}
 
 	ul:not([class]) {
-		@apply .c-list;
+		@apply .list;
 	}
 
 	li:not([class]) {
-		@apply .c-li;
+		@apply .li;
 	}
 
 	blockquote:not([class]) {
@@ -28,6 +28,6 @@
 	}
 
 	hr:not([class]) {
-		@apply .c-hr;
+		@apply .hr;
 	}
 }

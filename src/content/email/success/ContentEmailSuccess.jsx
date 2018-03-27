@@ -35,7 +35,7 @@ const ContentEmailSuccess = ({ data: { currentContent } }: ContentProps) => (
 			title={currentContent.frontmatter.title}
 		/>
 		<PageContainer small className="wysiwyg my-12">
-			<p className="c-subtitle">
+			<p className="subtitle">
 				When I write new stuff, you’ll be first to know — lucky duck!
 			</p>
 			<p>I just sent you an email to make sure you’re fo’ real.</p>

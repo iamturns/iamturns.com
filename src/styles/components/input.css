@@ -1,7 +1,0 @@
-.input {
-	@apply .appearance-none .leading-none;
-	@apply .h-10 .py-2 .px-3;
-	@apply .inline-flex .items-center;
-	@apply .border .border-turtle-lightest;
-	@apply .shadow .rounded;
-}

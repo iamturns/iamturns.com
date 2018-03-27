@@ -14,20 +14,13 @@
 /* Globals */
 
 @import 'globals/a.css';
+@import 'globals/atoms.css';
 @import 'globals/colors.css';
 @import 'globals/layout.css';
 @import 'globals/prism-app.css';
 @import 'globals/prism.css';
 @import 'globals/text.css';
-
-/* Components */
-
-@import 'components/button.css';
-@import 'components/core.css';
-@import 'components/input.css';
-@import 'components/link-border.css';
-@import 'components/text-highlight.css';
-@import 'components/wysiwyg.css';
+@import 'globals/wysiwyg.css';
 
 /* Tailwind components: plugins added to plugin system */
 
@@ -48,5 +41,7 @@
 @import 'utils/hover-dim.css';
 @import 'utils/hover-fly.css';
 @import 'utils/hover-grow.css';
+@import 'utils/link-border.css';
+@import 'utils/text-highlight.css';
 @import 'utils/transition.css';
 @import 'utils/visited.css';

@@ -82,7 +82,7 @@ const ContentAbout = ({
 		<HeadTagsContent content={currentContent} />
 		<PageContainer small>
 			<Hey />
-			<p className="c-p">And I have a confession to make…</p>
+			<p className="p">And I have a confession to make…</p>
 		</PageContainer>
 		<PageContainer className="my-8 p-6 bg-denim-white text-center">
 			<h2 className="text-xl text-denim-black">
@@ -92,14 +92,14 @@ const ContentAbout = ({
 		<PageContainer small className="wysiwyg">
 			<p>It gets me out of bed, and keeps me up at night.</p>
 
-			<h3 className="c-h3 mt-12">Blame it on crabs</h3>
+			<h3 className="h3 mt-12">Blame it on crabs</h3>
 			<ImgBlock image={imgCrab} alt="Hermit crab" />
 			<p>
 				It all started with building a website about hermit crabs at the
 				age of 13.
 			</p>
 			<p>20 years later this passion has driven me to:</p>
-			<ul className="c-list-reset my-6">
+			<ul className="list list-reset my-6">
 				<li>
 					<EmojiText emoji="🛠️">
 						Create great things with award-winning agencies in
@@ -127,7 +127,7 @@ const ContentAbout = ({
 					className="text-xs"
 				/>
 			)}
-			<ul className="c-list-reset my-6">
+			<ul className="list list-reset my-6">
 				<li>
 					<EmojiText emoji="📍" emojiLabel="Current location: ">
 						Melbourne, Australia
@@ -209,7 +209,7 @@ const ContentAbout = ({
 
 			<p>Away from the keyboard I love:</p>
 
-			<ul className="c-list-reset">
+			<ul className="list list-reset">
 				<li>
 					<EmojiText emoji="🌏">
 						<Link to="https://www.instagram.com/whereareweguys/">

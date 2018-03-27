@@ -73,7 +73,7 @@ const Article = (props: ContentProps) => (
 			Angular.
 		</p>
 		<h2>Oh, Angular…</h2>
-		<p className="c-p text-sm">*long sigh*</p>
+		<p className="p text-sm">*long sigh*</p>
 		<p>
 			I’ve been deep diving into Angular (v1 and 2+) for three years now.
 			Overall, a frustrating experience. Coding feels challenging for the{' '}
@@ -124,7 +124,7 @@ const Article = (props: ContentProps) => (
 		</ul>
 
 		<h2>Arguments for Angular</h2>
-		<blockquote className="c-blockquote text-lg">
+		<blockquote className="blockquote text-lg">
 			“I just need to learn Angular, then I can easily jump between any
 			Angular project.”
 		</blockquote>
@@ -146,7 +146,7 @@ const Article = (props: ContentProps) => (
 			services. Could any Angular developer jump straight into this setup?
 			Nope.
 		</p>
-		<blockquote className="c-blockquote text-lg">
+		<blockquote className="blockquote text-lg">
 			“Code written by Angular official maintainers is better quality and
 			more stable than a bunch of random 3rd-party libraries thrown
 			together.”
@@ -170,7 +170,7 @@ const Article = (props: ContentProps) => (
 			group of random developers can deliver code that surpasses the
 			efforts of core maintainers.
 		</p>
-		<blockquote className="c-blockquote text-lg">
+		<blockquote className="blockquote text-lg">
 			“I like that Angular makes choices for me, I don’t want to pick and
 			choose which libraries to use.”
 		</blockquote>
