@@ -6,7 +6,7 @@ import * as React from 'react';
 import ContentBlock from '../ContentBlock';
 
 type ContentHRProps = {
-	children: React.Node,
+	children?: React.Node,
 	className?: string,
 	// ...wrapperProps
 };

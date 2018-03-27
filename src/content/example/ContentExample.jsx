@@ -18,15 +18,102 @@ import ContentSubtitle from '../../components/ContentSubtitle';
 import ContentUL from '../../components/ContentUL';
 import Emoji from '../../components/Emoji';
 import EmojiText from '../../components/EmojiText';
+import LayoutContent from '../../components/LayoutContent';
+import type { Content } from '../../types/Content';
+import type { Image } from '../../types/Image';
+import type { Result } from '../../types/Result';
 import { createImage } from '../../utils/image';
-import type { PageExampleProps } from './PageExample';
 import ImgSpongebob from './spongebob.gif';
 
 const IMG_SPONGEBOB = createImage(ImgSpongebob, 500, 380);
 
-const Content = ({
+export const frontmatter = {
+	type: 'article', // 'page'
+	title: 'Example page',
+	description: 'Example description.',
+	dateCreated: '2017-01-01',
+	dateUpdated: '2018-01-01',
+	unlisted: true,
+	// nerdsOnly: true,
+	cover: '../../assets/images/headers/fireworks.jpg',
+	shareImage: '../../assets/images/headers/celebrate.jpg',
+};
+
+declare var graphql: Function;
+export const pageQuery = graphql`
+	query PageExampleQuery($slug: String!) {
+		...CurrentContent
+		...ContentList
+		imgSetSize: file(
+			sourceInstanceName: { eq: "content" }
+			relativePath: { eq: "example/little.png" }
+		) {
+			childImageSharp {
+				resolutions(width: 190, height: 174) {
+					...GatsbyImageSharpResolutions
+				}
+			}
+		}
+		imgSmall: file(
+			sourceInstanceName: { eq: "content" }
+			relativePath: { eq: "example/little.png" }
+		) {
+			childImageSharp {
+				sizes(maxWidth: 580) {
+					...GatsbyImageSharpSizes
+				}
+			}
+		}
+		imgBig: file(
+			sourceInstanceName: { eq: "content" }
+			relativePath: { eq: "example/big.jpg" }
+		) {
+			childImageSharp {
+				sizes(maxWidth: 580) {
+					...GatsbyImageSharpSizes
+				}
+			}
+		}
+		imgFull: file(
+			sourceInstanceName: { eq: "content" }
+			relativePath: { eq: "example/big.jpg" }
+		) {
+			childImageSharp {
+				sizes(maxWidth: 1920) {
+					...GatsbyImageSharpSizes
+				}
+			}
+		}
+	}
+`;
+
+export type ContentProps = {
+	data: {
+		currentContent: Content,
+		contentListResult: Result<Content>,
+		contentListNerdsResult: Result<Content>,
+		imgSetSize: Image,
+		imgSmall: Image,
+		imgBig: Image,
+		imgFull: Image,
+	},
+};
+
+const ContentExample = (props: ContentProps) => (
+	<LayoutContent
+		currentContent={props.data.currentContent}
+		contentListResult={props.data.contentListResult}
+		contentListNerdsResult={props.data.contentListNerdsResult}
+	>
+		<Article {...props} />
+	</LayoutContent>
+);
+
+export default ContentExample;
+
+const Article = ({
 	data: { imgSetSize, imgSmall, imgBig, imgFull },
-}: PageExampleProps) => (
+}: ContentProps) => (
 	<div>
 		<ContentSubtitle>
 			This is a subtitle and it is a little bit longer so that it wraps
@@ -209,5 +296,3 @@ const Content = ({
 		</ContentBlock>
 	</div>
 );
-
-export default Content;

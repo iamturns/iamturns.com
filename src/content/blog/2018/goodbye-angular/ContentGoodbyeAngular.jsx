@@ -9,9 +9,64 @@ import ContentLI from '../../../../components/ContentLI';
 import ContentP from '../../../../components/ContentP';
 import ContentQuote from '../../../../components/ContentQuote';
 import ContentUL from '../../../../components/ContentUL';
-import type { PageGoodbyeAngularProps } from './PageGoodbyeAngular';
+import LayoutContent from '../../../../components/LayoutContent';
+import type { Content } from '../../../../types/Content';
+import type { Image } from '../../../../types/Image';
+import type { Result } from '../../../../types/Result';
 
-const Content = (props: PageGoodbyeAngularProps) => (
+export const frontmatter = {
+	title: 'Angular Burnout',
+	description:
+		'I dreaded returning to programming during a 3 month travel break. It turns out I’m not done with programming; I’m just done with Angular.',
+	slug: '/angular-burnout',
+	dateCreated: '2018-03-23',
+	dateUpdated: '2018-03-23',
+	type: 'article',
+	nerdsOnly: true,
+	cover: './sleeping-dog.jpg',
+	shareImage: './sleeping-dog.jpg',
+};
+
+declare var graphql: Function;
+export const pageQuery = graphql`
+	query ContentGoodbyeAngularQuery($slug: String!) {
+		...CurrentContent
+		...ContentList
+		imgDocs: file(
+			sourceInstanceName: { eq: "content" }
+			relativePath: { eq: "blog/2018/goodbye-angular/docs.jpg" }
+		) {
+			childImageSharp {
+				sizes(maxWidth: 580) {
+					...GatsbyImageSharpSizes
+				}
+			}
+		}
+	}
+`;
+
+type ContentProps = {
+	data: {
+		currentContent: Content,
+		contentListResult: Result<Content>,
+		contentListNerdsResult: Result<Content>,
+		imgDocs: Image,
+	},
+};
+
+const ContentGoodbyeAngular = (props: ContentProps) => (
+	<LayoutContent
+		currentContent={props.data.currentContent}
+		contentListResult={props.data.contentListResult}
+		contentListNerdsResult={props.data.contentListNerdsResult}
+	>
+		<Article {...props} />
+	</LayoutContent>
+);
+
+export default ContentGoodbyeAngular;
+
+const Article = (props: ContentProps) => (
 	<div>
 		<ContentP>
 			I dreaded returning to programming during a 3-month travel break.
@@ -179,5 +234,3 @@ const Content = (props: PageGoodbyeAngularProps) => (
 		</ContentP>
 	</div>
 );
-
-export default Content;

@@ -9,32 +9,43 @@ import Img from '../Img';
 const IMG_MIN_HEIGHT = '400px';
 const IMG_MAX_HEIGHT = 'calc(100vh - 400px)';
 
-type ContentTitleProps = {
-	image: Image,
+type ContentHeaderProps = {
+	image?: Image,
 	title?: string,
 };
 
-const ContentTitle = ({ image, title }: ContentTitleProps) => (
-	<div
-		className="relative overflow-hidden"
-		style={{ minHeight: IMG_MIN_HEIGHT, maxHeight: IMG_MAX_HEIGHT }}
-	>
-		<Img
-			image={image}
-			alt=""
-			style={{ minHeight: IMG_MIN_HEIGHT, maxHeight: IMG_MAX_HEIGHT }}
-		/>
-		{title && <Title title={title} />}
-	</div>
-);
+const ContentHeader = ({ image, title }: ContentHeaderProps) => {
+	if (image) {
+		return (
+			<div
+				className="relative overflow-hidden"
+				style={{ minHeight: IMG_MIN_HEIGHT, maxHeight: IMG_MAX_HEIGHT }}
+			>
+				<Img
+					image={image}
+					alt=""
+					style={{
+						minHeight: IMG_MIN_HEIGHT,
+						maxHeight: IMG_MAX_HEIGHT,
+					}}
+				/>
+				<Title title={title} />
+			</div>
+		);
+	}
+	return <Title title={title} />;
+};
 
-export default ContentTitle;
+export default ContentHeader;
 
 type TitleProps = {
-	title: string,
+	title?: string,
 };
 
 const Title = ({ title }: TitleProps) => {
+	if (!title) {
+		return null;
+	}
 	const isTitleLong = title.length > 60;
 	const TitleTag = isTitleLong ? TitleLong : TitleShort;
 	return <TitleTag title={title} />;

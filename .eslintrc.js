@@ -12,7 +12,7 @@ module.exports = {
 	plugins: ['flowtype'],
 	settings: {
 		// These modules confuse ESLint as they are imported from within Gatsby
-		'import/core-modules': ['graphql', 'prismjs', 'prop-types', 'react'],
+		'import/core-modules': ['graphql', 'react'],
 	},
 	rules: {
 		// Temporarily disabled valid anchor check: https://github.com/airbnb/javascript/pull/1648
@@ -21,8 +21,6 @@ module.exports = {
 		'jsx-a11y/html-has-lang': false,
 		// allow a.target="_blank"
 		'react/jsx-no-target-blank': false,
-		// Unfortunately using Flow union types as default props only works in React components, see SEOApp component
-		'react/prefer-stateless-function': false,
 		// Allow functions and classes to be defined after they are called for better flow in reading coe
 		'no-use-before-define': [
 			'error',

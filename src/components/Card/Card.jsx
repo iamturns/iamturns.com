@@ -10,8 +10,8 @@ import Link from '../Link';
 type CardProps = {
 	linkTo: string,
 	title: string,
-	image: Image,
-	text: string,
+	image?: Image,
+	text?: string,
 };
 
 const Card = (props: CardProps) => (

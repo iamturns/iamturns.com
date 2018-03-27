@@ -2,7 +2,7 @@
 
 import type { Image } from '../types/Image';
 
-// $FloxFixMe - Flow is terrible dealing with union types
+// $FlowFixMe - Flow is terrible dealing with union types
 
 export function createImage(src: string, width: number, height: number): Image {
 	return {
