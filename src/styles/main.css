@@ -2,22 +2,25 @@
 
 @import 'tailwindcss/preflight';
 
+/* Mixins */
+
+@import 'mixins/a.css';
+@import 'mixins/blockquote-pull.css';
+@import 'mixins/blockquote.css';
+@import 'mixins/button.css';
+@import 'mixins/link-border.css';
+@import 'mixins/visited.css';
+
 /* Globals */
 
 @import 'globals/a.css';
+@import 'globals/atoms.css';
 @import 'globals/colors.css';
-@import 'globals/hr.css';
 @import 'globals/layout.css';
 @import 'globals/prism-app.css';
 @import 'globals/prism.css';
 @import 'globals/text.css';
-
-/* Components */
-
-@import 'components/button.css';
-@import 'components/input.css';
-@import 'components/link-border.css';
-@import 'components/text-highlight.css';
+@import 'globals/wysiwyg.css';
 
 /* Tailwind components: plugins added to plugin system */
 
@@ -31,11 +34,14 @@
 
 @import 'utils/bg-pattern.css';
 @import 'utils/content-empty.css';
-@import 'utils/content-full.css';
+@import 'utils/darken.css';
 @import 'utils/debug.css';
+@import 'utils/fullscreen.css';
 @import 'utils/hover-darken.css';
 @import 'utils/hover-dim.css';
 @import 'utils/hover-fly.css';
 @import 'utils/hover-grow.css';
+@import 'utils/link-border.css';
+@import 'utils/text-highlight.css';
 @import 'utils/transition.css';
 @import 'utils/visited.css';

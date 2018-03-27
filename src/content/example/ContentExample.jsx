@@ -2,23 +2,13 @@
 
 import * as React from 'react';
 
-import ContentA from '../../components/ContentA';
-import ContentBlock from '../../components/ContentBlock';
-import ContentCode from '../../components/ContentCode';
-import ContentCodeBlock from '../../components/ContentCodeBlock';
-import ContentH2 from '../../components/ContentH2';
-import ContentH3 from '../../components/ContentH3';
-import ContentHR from '../../components/ContentHR';
-import ContentImg from '../../components/ContentImg';
-import ContentLI from '../../components/ContentLI';
-import ContentP from '../../components/ContentP';
-import ContentPullQuote from '../../components/ContentPullQuote';
-import ContentQuote from '../../components/ContentQuote';
-import ContentSubtitle from '../../components/ContentSubtitle';
-import ContentUL from '../../components/ContentUL';
+import Code from '../../components/Code';
+import CodeBlock from '../../components/CodeBlock';
 import Emoji from '../../components/Emoji';
 import EmojiText from '../../components/EmojiText';
+import ImgBlock from '../../components/ImgBlock';
 import LayoutContent from '../../components/LayoutContent';
+import Link from '../../components/Link';
 import type { Content } from '../../types/Content';
 import type { Image } from '../../types/Image';
 import type { Result } from '../../types/Result';
@@ -114,136 +104,136 @@ export default ContentExample;
 const Article = ({
 	data: { imgSetSize, imgSmall, imgBig, imgFull },
 }: ContentProps) => (
-	<div>
-		<ContentSubtitle>
+	<div className="wysiwyg">
+		<p className="subtitle">
 			This is a subtitle and it is a little bit longer so that it wraps
 			over a couple of lines you see.
-		</ContentSubtitle>
-		<ContentP>
-			<Emoji>😖</Emoji> Lorem ipsum{' '}
-			<ContentA to="internal">dolor sit</ContentA> amet,{' '}
-			<ContentA to="http://external/">consectetur adipiscing</ContentA>{' '}
+		</p>
+		<p>
+			<Emoji>😖</Emoji> Lorem ipsum <Link to="internal">dolor sit</Link>{' '}
+			amet, <Link to="http://external/">consectetur adipiscing</Link>{' '}
 			elit, sed do and{' '}
-			<ContentA to="https://google.com/">this link is visited</ContentA>.
-			Ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
-			nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			<Link to="https://google.com/">this link is visited</Link>. Ut
+			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+			exercitation ullamco laboris nisi ut aliquip ex ea commodo
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit
 			esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
 			cupidatat non proident, sunt in culpa qui officia deserunt mollit
 			anim id est laborum.
-		</ContentP>
-		<ContentH2>Heading level two</ContentH2>
-		<ContentP>
+		</p>
+		<h2>Heading level two</h2>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentH3>Heading level three</ContentH3>
-		<ContentP>
+		</p>
+		<h3>Heading level three</h3>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentUL>
-			<ContentLI>List item 1</ContentLI>
-			<ContentLI>
+		</p>
+		<ul>
+			<li>List item 1</li>
+			<li>
 				List item 2 consectetur adipiscing elit, sed do eiusmod tempor
 				incididunt ut labore et dolore magna aliqua
-			</ContentLI>
-			<ContentLI>List item 3</ContentLI>
-		</ContentUL>
-		<ContentP>
+			</li>
+			<li>List item 3</li>
+		</ul>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentUL reset>
-			<ContentLI>
+		</p>
+		<ul className="list list-reset">
+			<li>
 				<EmojiText emoji="✋">List item 1</EmojiText>
-			</ContentLI>
-			<ContentLI>
+			</li>
+			<li>
 				<EmojiText emoji="☄">
 					Listem item 2 consectetur adipiscing elit, sed do eiusmod
 					tempor incididunt ut labore et dolore magna aliqua
 				</EmojiText>
-			</ContentLI>
-			<ContentLI>
+			</li>
+			<li>
 				<EmojiText emoji="⚽">List item 3</EmojiText>
-			</ContentLI>
-		</ContentUL>
-		<ContentQuote>This is a quote.</ContentQuote>
-		<ContentP>
+			</li>
+		</ul>
+		<blockquote>This is a quote.</blockquote>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentPullQuote>This is a pull quote.</ContentPullQuote>
-		<ContentP>
+		</p>
+		<blockquote className="blockquote-pull">
+			This is a pull quote.
+		</blockquote>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentH3>Image set size</ContentH3>
-		<ContentImg image={imgSetSize} alt="Example alt text">
+		</p>
+		<h3>Image set size</h3>
+		<ImgBlock image={imgSetSize} alt="Example alt text">
 			Example caption
-		</ContentImg>
-		<ContentP>
+		</ImgBlock>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentH3>Image small</ContentH3>
-		<ContentImg image={imgSmall} alt="Example alt text">
-			Here is the caption with a <ContentA to="/">link inside</ContentA> -
-			wow!
-		</ContentImg>
-		<ContentP>
+		</p>
+		<h3>Image small</h3>
+		<ImgBlock image={imgSmall} alt="Example alt text">
+			Here is the caption with a <Link to="/">link inside</Link> - wow!
+		</ImgBlock>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentH3>Image big</ContentH3>
-		<ContentImg image={imgBig} alt="Example alt text">
+		</p>
+		<h3>Image big</h3>
+		<ImgBlock image={imgBig} alt="Example alt text">
 			Example caption
-		</ContentImg>
-		<ContentP>
+		</ImgBlock>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentH3>Image full</ContentH3>
-		<ContentImg image={imgFull} alt="Example alt text" type="fullscreen">
+		</p>
+		<h3>Image full</h3>
+		<ImgBlock image={imgFull} alt="Example alt text" type="fullscreen">
 			Example caption
-		</ContentImg>
-		<ContentP>
+		</ImgBlock>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentH3>Image gif</ContentH3>
-		<ContentImg image={IMG_SPONGEBOB} alt="Example alt text">
+		</p>
+		<h3>Image gif</h3>
+		<ImgBlock image={IMG_SPONGEBOB} alt="Example alt text">
 			Example caption
-		</ContentImg>
-		<ContentHR />
-		<ContentP>
-			Inline code <ContentCode language="js" code="const a = 'b'" />
-		</ContentP>
-		<ContentP>
+		</ImgBlock>
+		<hr />
+		<p>
+			Inline code <Code language="js" code="const a = 'b'" />
+		</p>
+		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
-		</ContentP>
-		<ContentCodeBlock
+		</p>
+		<CodeBlock
 			language="jsx"
 			highlight="3, 15-17"
 			code={`
@@ -269,30 +259,30 @@ const Article = ({
 				}
 			`}
 		/>
-		<ContentH2>Colours</ContentH2>
-		<ContentBlock>
+		<h2>Colours</h2>
+		<div className="p">
 			<div className="bg-black h-16" />
-			<div className="bg-turtle-black h-8" />
-			<div className="bg-turtle-darkest h-8" />
-			<div className="bg-turtle-darker h-8" />
-			<div className="bg-turtle-dark h-8" />
-			<div className="bg-turtle h-8">TURTLE</div>
-			<div className="bg-turtle-light h-8" />
-			<div className="bg-turtle-lighter h-8" />
-			<div className="bg-turtle-lightest h-8" />
-			<div className="bg-turtle-white h-8" />
+			<div className="bg-turtle-black h-16" />
+			<div className="bg-turtle-darkest h-16" />
+			<div className="bg-turtle-darker h-16" />
+			<div className="bg-turtle-dark h-16" />
+			<div className="bg-turtle h-16">TURTLE</div>
+			<div className="bg-turtle-light h-16" />
+			<div className="bg-turtle-lighter h-16" />
+			<div className="bg-turtle-lightest h-16" />
+			<div className="bg-turtle-white h-16" />
 			<div className="bg-white h-16" />
 			<div className="bg-black h-16" />
-			<div className="bg-denim-black h-8" />
-			<div className="bg-denim-darkest h-8" />
-			<div className="bg-denim-darker h-8" />
-			<div className="bg-denim-dark h-8" />
-			<div className="bg-denim h-8">DENIM</div>
-			<div className="bg-denim-light h-8" />
-			<div className="bg-denim-lighter h-8" />
-			<div className="bg-denim-lightest h-8" />
-			<div className="bg-denim-white h-8" />
+			<div className="bg-denim-black h-16" />
+			<div className="bg-denim-darkest h-16" />
+			<div className="bg-denim-darker h-16" />
+			<div className="bg-denim-dark h-16" />
+			<div className="bg-denim h-16">DENIM</div>
+			<div className="bg-denim-light h-16" />
+			<div className="bg-denim-lighter h-16" />
+			<div className="bg-denim-lightest h-16" />
+			<div className="bg-denim-white h-16" />
 			<div className="bg-white h-16" />
-		</ContentBlock>
+		</div>
 	</div>
 );

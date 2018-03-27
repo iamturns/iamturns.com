@@ -1,0 +1,11 @@
+.fullscreen {
+	margin-left: -2rem;
+	margin-right: -2rem;
+}
+
+@media (min-width: 40rem) {
+	.fullscreen {
+		margin-left: calc(((-100vw / 2) + (40rem / 2)) - 2rem);
+		margin-right: calc(((-100vw / 2) + (40rem / 2)) - 2rem);
+	}
+}

@@ -2,8 +2,6 @@
 
 import * as React from 'react';
 
-import ContentP from '../../../../components/ContentP';
-import ContentSubtitle from '../../../../components/ContentSubtitle';
 import LayoutContent from '../../../../components/LayoutContent';
 import type { Content } from '../../../../types/Content';
 import type { Result } from '../../../../types/Result';
@@ -42,10 +40,10 @@ const ContentNewWebsite = (props: ContentProps) => (
 		contentListResult={props.data.contentListResult}
 		contentListNerdsResult={props.data.contentListNerdsResult}
 	>
-		<ContentSubtitle>Welcome!</ContentSubtitle>
-		<ContentP>
-			There’s not much to see yet, but that will soon change!
-		</ContentP>
+		<div className="wysiwyg">
+			<p className="subtitle">Welcome!</p>
+			<p>There’s not much to see yet, but that will soon change!</p>
+		</div>
 	</LayoutContent>
 );
 

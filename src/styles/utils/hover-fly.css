@@ -1,4 +1,4 @@
-.hover-fly {
+.hover\:fly {
 	@apply .transition;
 
 	transform: translateY(0);

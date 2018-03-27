@@ -16,7 +16,7 @@ type CardProps = {
 
 const Card = (props: CardProps) => (
 	<article className="flex w-full max-w-sm pb-12 md:p-4 md:w-1/2 xl:w-1/4">
-		<div className="flex flex-col w-full bg-white hover-fly">
+		<div className="flex flex-col w-full bg-white hover:fly">
 			<CardImgTitle {...props} />
 			<CardDetails {...props} />
 		</div>

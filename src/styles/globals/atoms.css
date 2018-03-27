@@ -1,0 +1,56 @@
+.p {
+	@apply .my-4;
+}
+
+.a {
+	@mixin a;
+}
+
+.subtitle {
+	@apply .my-4 .mt-8;
+	@apply .text-lg .text-turtle-darkest .font-sans;
+}
+
+.h2 {
+	@apply .my-4 .mt-12;
+	@apply .text-2xl;
+}
+
+.h3 {
+	@apply .my-4 .mt-8;
+	@apply .text-xl;
+}
+
+.list {
+	@apply .my-4 .pl-4;
+}
+
+.li {
+	@apply .my-2 .ml-2 .p-0;
+}
+
+.blockquote {
+	@mixin blockquote;
+}
+
+.blockquote-pull {
+	@mixin blockquote-pull;
+}
+
+.hr {
+	@apply .my-12;
+	@apply .border-0 m-0 .pt-1;
+	@apply .bg-turtle;
+}
+
+.button {
+	@mixin button;
+}
+
+.input {
+	@apply .appearance-none .leading-none;
+	@apply .h-10 .py-2 .px-3;
+	@apply .inline-flex .items-center;
+	@apply .border .border-turtle-lightest;
+	@apply .shadow .rounded;
+}

@@ -1,0 +1,6 @@
+@define-mixin a {
+	@mixin link-border;
+	@mixin visited-turtle-dark;
+
+	@apply .border-dotted;
+}

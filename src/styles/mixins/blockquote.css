@@ -1,0 +1,10 @@
+@define-mixin blockquote {
+	@apply .my-4;
+	@apply .p-2;
+	@apply .border-l-4 .border-turtle;
+	@apply .italic .font-serif;
+
+	@screen md {
+		@apply .p-4;
+	}
+}
