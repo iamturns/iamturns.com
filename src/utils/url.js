@@ -5,10 +5,17 @@ import urlJoin from 'url-join';
 import { SITE_URL } from '../config';
 
 export function prefixSiteUrl(url: string): string {
-	if (url.startsWith(SITE_URL)) {
+	if (isUrlExternal(url)) {
 		return url;
 	}
 	return urlJoin(SITE_URL, url);
+}
+
+export function isUrlExternal(url: string): boolean {
+	if (url.startsWith('mailto:')) {
+		return true;
+	}
+	return url.match(/^https?:\/\//) !== null;
 }
 
 export function removeTrailingSlash(url: string): string {

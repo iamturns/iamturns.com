@@ -6,6 +6,7 @@ import siteLogo from '../assets/images/i-am-turns-logo.png';
 import defaultImage from '../assets/images/social-share/default.png';
 import type { HeadTagsProps } from '../components/HeadTags';
 import { SITE_URL } from '../config';
+import { prefixSiteUrl } from './url';
 
 const DEFAULT_HEAD_TAGS: HeadTagsProps = {
 	pageTitle: 'I Am Turns',
@@ -43,7 +44,7 @@ const DEFAULT_HEAD_TAGS_ARTICLE: HeadTagsProps = {
 };
 
 const DEFAULT_PAGE_IMAGE: HeadTagsProps = {
-	pageImage: defaultImage,
+	pageImage: prefixSiteUrl(defaultImage),
 	pageImageWidth: '1200',
 	pageImageHeight: '630',
 };
