@@ -246,13 +246,13 @@ const Article = ({
 				class TodoList extends React.Component {
 					render() {
 					const list = this.props.list;
-					return (
-						<View>
-						{/* It works just like a React component, because it is one! */}
-						<Text>{list.title}</Text>
-						{list.todoItems.map(item => <TodoItem item={item} />)}
-						</View>
-					);
+						return (
+							<View>
+							{/* It works just like a React component, because it is one! */}
+							<Text>{list.title}</Text>
+							{list.todoItems.map(item => <TodoItem item={item} />)}
+							</View>
+						);
 					}
 				}
 			`}
