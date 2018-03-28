@@ -1,14 +1,14 @@
 // @flow
 
-import LogRocket from 'logrocket';
 import * as React from 'react';
 import Helmet from 'react-helmet';
 
 import GlobalFooter from '../components/GlobalFooter';
 import GlobalHeader from '../components/GlobalHeader';
 import GTMBody from '../components/GTMBody';
-import { GTM_DEVELOP, GTM_ID, GTM_LIVE, LOG_ROCKET_LIVE } from '../config';
+import { GTM_DEVELOP, GTM_ID, GTM_LIVE } from '../config';
 import { isEnvLive } from '../utils/env';
+import { initLogRocket } from '../utils/log-rocket';
 
 /**
  * IMPORT MAIN.CSS
@@ -21,12 +21,7 @@ import { isEnvLive } from '../utils/env';
 require('../../build/styles/main.css');
 /* eslint-enable import/no-unresolved */
 
-/* LOG ROCKET */
-
-if (isEnvLive()) {
-	// Avoid wasting sessions on bots
-	setTimeout(() => LogRocket.init(LOG_ROCKET_LIVE), 5000);
-}
+initLogRocket();
 
 declare var graphql: Function;
 export const pageQuery = graphql`
