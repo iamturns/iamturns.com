@@ -22,7 +22,7 @@ const Code = ({
 	<Prism>
 		<code
 			className={classNames(
-				'code code--inline',
+				'code-highlight code-highlight--inline',
 				`language-${language}`,
 				className,
 			)}

@@ -78,7 +78,7 @@ const Article = (props: ContentProps) => (
 
 		<h2>There‘s no need for Angular in 2018</h2>
 
-		<blockquote className="blockquote mt-12 text-lg">
+		<blockquote className="quote mt-12 text-lg">
 			“I just need to learn Angular, then I can easily jump between any
 			Angular project.”
 		</blockquote>
@@ -101,7 +101,7 @@ const Article = (props: ContentProps) => (
 			Nope.
 		</p>
 
-		<blockquote className="blockquote mt-12 text-lg">
+		<blockquote className="quote mt-12 text-lg">
 			“Code endorsed by the Angular team is better quality and more stable
 			than a bunch of random 3rd-party libraries thrown together.”
 		</blockquote>
@@ -125,7 +125,7 @@ const Article = (props: ContentProps) => (
 			efforts of the core Angular maintainers.
 		</p>
 
-		<blockquote className="blockquote mt-12 text-lg">
+		<blockquote className="quote mt-12 text-lg">
 			“I like that Angular makes choices for me, I don’t want to pick and
 			choose.”
 		</blockquote>

@@ -22,7 +22,10 @@ const CodeBlock = ({
 	...wrapperProps
 }: CodeBlockProps) => (
 	<div
-		className={classNames('code code--block', className)}
+		className={classNames(
+			'code-highlight code-highlight--block',
+			className,
+		)}
 		{...wrapperProps}
 	>
 		<Prism>
