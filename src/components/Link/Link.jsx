@@ -3,13 +3,15 @@
 import LinkInternal from 'gatsby-link';
 import * as React from 'react';
 
+import { isUrlExternal } from '../../utils/url';
+
 type LinkProps = {
 	children: React.Node,
 	to: string,
 };
 
 const Link = ({ children, to, ...rest }: LinkProps) => {
-	const isExternal = to.startsWith('http') || to.startsWith('mailto');
+	const isExternal = isUrlExternal(to);
 	const Tag = isExternal ? LinkExternal : LinkInternal;
 
 	return (
