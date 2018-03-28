@@ -3,8 +3,8 @@
 import * as React from 'react';
 
 import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
-import ImgFace from '../../assets/images/matt-turnbull-120.jpg';
-import ImgFace2x from '../../assets/images/matt-turnbull-240.jpg';
+import ImgFace from '../../assets/images/matt-turnbull-cartoon-120.png';
+import ImgFace2x from '../../assets/images/matt-turnbull-cartoon-240.png';
 import Link from '../Link';
 
 const Hey = () => (
@@ -28,7 +28,7 @@ const Pic = () => (
 			alt="Matt Turnbull"
 			width="120"
 			height="120"
-			className="rounded-full"
+			className="rounded-full border-2 border-turtle-darker hover:grow-sm transition-slow"
 		/>
 	</Link>
 );

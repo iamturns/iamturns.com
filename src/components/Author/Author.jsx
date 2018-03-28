@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 
-import ImgFace from '../../assets/images/matt-turnbull-120.jpg';
+import ImgFace from '../../assets/images/matt-turnbull-cartoon-120.png';
 import LastUpdated from '../LastUpdated';
 import Link from '../Link';
 
@@ -41,7 +41,7 @@ const Pic = () => (
 			alt="Matt Turnbull"
 			width="45"
 			height="45"
-			className="rounded-full"
+			className="rounded-full border border-turtle-darker hover:grow transition-slow"
 		/>
 	</Link>
 );

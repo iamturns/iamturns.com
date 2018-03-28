@@ -60,14 +60,23 @@ const Article = () => (
 
 		<CodeBlock
 			language="js"
-			code={`const stuff$ = Rx.Observable.of('Spaghetti', 42, 'Meatballs');`}
+			code={`
+				const stuff$ = Rx.Observable.of(
+					'Spaghetti',
+					42,
+					'Meatballs'
+				);
+			`}
 		/>
 
 		<p>Let’s make the stuff lowercase:</p>
 
 		<CodeBlock
 			language="js"
-			code={`const lowercaseStuff$ = stuff$.map(x => x.toLowerCase());`}
+			code={`
+				const lowercaseStuff$ = stuff$
+					.map(x => x.toLowerCase());
+			`}
 		/>
 
 		<p>Quick quiz: what is logged to console?</p>
