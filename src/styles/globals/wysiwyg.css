@@ -16,7 +16,7 @@
 	}
 
 	ul:not([class]) {
-		@apply .list;
+		@apply .ul;
 	}
 
 	li:not([class]) {
@@ -24,7 +24,7 @@
 	}
 
 	blockquote:not([class]) {
-		@mixin blockquote;
+		@mixin quote;
 	}
 
 	hr:not([class]) {

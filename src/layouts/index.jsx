@@ -141,7 +141,7 @@ const Layout = (props: LayoutProps) => (
 			{/* Fonts */}
 
 			<link
-				href="https://fonts.googleapis.com/css?family=Roboto+Slab|Roboto+Mono|Roboto:400,400i,700,700i"
+				href="https://fonts.googleapis.com/css?family=Roboto+Slab|Fira+Mono|Roboto:400,400i,700,700i"
 				rel="stylesheet"
 			/>
 

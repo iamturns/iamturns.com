@@ -5,17 +5,17 @@
 /* Mixins */
 
 @import 'mixins/a.css';
-@import 'mixins/blockquote-pull.css';
-@import 'mixins/blockquote.css';
 @import 'mixins/button.css';
 @import 'mixins/link-border.css';
+@import 'mixins/quote-pull.css';
+@import 'mixins/quote.css';
 @import 'mixins/visited.css';
 
 /* Globals */
 
 @import 'globals/a.css';
 @import 'globals/atoms.css';
-@import 'globals/code.css';
+@import 'globals/code-highlight.css';
 @import 'globals/colors.css';
 @import 'globals/layout.css';
 @import 'globals/text.css';
