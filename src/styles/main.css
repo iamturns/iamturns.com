@@ -15,10 +15,9 @@
 
 @import 'globals/a.css';
 @import 'globals/atoms.css';
+@import 'globals/code.css';
 @import 'globals/colors.css';
 @import 'globals/layout.css';
-@import 'globals/prism-app.css';
-@import 'globals/prism.css';
 @import 'globals/text.css';
 @import 'globals/wysiwyg.css';
 

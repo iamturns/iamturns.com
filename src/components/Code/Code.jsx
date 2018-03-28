@@ -21,7 +21,11 @@ const Code = ({
 }: CodeProps) => (
 	<Prism>
 		<code
-			className={classNames(`language-${language}`, className)}
+			className={classNames(
+				'code code--inline',
+				`language-${language}`,
+				className,
+			)}
 			{...wrapperProps}
 		>
 			{stripIndent(code).trim()}
