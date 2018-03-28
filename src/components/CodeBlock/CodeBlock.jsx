@@ -21,7 +21,10 @@ const CodeBlock = ({
 	className,
 	...wrapperProps
 }: CodeBlockProps) => (
-	<div className={classNames('my-8 code-block', className)} {...wrapperProps}>
+	<div
+		className={classNames('code code--block', className)}
+		{...wrapperProps}
+	>
 		<Prism>
 			<pre data-line={highlight}>
 				<code className={`language-${language}`}>

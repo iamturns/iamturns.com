@@ -1,30 +1,44 @@
-/* Font */
+/* PrismJS 1.12.2 */
 
-code[class*='language-'],
-pre[class*='language-'] {
+.code {
+	position: relative; /* Fixes horizontal scroll chopping off line highlighting */
+	text-align: left;
+	background: none;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	tab-size: 2;
+	hyphens: none;
+
+	@apply .my-8;
 	@apply .font-mono .leading-tight .text-sm;
-	@apply .text-turtle-black;
 }
 
-/* Inline code */
+.code--inline {
+	white-space: normal;
 
-:not(pre) > code[class*='language-'] {
 	@apply .bg-denim-white .text-black;
 	@apply .py-px .px-2;
 }
 
-/* Code blocks */
-
-pre[class*='language-'],
-pre[data-line] {
-	@apply .px-4;
-	@apply .bg-turtle-white;
+.code--block {
+	@apply .bg-turtle-white .text-turtle-black;
 	@apply .border-l-2 .border-turtle-dark;
+	@apply .px-4;
+
+	pre {
+		overflow: auto; /* Fixes horizontal scroll chopping off line highlighting */
+	}
 }
 
-/* Line highlight */
-
 .line-highlight {
+	position: absolute;
+	left: 0;
+	right: 0;
+	padding: inherit 0;
+	pointer-events: none;
+
 	@apply .bg-code-highlight;
 	@apply .border-r-2 .border-turtle-dark;
 }
@@ -97,4 +111,8 @@ pre[data-line] {
 .language-css .token.string,
 .style .token.string {
 	@apply .text-turtle-darker;
+}
+
+.token.url-link {
+	@mixin a;
 }
