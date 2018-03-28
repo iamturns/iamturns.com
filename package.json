@@ -38,6 +38,7 @@
     "gatsby-source-filesystem": "1.5.27",
     "gatsby-transformer-javascript-frontmatter": "1.0.8",
     "gatsby-transformer-sharp": "1.6.22",
+    "js-cookie": "2.2.0",
     "lodash": "4.17.5",
     "logrocket": "0.6.10",
     "moment": "^2.21.0",
