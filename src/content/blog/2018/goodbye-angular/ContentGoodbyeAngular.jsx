@@ -13,7 +13,7 @@ import type { Result } from '../../../../types/Result';
 export const frontmatter = {
 	title: 'Angular Burnout',
 	description:
-		'I dreaded returning to programming during a 3 month travel break. It turns out I’m not done with programming; I’m just done with Angular.',
+		'I dreaded returning to programming during a recent holiday. It turns out I’m just done with Angular.',
 	slug: '/angular-burnout',
 	dateCreated: '2018-03-23',
 	dateUpdated: '2018-03-28',
@@ -65,15 +65,15 @@ export default ContentGoodbyeAngular;
 const Article = (props: ContentProps) => (
 	<div className="wysiwyg">
 		<p>
-			I’ve been deep diving into{' '}
-			<Link to="https://angular.io/">Angular</Link> (v1 and 2+) for three
-			years now. During a 3-month travel break, I dreaded returning to
-			programming. After all these years, it seemed my passion had dried
-			up. Time for something new.
+			I dreaded returning to programming during a recent holiday. After
+			all these years, it seemed my passion had dried up. Time for
+			something new.
 		</p>
 		<p>
-			It turns out I’m not done with programming; I’m just done with
-			Angular.
+			I’ve been deep diving into{' '}
+			<Link to="https://angular.io/">Angular</Link> (v1 and 2+) for three
+			years now. It turns out I’m not done with programming; I’m just done
+			with Angular.
 		</p>
 
 		<h2>There‘s no need for Angular in 2018</h2>

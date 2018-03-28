@@ -211,7 +211,7 @@ const ContentAbout = ({
 				/>
 			</div>
 		</div>
-		<PageContainer small className="wysiwyg">
+		<PageContainer small className="py-6 wysiwyg">
 			<ImgBlock image={imgCartoon} alt="Matt Turnbull" />
 
 			<p>Away from the keyboard I love:</p>
