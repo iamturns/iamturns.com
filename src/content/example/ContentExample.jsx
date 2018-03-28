@@ -13,6 +13,7 @@ import type { Content } from '../../types/Content';
 import type { Image } from '../../types/Image';
 import type { Result } from '../../types/Result';
 import { createImage } from '../../utils/image';
+import { markUserAdmin } from '../../utils/user';
 import ImgSpongebob from './spongebob.gif';
 
 const IMG_SPONGEBOB = createImage(ImgSpongebob, 500, 380);
@@ -89,15 +90,23 @@ export type ContentProps = {
 	},
 };
 
-const ContentExample = (props: ContentProps) => (
-	<LayoutContent
-		currentContent={props.data.currentContent}
-		contentListResult={props.data.contentListResult}
-		contentListNerdsResult={props.data.contentListNerdsResult}
-	>
-		<Article {...props} />
-	</LayoutContent>
-);
+class ContentExample extends React.Component<ContentProps> {
+	componentDidMount() {
+		markUserAdmin();
+	}
+
+	render() {
+		return (
+			<LayoutContent
+				currentContent={this.props.data.currentContent}
+				contentListResult={this.props.data.contentListResult}
+				contentListNerdsResult={this.props.data.contentListNerdsResult}
+			>
+				<Article {...this.props} />
+			</LayoutContent>
+		);
+	}
+}
 
 export default ContentExample;
 
