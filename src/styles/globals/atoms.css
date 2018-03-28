@@ -21,7 +21,7 @@
 	@apply .text-xl;
 }
 
-.list {
+.ul {
 	@apply .my-4 .pl-4;
 }
 
@@ -29,12 +29,12 @@
 	@apply .my-2 .ml-2 .p-0;
 }
 
-.blockquote {
-	@mixin blockquote;
+.quote {
+	@mixin quote;
 }
 
-.blockquote-pull {
-	@mixin blockquote-pull;
+.quote-pull {
+	@mixin quote-pull;
 }
 
 .hr {

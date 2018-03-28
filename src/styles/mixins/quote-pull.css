@@ -1,4 +1,4 @@
-@define-mixin blockquote-pull {
+@define-mixin quote-pull {
 	@apply .my-12 .ml-8 .text-lg;
 
 	@screen md {

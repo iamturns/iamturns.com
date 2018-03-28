@@ -170,9 +170,7 @@ const Article = ({
 			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
 			aliquip ex ea commodo consequat.
 		</p>
-		<blockquote className="blockquote-pull">
-			This is a pull quote.
-		</blockquote>
+		<blockquote className="quote-pull">This is a pull quote.</blockquote>
 		<p>
 			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
