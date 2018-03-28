@@ -67,7 +67,7 @@ const Article = (props: ContentProps) => (
 		<p>
 			I’ve been deep diving into{' '}
 			<Link to="https://angular.io/">Angular</Link> (v1 and 2+) for three
-			years now. During a 3-month travel break I dreaded returning to
+			years now. During a 3-month travel break, I dreaded returning to
 			programming. After all these years, it seemed my passion had dried
 			up. Time for something new.
 		</p>
@@ -76,8 +76,9 @@ const Article = (props: ContentProps) => (
 			Angular.
 		</p>
 
-		<h2>Destroying Arguments for Angular</h2>
-		<blockquote className="blockquote text-lg">
+		<h2>There‘s no need for Angular in 2018</h2>
+
+		<blockquote className="blockquote mt-12 text-lg">
 			“I just need to learn Angular, then I can easily jump between any
 			Angular project.”
 		</blockquote>
@@ -100,15 +101,14 @@ const Article = (props: ContentProps) => (
 			Nope.
 		</p>
 
-		<blockquote className="blockquote text-lg">
-			“Code written by Angular official maintainers is better quality and
-			more stable than a bunch of random 3rd-party libraries thrown
-			together.”
+		<blockquote className="blockquote mt-12 text-lg">
+			“Code endorsed by the Angular team is better quality and more stable
+			than a bunch of random 3rd-party libraries thrown together.”
 		</blockquote>
 		<p>
 			Angular has mostly settled now, but the early days saw huge breaking
-			changes every month or two. It portrayed a lack of vision and focus.
-			This is not stability.
+			changes every month or two. It portrayed a lack of vision and focus,
+			not stability.
 		</p>
 		<p>The official documentation had this gem:</p>
 		<ImgBlock image={props.data.imgDocs}>
@@ -122,21 +122,21 @@ const Article = (props: ContentProps) => (
 		<p>
 			The JavaScript community is energetic, active, and passionate. A
 			group of random developers can deliver code that surpasses the
-			efforts of core maintainers.
+			efforts of the core Angular maintainers.
 		</p>
 
-		<blockquote className="blockquote text-lg">
+		<blockquote className="blockquote mt-12 text-lg">
 			“I like that Angular makes choices for me, I don’t want to pick and
-			choose which libraries to use.”
+			choose.”
 		</blockquote>
 		<p>
 			I get it. You want to style your React project, okay: CSS Modules or
 			Styled Components? Or maybe Glamorous? Oh, Emotion looks nice!
 		</p>
 		<p>
-			Relying on what Angular provides is initially easier, but it might
-			not be the best for your project. TypeScript is forced on you, but
-			it might be overkill for your needs{' '}
+			Relying on what Angular provides is initially easier, but you can be
+			locked into poor choices. TypeScript is forced on you, but it might
+			be overkill for your needs{' '}
 			<span className="text-sm">
 				(the non-TS version of Angular is still undocumented all these
 				years later)
@@ -145,15 +145,13 @@ const Article = (props: ContentProps) => (
 			services, ngModules, zone.js, AOT compilation, the list goes on.
 		</p>
 		<p>
-			These decisions have been made for you, but many projects succeed
-			without this baggage — is it necessary? It‘s a lot to learn, a lot
-			to code, and a lot to maintain. You can easily become locked into
-			poor choices.
+			Many projects succeed without this baggage. Is it necessary? It‘s a
+			lot to learn, a lot to code, and a lot to maintain.
 		</p>
 		<p>
 			Embrace the light-weight libraries that do one thing, and do it
 			well. Celebrate that the JavaScript community provides you with so
-			many options you can pick-and-choose based on your specific needs.
+			many options you can pick the best for your needs.
 		</p>
 
 		<h2>React reignites the passion</h2>
