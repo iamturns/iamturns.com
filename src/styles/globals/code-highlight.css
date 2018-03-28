@@ -114,13 +114,12 @@
 	@apply .text-denim-dark;
 }
 
-.language-css .token.string,
-.style .token.string {
-	@apply .text-turtle-darker;
-}
-
 .token.url-link {
 	@mixin a;
+}
+
+.language-css .token.string {
+	@apply .text-turtle-darker;
 }
 
 .language-markdown .token.keyword {
