@@ -5,7 +5,7 @@ export type GatsbyImageResolutions = {
 		base64?: string,
 		height: number,
 		src: string,
-		srcSet?: string,
+		srcSet: string,
 		width: number,
 	},
 };
@@ -16,7 +16,7 @@ export type GatsbyImageSizes = {
 		base64?: string,
 		sizes: string,
 		src: string,
-		srcSet?: string,
+		srcSet: string,
 	},
 };
 
