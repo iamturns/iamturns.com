@@ -11,6 +11,7 @@ export function createImage(src: string, width: number, height: number): Image {
 				src,
 				aspectRatio: width / height,
 				sizes: `(max-width: ${width}px) 100vw, ${width}px`,
+				srcSet: `${src} 1x`,
 			},
 		},
 	};
