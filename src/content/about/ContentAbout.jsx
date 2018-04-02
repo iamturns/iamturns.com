@@ -138,7 +138,7 @@ const ContentAbout = ({
 				</li>
 				<li>
 					<EmojiText emoji="⛰" emojiLabel="Current goal: ">
-						Mission for 2018: earn $2k/mo solo
+						Mission for 2018: create a successful startup
 					</EmojiText>
 				</li>
 			</ul>
