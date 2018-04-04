@@ -173,11 +173,6 @@ const Article = (props: ContentProps) => (
 			that best fit my needs. Freedom and power.
 		</p>
 		<p>
-			Relying on <Link to="https://prettier.io/">Prettier</Link> to style
-			code for me is a relief. Again, fewer barriers, and more focus on
-			getting the job done.
-		</p>
-		<p>
 			I love tying together tiny stateless components. It barely looks
 			like framework specific code, and is super quick to scaffold.
 			Goodbye NgIf, NgSwitch, NgFor and all that nonsense.{' '}
