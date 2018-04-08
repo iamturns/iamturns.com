@@ -17,10 +17,7 @@ type ContentHeaderProps = {
 const ContentHeader = ({ image, title }: ContentHeaderProps) => {
 	if (image) {
 		return (
-			<div
-				className="relative overflow-hidden"
-				style={{ minHeight: IMG_MIN_HEIGHT, maxHeight: IMG_MAX_HEIGHT }}
-			>
+			<div className="relative overflow-hidden">
 				<Img
 					image={image}
 					alt=""
