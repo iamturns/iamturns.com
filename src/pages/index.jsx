@@ -47,7 +47,8 @@ const PageIndex = ({
 		<ContentListing contentList={getResultAsArray(contentListResult)} />
 		<ContentListing
 			contentList={getResultAsArray(contentListNerdsResult)}
-			nerdsOnly
+			title="Nerds Only"
+			bgPattern
 		/>
 		<PageContainer className="py-12 bg-denim-white">
 			<EmailPlease />

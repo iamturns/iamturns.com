@@ -269,10 +269,6 @@ const ContentAbout = ({
 
 			<h2>Cheers!</h2>
 			<ImgBlock image={IMG_CHEERS} type="fullwidth" />
-			<p>
-				You made it all the way to the end! I think you might be in love
-				with me? It happens :)
-			</p>
 		</PageContainer>
 		<PageContainer className="mt-12 py-12 bg-denim-white">
 			<EmailPlease />
@@ -280,11 +276,13 @@ const ContentAbout = ({
 		<ContentListing
 			contentList={getResultAsArray(contentListResult)}
 			currentContent={currentContent}
+			title="Articles"
 		/>
 		<ContentListing
 			contentList={getResultAsArray(contentListNerdsResult)}
 			currentContent={currentContent}
-			nerdsOnly
+			title="Nerds Only"
+			bgPattern
 		/>
 	</div>
 );

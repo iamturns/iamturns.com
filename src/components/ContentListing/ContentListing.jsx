@@ -12,7 +12,8 @@ import PageContainer from '../PageContainer';
 type ContentListingProps = {
 	contentList: Array<Content>,
 	currentContent?: Content,
-	nerdsOnly?: boolean, // default = false
+	title?: string,
+	bgPattern?: boolean, // default = false
 	className?: string,
 	// ...wrapperProps
 };
@@ -20,7 +21,8 @@ type ContentListingProps = {
 const ContentListing = ({
 	contentList,
 	currentContent,
-	nerdsOnly = false,
+	title,
+	bgPattern = false,
 	className,
 	...wrapperProps
 }: ContentListingProps) => {
@@ -32,14 +34,14 @@ const ContentListing = ({
 		<div
 			className={classNames(
 				'py-12',
-				nerdsOnly ? 'bg-turtle-white bg-pattern' : '',
+				bgPattern ? 'bg-turtle-white bg-pattern' : '',
 				className,
 			)}
 			{...wrapperProps}
 		>
 			<PageContainer>
-				{nerdsOnly && (
-					<HeadingBrick className="mb-12">Nerds Only</HeadingBrick>
+				{title && (
+					<HeadingBrick className="mb-12">{title}</HeadingBrick>
 				)}
 				<CardGroup>
 					{contentListFiltered.map(content => (

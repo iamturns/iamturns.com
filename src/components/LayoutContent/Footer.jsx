@@ -22,19 +22,21 @@ const Footer = ({
 	<div>
 		<PageContainer className="mt-12 py-12 bg-denim-white">
 			<Hey />
+			<div className="mt-12">
+				<EmailPlease />
+			</div>
 		</PageContainer>
 		<ContentListing
 			contentList={contentList}
 			currentContent={currentContent}
+			title="More Articles"
 		/>
 		<ContentListing
 			contentList={contentListNerds}
 			currentContent={currentContent}
-			nerdsOnly
+			title="Nerds Only"
+			bgPattern
 		/>
-		<PageContainer className="py-12 bg-denim-white">
-			<EmailPlease />
-		</PageContainer>
 	</div>
 );
 
