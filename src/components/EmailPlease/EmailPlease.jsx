@@ -11,11 +11,13 @@ const EmailPlease = () => (
 			'border border-turtle',
 			'p-4 sm:p-8',
 			'shadow-md',
-			'max-w-sm mx-auto text-center',
+			'max-w-md mx-auto text-center',
 		].join(' ')}
 	>
-		<h2 className="text-xl">Stay updated</h2>
-		<div className="mt-4 mx-8">Get an email when I write new stuff</div>
+		<h2 className="text-xl">Don&apos;t miss a thing!</h2>
+		<div className="mt-4 mx-8">
+			Stay updated and be the first to discover new articles:
+		</div>
 		<form
 			action="https://iamturns.us17.list-manage.com/subscribe/post?u=5d5780fe2d3de49f7c38306f2&amp;id=46266d5c5e"
 			method="post"
@@ -42,6 +44,9 @@ const EmailPlease = () => (
 				</button>
 			</div>
 		</form>
+		<div className="text-xs pt-3">
+			Easy unsubscribe. No spam, just love.
+		</div>
 	</section>
 );
 
