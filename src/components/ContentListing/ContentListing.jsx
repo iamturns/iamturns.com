@@ -13,7 +13,6 @@ type ContentListingProps = {
 	contentList: Array<Content>,
 	currentContent?: Content,
 	title?: string,
-	bgPattern?: boolean, // default = false
 	className?: string,
 	// ...wrapperProps
 };
@@ -22,7 +21,6 @@ const ContentListing = ({
 	contentList,
 	currentContent,
 	title,
-	bgPattern = false,
 	className,
 	...wrapperProps
 }: ContentListingProps) => {
@@ -31,14 +29,7 @@ const ContentListing = ({
 		return null;
 	}
 	return (
-		<div
-			className={classNames(
-				'py-12',
-				bgPattern ? 'bg-turtle-white bg-pattern' : '',
-				className,
-			)}
-			{...wrapperProps}
-		>
+		<div className={classNames('py-12', className)} {...wrapperProps}>
 			<PageContainer>
 				{title && (
 					<HeadingBrick className="mb-12">{title}</HeadingBrick>

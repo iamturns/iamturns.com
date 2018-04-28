@@ -15,7 +15,6 @@ type LayoutContentProps = {
 	children: React.Node,
 	currentContent: Content,
 	contentListResult: Result<Content>,
-	contentListNerdsResult: Result<Content>,
 	additionalHeadTags?: HeadTagsProps,
 	imageCaption?: string,
 };
@@ -24,7 +23,6 @@ const LayoutContent = ({
 	children,
 	currentContent,
 	contentListResult,
-	contentListNerdsResult,
 	additionalHeadTags = {},
 	imageCaption,
 }: LayoutContentProps) => (
@@ -37,7 +35,6 @@ const LayoutContent = ({
 		<PageContainer small>{children}</PageContainer>
 		<Footer
 			contentList={getResultAsArray(contentListResult)}
-			contentListNerds={getResultAsArray(contentListNerdsResult)}
 			currentContent={currentContent}
 		/>
 	</div>

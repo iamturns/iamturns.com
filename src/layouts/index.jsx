@@ -82,27 +82,10 @@ export const pageQuery = graphql`
 	fragment ContentList on RootQueryType {
 		contentListResult: allJavascriptFrontmatter(
 			filter: {
-				frontmatter: {
-					type: { eq: "article" }
-					unlisted: { ne: true }
-					nerdsOnly: { ne: true }
-				}
+				frontmatter: { type: { eq: "article" }, unlisted: { ne: true } }
 			}
 			sort: { order: DESC, fields: [frontmatter___dateCreated] }
-			limit: 5
-		) {
-			...ContentListResult
-		}
-		contentListNerdsResult: allJavascriptFrontmatter(
-			filter: {
-				frontmatter: {
-					type: { eq: "article" }
-					unlisted: { ne: true }
-					nerdsOnly: { eq: true }
-				}
-			}
-			sort: { order: DESC, fields: [frontmatter___dateCreated] }
-			limit: 5
+			limit: 9
 		) {
 			...ContentListResult
 		}

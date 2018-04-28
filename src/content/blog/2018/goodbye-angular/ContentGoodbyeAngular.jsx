@@ -18,7 +18,6 @@ export const frontmatter = {
 	dateCreated: '2018-03-23',
 	dateUpdated: '2018-03-28',
 	type: 'article',
-	nerdsOnly: true,
 	cover: './sleeping-dog.jpg',
 	shareImage: './sleeping-dog.jpg',
 };
@@ -45,7 +44,6 @@ type ContentProps = {
 	data: {
 		currentContent: Content,
 		contentListResult: Result<Content>,
-		contentListNerdsResult: Result<Content>,
 		imgDocs: Image,
 	},
 };
@@ -54,7 +52,6 @@ const ContentGoodbyeAngular = (props: ContentProps) => (
 	<LayoutContent
 		currentContent={props.data.currentContent}
 		contentListResult={props.data.contentListResult}
-		contentListNerdsResult={props.data.contentListNerdsResult}
 	>
 		<Article {...props} />
 	</LayoutContent>

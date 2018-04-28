@@ -17,7 +17,6 @@ export const frontmatter = {
 	dateCreated: '2017-05-07',
 	dateUpdated: '2018-03-19',
 	type: 'article',
-	nerdsOnly: true,
 	cover: './meatballs.jpg',
 	shareImage: './meatballs.jpg',
 };
@@ -34,7 +33,6 @@ export type ContentProps = {
 	data: {
 		currentContent: Content,
 		contentListResult: Result<Content>,
-		contentListNerdsResult: Result<Content>,
 	},
 };
 
@@ -42,7 +40,6 @@ const ContentRxjsErrors = (props: ContentProps) => (
 	<LayoutContent
 		currentContent={props.data.currentContent}
 		contentListResult={props.data.contentListResult}
-		contentListNerdsResult={props.data.contentListNerdsResult}
 	>
 		<Article />
 	</LayoutContent>
