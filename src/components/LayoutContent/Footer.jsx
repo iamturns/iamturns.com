@@ -10,15 +10,10 @@ import PageContainer from '../PageContainer';
 
 type FooterProps = {
 	contentList: Array<Content>,
-	contentListNerds: Array<Content>,
 	currentContent?: Content,
 };
 
-const Footer = ({
-	contentList,
-	contentListNerds,
-	currentContent,
-}: FooterProps) => (
+const Footer = ({ contentList, currentContent }: FooterProps) => (
 	<div>
 		<PageContainer className="mt-12 py-12 bg-denim-white">
 			<Hey />
@@ -29,13 +24,6 @@ const Footer = ({
 		<ContentListing
 			contentList={contentList}
 			currentContent={currentContent}
-			title="More Articles"
-		/>
-		<ContentListing
-			contentList={contentListNerds}
-			currentContent={currentContent}
-			title="Nerds Only"
-			bgPattern
 		/>
 	</div>
 );

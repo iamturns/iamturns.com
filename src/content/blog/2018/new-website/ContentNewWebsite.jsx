@@ -29,7 +29,6 @@ type ContentProps = {
 	data: {
 		currentContent: Content,
 		contentListResult: Result<Content>,
-		contentListNerdsResult: Result<Content>,
 		imgDocs: Image,
 	},
 };
@@ -38,7 +37,6 @@ const ContentNewWebsite = (props: ContentProps) => (
 	<LayoutContent
 		currentContent={props.data.currentContent}
 		contentListResult={props.data.contentListResult}
-		contentListNerdsResult={props.data.contentListNerdsResult}
 	>
 		<div className="wysiwyg">
 			<p className="subtitle">Welcome!</p>

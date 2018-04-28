@@ -66,20 +66,13 @@ type ContentProps = {
 	data: {
 		currentContent: Content,
 		contentListResult: Result<Content>,
-		contentListNerdsResult: Result<Content>,
 		imgCrab: Image,
 		imgCartoon: Image,
 	},
 };
 
 const ContentAbout = ({
-	data: {
-		currentContent,
-		contentListResult,
-		contentListNerdsResult,
-		imgCrab,
-		imgCartoon,
-	},
+	data: { currentContent, contentListResult, imgCrab, imgCartoon },
 }: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
@@ -276,13 +269,6 @@ const ContentAbout = ({
 		<ContentListing
 			contentList={getResultAsArray(contentListResult)}
 			currentContent={currentContent}
-			title="Articles"
-		/>
-		<ContentListing
-			contentList={getResultAsArray(contentListNerdsResult)}
-			currentContent={currentContent}
-			title="Nerds Only"
-			bgPattern
 		/>
 	</div>
 );

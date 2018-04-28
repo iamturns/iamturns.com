@@ -23,7 +23,6 @@ export const pageQuery: string = graphql`
 export type PageProps = {
 	data: {
 		contentListResult: Result<Content>,
-		contentListNerdsResult: Result<Content>,
 	},
 	location: {
 		pathname: string,
@@ -31,7 +30,7 @@ export type PageProps = {
 };
 
 const PageIndex = ({
-	data: { contentListResult, contentListNerdsResult },
+	data: { contentListResult },
 	location: { pathname },
 }: PageProps) => (
 	<div>
@@ -41,14 +40,12 @@ const PageIndex = ({
 				pageTitle: 'I Am Turns',
 			})}
 		/>
-		<PageContainer className="pt-12">
+		<PageContainer className="pt-16">
 			<Hey />
 		</PageContainer>
-		<ContentListing contentList={getResultAsArray(contentListResult)} />
 		<ContentListing
-			contentList={getResultAsArray(contentListNerdsResult)}
-			title="Nerds Only"
-			bgPattern
+			contentList={getResultAsArray(contentListResult)}
+			className="pt-16"
 		/>
 		<PageContainer className="py-12 bg-denim-white">
 			<EmailPlease />
