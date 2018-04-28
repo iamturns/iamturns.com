@@ -25,7 +25,6 @@ export const frontmatter = {
 	dateCreated: '2017-01-01',
 	dateUpdated: '2018-01-01',
 	unlisted: true,
-	// nerdsOnly: true,
 	cover: '../../assets/images/headers/fireworks.jpg',
 	shareImage: '../../assets/images/headers/celebrate.jpg',
 };
@@ -82,7 +81,6 @@ export type ContentProps = {
 	data: {
 		currentContent: Content,
 		contentListResult: Result<Content>,
-		contentListNerdsResult: Result<Content>,
 		imgSetSize: Image,
 		imgSmall: Image,
 		imgBig: Image,
@@ -100,7 +98,6 @@ class ContentExample extends React.Component<ContentProps> {
 			<LayoutContent
 				currentContent={this.props.data.currentContent}
 				contentListResult={this.props.data.contentListResult}
-				contentListNerdsResult={this.props.data.contentListNerdsResult}
 			>
 				<Article {...this.props} />
 			</LayoutContent>
