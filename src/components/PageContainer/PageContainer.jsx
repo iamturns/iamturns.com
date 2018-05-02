@@ -19,7 +19,7 @@ const PageContainer = ({
 	<div
 		className={classNames(
 			'px-4 sm:px-8',
-			small ? 'max-w-md mx-auto' : '',
+			small ? 'max-w-lg mx-auto' : '',
 			className,
 		)}
 		{...rest}
