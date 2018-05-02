@@ -14,7 +14,7 @@ import type { Result } from '../../../../types/Result';
 export const frontmatter = {
 	title: 'Hunting For The Best Open Graph Image Size',
 	description:
-		'30 massively popular websites analysed to figure out what image size to set og:image',
+		'Finding the best image size for og:image and twitter:image by analysing 30 massively popular websites',
 	slug: '/open-graph-image-size',
 	dateCreated: '2018-05-01',
 	dateUpdated: '2018-05-01',
