@@ -264,7 +264,7 @@ const ContentAbout = ({
 			<ImgBlock image={IMG_CHEERS} type="fullwidth" />
 		</PageContainer>
 		<PageContainer className="mt-12 py-12 bg-denim-white">
-			<EmailPlease />
+			<EmailPlease id={`footer-${currentContent.fields.slug}`} />
 		</PageContainer>
 		<ContentListing
 			contentList={getResultAsArray(contentListResult)}

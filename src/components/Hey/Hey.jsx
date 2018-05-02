@@ -37,7 +37,7 @@ const Info = () => (
 	<div className="flex flex-col">
 		<div className="text-center pb-4">
 			<h1 className="text-lg">
-				Hey, I&apos;m{' '}
+				Hey, I’m{' '}
 				<Link to="/about/" className="link-border">
 					Matt Turnbull
 				</Link>
