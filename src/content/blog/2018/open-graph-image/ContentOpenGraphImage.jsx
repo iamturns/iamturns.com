@@ -467,8 +467,8 @@ const Article = (props: ContentProps) => (
 			<li>What is the average word count for the meta description?</li>
 		</ul>
 		<p>
-			I believe we can find some interesting insights by reverse
-			engineering successful websites.
+			We can find some interesting insights by reverse engineering
+			successful websites.
 		</p>
 		<p>
 			If this tickles you, subscribe below and I’ll send you an email when
