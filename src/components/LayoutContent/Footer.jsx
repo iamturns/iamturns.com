@@ -9,16 +9,16 @@ import Hey from '../Hey';
 import PageContainer from '../PageContainer';
 
 type FooterProps = {
+	currentContent: Content,
 	contentList: Array<Content>,
-	currentContent?: Content,
 };
 
-const Footer = ({ contentList, currentContent }: FooterProps) => (
+const Footer = ({ currentContent, contentList }: FooterProps) => (
 	<div>
 		<PageContainer className="mt-12 py-12 bg-denim-white">
 			<Hey />
 			<div className="mt-12">
-				<EmailPlease />
+				<EmailPlease id={`footer-${currentContent.fields.slug}`} />
 			</div>
 		</PageContainer>
 		<ContentListing
