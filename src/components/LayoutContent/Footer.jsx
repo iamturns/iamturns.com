@@ -1,5 +1,6 @@
 // @flow
 
+import _ from 'lodash';
 import * as React from 'react';
 
 import type { Content } from '../../types/Content';
@@ -18,7 +19,7 @@ const Footer = ({ contentList, currentContent }: FooterProps) => (
 		<PageContainer className="mt-12 py-12 bg-denim-white">
 			<Hey />
 			<div className="mt-12">
-				<EmailPlease />
+				<EmailPlease id={_.get(currentContent, 'fields.slug')} />
 			</div>
 		</PageContainer>
 		<ContentListing

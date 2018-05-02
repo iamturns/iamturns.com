@@ -48,7 +48,7 @@ const PageIndex = ({
 			className="pt-16"
 		/>
 		<PageContainer className="py-12 bg-denim-white">
-			<EmailPlease />
+			<EmailPlease id="/home" />
 		</PageContainer>
 	</div>
 );

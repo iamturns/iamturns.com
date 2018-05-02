@@ -4,7 +4,11 @@ import * as React from 'react';
 
 import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
 
-const EmailPlease = () => (
+type EmailPleaseProps = {
+	id?: string,
+};
+
+const EmailPlease = (props: EmailPleaseProps) => (
 	<section
 		className={[
 			'bg-white',
@@ -14,7 +18,7 @@ const EmailPlease = () => (
 			'max-w-md mx-auto text-center',
 		].join(' ')}
 	>
-		<h2 className="text-xl">Don&apos;t miss a thing!</h2>
+		<h2 className="text-xl">Don’t miss a thing!</h2>
 		<div className="mt-4 mx-8">
 			Stay updated and be the first to discover new articles:
 		</div>
@@ -43,6 +47,7 @@ const EmailPlease = () => (
 					</div>
 				</button>
 			</div>
+			{props.id && <input type="hidden" name="ID" value={props.id} />}
 		</form>
 		<div className="text-xs pt-3">
 			Easy unsubscribe. No spam, just love.

@@ -1,6 +1,7 @@
 // @flow
 
 import classNames from 'classnames';
+import _ from 'lodash';
 import * as React from 'react';
 
 import ImgFace from '../../assets/images/matt-turnbull-face-120.jpg';
@@ -264,7 +265,7 @@ const ContentAbout = ({
 			<ImgBlock image={IMG_CHEERS} type="fullwidth" />
 		</PageContainer>
 		<PageContainer className="mt-12 py-12 bg-denim-white">
-			<EmailPlease />
+			<EmailPlease id={_.get(currentContent, 'fields.slug')} />
 		</PageContainer>
 		<ContentListing
 			contentList={getResultAsArray(contentListResult)}
