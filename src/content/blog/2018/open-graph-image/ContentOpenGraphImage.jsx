@@ -50,13 +50,13 @@ type ContentProps = {
 };
 
 const ContentOpenGraphImage = (props: ContentProps) => (
-		<LayoutContent
-			currentContent={props.data.currentContent}
-			contentListResult={props.data.contentListResult}
-		>
-			<Article {...props} />
-		</LayoutContent>
-	);
+	<LayoutContent
+		currentContent={props.data.currentContent}
+		contentListResult={props.data.contentListResult}
+	>
+		<Article {...props} />
+	</LayoutContent>
+);
 
 export default ContentOpenGraphImage;
 
@@ -401,19 +401,6 @@ const Article = (props: ContentProps) => (
 			</li>
 		</ul>
 
-		<h2>Raw data</h2>
-
-		<Link to="https://docs.google.com/spreadsheets/d/1aIQVn0iN0n_ECfEZmHPqA7ggt_MCY2CWzeXPpKI0Yas/edit#gid=0">
-			<ImgBlock image={props.data.imgSpreadsheet} />
-		</Link>
-
-		<p>
-			If you find any extra patterns or anything I’ve missed, please let
-			me know!
-		</p>
-
-		<hr />
-
 		<h2>Cheatsheet</h2>
 
 		<h3 className="h4">What size og:image for my homepage?</h3>
@@ -457,6 +444,17 @@ const Article = (props: ContentProps) => (
 				</ul>
 			</li>
 		</ul>
+
+		<h2>Raw data</h2>
+
+		<Link to="https://docs.google.com/spreadsheets/d/1aIQVn0iN0n_ECfEZmHPqA7ggt_MCY2CWzeXPpKI0Yas/edit#gid=0">
+			<ImgBlock image={props.data.imgSpreadsheet} />
+		</Link>
+
+		<p>
+			If you find any extra patterns or anything I’ve missed, please let
+			me know!
+		</p>
 
 		<hr />
 
