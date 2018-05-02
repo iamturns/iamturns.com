@@ -25,7 +25,6 @@ const EmailPlease = (props: EmailPleaseProps) => (
 		<form
 			action="https://iamturns.us17.list-manage.com/subscribe/post?u=5d5780fe2d3de49f7c38306f2&amp;id=46266d5c5e"
 			method="post"
-			target="_blank"
 			className="flex items-center mt-4"
 		>
 			<div className="flex-1">
