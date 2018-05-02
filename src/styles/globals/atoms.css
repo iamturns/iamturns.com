@@ -21,6 +21,11 @@
 	@apply .text-xl;
 }
 
+.h4 {
+	@apply .my-4 .mt-6;
+	@apply .font-bold;
+}
+
 .ul {
 	@apply .my-4 .pl-4;
 }
@@ -53,4 +58,8 @@
 	@apply .inline-flex .items-center;
 	@apply .border .border-turtle-lightest;
 	@apply .shadow .rounded;
+}
+
+.mark {
+	@apply .bg-turtle-lightest;
 }
