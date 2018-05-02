@@ -453,6 +453,9 @@ const Article = () => (
 					News thread? Are there patterns to attract more?
 				</li>
 				<li>
+					What is the most common font size body text across devices?
+				</li>
+				<li>
 					What is the average word count for the meta description?
 				</li>
 			</ul>
