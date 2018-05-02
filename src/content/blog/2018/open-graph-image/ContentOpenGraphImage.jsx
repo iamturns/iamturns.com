@@ -77,21 +77,21 @@ const Article = (props: ContentProps) => (
 		</p>
 		<p>
 			<mark>But you can only set one single Open Graph image.</mark> So
-			how do you cater for all these platforms? What dimensions should the
-			image be? And what aspect ratio is best?
+			how do you cater for all these platforms? What image size and aspect
+			ratio is best?
 		</p>
 		<h2>Let’s Google it!</h2>
 		<p>According to the first page of Google:</p>
 		<ul>
 			<li>
 				<Link to="https://developers.facebook.com/docs/sharing/best-practices/">
-					Facebook
+					Facebook Open Graph Docs
 				</Link>{' '}
 				suggests 1200 x 630 (1.9:1)
 			</li>
 			<li>
 				<Link to="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary">
-					Twitter
+					Twitter Docs
 				</Link>{' '}
 				suggests 2:1 for large images, and 1:1 for small images
 			</li>
@@ -157,7 +157,7 @@ const Article = (props: ContentProps) => (
 				</ul>
 			</li>
 			<li>
-				Udemy.com set a <strong>576 x 167</strong> image (ratio of
+				Udemy.com set a <strong>576 x 167</strong> image (ratio of{' '}
 				<strong>3.45:1</strong>, wtf?)
 			</li>
 			<li>
@@ -214,9 +214,12 @@ const Article = (props: ContentProps) => (
 		<h3 className="h4">In summary</h3>
 
 		<p>
-			The results indicate that the biggest and most popular websites{' '}
-			<mark>do not care about og:image</mark>. They either don’t set one
-			at all, or set images with random sizes.
+			The results indicate that{' '}
+			<mark>
+				the biggest and most popular websites{' '}
+				<strong>do not care</strong> about og:image
+			</mark>. They either don’t set one at all, or set images with random
+			sizes.
 		</p>
 
 		<h2>A pattern emerges</h2>
@@ -234,9 +237,9 @@ const Article = (props: ContentProps) => (
 		</p>
 
 		<p>
-			<Emoji>👏</Emoji> for apple.com, forbes.com, foxnews.com,
-			goodreads.com, indiatimes.com, nytimes.com, stackoverflow.com,
-			theguardian.com.
+			<Emoji label="Applause">👏</Emoji> for apple.com, forbes.com,
+			foxnews.com, goodreads.com, indiatimes.com, nytimes.com,
+			stackoverflow.com, theguardian.com.
 		</p>
 
 		<p>These guys know what’s up.</p>
@@ -280,8 +283,8 @@ const Article = (props: ContentProps) => (
 				twitter:image
 				<ul>
 					<li>
-						All 6 (100%) are set to the same image as og:image
-						(making them redundant)
+						All 6 (100%) are set to the same image as og:image,
+						making them redundant
 					</li>
 				</ul>
 			</li>
@@ -290,8 +293,8 @@ const Article = (props: ContentProps) => (
 				twitter:image
 				<ul>
 					<li>
-						14 (78%) are set to the same image as og:image (again,
-						making them redundant)
+						14 (78%) are set to the same image as og:image, again,
+						making them redundant
 					</li>
 				</ul>
 			</li>
@@ -367,11 +370,10 @@ const Article = (props: ContentProps) => (
 
 		<ul>
 			<li>
-				93% of websites <strong>do use og:image</strong>
+				93% of websites <strong>use og:image</strong>
 			</li>
 			<li>
-				36% of websites using og:image set{' '}
-				<strong>random dimensions</strong>
+				36% of websites set <strong>random dimensions</strong>
 			</li>
 			<li>
 				63% of perfectionists set a ratio of <strong>1.9:1</strong>
@@ -449,6 +451,8 @@ const Article = (props: ContentProps) => (
 
 		<hr />
 
+		<p>I hope that was useful!</p>
+
 		<p>I’ve always wondered:</p>
 		<ul>
 			<li>What keywords are most used in popular headlines?</li>
@@ -467,8 +471,8 @@ const Article = (props: ContentProps) => (
 			engineering successful websites.
 		</p>
 		<p>
-			If you enjoyed this post and want more of this style, subscribe
-			below and I’ll send you an email when I write more:
+			If this tickles you, subscribe below and I’ll send you an email when
+			I write an article:
 		</p>
 
 		<div className="mt-6">
