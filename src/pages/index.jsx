@@ -3,7 +3,7 @@
 import * as React from 'react';
 
 import ContentListing from '../components/ContentListing';
-import EmailPlease from '../components/EmailPlease';
+import EmailPleaseBox from '../components/EmailPleaseBox';
 import HeadTags from '../components/HeadTags';
 import Hey from '../components/Hey';
 import PageContainer from '../components/PageContainer';
@@ -48,7 +48,7 @@ const PageIndex = ({
 			className="pt-16"
 		/>
 		<PageContainer className="py-12 bg-denim-white">
-			<EmailPlease id="footer-home" />
+			<EmailPleaseBox id="footer-home" />
 		</PageContainer>
 	</div>
 );
