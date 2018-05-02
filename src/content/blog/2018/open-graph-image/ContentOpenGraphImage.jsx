@@ -12,7 +12,7 @@ import type { Image } from '../../../../types/Image';
 import type { Result } from '../../../../types/Result';
 
 export const frontmatter = {
-	title: 'Hunting For The Best Open Graph Image Size',
+	title: 'Hunting For The Perfect Open Graph Image Size',
 	description:
 		'Finding the best image size for og:image and twitter:image by analysing 30 massively popular websites',
 	slug: '/open-graph-image-size',
