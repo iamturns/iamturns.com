@@ -277,7 +277,8 @@ const Article = (props: ContentProps) => (
 		<ul>
 			<li>
 				On the homepage: only <strong>6</strong> websites (20%) use
-				twitter:image<ul>
+				twitter:image
+				<ul>
 					<li>
 						All 6 (100%) are set to the same image as og:image
 						(making them redundant)
@@ -286,7 +287,8 @@ const Article = (props: ContentProps) => (
 			</li>
 			<li>
 				On article pages: <strong>18</strong> websites (60%) use
-				twitter:image<ul>
+				twitter:image
+				<ul>
 					<li>
 						14 (78%) are set to the same image as og:image (again,
 						making them redundant)
@@ -445,36 +447,21 @@ const Article = (props: ContentProps) => (
 			</li>
 		</ul>
 
-		<h2>Raw data</h2>
-
-		<Link to="https://docs.google.com/spreadsheets/d/1aIQVn0iN0n_ECfEZmHPqA7ggt_MCY2CWzeXPpKI0Yas/edit#gid=0">
-			<ImgBlock image={props.data.imgSpreadsheet} />
-		</Link>
-
-		<p>
-			If you find any extra patterns or anything I’ve missed, please let
-			me know!
-		</p>
-
 		<hr />
 
-		<p>
-			I’ve always wondered:
-			<ul>
-				<li>What keywords are most used in popular headlines?</li>
-				<li>
-					What’s the average amount of comments on a Reddit or Hacker
-					News thread? Are there patterns to attract more?
-				</li>
-				<li>
-					What is the most common font size body text? Does it change
-					across breakpoints?
-				</li>
-				<li>
-					What is the average word count for the meta description?
-				</li>
-			</ul>
-		</p>
+		<p>I’ve always wondered:</p>
+		<ul>
+			<li>What keywords are most used in popular headlines?</li>
+			<li>
+				What’s the average amount of comments on a Reddit or Hacker News
+				thread? Are there patterns to attract more?
+			</li>
+			<li>
+				What is the most common font size body text? Does it change
+				across breakpoints?
+			</li>
+			<li>What is the average word count for the meta description?</li>
+		</ul>
 		<p>
 			I believe we can find some interesting insights by reverse
 			engineering successful websites.
@@ -487,5 +474,24 @@ const Article = (props: ContentProps) => (
 		<div className="mt-6">
 			<EmailPlease id="open-graph-image-cta" />
 		</div>
+
+		<hr />
+
+		<h2>Bonus: Raw Data</h2>
+
+		<ImgBlock
+			image={props.data.imgSpreadsheet}
+			linkTo="https://docs.google.com/spreadsheets/d/1aIQVn0iN0n_ECfEZmHPqA7ggt_MCY2CWzeXPpKI0Yas/edit?usp=sharing"
+			type="fullwidth"
+		>
+			<Link to="https://docs.google.com/spreadsheets/d/1aIQVn0iN0n_ECfEZmHPqA7ggt_MCY2CWzeXPpKI0Yas/edit?usp=sharing">
+				View the raw data in Google Sheets
+			</Link>
+		</ImgBlock>
+
+		<p>
+			If you find any extra patterns or anything I’ve missed, please let
+			me know!
+		</p>
 	</div>
 );
