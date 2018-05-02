@@ -2,10 +2,13 @@
 
 import * as React from 'react';
 
+import EmailPlease from '../../../../components/EmailPlease';
 import Emoji from '../../../../components/Emoji';
+import ImgBlock from '../../../../components/ImgBlock';
 import LayoutContent from '../../../../components/LayoutContent';
 import Link from '../../../../components/Link';
 import type { Content } from '../../../../types/Content';
+import type { Image } from '../../../../types/Image';
 import type { Result } from '../../../../types/Result';
 
 export const frontmatter = {
@@ -25,6 +28,16 @@ export const pageQuery = graphql`
 	query ContentOpenGraphImageQuery($slug: String!) {
 		...CurrentContent
 		...ContentList
+		imgSpreadsheet: file(
+			sourceInstanceName: { eq: "content" }
+			relativePath: { eq: "blog/2018/open-graph-image/spreadsheet.png" }
+		) {
+			childImageSharp {
+				sizes(maxWidth: 580) {
+					...GatsbyImageSharpSizes
+				}
+			}
+		}
 	}
 `;
 
@@ -32,21 +45,22 @@ type ContentProps = {
 	data: {
 		currentContent: Content,
 		contentListResult: Result<Content>,
+		imgSpreadsheet: Image,
 	},
 };
 
 const ContentOpenGraphImage = (props: ContentProps) => (
-	<LayoutContent
-		currentContent={props.data.currentContent}
-		contentListResult={props.data.contentListResult}
-	>
-		<Article />
-	</LayoutContent>
-);
+		<LayoutContent
+			currentContent={props.data.currentContent}
+			contentListResult={props.data.contentListResult}
+		>
+			<Article {...props} />
+		</LayoutContent>
+	);
 
 export default ContentOpenGraphImage;
 
-const Article = () => (
+const Article = (props: ContentProps) => (
 	<div className="wysiwyg">
 		<p>
 			Everyone wants a piece of your sweet sweet Open Graph image. I’m
@@ -389,12 +403,16 @@ const Article = () => (
 
 		<h2>Raw data</h2>
 
+		<Link to="https://docs.google.com/spreadsheets/d/1aIQVn0iN0n_ECfEZmHPqA7ggt_MCY2CWzeXPpKI0Yas/edit#gid=0">
+			<ImgBlock image={props.data.imgSpreadsheet} />
+		</Link>
+
 		<p>
-			Go for it! If you find any extra patterns or anything I’ve missed,
-			please let me know!
+			If you find any extra patterns or anything I’ve missed, please let
+			me know!
 		</p>
 
-		<p>TODO: IMG HERE</p>
+		<hr />
 
 		<h2>Cheatsheet</h2>
 
@@ -445,15 +463,14 @@ const Article = () => (
 		<p>
 			I’ve always wondered:
 			<ul>
-				<li>
-					What keywords are used the most in very popular headlines?
-				</li>
+				<li>What keywords are most used in popular headlines?</li>
 				<li>
 					What’s the average amount of comments on a Reddit or Hacker
 					News thread? Are there patterns to attract more?
 				</li>
 				<li>
-					What is the most common font size body text across devices?
+					What is the most common font size body text? Does it change
+					across breakpoints?
 				</li>
 				<li>
 					What is the average word count for the meta description?
@@ -468,5 +485,9 @@ const Article = () => (
 			If you enjoyed this post and want more of this style, subscribe
 			below and I’ll send you an email when I write more:
 		</p>
+
+		<div className="mt-6">
+			<EmailPlease id="open-graph-image-cta" />
+		</div>
 	</div>
 );
