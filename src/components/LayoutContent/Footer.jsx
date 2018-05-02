@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import type { Content } from '../../types/Content';
 import ContentListing from '../ContentListing';
-import EmailPlease from '../EmailPlease';
+import EmailPleaseBox from '../EmailPleaseBox';
 import Hey from '../Hey';
 import PageContainer from '../PageContainer';
 
@@ -18,7 +18,7 @@ const Footer = ({ currentContent, contentList }: FooterProps) => (
 		<PageContainer className="mt-12 py-12 bg-denim-white">
 			<Hey />
 			<div className="mt-12">
-				<EmailPlease id={`footer-${currentContent.fields.slug}`} />
+				<EmailPleaseBox id={`footer-${currentContent.fields.slug}`} />
 			</div>
 		</PageContainer>
 		<ContentListing

@@ -7,7 +7,7 @@ import ImgFace from '../../assets/images/matt-turnbull-face-120.jpg';
 import ImgFace2x from '../../assets/images/matt-turnbull-face-240.jpg';
 import CodeBlock from '../../components/CodeBlock';
 import ContentListing from '../../components/ContentListing';
-import EmailPlease from '../../components/EmailPlease';
+import EmailPleaseBox from '../../components/EmailPleaseBox';
 import EmojiText from '../../components/EmojiText';
 import HeadingBrick from '../../components/HeadingBrick';
 import HeadTagsContent from '../../components/HeadTagsContent';
@@ -264,7 +264,7 @@ const ContentAbout = ({
 			<ImgBlock image={IMG_CHEERS} type="fullwidth" />
 		</PageContainer>
 		<PageContainer className="mt-12 py-12 bg-denim-white">
-			<EmailPlease id={`footer-${currentContent.fields.slug}`} />
+			<EmailPleaseBox id={`footer-${currentContent.fields.slug}`} />
 		</PageContainer>
 		<ContentListing
 			contentList={getResultAsArray(contentListResult)}
