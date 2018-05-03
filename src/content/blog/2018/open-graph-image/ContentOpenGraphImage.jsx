@@ -111,7 +111,7 @@ const Article = (props: ContentProps) => (
 
 		<p>No general consensus. So…</p>
 
-		<h2>I analysed how 30 massive websites use og:image</h2>
+		<h2>I analysed how 30 massively popular websites use og:image</h2>
 		<p>
 			I chose websites that are a) very popular, b) have pages begging to
 			be shared, and c) tickle me.
@@ -217,15 +217,19 @@ const Article = (props: ContentProps) => (
 						<strong>exact dimensions</strong>
 						<ul>
 							<li>
-								{toPercent(13, 15)} set a{' '}
+								{toPercent(13, 18)} set a{' '}
 								<strong>landscape image</strong>
 							</li>
 							<li>
-								{toPercent(9, 15)} set a width of{' '}
+								{toPercent(9, 18)} set a width of{' '}
 								<strong>1000 or more</strong>
 							</li>
 							<li>
-								{toPercent(5, 13)} set a ratio of{' '}
+								{toPercent(5, 13)} set a{' '}
+								<strong>square image</strong>
+							</li>
+							<li>
+								{toPercent(5, 18)} set a ratio of{' '}
 								<strong>1.9:1</strong>
 								<ul>
 									<li>
@@ -272,20 +276,12 @@ const Article = (props: ContentProps) => (
 			</li>
 		</ul>
 
-		<h2>A pattern emerges</h2>
+		<h2>Searching for a pattern</h2>
 
 		<p>
-			The results indicate that{' '}
-			<mark>
-				the biggest and most popular websites{' '}
-				<strong>do not care</strong> about og:image
-			</mark>. They either don’t use it, or throw in <em>any</em> size
-			image. There are some patterns, but nothing stands out.
-		</p>
-
-		<p>
-			If we ignore websites that set broken images, wacky aspect ratios,
-			and random sizes, then 8 websites remain stranding.
+			No strong pattern emerged from the above results. But, if we ignore
+			websites that set broken images, wacky aspect ratios, and random
+			sizes, then 8 websites remain stranding.
 		</p>
 
 		<p>
@@ -327,11 +323,6 @@ const Article = (props: ContentProps) => (
 				</ul>
 			</li>
 		</ul>
-
-		<p>
-			This matches up with the overall majority from all 30 websites,
-			making it a solid recommendation.
-		</p>
 
 		<h2>What about twitter:image?</h2>
 
@@ -404,9 +395,20 @@ const Article = (props: ContentProps) => (
 			twitter:image, and they became out of sync.
 		</p>
 
-		<p>Forbes and Goodreads seem to have a specific strategy here.</p>
+		<p>
+			Forbes and Goodreads seem to have a specific strategy here, and
+			follow advice directly from{' '}
+			<Link to="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary-card-with-large-image">
+				Twitter
+			</Link>.
+		</p>
 
 		<h2>Cheatsheet</h2>
+
+		<p>
+			If 40% (or more) of the 30 massively popular websites follow a
+			pattern, it is recommended below.
+		</p>
 
 		<h3 className="h4">What size og:image for my homepage?</h3>
 
@@ -418,9 +420,17 @@ const Article = (props: ContentProps) => (
 					<li>
 						But if you do…<ul>
 							<li>
-								Square <em>or</em> landscape image
+								Landscape image?
+								<ul>
+									<li>1200 x 630 (1.9:1)</li>
+								</ul>
 							</li>
-							<li>Width of exactly 1200 pixels</li>
+							<li>
+								Square image?
+								<ul>
+									<li>1200 x 1200 (1:1)</li>
+								</ul>
+							</li>
 						</ul>
 					</li>
 				</ul>
@@ -443,6 +453,7 @@ const Article = (props: ContentProps) => (
 				<ul>
 					<li>Landscape image</li>
 					<li>Width between 1000 and 3200 pixels</li>
+					<li>Any height</li>
 				</ul>
 			</li>
 			<li>
@@ -466,12 +477,13 @@ const Article = (props: ContentProps) => (
 				<strong>For perfectionists:</strong>
 				<ul>
 					<li>
-						Want a wide image?<ul>
+						Wide image?
+						<ul>
 							<li>2:1 aspect ratio (eg: 1200 x 600 pixels)</li>
 						</ul>
 					</li>
 					<li>
-						Want a small image?<ul>
+						Small image?<ul>
 							<li>1:1 aspect ratio (eg: 600 x 600 pixels)</li>
 						</ul>
 					</li>
