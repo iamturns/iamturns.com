@@ -16,8 +16,8 @@ export const frontmatter = {
 	description:
 		'Finding the best image size for og:image and twitter:image by analysing 30 massively popular websites',
 	slug: '/open-graph-image-size',
-	dateCreated: '2018-05-01',
-	dateUpdated: '2018-05-01',
+	dateCreated: '2018-05-03',
+	dateUpdated: '2018-05-03',
 	type: 'article',
 	cover: './og-image.jpg',
 	shareImage: './og-image.jpg',
