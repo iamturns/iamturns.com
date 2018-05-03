@@ -524,7 +524,7 @@ const Article = (props: ContentProps) => (
 		</p>
 
 		<div className="mt-6">
-			<EmailPlease id="open-graph-image-cta" />
+			<EmailPlease id="open-graph-image-size-cta" />
 		</div>
 
 		<hr />
