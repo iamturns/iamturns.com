@@ -26,13 +26,9 @@ export function addTrailingSlash(url: string): string {
 	return url.replace(/\/?$/, '/');
 }
 
-export function getHostname(): ?string {
-	if (!window) {
-		return undefined;
+export function isHostnameLive(): boolean {
+	if (typeof window === 'undefined') {
+		return false;
 	}
-	return window.location.hostname;
-}
-
-export function isHostnameLive() {
-	return getHostname() === LIVE_HOSTNAME;
+	return window.location.hostname === LIVE_HOSTNAME;
 }
