@@ -3,6 +3,7 @@
 import stripIndent from '../vendor/strip-indent';
 
 export const SITE_URL = 'https://iamturns.com/';
+export const LIVE_HOSTNAME = 'iamturns.com';
 
 export const GTM_ID = 'GTM-PG68LQN';
 
