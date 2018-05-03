@@ -38,4 +38,28 @@
 	mark:not([class]) {
 		@apply .mark;
 	}
+
+	ul ul:not([class]) {
+		@apply .m-0;
+
+		list-style-type: circle;
+	}
+
+	ul ul ul:not([class]) {
+		@apply .m-0;
+
+		list-style-type: square;
+	}
+
+	ul ul ul ul:not([class]) {
+		@apply .m-0;
+
+		list-style-type: circle;
+	}
+
+	ul ul ul ul ul:not([class]) {
+		@apply .m-0;
+
+		list-style-type: square;
+	}
 }
