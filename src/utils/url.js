@@ -1,6 +1,5 @@
 // @flow
 
-import _ from 'lodash';
 import urlJoin from 'url-join';
 
 import { LIVE_HOSTNAME, SITE_URL } from '../config';
@@ -28,7 +27,10 @@ export function addTrailingSlash(url: string): string {
 }
 
 export function getHostname(): ?string {
-	return _.get(window, 'location.hostname');
+	if (!window) {
+		return undefined;
+	}
+	return window.location.hostname;
 }
 
 export function isHostnameLive() {
