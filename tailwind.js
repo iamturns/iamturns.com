@@ -88,7 +88,7 @@ function adjustRatio(start, level, ratio) {
 
 // https://type-scale.com/
 const TEXT_BASE = 1.2; // Start a little larger
-const TEXT_RATIO = 1.250; // Major third
+const TEXT_RATIO = 1.2; // Minor third
 
 module.exports = {
 
