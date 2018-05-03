@@ -132,36 +132,69 @@ const Article = (props: ContentProps) => (
 
 		<ul>
 			<li>
-				13 websites (43%){' '}
+				{toPercent(17, 30)} of websites <strong>use og:image</strong>
+				<ul>
+					<li>
+						Image width ranges from <strong>291</strong> to{' '}
+						<strong>1484</strong> (average: <strong>871</strong>)
+					</li>
+					<li>
+						Image height ranges from <strong>167</strong> to{' '}
+						<strong>1200</strong> (average: <strong>564</strong>)
+					</li>
+					<li>
+						{toPercent(9, 17)} set a{' '}
+						<strong>landscape image</strong>
+						<ul>
+							<li>
+								{toPercent(5, 9)} set a ratio of{' '}
+								<strong>1.9:1</strong>
+								<ul>
+									<li>
+										{toPercent(4, 5)} set exactly{' '}
+										<strong>1200 x 630</strong>
+									</li>
+								</ul>
+							</li>
+							<li>
+								{toPercent(3, 9)} set a ratio of{' '}
+								<strong>1.91:1</strong>
+								<ul>
+									<li>
+										67% set exactly{' '}
+										<strong>1200 x 628</strong>
+									</li>
+								</ul>
+							</li>
+						</ul>
+					</li>
+					<li>
+						{toPercent(7, 17)} set a width of exactly{' '}
+						<strong>1200</strong>
+					</li>
+					<li>
+						{toPercent(7, 17)} set a <strong>square image</strong>
+						<ul>
+							<li>
+								The average dimension is{' '}
+								<strong>554 x 554</strong>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>
+				{toPercent(13, 30)} of websites{' '}
 				<strong>
 					do <em>not</em> use og:image
 				</strong>
 			</li>
 			<li>
-				7 websites (23%) set a ratio of <strong>1:1</strong>
-			</li>
-			<li>
-				5 websites (17%) set a ratio of <strong>1.9:1</strong>
-				<ul>
-					<li>
-						4 (80%) are exactly <strong>1200 x 630</strong>
-					</li>
-				</ul>
-			</li>
-			<li>
-				3 websites (10%) set a ratio of <strong>1.91:1</strong>
-				<ul>
-					<li>
-						2 (67%) are exactly <strong>1200 x 628</strong>
-					</li>
-				</ul>
-			</li>
-			<li>
-				Udemy.com set a <strong>576 x 167</strong> image (ratio of{' '}
+				Udemy sets a <strong>576 x 167</strong> image (ratio of{' '}
 				<strong>3.45:1</strong>, wtf?)
 			</li>
 			<li>
-				Walmart.com set a <strong>broken image</strong> (ouch)
+				Walmart sets a <strong>broken image</strong> (ouch)
 			</li>
 		</ul>
 
@@ -169,32 +202,60 @@ const Article = (props: ContentProps) => (
 
 		<ul>
 			<li>
-				10 websites (33%) <strong>change image dimensions</strong> from
-				page to page
+				{toPercent(28, 30)} of websites <strong>use og:image</strong>
 				<ul>
 					<li>
-						3 (30%) lock the width to <strong>1200</strong> (but the
-						height is random)
+						Image width ranges from <strong>316</strong> to{' '}
+						<strong>3200</strong> (average: <strong>960</strong>)
+					</li>
+					<li>
+						Image height ranges from <strong>215</strong> to{' '}
+						<strong>1400</strong> (average: <strong>547</strong>)
+					</li>
+					<li>
+						{toPercent(18, 28)} set{' '}
+						<strong>exact dimensions</strong>
+						<ul>
+							<li>
+								{toPercent(13, 15)} set a{' '}
+								<strong>landscape image</strong>
+							</li>
+							<li>
+								{toPercent(9, 15)} set a width of{' '}
+								<strong>1000 or more</strong>
+							</li>
+							<li>
+								{toPercent(5, 13)} set a ratio of{' '}
+								<strong>1.9:1</strong>
+								<ul>
+									<li>
+										{toPercent(3, 5)} set exactly{' '}
+										<strong>1200 x 630</strong>
+									</li>
+								</ul>
+							</li>
+							<li>
+								{toPercent(4, 13)} set a ratio of{' '}
+								<strong>1.78:1</strong> (aka{' '}
+								<strong>16:9</strong>)
+							</li>
+						</ul>
+					</li>
+					<li>
+						{toPercent(10, 28)}{' '}
+						<strong>change image dimensions</strong> from page to
+						page
+						<ul>
+							<li>
+								{toPercent(3, 10)} lock the width to{' '}
+								<strong>1200</strong> (but the height changes)
+							</li>
+						</ul>
 					</li>
 				</ul>
 			</li>
 			<li>
-				5 websites (17%) set a ratio of <strong>1:1</strong>
-			</li>
-			<li>
-				5 websites (17%) set a ratio of <strong>1.9:1</strong>
-				<ul>
-					<li>
-						3 (60%) are exactly <strong>1200 x 630</strong>
-					</li>
-				</ul>
-			</li>
-			<li>
-				4 websites (13%) have a ratio of <strong>1.78:1</strong> (aka{' '}
-				<strong>16:9</strong>)
-			</li>
-			<li>
-				2 websites (7%), Quora and Amazon,{' '}
+				{toPercent(2, 28)} of websites (Quora and Amazon){' '}
 				<strong>
 					do <em>not</em> use og:image
 				</strong>
@@ -211,18 +272,16 @@ const Article = (props: ContentProps) => (
 			</li>
 		</ul>
 
-		<h3 className="h4">In summary</h3>
+		<h2>A pattern emerges</h2>
 
 		<p>
 			The results indicate that{' '}
 			<mark>
 				the biggest and most popular websites{' '}
 				<strong>do not care</strong> about og:image
-			</mark>. They either don’t set one at all, or set images with random
-			sizes.
+			</mark>. They either don’t use it, or throw in <em>any</em> size
+			image. There are some patterns, but nothing stands out.
 		</p>
-
-		<h2>A pattern emerges</h2>
 
 		<p>
 			If we ignore websites that set broken images, wacky aspect ratios,
@@ -248,24 +307,31 @@ const Article = (props: ContentProps) => (
 
 		<ul>
 			<li>
-				On the homepage: 4 websites (50%) set a ratio of{' '}
+				On the homepage: {toPercent(4, 8)} set a ratio of{' '}
 				<strong>1.9:1</strong>
 				<ul>
 					<li>
-						3 (75%) are exactly <strong>1200 x 630</strong>
+						{toPercent(3, 4)} set exactly{' '}
+						<strong>1200 x 630</strong>
 					</li>
 				</ul>
 			</li>
 			<li>
-				On article &amp; product pages: 5 websites (63%) set a ratio of{' '}
+				On article &amp; product pages: {toPercent(5, 8)} set a ratio of{' '}
 				<strong>1.9:1</strong>
 				<ul>
 					<li>
-						3 (60%) are exactly <strong>1200 x 630</strong>
+						{toPercent(3, 5)} set exactly{' '}
+						<strong>1200 x 630</strong>
 					</li>
 				</ul>
 			</li>
 		</ul>
+
+		<p>
+			This matches up with the overall majority from all 30 websites,
+			making it a solid recommendation.
+		</p>
 
 		<h2>What about twitter:image?</h2>
 
@@ -279,22 +345,21 @@ const Article = (props: ContentProps) => (
 
 		<ul>
 			<li>
-				On the homepage: only <strong>6</strong> websites (20%) use
-				twitter:image
+				On the homepage: only {toPercent(6, 30)} use twitter:image
 				<ul>
 					<li>
-						All 6 (100%) are set to the same image as og:image,
-						making them redundant
+						{toPercent(6, 6)} set the same as og:image, making
+						twitter:image redundant
 					</li>
 				</ul>
 			</li>
 			<li>
-				On article pages: <strong>18</strong> websites (60%) use
+				On article &amp; product pages: {toPercent(18, 30)} use
 				twitter:image
 				<ul>
 					<li>
-						14 (78%) are set to the same image as og:image, again,
-						making them redundant
+						{toPercent(14, 18)} set the same as og:image, making
+						twitter:image redundant
 					</li>
 				</ul>
 			</li>
@@ -341,92 +406,50 @@ const Article = (props: ContentProps) => (
 
 		<p>Forbes and Goodreads seem to have a specific strategy here.</p>
 
-		<h2>What did we learn?</h2>
-
-		<h3 className="h4">On the homepage:</h3>
-
-		<ul>
-			<li>
-				43% of websites{' '}
-				<strong>
-					do <em>not</em> use og:image
-				</strong>
-			</li>
-			<li>
-				41% of websites using og:image set a ratio of{' '}
-				<strong>1:1</strong>
-			</li>
-			<li>
-				50% of perfectionists set a ratio of <strong>1.91:1</strong>
-				<ul>
-					<li>
-						75% with dimensions of <strong>1200 x 630</strong>
-					</li>
-				</ul>
-			</li>
-		</ul>
-
-		<h3 className="h4">On article pages:</h3>
-
-		<ul>
-			<li>
-				93% of websites <strong>use og:image</strong>
-			</li>
-			<li>
-				36% of websites set <strong>random dimensions</strong>
-			</li>
-			<li>
-				63% of perfectionists set a ratio of <strong>1.9:1</strong>
-				<ul>
-					<li>
-						60% with dimensions of <strong>1200 x 630</strong>
-					</li>
-				</ul>
-			</li>
-		</ul>
-
-		<h3 className="h4">Using twitter:image:</h3>
-
-		<ul>
-			<li>
-				87% of websites{' '}
-				<strong>
-					do <em>not</em> use twitter:image
-				</strong>, or{' '}
-				<strong>
-					do <em>not</em> use it correctly
-				</strong>
-			</li>
-			<li>
-				50% of perfectionists set a ratio of <strong>2:1</strong>
-			</li>
-			<li>
-				50% of perfectionists set a ratio of <strong>1:1</strong>
-			</li>
-		</ul>
-
 		<h2>Cheatsheet</h2>
 
 		<h3 className="h4">What size og:image for my homepage?</h3>
 
 		<ul>
 			<li>
-				<strong>Majority rules</strong>: Don’t bother setting an
-				og:image, or use 1:1 ratio
+				<strong>Majority rules:</strong>
+				<ul>
+					<li>Don’t bother</li>
+					<li>
+						But if you do…<ul>
+							<li>
+								Square <em>or</em> landscape image
+							</li>
+							<li>Width of exactly 1200 pixels</li>
+						</ul>
+					</li>
+				</ul>
 			</li>
 			<li>
-				<strong>Perfectionists:</strong> 1200 x 630 (1.9:1)
+				<strong>For perfectionists:</strong>
+				<ul>
+					<li>1200 x 630 (1.9:1)</li>
+				</ul>
 			</li>
 		</ul>
 
-		<h3 className="h4">What size og:image for my article pages?</h3>
+		<h3 className="h4">
+			What size og:image for my article &amp; product pages?
+		</h3>
 
 		<ul>
 			<li>
-				<strong>Majority rules:</strong> Use any size &amp; aspect ratio
+				<strong>Majority rules:</strong>
+				<ul>
+					<li>Landscape image</li>
+					<li>Width between 1000 and 3200 pixels</li>
+				</ul>
 			</li>
 			<li>
-				<strong>Perfectionists:</strong> 1200 x 630 (1.9:1)
+				<strong>For perfectionists:</strong>
+				<ul>
+					<li>1200 x 630 (1.9:1)</li>
+				</ul>
 			</li>
 		</ul>
 
@@ -434,16 +457,23 @@ const Article = (props: ContentProps) => (
 
 		<ul>
 			<li>
-				<strong>Majority rules:</strong> Don’t bother.
+				<strong>Majority rules:</strong>
+				<ul>
+					<li>Don’t bother.</li>
+				</ul>
 			</li>
 			<li>
-				<strong>Perfectionists...</strong>
+				<strong>For perfectionists:</strong>
 				<ul>
 					<li>
-						Want a wide image? 2:1 aspect ratio (eg: 1200 x 600)
+						Want a wide image?<ul>
+							<li>2:1 aspect ratio (eg: 1200 x 600 pixels)</li>
+						</ul>
 					</li>
 					<li>
-						Want a small image? 1:1 aspect ratio (eg: 600 x 600)
+						Want a small image?<ul>
+							<li>1:1 aspect ratio (eg: 600 x 600 pixels)</li>
+						</ul>
 					</li>
 				</ul>
 			</li>
@@ -451,28 +481,34 @@ const Article = (props: ContentProps) => (
 
 		<hr />
 
-		<p>I hope that was useful!</p>
+		<p>
+			Reverse enginerring successful websites can reveal interesting
+			insights.
+		</p>
 
-		<p>I’ve always wondered:</p>
+		<p>Here’s some more ideas I plan to research:</p>
+
 		<ul>
-			<li>What keywords are most used in popular headlines?</li>
 			<li>
-				What’s the average amount of comments on a Reddit or Hacker News
-				thread? Are there patterns to attract more?
+				What’s the most popular keywords on the frontpage of Reddit? Has
+				it changed over time?
 			</li>
 			<li>
-				What is the most common font size body text? Does it change
+				What’s the average amount of comments on a Hacker News thread?
+				Which threads attract the most?
+			</li>
+			<li>
+				What’s the most common body text font size? Does it change
 				across breakpoints?
 			</li>
-			<li>What is the average word count for the meta description?</li>
+			<li>
+				Which Instagram hashtags are used by the most popular accounts?
+			</li>
 		</ul>
+
 		<p>
-			We can find some interesting insights by reverse engineering
-			successful websites.
-		</p>
-		<p>
-			If this tickles you, subscribe below and I’ll send you an email when
-			I write an article:
+			If this kinda stuff tickles you, subscribe below and I’ll send you
+			an email when I write an article:
 		</p>
 
 		<div className="mt-6">
@@ -499,3 +535,7 @@ const Article = (props: ContentProps) => (
 		</p>
 	</div>
 );
+
+function toPercent(amount: number, total: number): string {
+	return `${Math.round(amount / total * 100)}%`;
+}
