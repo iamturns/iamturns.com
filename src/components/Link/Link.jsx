@@ -6,8 +6,8 @@ import * as React from 'react';
 import { isUrlExternal } from '../../utils/url';
 
 type LinkProps = {
-	children: React.Node,
 	to: string,
+	children?: React.Node,
 };
 
 const Link = ({ children, to, ...rest }: LinkProps) => {
@@ -16,7 +16,7 @@ const Link = ({ children, to, ...rest }: LinkProps) => {
 
 	return (
 		<Tag to={to} target={isExternal ? '_blank' : ''} {...rest}>
-			{children}
+			{children || to}
 		</Tag>
 	);
 };

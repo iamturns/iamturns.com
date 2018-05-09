@@ -24,6 +24,7 @@
 .h4 {
 	@apply .my-4 .mt-6;
 	@apply .font-bold;
+	@apply .text-base;
 }
 
 .ul {
