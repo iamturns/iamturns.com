@@ -83,7 +83,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 					Classic.
 				</p>
 				<p>
-					I wake up around 7:30am
+					I wake up at around 7:30am
 					{this.footnoteLink({
 						key: 'wake',
 						node: (
@@ -119,7 +119,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					at a web development / design company
+					at a web development / design company.
 					{this.footnoteLink({
 						key: 'industry',
 						node: (
@@ -130,8 +130,9 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 								<Link to="https://insights.stackoverflow.com/survey/2018/#work-industry" />
 							</div>
 						),
-					})}. I’m a back-end dev, but dabble into full-stack
-					territory too.
+					})}{' '}
+					I’m a back-end dev, but dabble into full-stack territory
+					too.
 					{this.footnoteLink({
 						key: 'role',
 						node: (
@@ -202,6 +203,69 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 								9 and 12 hours on a computer.
 								<br />
 								<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-how-much-time-do-developers-spend-on-a-computer" />
+							</div>
+						),
+					})}
+				</p>
+				<p>
+					I’ve been working here for about 1 year.
+					{this.footnoteLink({
+						key: 'years-working',
+						node: (
+							<div>
+								The majority of developers (30.1%) have been
+								coding professionally for less than 2 years.
+								<br />
+								<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-years-coding-professionally" />
+							</div>
+						),
+					})}{' '}
+					I like it.
+					{this.footnoteLink({
+						key: 'job-satisfaction',
+						node: (
+							<div>
+								The majority of developers (36.5%) are
+								moderately satisfied with their career &amp;
+								job.
+								<br />
+								<Link to="https://insights.stackoverflow.com/survey/2018/#work-how-do-developers-feel-about-their-careers-and-jobs" />
+							</div>
+						),
+					})}{' '}
+					We use the agile methodology to stay on track,
+					{this.footnoteLink({
+						key: 'agile',
+						node: (
+							<div>
+								The majority of developers (85.4%) use the agile
+								methodology.
+								<br />
+								<Link to="https://insights.stackoverflow.com/survey/2018/#work-which-methodologies-do-developers-use" />
+							</div>
+						),
+					})}{' '}
+					and I check my code into git
+					{this.footnoteLink({
+						key: 'git',
+						node: (
+							<div>
+								The majority of developers (87.2%) use Git for
+								version control.
+								<br />
+								<Link to="https://insights.stackoverflow.com/survey/2018/#work-version-control" />
+							</div>
+						),
+					})}{' '}
+					multiple times a day to keep momentum.
+					{this.footnoteLink({
+						key: 'check-in',
+						node: (
+							<div>
+								The majority of developers (60.2%) check in
+								their code multiple times per day.
+								<br />
+								<Link to="https://insights.stackoverflow.com/survey/2018/#work-how-often-do-developers-check-in-code" />
 							</div>
 						),
 					})}
@@ -319,71 +383,8 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 					})}
 				</p>
 				<p>
-					I’ve been working here about a year.
-					{this.footnoteLink({
-						key: 'years-working',
-						node: (
-							<div>
-								The majority of developers (30.1%) have been
-								coding professionally for less than 2 years.
-								<br />
-								<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-years-coding-professionally" />
-							</div>
-						),
-					})}{' '}
-					I like it.
-					{this.footnoteLink({
-						key: 'job-satisfaction',
-						node: (
-							<div>
-								The majority of developers (36.5%) are
-								moderately satisfied with their career &amp;
-								job.
-								<br />
-								<Link to="https://insights.stackoverflow.com/survey/2018/#work-how-do-developers-feel-about-their-careers-and-jobs" />
-							</div>
-						),
-					})}{' '}
-					We use the agile methodology to stay on track,
-					{this.footnoteLink({
-						key: 'agile',
-						node: (
-							<div>
-								The majority of developers (85.4%) use the agile
-								methodology.
-								<br />
-								<Link to="https://insights.stackoverflow.com/survey/2018/#work-which-methodologies-do-developers-use" />
-							</div>
-						),
-					})}{' '}
-					and I check my code into git
-					{this.footnoteLink({
-						key: 'git',
-						node: (
-							<div>
-								The majority of developers (87.2%) use Git for
-								version control.
-								<br />
-								<Link to="https://insights.stackoverflow.com/survey/2018/#work-version-control" />
-							</div>
-						),
-					})}{' '}
-					multiple times a day to keep momentum.
-					{this.footnoteLink({
-						key: 'check-in',
-						node: (
-							<div>
-								The majority of developers (60.2%) check in
-								their code multiple times per day.
-								<br />
-								<Link to="https://insights.stackoverflow.com/survey/2018/#work-how-often-do-developers-check-in-code" />
-							</div>
-						),
-					})}
-				</p>
-				<p>
-					I’m not looking for a new job, but if something comes up
-					I’ll think about it.
+					I’m not looking for a new job, but if something came up I’d
+					think about it.
 					{this.footnoteLink({
 						key: 'job-search',
 						node: (
@@ -396,8 +397,8 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					Especially if they pay well, and let me dig into awesome
-					tech.
+					Especially if they pay well, and give me experience with
+					awesome tech
 					{this.footnoteLink({
 						key: 'job-criteria',
 						node: (
@@ -410,15 +411,16 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					I hear good things about Rust, Kotlin, Python, TypeScript,
-					Go, and Swift.{this.footnoteLink({
-						key: 'loved',
-						node: (
-							<div>
-								<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-languages" />
-							</div>
-						),
-					})}{' '}
+					like Rust, Kotlin, Python, TypeScript, Go, and Swift.{this.footnoteLink(
+						{
+							key: 'loved',
+							node: (
+								<div>
+									<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-languages" />
+								</div>
+							),
+						},
+					)}{' '}
 					Oh, and machine learning is interesting — I see devs going
 					crazy for TensorFlow and Torch / PyTorch.{this.footnoteLink(
 						{
@@ -433,18 +435,20 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							),
 						},
 					)}{' '}
-					I’d love to play with all this stuff, just keep me the hell
-					away from VB6, Oracle, and Cordova.{this.footnoteLink({
-						key: 'dreaded',
-						node: (
-							<div>
-								The majority of developers dread VB6 (89.9%),
-								Oracle (63.1%), and Cordova (59.6%).
-								<br />
-								<Link to="https://insights.stackoverflow.com/survey/2018/#most-loved-dreaded-and-wanted" />
-							</div>
-						),
-					})}{' '}
+					Just keep me the hell away from VB6, Oracle, and Cordova.{this.footnoteLink(
+						{
+							key: 'dreaded',
+							node: (
+								<div>
+									The majority of developers dread VB6
+									(89.9%), Oracle (63.1%), and Cordova
+									(59.6%).
+									<br />
+									<Link to="https://insights.stackoverflow.com/survey/2018/#most-loved-dreaded-and-wanted" />
+								</div>
+							),
+						},
+					)}{' '}
 					And I ain’t touching SharePoint, Drupal or Salesforce
 					either!
 					{this.footnoteLink({
@@ -495,7 +499,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					and haven’t stopped since. I even code at home for fun.{this.footnoteLink(
+					and haven’t stopped since. I even code at home for fun!{this.footnoteLink(
 						{
 							key: 'hobby',
 							node: (
@@ -508,7 +512,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							),
 						},
 					)}{' '}
-					I’m teaching myself Python, MongoDB and Android{' '}
+					I’m teaching myself Python, MongoDB and Android
 					{this.footnoteLink({
 						key: 'wanted',
 						node: (
