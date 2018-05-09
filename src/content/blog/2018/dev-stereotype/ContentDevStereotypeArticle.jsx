@@ -57,13 +57,13 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					hetro,
+					straight,
 					{this.footnoteLink({
 						key: 'sexual-orientation',
 						node: (
 							<div>
 								The majority of developers (93.2%) are
-								hetrosexual.
+								heterosexual.
 								<br />
 								<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-sexual-orientation" />
 							</div>
@@ -83,7 +83,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 					Classic.
 				</p>
 				<p>
-					I wake up at around 7:30am
+					I wake up at around 7:30 am
 					{this.footnoteLink({
 						key: 'wake',
 						node: (
@@ -119,7 +119,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					at a web development / design company.
+					at a web development/design company.
 					{this.footnoteLink({
 						key: 'industry',
 						node: (
@@ -144,7 +144,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					There’s about 60 people working here,
+					About 60 people work here,
 					{this.footnoteLink({
 						key: 'company-size',
 						node: (
@@ -194,7 +194,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					I spend between 9 and 12 hours on my computer so it’s gotta
+					I spend between 9 and 12 hours on my computer, so it’s gotta
 					be comfortable.{this.footnoteLink({
 						key: 'computer-usage',
 						node: (
@@ -208,7 +208,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 					})}
 				</p>
 				<p>
-					I’ve been working here for about 1 year.
+					I’ve been working here for about one year.
 					{this.footnoteLink({
 						key: 'years-working',
 						node: (
@@ -326,7 +326,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 								<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-frameworks-libraries-and-tools" />
 							</div>
 						),
-					})}. I stick to a MySQL database{this.footnoteLink({
+					})}. I stick to a MySQL database,{this.footnoteLink({
 						key: 'database',
 						node: (
 							<div>
@@ -391,7 +391,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							<div>
 								The majority of developers (59.8%) are not
 								actively looking for a job, but are open to new
-								oppurtunities.
+								opportunities.
 								<br />
 								<Link to="https://insights.stackoverflow.com/survey/2018/#work-job-search-status" />
 							</div>
@@ -464,7 +464,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 					})}
 				</p>
 				<p>
-					How did I get here? Well… I started coding about 4 years
+					How did I get here? Well… I started coding about four years
 					ago.{this.footnoteLink({
 						key: 'started',
 						node: (
@@ -539,7 +539,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 						},
 					)}{' '}
 					One day I might start my own company, but I want to stay
-					techy over the next 5 years.{this.footnoteLink({
+					techy over the next five years.{this.footnoteLink({
 						key: 'future',
 						node: (
 							<div>
