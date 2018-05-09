@@ -214,6 +214,7 @@ module.exports = {
   */
 
   textSizes: {
+    'xxs': adjustRatio(TEXT_BASE, -3, TEXT_RATIO) + 'rem',
     'xs': adjustRatio(TEXT_BASE, -2, TEXT_RATIO) + 'rem',
     'sm': adjustRatio(TEXT_BASE, -1, TEXT_RATIO) + 'rem',
     'base': `${TEXT_BASE}rem`,

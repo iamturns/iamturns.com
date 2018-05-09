@@ -17,5 +17,10 @@ h6 {
 
 sup,
 sub {
-	@apply .text-xs;
+	@apply .text-xxs;
+	@apply .whitespace-no-wrap;
+}
+
+sup {
+	top: -0.5rem;
 }
