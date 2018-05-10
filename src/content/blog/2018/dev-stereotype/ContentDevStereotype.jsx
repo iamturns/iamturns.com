@@ -12,7 +12,7 @@ import ContentDevStereotypeArticle from './ContentDevStereotypeArticle';
 export const frontmatter = {
 	title: 'The Stereotypical Developer in 2018',
 	description:
-		'Created from the 100,000 developers who participated in the 2018 Stack Overflow developer survey.',
+		'Inspired by the the 100,000 developers who participated in the 2018 Stack Overflow developer survey.',
 	slug: '/stereotypical-developer-2018',
 	dateCreated: '2018-05-09',
 	dateUpdated: '2018-05-09',
