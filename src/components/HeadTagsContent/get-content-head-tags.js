@@ -62,7 +62,7 @@ function setContentImage(props: ContentHeadTags): ContentHeadTags {
 		return props;
 	}
 
-	const newProps = {
+	const newProps: ContentHeadTags = {
 		...props,
 		pageImage: prefixSiteUrl(imageSrc),
 	};
