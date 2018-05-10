@@ -3,6 +3,7 @@
 import * as React from 'react';
 
 import type { Content } from '../../types/Content';
+import type { Footnote } from '../../types/Footnote';
 import type { Result } from '../../types/Result';
 import { getResultAsArray } from '../../utils/result';
 import ContentHeader from '../ContentHeader/ContentHeader';
@@ -11,6 +12,7 @@ import type { HeadTagsProps } from '../HeadTags';
 import HeadTagsContent from '../HeadTagsContent';
 import PageContainer from '../PageContainer';
 import LayoutContentEmail from './Email';
+import LayoutContentFootnotes from './Footnotes';
 import LayoutContentHeaderAuthor from './HeaderAuthor';
 
 type LayoutContentProps = {
@@ -18,6 +20,7 @@ type LayoutContentProps = {
 	currentContent: Content,
 	contentListResult: Result<Content>,
 	additionalHeadTags?: HeadTagsProps,
+	footnotes?: Array<Footnote>,
 };
 
 const LayoutContent = ({
@@ -25,6 +28,7 @@ const LayoutContent = ({
 	currentContent,
 	contentListResult,
 	additionalHeadTags = {},
+	footnotes = [],
 }: LayoutContentProps) => (
 	<div>
 		<HeadTagsContent
@@ -39,6 +43,7 @@ const LayoutContent = ({
 		<PageContainer small>
 			{children}
 			<LayoutContentEmail currentContent={currentContent} />
+			<LayoutContentFootnotes footnotes={footnotes} />
 		</PageContainer>
 		<ContentListing
 			contentList={getResultAsArray(contentListResult)}
