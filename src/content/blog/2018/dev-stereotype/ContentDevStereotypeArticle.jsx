@@ -25,8 +25,8 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 		return (
 			<div className="wysiwyg">
 				<p>
-					Joe is inspired by the by the 100,000 developers who
-					participated in the{' '}
+					This little story is inspired by the by the 100,000
+					developers who participated in the{' '}
 					<Link to="https://insights.stackoverflow.com/survey/2018/">
 						2018 Stack Overflow developer survey
 					</Link>.
