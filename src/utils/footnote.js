@@ -1,11 +1,6 @@
 // @flow
 
-import * as React from 'react';
-
-export type Footnote = {
-	key: string,
-	node: React.Node,
-};
+import type { Footnote } from '../types/Footnote';
 
 export function generateFootnoteHash(footnote: Footnote): string {
 	return `footnote-${footnote.key}`;

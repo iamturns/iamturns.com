@@ -10,7 +10,7 @@ type Props = {
 };
 
 const FootnoteLink = (props: Props) => (
-	<sup className="text-xxs text-turtle-dark">
+	<sup className="text-turtle-dark">
 		<Link to={props.link} className="no-underline">
 			[{props.id}]
 		</Link>

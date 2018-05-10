@@ -17,10 +17,14 @@ h6 {
 
 sup,
 sub {
-	@apply .text-xxs;
+	@apply .text-xxxs;
 	@apply .whitespace-no-wrap;
 }
 
 sup {
+	@apply .relative;
+	@apply .font-mono .tracking-tight;
+
 	top: -0.5rem;
+	left: 1px;
 }
