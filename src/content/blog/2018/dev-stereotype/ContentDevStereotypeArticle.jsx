@@ -25,11 +25,15 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 		return (
 			<div className="wysiwyg">
 				<p>
-					This little story is inspired by the by the 100,000
-					developers who participated in the{' '}
+					Introducing: Joe, the stereotypical developer. He’s inspired
+					by the 100,000 developers who participated in the{' '}
 					<Link to="https://insights.stackoverflow.com/survey/2018/">
 						2018 Stack Overflow developer survey
 					</Link>.
+				</p>
+				<p>Maybe you know someone like Joe?</p>
+				<p>
+					Maybe… you <em>are</em> Joe!
 				</p>
 				<hr />
 				<p>
