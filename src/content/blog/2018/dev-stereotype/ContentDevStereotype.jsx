@@ -3,11 +3,11 @@
 import * as React from 'react';
 
 import LayoutContent from '../../../../components/LayoutContent';
+import { withFootnotes } from '../../../../hocs/withFootnotes';
 import type { Content } from '../../../../types/Content';
+import type { Footnote } from '../../../../types/Footnote';
 import type { Result } from '../../../../types/Result';
 import ContentDevStereotypeArticle from './ContentDevStereotypeArticle';
-import ContentDevStereotypeFootnotes from './ContentDevStereotypeFootnotes';
-import type { Footnote } from './Footnote';
 
 export const frontmatter = {
 	title: 'The Stereotypical Developer in 2018',
@@ -34,45 +34,18 @@ type ContentProps = {
 		currentContent: Content,
 		contentListResult: Result<Content>,
 	},
-};
-
-type ContentState = {
 	footnotes: Array<Footnote>,
+	addFootnote: (footnote: Footnote) => number,
 };
 
-class ContentDevStereotype extends React.Component<ContentProps, ContentState> {
-	constructor(props: ContentProps) {
-		super(props);
-		// $FlowFixMe
-		this.addFootnote = this.addFootnote.bind(this);
-	}
+const ContentDevStereotype = (props: ContentProps) => (
+	<LayoutContent
+		currentContent={props.data.currentContent}
+		contentListResult={props.data.contentListResult}
+		footnotes={props.footnotes}
+	>
+		<ContentDevStereotypeArticle addFootnote={props.addFootnote} />
+	</LayoutContent>
+);
 
-	state = {
-		footnotes: [],
-	};
-
-	componentWillUpdate() {
-		this.state.footnotes = [];
-	}
-
-	addFootnote(footnote: Footnote): number {
-		this.state.footnotes.push(footnote);
-		return this.state.footnotes.length;
-	}
-
-	render() {
-		return (
-			<LayoutContent
-				currentContent={this.props.data.currentContent}
-				contentListResult={this.props.data.contentListResult}
-			>
-				<ContentDevStereotypeArticle addFootnote={this.addFootnote} />
-				<ContentDevStereotypeFootnotes
-					footnotes={this.state.footnotes}
-				/>
-			</LayoutContent>
-		);
-	}
-}
-
-export default ContentDevStereotype;
+export default withFootnotes(ContentDevStereotype);

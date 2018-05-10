@@ -4,8 +4,8 @@ import * as React from 'react';
 
 import FootnoteLink from '../../../../components/FootnoteLink';
 import Link from '../../../../components/Link';
-import type { Footnote } from './Footnote';
-import { generateFootnoteHash } from './Footnote';
+import type { Footnote } from '../../../../types/Footnote';
+import { generateFootnoteHash } from '../../../../utils/footnote';
 
 type Props = {
 	addFootnote: (footnote: Footnote) => number,
