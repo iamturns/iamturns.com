@@ -10,7 +10,7 @@ import ContentDevStereotypeFootnotes from './ContentDevStereotypeFootnotes';
 import type { Footnote } from './Footnote';
 
 export const frontmatter = {
-	title: 'The Stereotypical Developer of 2018',
+	title: 'The Stereotypical Developer in 2018',
 	description:
 		'Inspired by the the 100,000 developers who participated in the 2018 Stack Overflow developer survey.',
 	slug: '/stereotypical-developer-2018',
