@@ -131,7 +131,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					I’m a back-end dev, but dabble into full-stack territory
+					I’m a back-end dev, but get my hands dirty in front-end land
 					too.
 					{this.footnoteLink({
 						key: 'role',
@@ -208,7 +208,7 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 					})}
 				</p>
 				<p>
-					I’ve been working here for about one year.
+					I’ve been working here for about a year.
 					{this.footnoteLink({
 						key: 'years-working',
 						node: (
