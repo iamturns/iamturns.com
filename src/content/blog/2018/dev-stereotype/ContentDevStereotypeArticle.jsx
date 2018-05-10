@@ -25,15 +25,15 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 		return (
 			<div className="wysiwyg">
 				<p>
-					This is a little story of a stereotypical developer inspired
-					by the 100,000 developers who participated in the{' '}
+					Joe is inspired by the by the 100,000 developers who
+					participated in the{' '}
 					<Link to="https://insights.stackoverflow.com/survey/2018/">
 						2018 Stack Overflow developer survey
 					</Link>.
 				</p>
 				<hr />
 				<p>
-					Hey! I’m 30 years old,
+					Hey, I’m Joe. I’m 30 years old,
 					{this.footnoteLink({
 						key: 'age',
 						node: (
@@ -233,7 +233,11 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					We use the agile methodology to stay on track,
+					We use the{' '}
+					<Link to="https://en.wikipedia.org/wiki/Agile_software_development">
+						agile methodology
+					</Link>{' '}
+					to stay on track,
 					{this.footnoteLink({
 						key: 'agile',
 						node: (
@@ -245,7 +249,8 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					and I check my code into git
+					and I check my code into{' '}
+					<Link to="https://en.wikipedia.org/wiki/Git">git</Link>
 					{this.footnoteLink({
 						key: 'git',
 						node: (
@@ -271,8 +276,16 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 					})}
 				</p>
 				<p>
-					Let’s talk nerdy! I code in the classic HTML / CSS /
-					JavaScript combo.{this.footnoteLink({
+					Let’s talk nerdy! I code in the classic{' '}
+					<Link to="https://en.wikipedia.org/wiki/HTML">HTML</Link> /{' '}
+					<Link to="https://en.wikipedia.org/wiki/Cascading_Style_Sheets">
+						CSS
+					</Link>{' '}
+					/
+					<Link to="https://en.wikipedia.org/wiki/JavaScript">
+						JavaScript
+					</Link>{' '}
+					combo.{this.footnoteLink({
 						key: 'languages',
 						node: (
 							<div>
@@ -283,7 +296,14 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					For the front-end I use Angular or React
+					For the front-end I use{' '}
+					<Link to="https://en.wikipedia.org/wiki/Angular_(application_platform)">
+						Angular
+					</Link>{' '}
+					or{' '}
+					<Link to="https://en.wikipedia.org/wiki/React_(JavaScript_library)">
+						React
+					</Link>
 					{this.footnoteLink({
 						key: 'frameworks-front-end',
 						node: (
@@ -305,7 +325,10 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 								<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-frameworks-libraries-and-tools" />
 							</div>
 						),
-					})}, and for the back-end I use Node.js
+					})}, and for the back-end I use{' '}
+					<Link to="https://en.wikipedia.org/wiki/Node.js">
+						Node.js
+					</Link>
 					{this.footnoteLink({
 						key: 'frameworks-back-end',
 						node: (
@@ -326,7 +349,9 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 								<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-frameworks-libraries-and-tools" />
 							</div>
 						),
-					})}. I stick to a MySQL database,{this.footnoteLink({
+					})}. I stick to a{' '}
+					<Link to="https://en.wikipedia.org/wiki/MySQL">MySQL</Link>{' '}
+					database,{this.footnoteLink({
 						key: 'database',
 						node: (
 							<div>
@@ -336,7 +361,12 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					but my mates are loving Redis and PostgreSQL.
+					but my mates are loving{' '}
+					<Link to="https://en.wikipedia.org/wiki/Redis">Redis</Link>{' '}
+					and{' '}
+					<Link to="https://en.wikipedia.org/wiki/PostgreSQL">
+						PostgreSQL
+					</Link>.
 					{this.footnoteLink({
 						key: 'database-love',
 						node: (
@@ -348,7 +378,8 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					I go for Linux
+					I go for{' '}
+					<Link to="https://en.wikipedia.org/wiki/Linux">Linux</Link>
 					{this.footnoteLink({
 						key: 'linux',
 						node: (
@@ -369,7 +400,14 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 								<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-platforms" />
 							</div>
 						),
-					})}, but my co-workers rave about Serverless and AWS.
+					})}, but my co-workers rave about{' '}
+					<Link to="https://en.wikipedia.org/wiki/Serverless_computing">
+						Serverless
+					</Link>{' '}
+					and{' '}
+					<Link to="https://en.wikipedia.org/wiki/Amazon_Web_Services">
+						AWS
+					</Link>.
 					{this.footnoteLink({
 						key: 'platform-love',
 						node: (
@@ -411,45 +449,86 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					like Rust, Kotlin, Python, TypeScript, Go, and Swift.{this.footnoteLink(
-						{
-							key: 'loved',
-							node: (
-								<div>
-									<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-languages" />
-								</div>
-							),
-						},
-					)}{' '}
+					like{' '}
+					<Link to="https://en.wikipedia.org/wiki/Rust_(programming_language)">
+						Rust
+					</Link>,{' '}
+					<Link to="https://en.wikipedia.org/wiki/Kotlin_(programming_language)">
+						Kotlin
+					</Link>,{' '}
+					<Link to="https://en.wikipedia.org/wiki/Python_(programming_language)">
+						Python
+					</Link>,{' '}
+					<Link to="https://en.wikipedia.org/wiki/TypeScript">
+						TypeScript
+					</Link>,{' '}
+					<Link to="https://en.wikipedia.org/wiki/Go_(programming_language)">
+						Go
+					</Link>, and{' '}
+					<Link to="https://en.wikipedia.org/wiki/Swift_(programming_language)">
+						Swift
+					</Link>.{this.footnoteLink({
+						key: 'loved',
+						node: (
+							<div>
+								<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-languages" />
+							</div>
+						),
+					})}{' '}
 					Oh, and machine learning is interesting — I see devs going
-					crazy for TensorFlow and Torch / PyTorch.{this.footnoteLink(
-						{
-							key: 'loved-ml',
-							node: (
-								<div>
-									The majority of developers love TensorFlow
-									(73.5%) and Torch / PyTorch (68%).
-									<br />
-									<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-frameworks-libraries-and-tools" />
-								</div>
-							),
-						},
-					)}{' '}
-					Just keep me the hell away from VB6, Oracle, and Cordova.{this.footnoteLink(
-						{
-							key: 'dreaded',
-							node: (
-								<div>
-									The majority of developers dread VB6
-									(89.9%), Oracle (63.1%), and Cordova
-									(59.6%).
-									<br />
-									<Link to="https://insights.stackoverflow.com/survey/2018/#most-loved-dreaded-and-wanted" />
-								</div>
-							),
-						},
-					)}{' '}
-					And I ain’t touching SharePoint, Drupal or Salesforce
+					crazy for{' '}
+					<Link to="https://en.wikipedia.org/wiki/TensorFlow">
+						TensorFlow
+					</Link>{' '}
+					and{' '}
+					<Link to="https://en.wikipedia.org/wiki/Torch_(machine_learning)">
+						Torch
+					</Link>{' '}
+					/{' '}
+					<Link to="https://en.wikipedia.org/wiki/PyTorch">
+						PyTorch
+					</Link>.{this.footnoteLink({
+						key: 'loved-ml',
+						node: (
+							<div>
+								The majority of developers love TensorFlow
+								(73.5%) and Torch / PyTorch (68%).
+								<br />
+								<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-frameworks-libraries-and-tools" />
+							</div>
+						),
+					})}{' '}
+					Just keep me the hell away from{' '}
+					<Link to="https://en.wikipedia.org/wiki/Visual_Basic">
+						VB6
+					</Link>,{' '}
+					<Link to="https://en.wikipedia.org/wiki/Oracle_Database">
+						Oracle
+					</Link>, and{' '}
+					<Link to="https://en.wikipedia.org/wiki/Apache_Cordova">
+						Cordova
+					</Link>,{this.footnoteLink({
+						key: 'dreaded',
+						node: (
+							<div>
+								The majority of developers dread VB6 (89.9%),
+								Oracle (63.1%), and Cordova (59.6%).
+								<br />
+								<Link to="https://insights.stackoverflow.com/survey/2018/#most-loved-dreaded-and-wanted" />
+							</div>
+						),
+					})}{' '}
+					and I ain’t touching{' '}
+					<Link to="https://en.wikipedia.org/wiki/SharePoint">
+						SharePoint
+					</Link>,{' '}
+					<Link to="https://en.wikipedia.org/wiki/Drupal">
+						Drupal
+					</Link>{' '}
+					or{' '}
+					<Link to="https://en.wikipedia.org/wiki/Salesforce.com">
+						Salesforce
+					</Link>{' '}
 					either!
 					{this.footnoteLink({
 						key: 'dreaded-2',
@@ -499,20 +578,17 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					and haven’t stopped since. I even code at home for fun!{this.footnoteLink(
-						{
-							key: 'hobby',
-							node: (
-								<div>
-									The majority of developers (80.8%) code as a
-									hobby.
-									<br />
-									<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-coding-as-a-hobby" />
-								</div>
-							),
-						},
-					)}{' '}
-					I’m teaching myself Python, MongoDB and Android
+					and haven’t stopped since. I’m playing with{' '}
+					<Link to="https://en.wikipedia.org/wiki/Python_(programming_language)">
+						Python
+					</Link>,{' '}
+					<Link to="https://en.wikipedia.org/wiki/MongoDB">
+						MongoDB
+					</Link>{' '}
+					and{' '}
+					<Link to="https://en.wikipedia.org/wiki/Android_software_development">
+						Android
+					</Link>
 					{this.footnoteLink({
 						key: 'wanted',
 						node: (
@@ -524,7 +600,19 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 							</div>
 						),
 					})}{' '}
-					by reading the docs and using Stack Overflow.{this.footnoteLink(
+					at home for fun{this.footnoteLink({
+						key: 'hobby',
+						node: (
+							<div>
+								The majority of developers (80.8%) code as a
+								hobby.
+								<br />
+								<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-coding-as-a-hobby" />
+							</div>
+						),
+					})}{' '}
+					by reading the official docs and using{' '}
+					<Link to="https://stackoverflow.com/">Stack Overflow</Link>.{this.footnoteLink(
 						{
 							key: 'learn-methods',
 							node: (
@@ -537,7 +625,9 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 								</div>
 							),
 						},
-					)}{' '}
+					)}
+				</p>
+				<p>
 					One day I might start my own company, but I want to stay
 					techy over the next five years.{this.footnoteLink({
 						key: 'future',
@@ -551,9 +641,9 @@ class ContentDevStereotypeArticle extends React.Component<Props> {
 								<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-ways-developers-learn-on-their-own" />
 							</div>
 						),
-					})}
+					})}{' '}
+					I’ll keep you posted, see you next year!
 				</p>
-				<p>I’ll keep you posted, see you next year!</p>
 			</div>
 		);
 	}
