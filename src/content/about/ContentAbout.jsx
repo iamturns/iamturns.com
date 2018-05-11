@@ -129,11 +129,6 @@ const ContentAbout = ({
 						Melbourne, Australia
 					</EmojiText>
 				</li>
-				<li>
-					<EmojiText emoji="⛰" emojiLabel="Current goal: ">
-						Mission for 2018: create a successful startup
-					</EmojiText>
-				</li>
 			</ul>
 		</PageContainer>
 		<div className="mt-8 mb-12 pt-12 sm:px-8 sm:pb-12 bg-pattern">
