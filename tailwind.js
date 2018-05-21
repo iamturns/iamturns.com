@@ -269,9 +269,9 @@ module.exports = {
   leading: {
     '0': 0.5,
     'none': 1,
-    'tight': 1.3,
+    'tight': 1.4,
     'normal': 1.6,
-    'loose': 1.9,
+    'loose': 1.8,
   },
 
 
