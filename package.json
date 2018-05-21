@@ -19,7 +19,7 @@
     "lint:styles": "stylelint 'src/**/*.css'",
     "lint:types": "flow check",
     "precommit": "npm run lint",
-    "reset": "run-s clean clean-modules install",
+    "reset": "run-s clean clean-modules && npm install",
     "serve": "gatsby serve",
     "styles:build": "postcss src/styles/main.css -o build/styles/main.css",
     "styles:watch": "postcss src/styles/main.css -o build/styles/main.css --watch",
