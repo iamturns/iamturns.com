@@ -10,9 +10,9 @@ import type { Content } from '../../../../types/Content';
 import type { Result } from '../../../../types/Result';
 
 export const frontmatter = {
-	title: 'Continue RxJS Streams When Errors Occur: The Quest for Meatballs',
+	title: 'Catch, Recover, and Continue RxJS Streams After An Error',
 	description:
-		'I assumed RxJS streams worked like Promises, and I was very wrong.',
+		'RxJS automatically kills streams when errors occur. This is hard coded. The solution: use disposable streams.',
 	slug: '/continue-rxjs-streams-when-errors-occur',
 	dateCreated: '2017-05-07',
 	dateUpdated: '2018-03-19',

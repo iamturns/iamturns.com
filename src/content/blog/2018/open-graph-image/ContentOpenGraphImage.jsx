@@ -12,7 +12,7 @@ import type { Image } from '../../../../types/Image';
 import type { Result } from '../../../../types/Result';
 
 export const frontmatter = {
-	title: 'Hunting For The Perfect Open Graph Image Size',
+	title: 'The Best Open Graph Image Size (Stolen From Top Websites of 2018)',
 	description:
 		'Finding the best image size for og:image (and twitter:image) by analysing 30 massively popular websites.',
 	slug: '/open-graph-image-size',
@@ -309,7 +309,7 @@ const Article = (props: ContentProps) => (
 			What size og:image for my homepage?
 		</h3>
 
-		<p>Don‘t bother.</p>
+		<p>Don‘t bother setting one.</p>
 
 		<p>But if you do…</p>
 

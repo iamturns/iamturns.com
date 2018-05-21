@@ -13,7 +13,7 @@ import type { Result } from '../../../../types/Result';
 export const frontmatter = {
 	title: 'Angular Burnout',
 	description:
-		'I dreaded returning to programming during a recent holiday. It turns out I’m just done with Angular.',
+		'I dreaded returning to programming during a recent holiday. It turns out I’m just done with Angular. Is it useful in 2018?',
 	slug: '/angular-burnout',
 	dateCreated: '2018-03-23',
 	dateUpdated: '2018-03-28',
