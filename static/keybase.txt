@@ -1,0 +1,68 @@
+==================================================================
+https://keybase.io/iamturns
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://iamturns.com
+  * I am iamturns (https://keybase.io/iamturns) on keybase.
+  * I have a public key with fingerprint 613C 58E1 B6A9 3FD2 90CB  916C EA76 1A6E D87B 4210
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0101c1579da43ae8884721dd747b8e2823a61345bb28df8f6dd3a5ca04ba68cf23700a",
+      "fingerprint": "613c58e1b6a93fd290cb916cea761a6ed87b4210",
+      "host": "keybase.io",
+      "key_id": "ea761a6ed87b4210",
+      "kid": "0101c1579da43ae8884721dd747b8e2823a61345bb28df8f6dd3a5ca04ba68cf23700a",
+      "uid": "f6119a81bd03914c5c87904836051e19",
+      "username": "iamturns"
+    },
+    "service": {
+      "hostname": "iamturns.com",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1527469281,
+  "expire_in": 157680000,
+  "prev": "4b6d439bfd2974bf7436045aaacafa9c10cab6eca82f8f2e8d22792329c54e14",
+  "seqno": 18,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.0.77
+Comment: https://keybase.io/crypto
+
+yMIgAnicrVJbSBVBGD5aWWmWlJiGKS0VoYfDzuzs7qx0I4owy4jsHh1mZmePm7p7
+PLvnlJRFWUS9SCLSja4UdKGgUtMiyiLCICgCheghSigIuoEvaTYr9RI9Ni/D/PN9
+33zfxzzOHhPKTGvLJXP9FbOVtGcPjyVDW7Kq3u6SqGs2SGW7pBo+uvFak3t+tMY2
+pTJJBjJgQNUNkyCFcIwx0iEwTR3pFHOIoUI0oCCVUohNC1uaaSpEZURGlGiYWVDR
+ZZlIYcmynRhPxBO24wtZwWEq5oBqxFAsExoyowbQGCe6BojGTaxTBIEsiNWuFzCE
+OUo8HrFdMROH6Ki9f+D/s+/kqJylAWAQDKgpKwZATGVYN2SEFU1WAQdGAPR4wiF1
+XKBtUucnE44nNYYlMU3ZjAfFBkn+QkSYWye48YTru8ytFTfVvh/3ygKm3xAPoDs4
+jf4WiVLbMUWPgpHiCc92HakMCCTz7UAVqFBHmgExCEt8Z9xO8KgdIFRdw7JYwTs8
+JSQR1UykGDQoXkfU0pHIgVRCCCMWMRiQGaEaZwRDUQ3k2IRQN6ACDaYiDpAUxKp3
+XKGNhU8SE5qeHXOIyMSlxp4HW8eG0jJDGePSgw8WypyY8+fb5d8cP7J2Rnd0ld81
+vz2n+fi47Vd6PiyqKnq6JvauxYaz9qUmbPx8W7oc7e/Y2z/46Gj4yxRgZZxPhdTd
+Yx7+6G1dXNP249NTt3zSmab3BzZtWKj2PzkImvZWnPIOn4j4F7+rI9bZtxNmfrlh
+ucNpr/teFV66W/lRas9raR/unD5vfGlykO5fv7kjttrCkw8lr97LbdjTU3ehcGXh
+tGXPjmSdLi/JGLjaNXLn8/2p13sX/VwydOs1nLs8b2xp/eSXX9cVhN+0FOdPWp++
+oLWyP/W8VtXe32++d87P++bOn91dcn31STtnQAFzLnyv2NOb3fGutLnqWudIeoHz
+fGljJSouah56Eelr2vYLnsw4cQ==
+=d24Y
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/iamturns
+
+==================================================================
