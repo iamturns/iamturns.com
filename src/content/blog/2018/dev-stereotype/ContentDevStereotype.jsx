@@ -3,7 +3,7 @@
 import * as React from 'react';
 
 import LayoutContent from '../../../../components/LayoutContent';
-import { withFootnotes } from '../../../../hocs/withFootnotes';
+import { withFootnotesParent } from '../../../../hocs/withFootnotesParent';
 import type { Content } from '../../../../types/Content';
 import type { Footnote } from '../../../../types/Footnote';
 import type { Result } from '../../../../types/Result';
@@ -48,4 +48,4 @@ const ContentDevStereotype = (props: ContentProps) => (
 	</LayoutContent>
 );
 
-export default withFootnotes(ContentDevStereotype);
+export default withFootnotesParent(ContentDevStereotype);
