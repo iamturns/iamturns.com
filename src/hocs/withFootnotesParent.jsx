@@ -11,11 +11,13 @@ type State = {
 	footnotes: Array<Footnote>,
 };
 
-export function withFootnotes(
+export function withFootnotesParent(
 	WrappedComponent: React.ComponentType<any>,
 ): React.ComponentType<Props> {
-	return class WithFootnotes extends React.Component<Props, State> {
-		displayName = `WithFootnotes(${getDisplayName(WrappedComponent)})`;
+	return class WithFootnotesParent extends React.Component<Props, State> {
+		displayName = `WithFootnotesParent(${getDisplayName(
+			WrappedComponent,
+		)})`;
 
 		constructor(props: Props) {
 			super(props);
@@ -27,13 +29,10 @@ export function withFootnotes(
 			footnotes: [],
 		};
 
-		componentWillUpdate() {
-			this.state.footnotes = [];
-		}
-
-		addFootnote(footnote: Footnote): number {
-			this.state.footnotes.push(footnote);
-			return this.state.footnotes.length;
+		addFootnote(footnote: Footnote) {
+			this.setState(prevState => ({
+				footnotes: [...prevState.footnotes, footnote],
+			}));
 		}
 
 		render() {
