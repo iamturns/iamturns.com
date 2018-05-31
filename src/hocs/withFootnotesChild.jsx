@@ -40,6 +40,7 @@ export function withFootnotesChild(
 		}
 
 		render() {
+			this.footnotes = [];
 			return (
 				<WrappedComponent
 					createFootnoteLink={this.createFootnoteLink}
