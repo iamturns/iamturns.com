@@ -41,5 +41,7 @@ module.exports = {
 		],
 		// Use Emoji component instead (with accessibility built in)
 		'jsx-a11y/accessible-emoji': false,
+		// https://github.com/facebookincubator/create-react-app/issues/87#issuecomment-234627904
+		'react/jsx-filename-extension': false,
 	},
 };
