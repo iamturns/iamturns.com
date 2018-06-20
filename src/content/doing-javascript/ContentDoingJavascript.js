@@ -35,52 +35,61 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
 		<PageContainer small className="wysiwyg">
-			<h2>There’s a brand new JavaScript framework to learn (again).</h2>
+			<h2>
+				This just in: there’s a brand new JavaScript library to learn
+				(again).
+			</h2>
+
 			<p>
-				Your buddy just Slacked you <em>another</em> article about
-				GraphQL.
-				<br />
-				“All the cool kids are using it!”
-				<br />You skim the article, dish out the thumbs up emoji, and
-				reply
-				<br />
-				“Nice! I’d love to learn this one day.”
+				Your buddy Slacks you <em>another</em> article about GraphQL.
+				Meanwhile, a famous dev tweets about an awesome new animation
+				library. And your inbox is jam packed with fresh articles:
+				“What‘s New In React This Month”, and “Why Haven‘t You Tried Vue
+				Yet?!”.
 			</p>
+
 			<p>
-				A famous(ish) developer just tweeted about a new animation
-				library. You scroll through the readme and star the repo.
-				<br />
-				You‘ll get around to learning it one day, right?
-			</p>
-			<p>
-				Your inbox is full of email newsletters jam packed with fresh
-				articles, including: “What‘s New In React 22” and “Why Haven‘t
-				You Tried Vue Yet?!”
-				<br />
-				You bookmark a handful of links to read later (or, never).
+				You skim the articles, star the repos, and bookmark a handful of
+				links to read later (or, never).
 			</p>
 
 			<h2>There’s too much to know, and too much to learn.</h2>
 
 			<p>
-				“JavaScript Fatigue” isn’t just something people say — you feel
-				it in your gut everytime you check Hacker News.
+				You‘re constantly bombared with hype, clickbait, and{' '}
+				<em>bullshit</em>.
 			</p>
 
 			<p>
-				You‘ve seen other devs stay on top of things. They‘re building
-				interesting stuff with the latest and greatest tech. If only you
-				had more hours in the day. But you‘re trying your best — right?
+				“JavaScript Fatigue” isn’t just something people say. Nuh uh —
+				you feel it in your gut everytime you check Hacker News.
 			</p>
 
 			<p>
-				You read another blog post about React. Hmm, looks familiar —
-				did you already read it last month? You follow along to discover
-				it’s outdated and broken anyway.
+				You‘ve seen other devs keep up. They‘re building interesting
+				projects with the latest and greatest tech. What‘s their secret
+				sauce?
+			</p>
+
+			<h2>
+				You know you need to build <em>something</em>.
+			</h2>
+
+			<p>
+				But you‘re not sure <em>what</em> to build. And even if you did,
+				you‘re not sure <em>how</em> to start. You resort to creating
+				another todo app, but it‘ll be fun this time — you‘re finally
+				gonna learn GraphQL!
 			</p>
 
 			<p>
-				So you try YouTube, but the videos are super… slow… ugh…
+				You read another blog post. Hmm, looks familiar — did you
+				already read it last month? You follow along to discover it’s
+				outdated and broken anyway.
+			</p>
+
+			<p>
+				So you try YouTube, but most videos are super… slow… ugh…
 				<br />
 				You end up watching some high energy dude code up a storm.
 				Impressive. But the next day? You forget almost everything.
@@ -94,40 +103,52 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 
 			<p>
-				After several hours of struggling, your demo todo app still says
-				“Hello World”.
+				After hours and hours of struggling, you lose steam and finally
+				give up. Your unfinished todo app says “Hello World”, just like
+				the others. Ouch.
 			</p>
 
-			<h2>What if you could easily learn new JavaScript skills?</h2>
+			<h2>It doesn‘t have to be this way.</h2>
 
 			<p>
-				You have a brilliant idea for a side project. You architect a
-				solid plan with a shiny new tech stack. Your mates are talking
-				about <em>whatever.js</em> this week, but you keep learning and
-				building with a calm focus. You fire up your favourite editor
-				and the code pours out. You’re in the zone! <em>This</em> is why
-				you fell in love with coding!
+				You know that ambitious idea you have for a side project?
+				Imagine you can architect a solid plan to make it happen. With a
+				shiny new tech stack too — you decide to launch your first
+				mobile app in React Native. You fire up your favourite editor
+				and code pours out. You‘re in the zone! <em>This</em> is why you
+				fell in love with coding!
 			</p>
 			<p>
-				You polish it up and throw it online. You <em>know</em> this
-				tech stack inside and out now. Your CV has never looked so
-				fresh, and your GitHub profile is a delicious shade of green.
-				You‘ve gained real-world experience with the battle scars to
-				prove it. You feel a massive sense of personal achievement.
+				Your mates are talking about <em>whatever.js</em> this week, but
+				you keep learning and coding with a calm focus. You smash out
+				the last feature and host it online for the world to see. Damn
+				it feels good! Your GitHub profile is a tasty shade of green.
+				You freshen up your portfolio and level up your CV.
+			</p>
+			<p>
+				You‘ve gained real-world experience and the battle scars to
+				prove it.
+				<br />
+				You <em>know</em> this new tech stack inside out now.
 			</p>
 			<p>Then you do it all again — because you love it!</p>
 
 			<h2>The secret sauce is: doing.</h2>
 
 			<p>
-				You don‘t learn by consuming the clickbait and hype.
+				You don‘t learn by consuming the clickbait, hype and bullshit.
 				<br />
 				You don‘t learn by passively skimming blogs.
 				<br />
 				You don‘t learn by mindlessly watching videos.
-				<br />
+			</p>
+			<p>
 				No. You learn by creating, coding, crafting, and{' '}
 				<strong>doing</strong>.
+			</p>
+
+			<p>
+				But <em>what</em> do you build? And <em>how</em> do you start?
 			</p>
 		</PageContainer>
 
@@ -136,7 +157,7 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 		</PageContainer>
 
 		<PageContainer small className="wysiwyg">
-			<p>A hands-on approach to learning JavaScript.</p>
+			<p>A hands-on project-first approach to learning JavaScript.</p>
 
 			<p>
 				Select from a catalogue of real-world projects (no todo apps)
@@ -153,15 +174,16 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 			<p>
 				Learning by “doing” is challenging, but you always have support
 				when you‘re stuck:
-				<ul>
-					<li>
-						Hints that nudge you slightly closer to your goal (like
-						a point-and-click adventure game)
-					</li>
-					<li>Solutions from other students</li>
-					<li>Slack community</li>
-				</ul>
 			</p>
+
+			<ul>
+				<li>
+					A clever hint system that nudges you slightly closer to your
+					goal (like a point-and-click adventure game)
+				</li>
+				<li>Solutions from other students</li>
+				<li>Slack community</li>
+			</ul>
 
 			<h2>
 				Start learning <em>and</em> doing.
