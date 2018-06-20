@@ -31,7 +31,7 @@ export const frontmatter = {
 
 declare var graphql: Function;
 export const pageQuery = graphql`
-	query PageExampleQuery($slug: String!) {
+	query ContentExampleQuery($slug: String!) {
 		...CurrentContent
 		...ContentList
 		imgSetSize: file(
