@@ -37,7 +37,8 @@ const EmailPlease = (props: EmailPleaseProps) => (
 			{props.id && <input type="hidden" name="ID" value={props.id} />}
 		</form>
 		<div className="text-xs text-center pt-2 text-turtle-darker">
-			No spam, just love.
+			I know, emails suck. I promise to send only quality stuff. And if
+			not — unsubscribe!
 		</div>
 	</div>
 );
