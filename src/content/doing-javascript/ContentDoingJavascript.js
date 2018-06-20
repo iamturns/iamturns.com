@@ -8,7 +8,6 @@ import HeadTagsContent from '../../components/HeadTagsContent/HeadTagsContent';
 import Link from '../../components/Link/Link';
 import PageContainer from '../../components/PageContainer/PageContainer';
 import type { Content } from '../../types/Content';
-import type { Result } from '../../types/Result';
 
 export const frontmatter = {
 	type: 'page',
