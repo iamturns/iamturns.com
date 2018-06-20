@@ -21,6 +21,7 @@
     "precommit": "npm run lint",
     "reset": "run-s clean clean-modules && npm install",
     "serve": "gatsby serve",
+    "start": "npm run develop",
     "styles:build": "postcss src/styles/main.css -o build/styles/main.css",
     "styles:watch": "postcss src/styles/main.css -o build/styles/main.css --watch",
     "test": "npm run lint",
