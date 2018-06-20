@@ -54,7 +54,7 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 			<p>
 				Your inbox is full of email newsletters jam packed with fresh
-				blog posts, including: “What‘s New In React 22” and “Why Haven‘t
+				articles, including: “What‘s New In React 22” and “Why Haven‘t
 				You Tried Vue Yet?!”
 				<br />
 				You bookmark a handful of links to read later (or, never).
