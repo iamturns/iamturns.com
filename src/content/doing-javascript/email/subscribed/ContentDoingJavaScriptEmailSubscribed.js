@@ -34,7 +34,6 @@ const ContentDoingJavaScriptEmailSubscribed = ({
 		<HeadTagsContent content={currentContent} />
 		<ContentHeader image={currentContent.frontmatter.cover} />
 		<PageContainer small className="wysiwyg my-12">
-			<p className="subtitle">That’s you up there — you‘re doing it!</p>
 			<p>
 				You‘re on the waiting list for{' '}
 				<Link to="/doing-javascript">Doing JavaScript</Link>. Enjoy
