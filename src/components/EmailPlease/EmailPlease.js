@@ -4,14 +4,17 @@ import * as React from 'react';
 
 import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
 
+type EmailList = 'default' | 'doing-javascript';
+
 type EmailPleaseProps = {
+	list?: EmailList,
 	id?: string,
 };
 
-const EmailPlease = (props: EmailPleaseProps) => (
+const EmailPlease = ({ list = 'default', id }: EmailPleaseProps) => (
 	<div>
 		<form
-			action="https://iamturns.us17.list-manage.com/subscribe/post?u=5d5780fe2d3de49f7c38306f2&amp;id=46266d5c5e"
+			action={getFormAction(list)}
 			method="post"
 			className="flex items-center mt-4"
 		>
@@ -34,7 +37,7 @@ const EmailPlease = (props: EmailPleaseProps) => (
 					</div>
 				</button>
 			</div>
-			{props.id && <input type="hidden" name="ID" value={props.id} />}
+			{id && <input type="hidden" name="ID" value={id} />}
 		</form>
 		<div className="text-xs text-center pt-2 text-turtle-darker">
 			I know, emails suck. I promise to send only quality stuff. And if
@@ -44,3 +47,18 @@ const EmailPlease = (props: EmailPleaseProps) => (
 );
 
 export default EmailPlease;
+
+function getFormAction(list: EmailList): string {
+	const listId = getListId(list);
+	return `https://iamturns.us17.list-manage.com/subscribe/post?u=5d5780fe2d3de49f7c38306f2&amp;id=${listId}`;
+}
+
+function getListId(list: EmailList): string {
+	switch (list) {
+		case 'doing-javascript':
+			return '46266d5c5e';
+		case 'default':
+		default:
+			return 'bdea2a1aea';
+	}
+}

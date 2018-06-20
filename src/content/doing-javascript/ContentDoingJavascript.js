@@ -173,9 +173,9 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 
 			<div className="my-4">
-				<EmailPlease id="doing-javascript" />
+				<EmailPlease list="doing-javascript" id="doing-javascript" />
 			</div>
-			<hr />
+			<hr className="hr-dash" />
 			<p className="my-12">
 				<Link to="/" className="button inline-flex items-center">
 					<ArrowLeft className="w-4 h-4 mr-1" />
