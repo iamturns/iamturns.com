@@ -69,14 +69,14 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 
 			<p>
 				You‘ve seen other devs stay on top of things. They‘re building
-				cool stuff with the latest and greatest. If only you had more
-				hours in the day. But you‘re trying your best — right?
+				interesting stuff with the latest and greatest tech. If only you
+				had more hours in the day. But you‘re trying your best — right?
 			</p>
 
 			<p>
-				You read another blog post about React. Hmm, it looks familiar —
-				did you already read this last month? You follow along to
-				discover it’s outdated and broken anyway.
+				You read another blog post about React. Hmm, looks familiar —
+				did you already read it last month? You follow along to discover
+				it’s outdated and broken anyway.
 			</p>
 
 			<p>
@@ -94,8 +94,8 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 
 			<p>
-				Your demo todo app still says “Hello World” as you waste hours
-				scouring the Internet.
+				After several hours of struggling, your demo todo app still says
+				“Hello World”.
 			</p>
 
 			<h2>What if you could easily learn new JavaScript skills?</h2>
@@ -112,10 +112,10 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 				You polish it up and throw it online. You <em>know</em> this
 				tech stack inside and out now. Your CV has never looked so
 				fresh, and your GitHub profile is a delicious shade of green.
-				You‘ve gained real-world experience and empowering battle scars.
-				You feel a massive sense of personal achievement. Then you do it
-				all again — because you love it!
+				You‘ve gained real-world experience with the battle scars to
+				prove it. You feel a massive sense of personal achievement.
 			</p>
+			<p>Then you do it all again — because you love it!</p>
 
 			<h2>The secret sauce is: doing.</h2>
 
