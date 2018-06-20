@@ -56,9 +56,9 @@ function getFormAction(list: EmailList): string {
 function getListId(list: EmailList): string {
 	switch (list) {
 		case 'doing-javascript':
-			return '46266d5c5e';
+			return 'bdea2a1aea';
 		case 'default':
 		default:
-			return 'bdea2a1aea';
+			return '46266d5c5e';
 	}
 }
