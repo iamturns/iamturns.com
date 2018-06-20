@@ -76,9 +76,9 @@ const ContentAbout = ({
 }: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
-		<PageContainer small>
+		<PageContainer small className="wysiwyg">
 			<Hey />
-			<p className="p">And I have a confession to make…</p>
+			<p>And I have a confession to make…</p>
 		</PageContainer>
 		<PageContainer className="my-8 p-6 bg-denim-white text-center">
 			<h2 className="text-xl text-denim-black">
