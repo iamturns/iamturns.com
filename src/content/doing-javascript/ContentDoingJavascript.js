@@ -36,119 +36,112 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 		<HeadTagsContent content={currentContent} />
 		<PageContainer small className="wysiwyg">
 			<h2>
-				This just in: there’s a brand new JavaScript library to learn
+				Guess what? There’s a brand new JavaScript library to learn
 				(again).
 			</h2>
-
 			<p>
-				Your buddy Slacks you <em>another</em> article about GraphQL.
-				Meanwhile, a famous dev tweets about an awesome new animation
-				library. And your inbox is jam packed with fresh articles:
-				“What‘s New In React This Month”, and “Why Haven‘t You Tried Vue
+				A popular dev tweets about a fancy new animation library.
+				Meanwhile, your buddy Slacks you <em>another</em> article about
+				React Native. And your inbox is jam-packed with fresh articles:
+				“What‘s New In React This Month” and “Why Haven‘t You Tried Vue
 				Yet?!”.
 			</p>
-
 			<p>
 				You skim the articles, star the repos, and bookmark a handful of
 				links to read later (or, never).
 			</p>
-
-			<h2>There’s too much to know, and too much to learn.</h2>
-
 			<p>
-				You‘re constantly bombared with hype, clickbait, and{' '}
-				<em>bullshit</em>.
+				<strong>
+					There’s too much to know, and too much to learn.
+				</strong>
+			</p>
+			<p>
+				“JavaScript fatigue” isn’t just something people say. Nuh uh —
+				you feel it in your gut every time you check Hacker News.
 			</p>
 
+			<h2>It feels impossible to stay updated.</h2>
+
 			<p>
-				“JavaScript Fatigue” isn’t just something people say. Nuh uh —
-				you feel it in your gut everytime you check Hacker News.
+				But you‘re doing your best. You‘re working on another todo app
+				this weekend — you‘re finally gonna learn GraphQL!
 			</p>
-
 			<p>
-				You‘ve seen other devs keep up. They‘re building interesting
-				projects with the latest and greatest tech. What‘s their secret
-				sauce?
+				You find yourself darting between the official docs and Stack
+				Overflow, lost within 42 browser tabs. Your terminal is glowing
+				red with errors — maybe you copy-and-pasted from an outdated
+				tutorial?
 			</p>
-
-			<h2>
-				You know you need to build <em>something</em>.
-			</h2>
-
 			<p>
-				But you‘re not sure <em>what</em> to build. And even if you did,
-				you‘re not sure <em>how</em> to start. You resort to creating
-				another todo app, but it‘ll be fun this time — you‘re finally
-				gonna learn GraphQL!
-			</p>
-
-			<p>
-				You read another blog post. Hmm, looks familiar — did you
-				already read it last month? You follow along to discover it’s
-				outdated and broken anyway.
-			</p>
-
-			<p>
-				So you try YouTube, but most videos are super… slow… ugh…
+				You turn to YouTube, but the videos… are… super… sloooow… ugh…
 				<br />
-				You end up watching some high energy dude code up a storm.
+				You end up watching some high energy dude coding up a storm.
 				Impressive. But the next day? You forget almost everything.
 				Nothing sticks.
 			</p>
-
 			<p>
-				So you buy an online course. “Type out this exact code into this
+				You delve into an online course. “Type this exact code into this
 				box”. You follow along, typing typing typing. Nothing clicks in
 				your head. Is this coding?
 			</p>
+			<p>
+				After an entire Sunday of struggling, you lose motivation and
+				give up. Your todo app is stuck on “Hello World”. Ouch.
+			</p>
 
 			<p>
-				After hours and hours of struggling, you lose steam and finally
-				give up. Your unfinished todo app says “Hello World”, just like
-				the others. Ouch.
+				You‘ve seen other devs manage to stay updated. They‘re building
+				interesting projects with the latest and greatest tech. What‘s
+				their secret sauce?
 			</p>
 
 			<h2>It doesn‘t have to be this way.</h2>
 
 			<p>
-				You know that ambitious idea you have for a side project?
-				Imagine you can architect a solid plan to make it happen. With a
-				shiny new tech stack too — you decide to launch your first
-				mobile app in React Native. You fire up your favourite editor
-				and code pours out. You‘re in the zone! <em>This</em> is why you
-				fell in love with coding!
+				That ambitious idea you have for a side project — what if you
+				could architect a solid plan to make it happen? With a shiny new
+				tech stack too. You decide to launch your first mobile app using
+				React Native.
 			</p>
 			<p>
-				Your mates are talking about <em>whatever.js</em> this week, but
-				you keep learning and coding with a calm focus. You smash out
-				the last feature and host it online for the world to see. Damn
-				it feels good! Your GitHub profile is a tasty shade of green.
-				You freshen up your portfolio and level up your CV.
+				You fire up your favourite editor and code pours onto the
+				screen. Your mates are talking about <em>whatever.js</em> this
+				week, but you keep learning and coding with intense focus. Step
+				by step your momentum carries you further — you‘re in the zone!{' '}
+				<em>This</em> is why you fell in love with coding!
 			</p>
 			<p>
-				You‘ve gained real-world experience and the battle scars to
-				prove it.
-				<br />
-				You <em>know</em> this new tech stack inside out now.
+				You smash out the last feature and host it online for the world
+				to see. It feels so damn good to finish a project! Your GitHub
+				profile is a tasty shade of green. You freshen up your portfolio
+				and level up your CV.
+			</p>
+			<p>
+				You <em>know</em> the new tech stack inside out now, and you‘ve
+				gained the battle scars and real-world experience to prove it.
 			</p>
 			<p>Then you do it all again — because you love it!</p>
 
 			<h2>The secret sauce is: doing.</h2>
 
 			<p>
-				You don‘t learn by consuming the clickbait, hype and bullshit.
-				<br />
-				You don‘t learn by passively skimming blogs.
-				<br />
-				You don‘t learn by mindlessly watching videos.
+				You don‘t learn by consuming the constant stream of hype,
+				clickbait, and bullshit. Or by mindlessly skimming blogs,
+				aimlessly jumping around docs, or passively watching videos.
+			</p>
+			<p>No.</p>
+			<p>
+				<strong>
+					You learn by <em>doing</em>.
+				</strong>
 			</p>
 			<p>
-				No. You learn by creating, coding, crafting, and{' '}
-				<strong>doing</strong>.
+				Applying knowledge. Building projects piece by piece. Creating,
+				crafting, coding.
 			</p>
-
 			<p>
-				But <em>what</em> do you build? And <em>how</em> do you start?
+				But doing is hard. What do you build? How do you build it? Where
+				do you start?
 			</p>
 		</PageContainer>
 
@@ -171,27 +164,24 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 				to guide you.
 			</p>
 
-			<p>
-				Learning by “doing” is challenging, but you always have support
-				when you‘re stuck:
-			</p>
+			<p>You always have support when you‘re stuck:</p>
 
 			<ul>
 				<li>
-					A clever hint system that nudges you slightly closer to your
-					goal (like a point-and-click adventure game)
+					Activate the hint system which nudges you slightly closer to
+					your goal (just like a point-and-click adventure game)
 				</li>
-				<li>Solutions from other students</li>
-				<li>Slack community</li>
+				<li>
+					View solutions from other students who have solved your{' '}
+					<em>exact</em> problem
+				</li>
+				<li>Reach out to the friendly Slack community</li>
 			</ul>
 
-			<h2>
-				Start learning <em>and</em> doing.
-			</h2>
-
 			<p>
-				Join the waiting list for early access, monthly updates, and a
-				discount on launch:
+				Update your JavaScript skills <em>and</em> your portfolio by
+				Doing JavaScript. Join the waiting list for early access,
+				monthly updates, and a discount on launch:
 			</p>
 
 			<div className="my-4">
