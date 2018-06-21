@@ -35,80 +35,55 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
 		<PageContainer small className="wysiwyg">
-			<h2>
-				Guess what? There’s a brand new JavaScript library to learn
-				(again).
-			</h2>
+			<h2>It‘s impossible to keep up with JavaScript.</h2>
 			<p>
 				A popular dev tweets about a fancy new animation library.
-				Meanwhile, your buddy Slacks you <em>another</em> article about
-				React Native. And your inbox is jam-packed with fresh articles:
+				Meanwhile, your buddy Slacks you <em>another</em> React Native
+				blog post. And your inbox is jam-packed with fresh articles:
 				“What‘s New In React This Month” and “Why Haven‘t You Tried Vue
 				Yet?!”.
 			</p>
-			<p>
-				You skim the articles, star the repos, and bookmark a handful of
-				links to read later (or, never).
-			</p>
-			<p>
-				<strong>
-					There’s too much to know, and too much to learn.
-				</strong>
-			</p>
+
+			<p>You bookmark a handful of links to read later (or, never).</p>
+
 			<p>
 				“JavaScript fatigue” isn’t just something people say. Nuh uh —
 				you feel it in your gut every time you check Hacker News.
 			</p>
 
-			<h2>It feels impossible to stay updated.</h2>
-
 			<p>
-				But you‘re doing your best. You‘re working on another todo app
-				this weekend — you‘re finally gonna learn GraphQL!
-			</p>
-			<p>
-				You find yourself darting between the official docs and Stack
-				Overflow, lost within 42 browser tabs. Your terminal is glowing
-				red with errors — maybe you copy-and-pasted from an outdated
-				tutorial?
-			</p>
-			<p>
-				You turn to YouTube, but the videos… are… super… sloooow… ugh…
-				<br />
-				You end up watching some high energy dude coding up a storm.
-				Impressive. But the next day? You forget almost everything.
-				Nothing sticks.
-			</p>
-			<p>
-				You delve into an online course. “Type this exact code into this
-				box”. You follow along, typing typing typing. Nothing clicks in
-				your head. Is this coding?
-			</p>
-			<p>
-				After an entire Sunday of struggling, you lose motivation and
-				give up. Your todo app is stuck on “Hello World”. Ouch.
+				<strong>
+					There’s too much to know, and too much to learn.
+				</strong>
 			</p>
 
 			<p>
 				You‘ve seen other devs manage to stay updated. They‘re building
-				interesting projects with the latest and greatest tech. What‘s
-				their secret sauce?
+				interesting projects with the latest and greatest tech.
 			</p>
 
-			<h2>It doesn‘t have to be this way.</h2>
-
 			<p>
-				That ambitious idea you have for a side project — what if you
-				could architect a solid plan to make it happen? With a shiny new
-				tech stack too. You decide to launch your first mobile app using
-				React Native.
+				But your terminal is glowing red with errors. Maybe you
+				copy-and-pasted from an outdated tutorial? You dart between the
+				official docs and Stack Overflow, lost within 42 browser tabs.
 			</p>
 			<p>
-				You fire up your favourite editor and code pours onto the
-				screen. Your mates are talking about <em>whatever.js</em> this
-				week, but you keep learning and coding with intense focus. Step
-				by step your momentum carries you further — you‘re in the zone!{' '}
-				<em>This</em> is why you fell in love with coding!
+				You stay up late watching some dude coding away on YouTube, but
+				nothing sticks.
+			</p>
+			<p>
+				You‘ve wasted an entire weekend on this app, and it‘s stuck on
+				“Hello World”. Ouch.
+			</p>
+
+			<h2>You just want to code.</h2>
+
+			<p>
+				You have a brilliant idea for a new side project and architect a
+				solid plan to launch your first mobile app using React Native
+				and GraphQL. You fire up your favourite editor and focus. Step
+				by step your momentum builds, code pours onto the screen —
+				you‘re in the zone! <em>This</em> is why you love coding!
 			</p>
 			<p>
 				You smash out the last feature and host it online for the world
@@ -117,77 +92,80 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 				and level up your CV.
 			</p>
 			<p>
-				You <em>know</em> the new tech stack inside out now, and you‘ve
-				gained the battle scars and real-world experience to prove it.
+				You <em>know</em> React Native and GraphQL inside out now, and
+				you‘ve gained the battle scars and real-world experience to
+				prove it.
 			</p>
+
 			<p>Then you do it all again — because you love it!</p>
 
-			<h2>The secret sauce is: doing.</h2>
+			<h2>
+				You learn best by <em>doing</em>.
+			</h2>
 
 			<p>
-				You don‘t learn by consuming the constant stream of hype,
-				clickbait, and bullshit. Or by mindlessly skimming blogs,
-				aimlessly jumping around docs, or passively watching videos.
-			</p>
-			<p>No.</p>
-			<p>
-				<strong>
-					You learn by <em>doing</em>.
-				</strong>
+				But <em>what</em> exactly do you build? Another todo app doesn‘t
+				inspire you.
 			</p>
 			<p>
-				Applying knowledge. Building projects piece by piece. Creating,
-				crafting, coding.
+				And <em>how</em> do you build it? What technology do you use?
+				Can you handle it? Will you give up again?
 			</p>
 			<p>
-				But doing is hard. What do you build? How do you build it? Where
-				do you start?
+				All you want to do is be creative, craft a beautiful solution,
+				and code up a storm.
 			</p>
 		</PageContainer>
 
-		<PageContainer className="my-8 p-6 bg-denim-white text-center">
-			<h2 className="h2 m-0">Introducing: Doing JavaScript</h2>
+		<PageContainer className="my-4 mt-12 p-6 bg-denim-white text-center">
+			<h2 className="h2 mt-0">Introducing: “Doing JavaScript”</h2>
+			<p className="p mb-0">
+				A hands-on project-first approach to learning JavaScript.
+			</p>
 		</PageContainer>
 
 		<PageContainer small className="wysiwyg">
-			<p>A hands-on project-first approach to learning JavaScript.</p>
-
 			<p>
-				Select from a catalogue of real-world projects (no todo apps)
-				paired with modern tech stacks (like React Native, TypeScript,
-				Node, and GraphQL).
+				This online course will help you build real-world projects (like
+				Instagram, Reddit, Airbnb) with modern JavaScript tech stacks
+				(like React Native, TypeScript, Node, GraphQL).
 			</p>
 
 			<p>
 				Each project is broken down into super-tiny super-achievable
-				steps. And each step has <em>just enough</em> learning material
-				to guide you.
+				steps. And each step contains fast-paced videos and{' '}
+				<em>just enough</em> learning material to guide you.
 			</p>
 
-			<p>You always have support when you‘re stuck:</p>
+			<p>
+				This is a hands-on approach, and answers are <em>not</em>{' '}
+				spoon-fed. When you get stuck (and you will), simply activate
+				the hint system. It will dish out code snippets and general
+				suggestions, nudging you slightly closer to your goal — just
+				like a point-and-click adventure game!
+			</p>
 
-			<ul>
-				<li>
-					Activate the hint system which nudges you slightly closer to
-					your goal (just like a point-and-click adventure game)
-				</li>
-				<li>
-					View solutions from other students who have solved your{' '}
-					<em>exact</em> problem
-				</li>
-				<li>Reach out to the friendly Slack community</li>
-			</ul>
+			<p>
+				See solutions from other students as you complete each step.
+				Steal the best tricks for yourself.
+			</p>
 
 			<p>
 				Update your JavaScript skills <em>and</em> your portfolio by
-				Doing JavaScript. Join the waiting list for early access,
-				monthly updates, and a discount on launch:
+				Doing JavaScript.
+			</p>
+
+			<p>
+				Join the waiting list for early access, monthly updates, and a
+				discount on launch:
 			</p>
 
 			<div className="my-4">
 				<EmailPlease list="doing-javascript" id="doing-javascript" />
 			</div>
+
 			<hr className="hr-dash" />
+
 			<p className="my-12">
 				<Link to="/" className="button inline-flex items-center">
 					<ArrowLeft className="w-4 h-4 mr-1" />
