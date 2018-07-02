@@ -8,6 +8,7 @@ import type { Result } from '../../types/Result';
 import { getResultAsArray } from '../../utils/result';
 import ContentHeader from '../ContentHeader/ContentHeader';
 import ContentListing from '../ContentListing/ContentListing';
+import DisqusContent from '../DisqusContent/';
 import type { HeadTagsProps } from '../HeadTags';
 import HeadTagsContent from '../HeadTagsContent';
 import PageContainer from '../PageContainer';
@@ -44,6 +45,8 @@ const LayoutContent = ({
 			{children}
 			<LayoutContentEmail currentContent={currentContent} />
 			<LayoutContentFootnotes footnotes={footnotes} />
+			<hr className="hr" />
+			<DisqusContent content={currentContent} />
 		</PageContainer>
 		<ContentListing
 			contentList={getResultAsArray(contentListResult)}
