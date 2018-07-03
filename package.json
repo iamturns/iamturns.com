@@ -25,9 +25,9 @@
     "styles:build": "postcss src/styles/main.css -o build/styles/main.css",
     "styles:watch": "postcss src/styles/main.css -o build/styles/main.css --watch",
     "test": "npm run lint",
-    "upgrade": "run-s upgrade:semver upgrade:modules",
-    "upgrade:semver": "npm run clean-modules:force && npm install",
-    "upgrade:modules": "npm-check --skip-unused --update --save-exact"
+    "upgrade": "run-s upgrade:auto upgrade:manual",
+    "upgrade:auto": "npm run clean-modules:force && npm install",
+    "upgrade:manual": "npm-check --skip-unused --update --save-exact"
   },
   "dependencies": {
     "classnames": "2.2.5",
