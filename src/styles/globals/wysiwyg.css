@@ -39,6 +39,10 @@
 		@apply .mark;
 	}
 
+	code:not([class]) {
+		@apply .code-highlight .code-highlight--inline;
+	}
+
 	ul ul:not([class]) {
 		@apply .m-0;
 
