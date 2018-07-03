@@ -22,7 +22,7 @@ const EmailPlease = ({ list = 'default', id }: EmailPleaseProps) => (
 				<input
 					type="email"
 					name="EMAIL"
-					placeholder="Email"
+					placeholder="Enter your email"
 					className="input w-full border-turtle border-r-0 rounded-r-none"
 				/>
 			</div>
