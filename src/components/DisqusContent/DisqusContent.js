@@ -10,16 +10,14 @@ type DisqusProps = {
 	content: Content,
 };
 
-const DisqusContent = ({ content }: DisqusProps) => {
-	return (
-		<Disqus
-			config={{
-				url: prefixSiteUrl(content.fields.slug),
-				identifier: content.fields.slug,
-				title: content.frontmatter.title,
-			}}
-		/>
-	);
-};
+const DisqusContent = ({ content }: DisqusProps) => (
+	<Disqus
+		config={{
+			url: prefixSiteUrl(content.fields.slug),
+			identifier: content.fields.slug,
+			title: content.frontmatter.title,
+		}}
+	/>
+);
 
 export default DisqusContent;

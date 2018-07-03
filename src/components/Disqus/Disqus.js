@@ -7,10 +7,8 @@ type DisqusProps = {
 	config: Object,
 };
 
-const Disqus = ({ config }: DisqusProps) => {
-	return (
-		<DisqusVendor.DiscussionEmbed shortname="iamturns" config={config} />
-	);
-};
+const Disqus = ({ config }: DisqusProps) => (
+	<DisqusVendor.DiscussionEmbed shortname="iamturns" config={config} />
+);
 
 export default Disqus;
