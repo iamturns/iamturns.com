@@ -44,9 +44,10 @@ const LayoutContent = ({
 		<PageContainer small>
 			{children}
 			<LayoutContentEmail currentContent={currentContent} />
+			<div className="mt-12">
+				<DisqusContent content={currentContent} />
+			</div>
 			<LayoutContentFootnotes footnotes={footnotes} />
-			<hr className="hr" />
-			<DisqusContent content={currentContent} />
 		</PageContainer>
 		<ContentListing
 			contentList={getResultAsArray(contentListResult)}
