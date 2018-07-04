@@ -203,7 +203,7 @@ const Article = (props: ContentProps) => (
 
 		<p>
 			<strong>
-				But what if you need to shift between projects reguarly, each
+				But what if you need to shift between projects regularly, each
 				requiring different Yarn versions?
 			</strong>
 		</p>
@@ -237,7 +237,7 @@ const Article = (props: ContentProps) => (
 			feature, consider using{' '}
 			<Link to="https://github.com/lerna/lerna/">Lerna</Link> instead. It
 			does everything Yarn offers with additional features, eg: managing
-			workspace versions, running comands within each workspace, and
+			workspace versions, running commands within each workspace, and
 			publishing workspaces.
 		</p>
 
@@ -337,7 +337,7 @@ const Article = (props: ContentProps) => (
 		</p>
 
 		<p>
-			The JavaScript ecosystem is complex enough. Do we neally need Yarn
+			The JavaScript ecosystem is complex enough. Do we really need Yarn
 			in the mix too?
 		</p>
 
@@ -378,7 +378,7 @@ const Article = (props: ContentProps) => (
 			tooling (like{' '}
 			<Link to="https://github.com/creationix/nvm">nvm</Link>,{' '}
 			<Link to="https://github.com/tj/n">n</Link>, and the shell
-			autocomplete above). It‘s reguarly updated with awesome features.
+			autocomplete above). It‘s regularly updated with awesome features.
 			Popular modules like{' '}
 			<Link to="https://github.com/lerna/lerna">Lerna</Link> and{' '}
 			<Link to="https://github.com/dylang/npm-check">npm-check</Link>{' '}
