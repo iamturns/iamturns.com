@@ -10,11 +10,15 @@ import Link from '../../../../components/Link';
 import type { Content } from '../../../../types/Content';
 import type { Image } from '../../../../types/Image';
 import type { Result } from '../../../../types/Result';
+import { createImage } from '../../../../utils/image';
+import ImgN from './n.gif';
+
+const IMG_N = createImage(ImgN, 640, 428);
 
 export const frontmatter = {
 	title: 'Why Are You Still Using Yarn in 2018?',
 	description:
-		'It’s time to give npm another chance. It’s just as fast as Yarn, and can achieve Yarns extra features with a couple of modules.',
+		'Simplify your dev tools — it‘s time to give npm another chance.',
 	slug: '/yarn-vs-npm-2018',
 	dateCreated: '2018-07-04',
 	dateUpdated: '2018-07-04',
@@ -212,7 +216,7 @@ const Article = (props: ContentProps) => (
 			You need to stop using brew (<code>brew uninstall yarn</code>) and
 			revert back to an npm install. Run{' '}
 			<code>npm install yarn@1.1 --global</code> and{' '}
-			<code>npm install yarn@1.2 --global</code> as you flip between
+			<code>npm install yarn@1.2 --global</code> as you switch between
 			projects. Yep, re-installing Yarn in its entirety every single time
 			you flip between projects. What a nightmare!
 		</p>
@@ -226,6 +230,8 @@ const Article = (props: ContentProps) => (
 			<Link to="https://github.com/tj/n">n</Link> and switch versions
 			instantly with one command. Boom.
 		</p>
+
+		<ImgBlock image={IMG_N} alt="Example of n" />
 
 		<h2>Use Lerna to manage your workspaces.</h2>
 
@@ -247,7 +253,10 @@ const Article = (props: ContentProps) => (
 			The <code>yarn upgrade-interactive</code> command is awesome:
 		</p>
 
-		<ImgBlock image={props.data.imgYarnUpgradeInteractive} />
+		<ImgBlock
+			image={props.data.imgYarnUpgradeInteractive}
+			alt="yarn upgrade-interactive example"
+		/>
 
 		<p>
 			The popular{' '}
@@ -255,7 +264,7 @@ const Article = (props: ContentProps) => (
 			module does the same thing:
 		</p>
 
-		<ImgBlock image={props.data.imgNpmCheck} />
+		<ImgBlock image={props.data.imgNpmCheck} alt="npm-check example" />
 
 		<p>And is very easy to setup:</p>
 
@@ -290,7 +299,10 @@ const Article = (props: ContentProps) => (
 			readme:
 		</p>
 
-		<ImgBlock image={props.data.imgYarnNpmJest} />
+		<ImgBlock
+			image={props.data.imgYarnNpmJest}
+			alt="Jest readme with yarn commands"
+		/>
 
 		<p>
 			You don’t need Yarn to use Jest. But here it is, pushed on you. Now
@@ -309,7 +321,10 @@ const Article = (props: ContentProps) => (
 			</Link>:
 		</p>
 
-		<ImgBlock image={props.data.imgYarnNpmCRA} />
+		<ImgBlock
+			image={props.data.imgYarnNpmCRA}
+			alt="Create react app readme with npm and yarn commands"
+		/>
 
 		<p>What benefit is Yarn bringing here? None.</p>
 		<p>
@@ -341,7 +356,10 @@ const Article = (props: ContentProps) => (
 			<code>npm run</code> commands by scanning package.json scripts:
 		</p>
 
-		<ImgBlock image={props.data.imgAutocomplete} />
+		<ImgBlock
+			image={props.data.imgAutocomplete}
+			alt="Shell autocompleting npm run command"
+		/>
 
 		<p>
 			Sure, Yarn might eventually have this support (and possibly already
@@ -362,12 +380,11 @@ const Article = (props: ContentProps) => (
 		</p>
 
 		<p>
-			It’s fast. It’s battle-tested. It has years of community support and
-			tooling (like{' '}
+			It’s fast. It’s battle-tested. It‘s regularly updated. It has years
+			of community support and tooling (like{' '}
 			<Link to="https://github.com/creationix/nvm">nvm</Link>,{' '}
 			<Link to="https://github.com/tj/n">n</Link>, and the shell
-			autocomplete above). It’s regularly updated with awesome features.
-			Popular modules like{' '}
+			autocomplete above). Popular modules like{' '}
 			<Link to="https://github.com/lerna/lerna">Lerna</Link> and{' '}
 			<Link to="https://github.com/dylang/npm-check">npm-check</Link>{' '}
 			achieve Yarn’s extra features.
