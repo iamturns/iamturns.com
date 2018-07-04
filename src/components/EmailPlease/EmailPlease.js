@@ -41,7 +41,7 @@ const EmailPlease = ({ list = 'default', id }: EmailPleaseProps) => (
 		</form>
 		<div className="text-xs text-center pt-2 text-turtle-darker">
 			I know, emails suck. I promise to send only quality stuff. And if
-			not — unsubscribe!
+			not, just unsubscribe!
 		</div>
 	</div>
 );
