@@ -45,7 +45,7 @@ export const pageQuery = graphql`
 			}
 		) {
 			childImageSharp {
-				sizes(maxWidth: 580) {
+				sizes(maxWidth: 376) {
 					...GatsbyImageSharpSizes
 				}
 			}
@@ -55,7 +55,7 @@ export const pageQuery = graphql`
 			relativePath: { eq: "blog/2018/yarn-vs-npm/yarn-npm-jest.png" }
 		) {
 			childImageSharp {
-				sizes(maxWidth: 580) {
+				sizes(maxWidth: 417) {
 					...GatsbyImageSharpSizes
 				}
 			}
@@ -247,10 +247,7 @@ const Article = (props: ContentProps) => (
 			The <code>yarn upgrade-interactive</code> command is awesome:
 		</p>
 
-		<ImgBlock
-			image={props.data.imgYarnUpgradeInteractive}
-			style={{ maxWidth: '773px' }}
-		/>
+		<ImgBlock image={props.data.imgYarnUpgradeInteractive} />
 
 		<p>
 			The popular{' '}
@@ -258,10 +255,7 @@ const Article = (props: ContentProps) => (
 			module does the same thing:
 		</p>
 
-		<ImgBlock
-			image={props.data.imgNpmCheck}
-			style={{ maxWidth: '767px' }}
-		/>
+		<ImgBlock image={props.data.imgNpmCheck} />
 
 		<p>And is very easy to setup:</p>
 
@@ -296,10 +290,7 @@ const Article = (props: ContentProps) => (
 			readme:
 		</p>
 
-		<ImgBlock
-			image={props.data.imgYarnNpmJest}
-			style={{ maxWidth: '417px' }}
-		/>
+		<ImgBlock image={props.data.imgYarnNpmJest} />
 
 		<p>
 			You don‘t need Yarn to use Jest. But here it is, pushed on you. Now
@@ -318,10 +309,7 @@ const Article = (props: ContentProps) => (
 			</Link>:
 		</p>
 
-		<ImgBlock
-			image={props.data.imgYarnNpmCRA}
-			style={{ maxWidth: '376px' }}
-		/>
+		<ImgBlock image={props.data.imgYarnNpmCRA} />
 
 		<p>What benefit is Yarn bringing here? None.</p>
 		<p>
