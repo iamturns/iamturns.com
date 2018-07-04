@@ -13,7 +13,8 @@ import type { Result } from '../../../../types/Result';
 
 export const frontmatter = {
 	title: 'Why Are You Still Using Yarn in 2018?',
-	description: '',
+	description:
+		'Simplify your tools and give npm another chance. It‘s just as fast as Yarn, and can achieve Yarn‘s extra features with a couple of modules.',
 	slug: '/yarn-vs-npm-2018',
 	dateCreated: '2018-07-04',
 	dateUpdated: '2018-07-04',
