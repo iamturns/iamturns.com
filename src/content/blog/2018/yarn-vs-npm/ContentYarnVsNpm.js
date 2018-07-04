@@ -14,7 +14,7 @@ import type { Result } from '../../../../types/Result';
 export const frontmatter = {
 	title: 'Why Are You Still Using Yarn in 2018?',
 	description:
-		'Simplify your tools and give npm another chance. It‘s just as fast as Yarn, and can achieve Yarn‘s extra features with a couple of modules.',
+		'Simplify your tools and give npm another chance. It’s just as fast as Yarn, and can achieve Yarns extra features with a couple of modules.',
 	slug: '/yarn-vs-npm-2018',
 	dateCreated: '2018-07-04',
 	dateUpdated: '2018-07-04',
@@ -144,7 +144,7 @@ const Article = (props: ContentProps) => (
 		</blockquote>
 
 		<p>
-			I think it‘s time to switch back to good ol‘ npm. Let‘s take a look.
+			I think it’s time to switch back to good ol’ npm. Let’s take a look.
 		</p>
 
 		<h2>npm is just as fast as Yarn.</h2>
@@ -218,7 +218,7 @@ const Article = (props: ContentProps) => (
 		</p>
 
 		<p>
-			<strong>But it‘s super easy with npm!</strong>
+			<strong>But it’s super easy with npm!</strong>
 		</p>
 
 		<p>
@@ -230,7 +230,7 @@ const Article = (props: ContentProps) => (
 		<h2>Use Lerna to manage your workspaces.</h2>
 
 		<p>
-			If you‘re using Yarn for the{' '}
+			If you’re using Yarn for the{' '}
 			<Link to="https://yarnpkg.com/lang/en/docs/workspaces/">
 				workspaces
 			</Link>{' '}
@@ -293,10 +293,10 @@ const Article = (props: ContentProps) => (
 		<ImgBlock image={props.data.imgYarnNpmJest} />
 
 		<p>
-			You don‘t need Yarn to use Jest. But here it is, pushed on you. Now
+			You don’t need Yarn to use Jest. But here it is, pushed on you. Now
 			I need to convert <code>yarn test</code> into an <code>npm</code>{' '}
 			command… ok, is it <code>npm test</code> or{' '}
-			<code>npm run test</code>? I can‘t quite remember. This is what the
+			<code>npm run test</code>? I can’t quite remember. This is what the
 			readme should tell me!
 		</p>
 
@@ -313,13 +313,13 @@ const Article = (props: ContentProps) => (
 
 		<p>What benefit is Yarn bringing here? None.</p>
 		<p>
-			It‘s confusing for brand new React developers who are already
+			It’s confusing for brand new React developers who are already
 			overwhelmed with learning a new framework. “Which command do I run?
 			What is this Yarn one? Do I need it? Argh!”
 		</p>
 
 		<p>
-			I‘ve also seen tooling and CI code check for the{' '}
+			I’ve also seen tooling and CI code check for the{' '}
 			<code>yarn.lock</code> file, and run a different set of commands if
 			detected.
 		</p>
@@ -362,19 +362,19 @@ const Article = (props: ContentProps) => (
 		</p>
 
 		<p>
-			It‘s fast. It‘s battle-tested. It has years of community support and
+			It’s fast. It’s battle-tested. It has years of community support and
 			tooling (like{' '}
 			<Link to="https://github.com/creationix/nvm">nvm</Link>,{' '}
 			<Link to="https://github.com/tj/n">n</Link>, and the shell
-			autocomplete above). It‘s regularly updated with awesome features.
+			autocomplete above). It’s regularly updated with awesome features.
 			Popular modules like{' '}
 			<Link to="https://github.com/lerna/lerna">Lerna</Link> and{' '}
 			<Link to="https://github.com/dylang/npm-check">npm-check</Link>{' '}
-			achieve Yarn‘s extra features.
+			achieve Yarn’s extra features.
 		</p>
 
 		<p>
-			If you‘re writing javascript then you already have npm installed.
+			If you’re writing javascript then you already have npm installed.
 			Simplify your dev tools and use npm again. And if you miss Yarn, let
 			me know why in the comments below!
 		</p>

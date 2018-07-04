@@ -35,12 +35,12 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
 		<PageContainer small className="wysiwyg">
-			<h2>It‘s impossible to keep up with JavaScript.</h2>
+			<h2>It’s impossible to keep up with JavaScript.</h2>
 			<p>
 				A popular dev tweets about a fancy new animation library.
 				Meanwhile, your buddy Slacks you <em>another</em> React Native
 				blog post. And your inbox is jam-packed with fresh articles:
-				“What‘s New In React This Month” and “Why Haven‘t You Tried Vue
+				“What’s New In React This Month” and “Why Haven’t You Tried Vue
 				Yet?!”.
 			</p>
 
@@ -58,7 +58,7 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 
 			<p>
-				You‘ve seen other devs manage to stay updated. They‘re building
+				You’ve seen other devs manage to stay updated. They’re building
 				interesting projects with the latest and greatest tech.
 			</p>
 
@@ -72,7 +72,7 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 				nothing sticks.
 			</p>
 			<p>
-				You‘ve wasted an entire weekend on this app, and it‘s stuck on
+				You’ve wasted an entire weekend on this app, and it’s stuck on
 				“Hello World”. Ouch.
 			</p>
 
@@ -83,7 +83,7 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 				solid plan to launch your first mobile app using React Native
 				and GraphQL. You fire up your favourite editor and focus. Step
 				by step your momentum builds, code pours onto the screen —
-				you‘re in the zone! <em>This</em> is why you love coding!
+				you’re in the zone! <em>This</em> is why you love coding!
 			</p>
 			<p>
 				You smash out the last feature and host it online for the world
@@ -93,7 +93,7 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 			<p>
 				You <em>know</em> React Native and GraphQL inside out now, and
-				you‘ve gained the battle scars and real-world experience to
+				you’ve gained the battle scars and real-world experience to
 				prove it.
 			</p>
 
@@ -104,7 +104,7 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 			</h2>
 
 			<p>
-				But <em>what</em> exactly do you build? Another todo app doesn‘t
+				But <em>what</em> exactly do you build? Another todo app doesn’t
 				inspire you.
 			</p>
 			<p>

@@ -73,7 +73,7 @@ const Article = (props: ContentProps) => (
 			with Angular.
 		</p>
 
-		<h2>There‘s no need for Angular in 2018</h2>
+		<h2>There’s no need for Angular in 2018</h2>
 
 		<blockquote className="quote mt-12 text-lg">
 			“I just need to learn Angular, then I can easily jump between any
@@ -142,7 +142,7 @@ const Article = (props: ContentProps) => (
 			services, ngModules, zone.js, AOT compilation, the list goes on.
 		</p>
 		<p>
-			Many projects succeed without this baggage. Is it necessary? It‘s a
+			Many projects succeed without this baggage. Is it necessary? It’s a
 			lot to learn, a lot to code, and a lot to maintain.
 		</p>
 		<p>
@@ -180,7 +180,7 @@ const Article = (props: ContentProps) => (
 		</p>
 		<p>
 			I have only scratched the surface of React, but I can’t deny this
-			feeling. The developer experience is A+ so far. I‘m back in the
+			feeling. The developer experience is A+ so far. I’m back in the
 			game!
 		</p>
 	</div>

@@ -38,7 +38,7 @@ const ContentDoingJavaScriptEmailSuccess = ({
 		/>
 		<PageContainer small className="wysiwyg my-12">
 			<p className="subtitle">
-				You‘re gonna love Doing JavaScript — I can feel it.
+				You’re gonna love Doing JavaScript — I can feel it.
 			</p>
 			<p>I just sent you an email to make sure you’re fo’ real.</p>
 			<p>

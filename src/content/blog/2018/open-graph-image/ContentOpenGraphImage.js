@@ -309,7 +309,7 @@ const Article = (props: ContentProps) => (
 			What size og:image for my homepage?
 		</h3>
 
-		<p>Don‘t bother setting one.</p>
+		<p>Don’t bother setting one.</p>
 
 		<p>But if you do…</p>
 
