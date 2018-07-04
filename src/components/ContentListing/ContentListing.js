@@ -51,14 +51,12 @@ function filterContentList(
 	contentList: Array<Content>,
 	currentContent: ?Content,
 ): Array<Content> {
-	return contentList
-		.filter(content => {
-			if (!currentContent) {
-				return true;
-			}
-			return content.fields.slug !== currentContent.fields.slug;
-		})
-		.slice(0, 4);
+	return contentList.filter(content => {
+		if (!currentContent) {
+			return true;
+		}
+		return content.fields.slug !== currentContent.fields.slug;
+	});
 }
 
 export default ContentListing;
