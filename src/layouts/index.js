@@ -84,7 +84,7 @@ export const pageQuery = graphql`
 			filter: {
 				frontmatter: { type: { eq: "article" }, unlisted: { ne: true } }
 			}
-			sort: { order: DESC, fields: [frontmatter___dateCreated] }
+			sort: { order: DESC, fields: [frontmatter___dateUpdated] }
 			limit: 9
 		) {
 			...ContentListResult
