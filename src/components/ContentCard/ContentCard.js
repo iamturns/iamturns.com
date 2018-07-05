@@ -15,6 +15,7 @@ const ContentCard = (props: ContentCardProps) => (
 		title={props.content.frontmatter.title}
 		image={props.content.frontmatter.cover}
 		text={props.content.frontmatter.description}
+		dateTime={props.content.frontmatter.dateUpdated}
 	/>
 );
 

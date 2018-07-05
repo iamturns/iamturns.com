@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
 import type { Image } from '../../types/Image';
+import DateTime from '../DateTime';
 import Img from '../Img';
 import Link from '../Link';
 
@@ -12,6 +13,7 @@ type CardProps = {
 	title: string,
 	image?: Image,
 	text?: string,
+	dateTime?: string, // ISO 8601
 };
 
 const Card = (props: CardProps) => (
@@ -44,11 +46,23 @@ const CardImgTitle = (props: CardProps) => (
 const CardDetails = (props: CardProps) => (
 	<div className="flex flex-grow flex-col justify-between border-2 border-turtle border-t-0">
 		<div className="p-4 mt-2">{props.text}</div>
-		<div className="p-4 pt-0 text-right">
+		<div className="p-4 pt-0 flex flex-row-reverse justify-between items-end">
 			<CardDetailsLink {...props} />
+			<CardDetailsDate {...props} />
 		</div>
 	</div>
 );
+
+const CardDetailsDate = (props: CardProps) => {
+	if (!props.dateTime) {
+		return null;
+	}
+	return (
+		<div className="text-xxs text-turtle-darker flex justify-end">
+			<DateTime dateTime={props.dateTime} />
+		</div>
+	);
+};
 
 const CardDetailsLink = (props: CardProps) => (
 	<Link
