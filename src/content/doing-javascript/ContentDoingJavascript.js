@@ -72,8 +72,8 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 				nothing sticks.
 			</p>
 			<p>
-				You’ve wasted an entire weekend on this app, and it’s stuck on
-				“Hello World”. Ouch.
+				You’ve wasted an entire weekend on an app stuck on “Hello
+				World”. Ouch.
 			</p>
 
 			<h2>You just want to code.</h2>
@@ -133,16 +133,16 @@ const ContentDoingJavaScript = ({ data: { currentContent } }: ContentProps) => (
 
 			<p>
 				Each project is broken down into super-tiny super-achievable
-				steps. And each step contains fast-paced videos and{' '}
-				<em>just enough</em> learning material to guide you.
+				steps. And each step contains <em>just enough</em> learning
+				material to guide you (like videos and cheatsheets).
 			</p>
 
 			<p>
 				This is a hands-on approach, and answers are <em>not</em>{' '}
 				spoon-fed. When you get stuck (and you will), simply activate
-				the hint system. It will dish out code snippets and general
-				suggestions, nudging you slightly closer to your goal — just
-				like a point-and-click adventure game!
+				the hint system. It will dish out suggestions and code snippets,
+				nudging you slightly closer to your goal — just like a
+				point-and-click adventure game!
 			</p>
 
 			<p>
