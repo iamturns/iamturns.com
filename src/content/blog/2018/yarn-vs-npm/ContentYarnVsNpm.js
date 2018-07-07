@@ -163,18 +163,26 @@ const Article = (props: ContentProps) => (
 				mv package-lock.json package-lock.backup.json
 				mv yarn.lock yarn.backup.lock
 
-				# Test npm speed
+				# Test cold npm speed
 				time npm install
 
-				# Reset
+				# Reset modules
 				rm -Rf node_modules
-				rm package-lock.json
 
-				# Test yarn speed
+				# Test warm npm speed
+				time npm install
+
+				# Test cold yarn speed
+				time yarn install
+
+				# Reset modules
+				rm -Rf node_modules
+
+				# Test warm yarn speed
 				time yarn install
 
 				# Reset
-				rm -Rf node_modules
+				rm package-lock.json
 				rm yarn.lock
 
 				# Restore
@@ -337,6 +345,12 @@ const Article = (props: ContentProps) => (
 			I’ve also seen tooling and CI code check for the{' '}
 			<code>yarn.lock</code> file, and run a different set of commands if
 			detected.
+		</p>
+
+		<p>
+			Choosing to use Yarn on a project means the rest of your dev team,
+			including future contributors, must also use Yarn (to maintain the
+			yarn.lock file).
 		</p>
 
 		<p>
