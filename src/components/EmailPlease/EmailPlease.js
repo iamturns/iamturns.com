@@ -4,14 +4,19 @@ import * as React from 'react';
 
 import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
 
-type EmailList = 'default' | 'doing-javascript';
+type EmailList = 'default' | 'doing-javascript' | 'javascript-list';
 
 type EmailPleaseProps = {
 	list?: EmailList,
 	id?: string,
+	hideFooter?: boolean,
 };
 
-const EmailPlease = ({ list = 'default', id }: EmailPleaseProps) => (
+const EmailPlease = ({
+	list = 'default',
+	id,
+	hideFooter = false,
+}: EmailPleaseProps) => (
 	<div>
 		<form
 			action={getFormAction(list)}
@@ -39,10 +44,12 @@ const EmailPlease = ({ list = 'default', id }: EmailPleaseProps) => (
 			</div>
 			{id && <input type="hidden" name="ID" value={id} />}
 		</form>
-		<div className="text-xs text-center pt-2 text-turtle-darker">
-			I know, emails suck. I promise to send only quality stuff. And if
-			not, just unsubscribe!
-		</div>
+		{!hideFooter && (
+			<div className="text-xs text-center pt-2 text-turtle-darker">
+				I know, emails suck. I promise to send only quality stuff. And
+				if not, just unsubscribe!
+			</div>
+		)}
 	</div>
 );
 
@@ -57,6 +64,8 @@ function getListId(list: EmailList): string {
 	switch (list) {
 		case 'doing-javascript':
 			return 'bdea2a1aea';
+		case 'javascript-list':
+			return '970fb402d2';
 		case 'default':
 		default:
 			return '46266d5c5e';
