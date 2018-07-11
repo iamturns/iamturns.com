@@ -9,9 +9,14 @@ type EmailList = 'default' | 'doing-javascript';
 type EmailPleaseProps = {
 	list?: EmailList,
 	id?: string,
+	hideFooter?: boolean,
 };
 
-const EmailPlease = ({ list = 'default', id }: EmailPleaseProps) => (
+const EmailPlease = ({
+	list = 'default',
+	id,
+	hideFooter = false,
+}: EmailPleaseProps) => (
 	<div>
 		<form
 			action={getFormAction(list)}
@@ -39,10 +44,12 @@ const EmailPlease = ({ list = 'default', id }: EmailPleaseProps) => (
 			</div>
 			{id && <input type="hidden" name="ID" value={id} />}
 		</form>
-		<div className="text-xs text-center pt-2 text-turtle-darker">
-			I know, emails suck. I promise to send only quality stuff. And if
-			not, just unsubscribe!
-		</div>
+		{!hideFooter && (
+			<div className="text-xs text-center pt-2 text-turtle-darker">
+				I know, emails suck. I promise to send only quality stuff. And
+				if not, just unsubscribe!
+			</div>
+		)}
 	</div>
 );
 
