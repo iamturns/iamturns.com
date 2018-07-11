@@ -35,11 +35,23 @@ const ContentJavascriptListEmailSubscribed = ({
 		<ContentHeader image={currentContent.frontmatter.cover} />
 		<PageContainer small className="wysiwyg my-12">
 			<p>
-				You’re on the waiting list for{' '}
-				<Link to="/doing-javascript">Doing JavaScript</Link>. Enjoy
-				early access, monthly updates, and a discount on launch.
+				You‘re in! Thanks for your interest in{' '}
+				<Link to="/javascript-list">The JavaScript List</Link>.
 			</p>
-			<p>See you (in your inbox) soon!</p>
+
+			<p>
+				The list is just a personal ugly spreadsheet for now. If I get
+				enough interest, I will take time to tidy the list and publish
+				it weekly.
+			</p>
+
+			<p>I‘ll send you an email if it kicks off.</p>
+			<p>
+				Feel free to tell your friends about{' '}
+				<Link to="/javascript-list">The JavaScript List</Link> — the
+				more the merrier!
+			</p>
+
 			<p>
 				Love,<br />Matt
 			</p>

@@ -64,13 +64,12 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 			<p>
 				So you’re on your phone every chance you get. Scrolling…
 				skimming… refreshing… and just when you feel on top of things —
-				Ding! You have another email newsletter.
+				Ding! Another email newsletter.
 			</p>
 			<p>
 				You’re constantly bombarded with hype, clickbait, and{' '}
-				<em>bullshit</em>.
+				<em>bullshit</em>. It’s overwhelming. There’s too much to know.
 			</p>
-			<p>It’s overwhelming. There’s too much to know.</p>
 
 			<h2>
 				I developed a system that easily keeps me up-to-date with
@@ -145,8 +144,8 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 
 			<div className="my-4">
 				<EmailPlease
-					list="doing-javascript"
-					id="doing-javascript"
+					list="javascript-list"
+					id="javascript-list"
 					hideFooter
 				/>
 			</div>

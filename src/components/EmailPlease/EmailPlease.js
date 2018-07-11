@@ -4,7 +4,7 @@ import * as React from 'react';
 
 import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
 
-type EmailList = 'default' | 'doing-javascript';
+type EmailList = 'default' | 'doing-javascript' | 'javascript-list';
 
 type EmailPleaseProps = {
 	list?: EmailList,
@@ -64,6 +64,8 @@ function getListId(list: EmailList): string {
 	switch (list) {
 		case 'doing-javascript':
 			return 'bdea2a1aea';
+		case 'javascript-list':
+			return '970fb402d2';
 		case 'default':
 		default:
 			return '46266d5c5e';
