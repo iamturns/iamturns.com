@@ -11,9 +11,9 @@ import type { Content } from '../../types/Content';
 
 export const frontmatter = {
 	type: 'page',
-	title: 'JavaScript List',
+	title: 'The JavaScript Report',
 	description:
-		'The pulse of JavaScript, powered by the community, and distilled into a weekly email.',
+		'The pulse of the JavaScript community distilled into a weekly email.',
 	dateCreated: '2018-07-11',
 	dateUpdated: '2018-07-11',
 	unlisted: true,
@@ -38,10 +38,12 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 		<PageContainer small className="wysiwyg">
 			<h2>It’s impossible to keep up with JavaScript.</h2>
 			<p>
-				A popular dev tweets “Why aren’t you using Vue yet?!”.
-				Meanwhile, your buddy Slacks you a blog post: “What‘s New In
-				React This Month”. And your inbox is jam-packed with fresh
-				articles: “You Must Learn Redux” and “Redux Is Dead”.
+				A popular dev tweets “<em>Why aren’t you using Vue yet?!</em>”.
+				Meanwhile, your buddy Slacks you a blog post: “<em>
+					What‘s New In React This Month
+				</em>”. And your inbox is jam-packed with fresh articles: “<em>
+					You Must Learn Redux
+				</em>” and “<em>Redux Is Dead</em>”.
 			</p>
 
 			<p>You bookmark a handful of links to read later (or, never).</p>
@@ -63,8 +65,8 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 			<p>
 				So you’re on your phone every chance you get. Scrolling…
-				skimming… refreshing… and just when you feel on top of things —
-				Ding! Another email newsletter.
+				reading… refreshing… skimming… and just when you feel on top of
+				things — Ding! Another email newsletter.
 			</p>
 			<p>
 				You’re constantly bombarded with hype, clickbait, and{' '}
@@ -86,39 +88,47 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 				last 7 days.
 			</p>
 
-			<p>3) I collate, de-dupe, tag, and save the results into a list.</p>
+			<p>
+				3) I collate, de-dupe, tag, and save the results into a report.
+			</p>
 
 			<p>
 				<strong>
-					This list is my single source of JavaScript news for the
+					This report is my single source of JavaScript news for the
 					week.
 				</strong>
 			</p>
 
 			<p>
-				The next step is easy: keep calm, and read the list! It surfaces
-				what‘s important, and contains everything I need to stay
-				updated. Even just skimming the list gives me a high-level
-				overview of current events and trends.
+				I love this report. It surfaces what‘s important, and contains
+				everything I need to stay updated. Even just skimming it gives
+				me a high-level overview of current trends.
 			</p>
 
 			<p>
 				It feels like cheating. Like watching the movie instead of
-				reading the book. Or an expert highlighting a handful of
-				important paragraphs in my mountain of papers.
+				reading the book. Or an expert highlighting paragraphs in my
+				mountain of papers.
 			</p>
 
 			<p>
-				It‘s sooo much easier to focus on just one single list
-				containing the cream of the crop. I’ve stopped habitually
-				refreshing Hacker News. My inbox feels lighter after
-				unsubscribing from a bunch of newsletters. I feel like I have
-				more hours in the day. I even discovered I have <em>other</em>{' '}
-				hobbies — woah!
+				I’ve stopped habitually refreshing Hacker News. My inbox feels
+				lighter after unsubscribing from a bunch of newsletters. I
+				ignore the noise and simply focus on the report. It feels like I
+				have more hours in the day. I even discovered I have{' '}
+				<em>other</em> hobbies — woah!
 			</p>
+		</PageContainer>
 
-			<h2>Get the list.</h2>
+		<PageContainer className="my-4 mt-12 p-6 bg-denim-white text-center">
+			<h2 className="h2 mt-0">The JavaScript Report</h2>
+			<p className="p mb-0">
+				The pulse of the JavaScript community distilled into a weekly
+				email.
+			</p>
+		</PageContainer>
 
+		<PageContainer small className="wysiwyg">
 			<p>
 				Stay updated with the JavaScript world (like React, Vue, Node,
 				GraphQL, and Serverless). And to keep things interesting: a dash
@@ -131,15 +141,10 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 
 			<p>
-				The pulse of JavaScript, powered by the community, and distilled
-				into a weekly email.
-			</p>
-
-			<p>
-				The list is just a personal ugly spreadsheet for now. If I get
-				enough interest, I will take time to tidy the list and publish
-				it weekly. Show your support by signing up below, and I‘ll send
-				you an email if it kicks off:
+				The report is currently just a personal ugly spreadsheet. If I
+				get enough interest, I will take time to tidy the report and
+				publish it weekly. Show your support by signing up below, and
+				I‘ll send you an email if it kicks off:
 			</p>
 
 			<div className="my-4">
