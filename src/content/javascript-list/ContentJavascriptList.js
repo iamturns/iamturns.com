@@ -3,11 +3,16 @@
 import * as React from 'react';
 
 import ArrowLeft from '../../../vendor/feather-icons-react/ArrowLeft';
-import EmailPlease from '../../components/EmailPlease/EmailPlease';
-import HeadTagsContent from '../../components/HeadTagsContent/HeadTagsContent';
-import Link from '../../components/Link/Link';
-import PageContainer from '../../components/PageContainer/PageContainer';
+import EmailPlease from '../../components/EmailPlease';
+import HeadTagsContent from '../../components/HeadTagsContent';
+import ImgBlock from '../../components/ImgBlock';
+import Link from '../../components/Link';
+import PageContainer from '../../components/PageContainer';
 import type { Content } from '../../types/Content';
+import { createImage } from '../../utils/image';
+import ImgHose from './hose.gif';
+
+const IMG_HOSE = createImage(ImgHose, 295, 288);
 
 export const frontmatter = {
 	type: 'page',
@@ -53,16 +58,25 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 
 			<p>
-				You‘re lost in 42 browser tabs. An endless supply of articles
-				and tutorials and GitHub repos, all bookmarked to check out
-				later (or, never).
+				You‘re lost in 42 browser tabs. An endless trail of articles and
+				tutorials and GitHub repos, all bookmarked to check out later
+				(or, never).
 			</p>
 			<p>It’s overwhelming. There’s too much to know.</p>
+
+			<ImgBlock image={IMG_HOSE}>
+				Checking the latest JavaScript news.
+			</ImgBlock>
 
 			<h2>
 				I developed a system that easily keeps me up-to-date with
 				JavaScript.
 			</h2>
+
+			<p>
+				I don‘t have time to sift through the noise, so I let the
+				JavaScript community do it for me.
+			</p>
 
 			<p>
 				1) Every Sunday I visit the biggest news platforms (like Hacker
@@ -78,16 +92,20 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 				3) I collate, de-dupe, tag, and save the results into a report.
 			</p>
 
+			<h2>
+				This report is my single source of JavaScript news for the week.
+			</h2>
+
 			<p>
-				<strong>
-					This report is my single source of JavaScript news for the
-					week.
-				</strong>
+				I’ve stopped habitually refreshing Hacker News. My inbox feels
+				lighter after unsubscribing from a bunch of newsletters. I
+				ignore the noise and simply focus on this one report.
 			</p>
 
 			<p>
-				It surfaces only what‘s important, and contains everything I
-				need to stay updated.
+				It contains everything I need to stay updated. Only the best
+				content survives, selected by the largest JavaScript
+				communities.
 			</p>
 
 			<p>
@@ -97,25 +115,16 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 
 			<p>
-				I’ve stopped habitually refreshing Hacker News. My inbox feels
-				lighter after unsubscribing from a bunch of newsletters. I
-				ignore the noise and simply focus on the report.
+				I love using my time wisely, and this report saves me hours
+				every week. I discovered I actually have <em>other</em> hobbies
+				— woah!
 			</p>
-			<p>
-				I love using my time wisely, and this report saves me both time
-				and energy every week. With all the hours saved, I discovered I
-				actually have <em>other</em> hobbies — woah!
-			</p>
-		</PageContainer>
 
-		<PageContainer className="my-8 p-6 bg-denim-white text-center">
-			<h2 className="h2 my-0">The JavaScript Report</h2>
-		</PageContainer>
+			<h2>Want the report?</h2>
 
-		<PageContainer small className="wysiwyg">
 			<p>
-				Surfacing only the best content from the communities at Hacker
-				News, Twitter, Medium, GitHub, Reddit, and YouTube.
+				Surfacing only the best content from the JavaScript communities
+				at Hacker News, Twitter, Medium, GitHub, Reddit, and YouTube.
 			</p>
 
 			<p>
@@ -126,9 +135,9 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 
 			<p>
 				The report is currently an ugly spreadsheet I keep to myself.
-				Given enough interest, I‘ll take time to tidy the report and
-				publish it weekly. Show your support by signing up below, and
-				I‘ll send an email (if it kicks off):
+				Given enough interest, I‘ll take time to tidy the report, polish
+				it up, and send it weekly. Show your support by signing up
+				below, and I‘ll send an email (if it kicks off):
 			</p>
 
 			<div className="my-4">
