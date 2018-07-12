@@ -61,14 +61,14 @@ const ContentJavascriptReport = ({
 			</p>
 
 			<p>
-				You‘re lost in 42 browser tabs. An endless trail of articles and
-				tutorials and GitHub repos, all bookmarked to check out later
-				(or, never).
+				You‘re lost in 42 browser tabs of articles, tutorials, and
+				GitHub repos. You bookmark a handful to check out later (or,
+				never).
 			</p>
 			<p>It’s overwhelming. There’s too much to know.</p>
 
 			<ImgBlock image={IMG_HOSE}>
-				Checking the latest JavaScript news.
+				Just checking the latest JavaScript news
 			</ImgBlock>
 
 			<h2>
@@ -77,7 +77,7 @@ const ContentJavascriptReport = ({
 			</h2>
 
 			<p>
-				I don‘t have time to sift through the noise, so I let the
+				I don‘t have time to filter the torrent of news, so I let the
 				JavaScript community do it for me.
 			</p>
 
@@ -100,21 +100,16 @@ const ContentJavascriptReport = ({
 			</h2>
 
 			<p>
+				With the best content from the best news platforms, it contains
+				everything I need to stay updated. It feels like a teacher
+				highlighting important paragraphs in my mountain of notes.
+			</p>
+
+			<p>
 				I’ve stopped habitually refreshing Hacker News. My inbox feels
 				lighter after unsubscribing from a bunch of newsletters. I
-				ignore the noise and simply focus on this one report.
-			</p>
-
-			<p>
-				It contains everything I need to stay updated. Only the best
-				content survives, selected by the largest JavaScript
-				communities.
-			</p>
-
-			<p>
-				It feels like cheating. Like watching the movie instead of
-				reading the book. Or an expert highlighting paragraphs in my
-				mountain of papers.
+				ignore the noise, keep calm, and simply focus on this report.
+				Anything else I stumble upon day-to-day can wait.
 			</p>
 
 			<p>
@@ -123,7 +118,7 @@ const ContentJavascriptReport = ({
 				— woah!
 			</p>
 
-			<h2>Want the report?</h2>
+			<h2>Get the weekly report.</h2>
 
 			<p>
 				Surfacing the best content from the biggest JavaScript
@@ -138,10 +133,11 @@ const ContentJavascriptReport = ({
 			</p>
 
 			<p>
-				The report is currently an ugly spreadsheet I keep to myself.
-				Given enough interest, I‘ll take time to tidy the report, polish
-				it up, and publish it weekly. Show your support by signing up
-				below, and I‘ll send an email (if it kicks off):
+				Here‘s the thing. The report is currently an ugly spreadsheet I
+				keep to myself. Given enough interest, I‘ll take time to tidy
+				the report, polish it up, and publish it weekly. Show your
+				support by signing up below, and I‘ll send an email (if it kicks
+				off):
 			</p>
 
 			<div className="my-4">
