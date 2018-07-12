@@ -12,8 +12,7 @@ import type { Content } from '../../types/Content';
 export const frontmatter = {
 	type: 'page',
 	title: 'The JavaScript Report',
-	description:
-		'The pulse of the JavaScript community distilled into a weekly email.',
+	description: 'The best from the JavaScript community every week.',
 	dateCreated: '2018-07-11',
 	dateUpdated: '2018-07-11',
 	unlisted: true,
@@ -46,32 +45,19 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 				</em>” and “<em>Redux Is Dead</em>”.
 			</p>
 
-			<p>You bookmark a handful of links to read later (or, never).</p>
-
 			<p>
-				“JavaScript fatigue” isn’t just something people say. Nuh uh —
-				you feel it in your gut every time you check Hacker News.
+				You’re doing your best to keep up. This fast-paced JavaScript
+				industry demands it! So you’re on your phone every chance you
+				get. Scrolling… reading… refreshing… skimming… and just when you
+				feel on top of things — ding! <em>Another</em> email newsletter.
 			</p>
 
 			<p>
-				<strong>
-					But you’re doing your best to get through it all.
-				</strong>
+				You‘re lost in 42 browser tabs. An endless supply of articles
+				and tutorials and GitHub repos, all bookmarked to check out
+				later (or, never).
 			</p>
-
-			<p>
-				You know you gotta keep up. This fast-paced JavaScript industry
-				demands it.
-			</p>
-			<p>
-				So you’re on your phone every chance you get. Scrolling…
-				reading… refreshing… skimming… and just when you feel on top of
-				things — Ding! Another email newsletter.
-			</p>
-			<p>
-				You’re constantly bombarded with hype, clickbait, and{' '}
-				<em>bullshit</em>. It’s overwhelming. There’s too much to know.
-			</p>
+			<p>It’s overwhelming. There’s too much to know.</p>
 
 			<h2>
 				I developed a system that easily keeps me up-to-date with
@@ -80,12 +66,12 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 
 			<p>
 				1) Every Sunday I visit the biggest news platforms (like Hacker
-				News, Reddit, Medium, and Twitter).
+				News, Twitter, and Medium).
 			</p>
 
 			<p>
-				2) I run filters to discover the most popular items from the
-				last 7 days.
+				2) I run filters to discover the most popular JavaScript content
+				from the last 7 days.
 			</p>
 
 			<p>
@@ -100,9 +86,8 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 			</p>
 
 			<p>
-				I love this report. It surfaces what‘s important, and contains
-				everything I need to stay updated. Even just skimming it gives
-				me a high-level overview of current trends.
+				It surfaces only what‘s important, and contains everything I
+				need to stay updated.
 			</p>
 
 			<p>
@@ -114,37 +99,36 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 			<p>
 				I’ve stopped habitually refreshing Hacker News. My inbox feels
 				lighter after unsubscribing from a bunch of newsletters. I
-				ignore the noise and simply focus on the report. It feels like I
-				have more hours in the day. I even discovered I have{' '}
-				<em>other</em> hobbies — woah!
+				ignore the noise and simply focus on the report.
+			</p>
+			<p>
+				I love using my time wisely, and this report saves me both time
+				and energy every week. With all the hours saved, I discovered I
+				actually have <em>other</em> hobbies — woah!
 			</p>
 		</PageContainer>
 
-		<PageContainer className="my-4 mt-12 p-6 bg-denim-white text-center">
-			<h2 className="h2 mt-0">The JavaScript Report</h2>
-			<p className="p mb-0">
-				The pulse of the JavaScript community distilled into a weekly
-				email.
-			</p>
+		<PageContainer className="my-8 p-6 bg-denim-white text-center">
+			<h2 className="h2 my-0">The JavaScript Report</h2>
 		</PageContainer>
 
 		<PageContainer small className="wysiwyg">
 			<p>
-				Stay updated with the JavaScript world (like React, Vue, Node,
-				GraphQL, and Serverless). And to keep things interesting: a dash
-				of tech news, design, and random lols.
+				Surfacing only the best content from the communities at Hacker
+				News, Twitter, Medium, GitHub, Reddit, and YouTube.
 			</p>
 
 			<p>
-				I‘ll bring the best of Hacker News, Reddit, Medium, GitHub,
-				Twitter, and YouTube to you.
+				Stay updated with the JavaScript world, including React, Vue,
+				Node, GraphQL, and Serverless. And to keep things interesting: a
+				splash of tech news, design, and funny bits.
 			</p>
 
 			<p>
-				The report is currently just a personal ugly spreadsheet. If I
-				get enough interest, I will take time to tidy the report and
+				The report is currently an ugly spreadsheet I keep to myself.
+				Given enough interest, I‘ll take time to tidy the report and
 				publish it weekly. Show your support by signing up below, and
-				I‘ll send you an email if it kicks off:
+				I‘ll send an email (if it kicks off):
 			</p>
 
 			<div className="my-4">
