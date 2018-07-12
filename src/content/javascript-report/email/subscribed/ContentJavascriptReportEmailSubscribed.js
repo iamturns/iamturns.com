@@ -10,13 +10,13 @@ import PageContainer from '../../../../components/PageContainer';
 import type { Content } from '../../../../types/Content';
 
 export const frontmatter = {
-	title: 'Yes!',
+	title: 'JavaScript Report',
 	cover: './jumping.jpg',
 };
 
 declare var graphql: Function;
 export const pageQuery = graphql`
-	query ContentJavascriptListEmailSubscribedQuery($slug: String!) {
+	query ContentJavascriptReportEmailSubscribedQuery($slug: String!) {
 		...CurrentContent
 	}
 `;
@@ -27,29 +27,28 @@ type ContentProps = {
 	},
 };
 
-const ContentJavascriptListEmailSubscribed = ({
+const ContentJavascriptReportEmailSubscribed = ({
 	data: { currentContent },
 }: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
 		<ContentHeader image={currentContent.frontmatter.cover} />
 		<PageContainer small className="wysiwyg my-12">
-			<p>
-				You‘re in! Thanks for your interest in{' '}
-				<Link to="/javascript-list">The JavaScript List</Link>.
-			</p>
+			<p>You‘re in!</p>
 
 			<p>
-				The list is just a personal ugly spreadsheet for now. If I get
-				enough interest, I will take time to tidy the list and publish
-				it weekly.
+				The <Link to="/javascript-report">JavaScript report</Link> is
+				just an ugly spreadsheet I keep to myself at the moment. But if
+				this gets enough interest, I‘ll take time to tidy the report,
+				polish it up, and publish it weekly.
 			</p>
 
-			<p>I‘ll send you an email if it kicks off.</p>
+			<p>If it all kicks off, you‘re the first to know!</p>
+
 			<p>
-				Feel free to tell your friends about{' '}
-				<Link to="/javascript-list">The JavaScript List</Link> — the
-				more the merrier!
+				Feel free to share the{' '}
+				<Link to="/javascript-report">report</Link> with anyone else who
+				might enjoy it — the more the merrier.
 			</p>
 
 			<p>
@@ -65,4 +64,4 @@ const ContentJavascriptListEmailSubscribed = ({
 	</div>
 );
 
-export default ContentJavascriptListEmailSubscribed;
+export default ContentJavascriptReportEmailSubscribed;

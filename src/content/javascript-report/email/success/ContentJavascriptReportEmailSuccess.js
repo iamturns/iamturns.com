@@ -10,13 +10,13 @@ import PageContainer from '../../../../components/PageContainer';
 import type { Content } from '../../../../types/Content';
 
 export const frontmatter = {
-	title: 'Boom!',
+	title: 'JavaScript Report',
 	cover: '../../../../assets/images/headers/fireworks.jpg',
 };
 
 declare var graphql: Function;
 export const pageQuery = graphql`
-	query ContentJavascriptListEmailSuccessQuery($slug: String!) {
+	query ContentJavascriptReportEmailSuccessQuery($slug: String!) {
 		...CurrentContent
 	}
 `;
@@ -27,26 +27,16 @@ type ContentProps = {
 	},
 };
 
-const ContentJavascriptListEmailSuccess = ({
+const ContentJavascriptReportEmailSuccess = ({
 	data: { currentContent },
 }: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
-		<ContentHeader
-			image={currentContent.frontmatter.cover}
-			title={currentContent.frontmatter.title}
-		/>
+		<ContentHeader image={currentContent.frontmatter.cover} />
 		<PageContainer small className="wysiwyg my-12">
-			<p className="subtitle">
-				You’re gonna love{' '}
-				<Link to="/javascript-list">The JavaScript List</Link> — I can
-				feel it.
-			</p>
+			<p className="subtitle">Awesome, thanks for your support!</p>
 			<p>I just sent you an email to make sure you’re fo’ real.</p>
-			<p>
-				Click the link (in the email), then we can get this ball
-				rolling.
-			</p>
+			<p>See you in your inbox!</p>
 			<p className="mt-8">
 				<Link to="/" className="button inline-flex items-center">
 					<ArrowLeft className="w-4 h-4 mr-1" />
@@ -57,4 +47,4 @@ const ContentJavascriptListEmailSuccess = ({
 	</div>
 );
 
-export default ContentJavascriptListEmailSuccess;
+export default ContentJavascriptReportEmailSuccess;

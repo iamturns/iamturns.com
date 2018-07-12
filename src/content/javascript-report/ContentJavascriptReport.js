@@ -16,8 +16,9 @@ const IMG_HOSE = createImage(ImgHose, 295, 288);
 
 export const frontmatter = {
 	type: 'page',
-	title: 'The JavaScript Report',
-	description: 'The best from the JavaScript community every week.',
+	title: 'JavaScript Report',
+	description:
+		'Surfacing the best content from the biggest JavaScript communities.',
 	dateCreated: '2018-07-11',
 	dateUpdated: '2018-07-11',
 	unlisted: true,
@@ -25,7 +26,7 @@ export const frontmatter = {
 
 declare var graphql: Function;
 export const pageQuery = graphql`
-	query ContentJavascriptListQuery($slug: String!) {
+	query ContentJavascriptReportQuery($slug: String!) {
 		...CurrentContent
 	}
 `;
@@ -36,7 +37,9 @@ export type ContentProps = {
 	},
 };
 
-const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
+const ContentJavascriptReport = ({
+	data: { currentContent },
+}: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
 		<PageContainer small className="wysiwyg">
@@ -123,8 +126,9 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 			<h2>Want the report?</h2>
 
 			<p>
-				Surfacing only the best content from the JavaScript communities
-				at Hacker News, Twitter, Medium, GitHub, Reddit, and YouTube.
+				Surfacing the best content from the biggest JavaScript
+				communities at Hacker News, Twitter, Medium, GitHub, Reddit, and
+				YouTube.
 			</p>
 
 			<p>
@@ -136,14 +140,14 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 			<p>
 				The report is currently an ugly spreadsheet I keep to myself.
 				Given enough interest, I‘ll take time to tidy the report, polish
-				it up, and send it weekly. Show your support by signing up
+				it up, and publish it weekly. Show your support by signing up
 				below, and I‘ll send an email (if it kicks off):
 			</p>
 
 			<div className="my-4">
 				<EmailPlease
-					list="javascript-list"
-					id="javascript-list"
+					list="javascript-report"
+					id="javascript-report"
 					hideFooter
 				/>
 			</div>
@@ -158,4 +162,4 @@ const ContentJavascriptList = ({ data: { currentContent } }: ContentProps) => (
 	</div>
 );
 
-export default ContentJavascriptList;
+export default ContentJavascriptReport;
