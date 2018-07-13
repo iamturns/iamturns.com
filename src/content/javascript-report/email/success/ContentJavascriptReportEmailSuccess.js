@@ -11,7 +11,7 @@ import type { Content } from '../../../../types/Content';
 
 export const frontmatter = {
 	title: 'JavaScript Report',
-	cover: '../../../../assets/images/headers/fireworks.jpg',
+	cover: '../../../../assets/images/headers/jumping.jpg',
 };
 
 declare var graphql: Function;
@@ -36,7 +36,6 @@ const ContentJavascriptReportEmailSuccess = ({
 		<PageContainer small className="wysiwyg my-12">
 			<p className="subtitle">Awesome, thanks for your support!</p>
 			<p>I just sent you an email to make sure you’re fo’ real.</p>
-			<p>See you in your inbox!</p>
 			<p className="mt-8">
 				<Link to="/" className="button inline-flex items-center">
 					<ArrowLeft className="w-4 h-4 mr-1" />

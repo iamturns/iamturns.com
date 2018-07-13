@@ -4,6 +4,7 @@ import * as React from 'react';
 
 import ArrowLeft from '../../../vendor/feather-icons-react/ArrowLeft';
 import EmailPlease from '../../components/EmailPlease';
+import FaceLink from '../../components/FaceLink';
 import HeadTagsContent from '../../components/HeadTagsContent';
 import ImgBlock from '../../components/ImgBlock';
 import Link from '../../components/Link';
@@ -47,23 +48,18 @@ const ContentJavascriptReport = ({
 			<p>
 				A popular dev tweets “<em>Why aren’t you using Vue yet?!</em>”.
 				Meanwhile, your buddy Slacks you a blog post: “<em>
-					What‘s New In React This Month
+					What’s New In React This Month
 				</em>”. And your inbox is jam-packed with fresh articles: “<em>
-					You Must Learn Redux
-				</em>” and “<em>Redux Is Dead</em>”.
+					You Must Learn Redux Now!
+				</em>” and “<em>Redux Is Dead!</em>”.
 			</p>
 
 			<p>
-				You’re doing your best to keep up. This fast-paced JavaScript
-				industry demands it! So you’re on your phone every chance you
-				get. Scrolling… reading… refreshing… skimming… and just when you
-				feel on top of things — ding! <em>Another</em> email newsletter.
-			</p>
-
-			<p>
-				You‘re lost in 42 browser tabs of articles, tutorials, and
-				GitHub repos. You bookmark a handful to check out later (or,
-				never).
+				You’re doing your best to keep up — this fast-paced JavaScript
+				industry demands it! So you’re catching up every chance you get.
+				Scrolling… reading… refreshing… skimming. You’re lost in 42
+				browser tabs of articles, tutorials, and GitHub repos. You
+				bookmark a handful to check out later (or, never).
 			</p>
 			<p>It’s overwhelming. There’s too much to know.</p>
 
@@ -76,77 +72,85 @@ const ContentJavascriptReport = ({
 				JavaScript.
 			</h2>
 
-			<p>
-				I don‘t have time to filter the torrent of news, so I let the
-				JavaScript community do it for me.
-			</p>
-
-			<p>
-				1) Every Sunday I visit the biggest news platforms (like Hacker
-				News, Twitter, and Medium).
-			</p>
-
-			<p>
-				2) I run filters to discover the most popular JavaScript content
-				from the last 7 days.
-			</p>
-
-			<p>
-				3) I collate, de-dupe, tag, and save the results into a report.
-			</p>
+			<ol className="pl-4">
+				<li>
+					Every Sunday I visit the biggest news platforms (like Hacker
+					News, Twitter, and Medium).
+				</li>
+				<li>
+					I run filters to discover the most popular JavaScript
+					content from the last 7 days.
+				</li>
+				<li>
+					I collate, de-dupe, tag, and save the results into a report.
+				</li>
+			</ol>
 
 			<h2>
 				This report is my single source of JavaScript news for the week.
 			</h2>
 
 			<p>
-				With the best content from the best news platforms, it contains
-				everything I need to stay updated. It feels like a teacher
-				highlighting important paragraphs in my mountain of notes.
+				It surfaces the best content from the biggest JavaScript
+				communities, and contains everything I need to stay updated.
+				Even just skimming the report keeps me in the loop.
 			</p>
 
 			<p>
-				I’ve stopped habitually refreshing Hacker News. My inbox feels
-				lighter after unsubscribing from a bunch of newsletters. I
-				ignore the noise, keep calm, and simply focus on this report.
-				Anything else I stumble upon day-to-day can wait.
+				The endless flood of JavaScript news is filtered by the
+				community. I‘ve stopped wasting time refreshing Hacker News
+				twice a day. My inbox feels lighter after ditching a bunch of
+				newsletters.
+				<br />
+				I ignore the noise and simply focus on the report.
 			</p>
 
 			<p>
-				I love using my time wisely, and this report saves me hours
-				every week. I discovered I actually have <em>other</em> hobbies
-				— woah!
+				It feels like Einstein ruffling through my mountain of notes and
+				screaming “Here! Look!”. I save so many hours every week, I
+				discovered I actually have <em>other</em> hobbies — woah!
 			</p>
 
-			<h2>Get the weekly report.</h2>
+			<h2>Want the report?</h2>
 
 			<p>
-				Surfacing the best content from the biggest JavaScript
-				communities at Hacker News, Twitter, Medium, GitHub, Reddit, and
-				YouTube.
-			</p>
-
-			<p>
-				Stay updated with the JavaScript world, including React, Vue,
-				Node, GraphQL, and Serverless. And to keep things interesting: a
-				splash of tech news, design, and funny bits.
+				Delivered to your inbox weekly: the best news in the JavaScript
+				world (like React, Vue, Node, GraphQL, and Serverless) powered
+				by JavaScript communities on the biggest platforms (like Hacker
+				News, Twitter, Medium, GitHub, Reddit, and YouTube).
 			</p>
 
 			<p>
-				Here‘s the thing. The report is currently an ugly spreadsheet I
-				keep to myself. Given enough interest, I‘ll take time to tidy
-				the report, polish it up, and publish it weekly. Show your
-				support by signing up below, and I‘ll send an email (if it kicks
-				off):
+				I’m currently refining the report generation process. Show your
+				support below and I’ll let you know when it kicks off.
 			</p>
 
 			<div className="my-4">
 				<EmailPlease
 					list="javascript-report"
 					id="javascript-report"
-					hideFooter
+					footer={<div>No funny business. Opt-out anytime.</div>}
 				/>
 			</div>
+
+			<aside className="mt-12">
+				<div className="inline-flex flex-row items-center">
+					<div className="pr-6 flex-none">
+						<FaceLink size={80} />
+					</div>
+					<div>
+						Questions, suggestions, feedback?
+						<br />
+						<Link to="https://twitter.com/iamturns">
+							@iamturns
+						</Link>{' '}
+						or{' '}
+						<Link to="mailto:matt@iamturns.com">
+							matt@iamturns.com
+						</Link>
+					</div>
+				</div>
+			</aside>
 
 			<p className="my-12">
 				<Link to="/" className="button inline-flex items-center">
