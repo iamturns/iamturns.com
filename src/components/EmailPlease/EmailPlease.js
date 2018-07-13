@@ -9,13 +9,18 @@ type EmailList = 'default' | 'doing-javascript' | 'javascript-report';
 type EmailPleaseProps = {
 	list?: EmailList,
 	id?: string,
-	hideFooter?: boolean,
+	footer?: React.Element<any>,
 };
 
 const EmailPlease = ({
 	list = 'default',
 	id,
-	hideFooter = false,
+	footer = (
+		<div>
+			I know, emails suck. I promise to send only quality stuff. And if
+			not, just unsubscribe!
+		</div>
+	),
 }: EmailPleaseProps) => (
 	<div>
 		<form
@@ -44,10 +49,9 @@ const EmailPlease = ({
 			</div>
 			{id && <input type="hidden" name="ID" value={id} />}
 		</form>
-		{!hideFooter && (
+		{footer && (
 			<div className="text-xs text-center pt-2 text-turtle-darker">
-				I know, emails suck. I promise to send only quality stuff. And
-				if not, just unsubscribe!
+				{footer}
 			</div>
 		)}
 	</div>
