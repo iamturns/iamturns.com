@@ -41,8 +41,8 @@ const ContentJavascriptReportEmailSubscribed = ({
 			</p>
 
 			<p>
-				Feel free to share the report with anyone else who might enjoy
-				it — the more the merrier.
+				Feel free to share this with anyone else who might enjoy it —
+				the more the merrier.
 			</p>
 
 			<p>
