@@ -3,34 +3,20 @@
 import * as React from 'react';
 
 import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
-import ImgFace from '../../assets/images/matt-turnbull-cartoon-120.png';
-import ImgFace2x from '../../assets/images/matt-turnbull-cartoon-240.png';
+import FaceLink from '../FaceLink';
 import Link from '../Link';
 
 const Hey = () => (
 	<div className="text-center">
 		<div className="inline-flex flex-col sm:flex-row items-center">
 			<div className="pb-4 sm:pb-0 sm:pr-8">
-				<Pic />
+				<FaceLink />
 			</div>
 			<div>
 				<Info />
 			</div>
 		</div>
 	</div>
-);
-
-const Pic = () => (
-	<Link to="/about/">
-		<img
-			src={ImgFace}
-			srcSet={`${ImgFace2x} 2x`}
-			alt="Matt Turnbull"
-			width="120"
-			height="120"
-			className="rounded-full border-2 border-turtle-darker hover:grow-sm transition-slow"
-		/>
-	</Link>
 );
 
 const Info = () => (
