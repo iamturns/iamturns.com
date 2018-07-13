@@ -34,7 +34,7 @@ const ContentJavascriptReportEmailSuccess = ({
 		<HeadTagsContent content={currentContent} />
 		<ContentHeader image={currentContent.frontmatter.cover} />
 		<PageContainer small className="wysiwyg my-12">
-			<p className="subtitle">Awesome, thanks for your support!</p>
+			<p className="subtitle">Cool, glad to see you’re interested!</p>
 			<p>I just sent you an email to make sure you’re fo’ real.</p>
 			<p className="mt-8">
 				<Link to="/" className="button inline-flex items-center">

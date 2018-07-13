@@ -122,7 +122,7 @@ const ContentJavascriptReport = ({
 
 			<p>
 				I’m currently refining the report generation process. Show your
-				support below and I’ll let you know when it kicks off.
+				interest below and I’ll let you know when it kicks off.
 			</p>
 
 			<div className="my-4">
