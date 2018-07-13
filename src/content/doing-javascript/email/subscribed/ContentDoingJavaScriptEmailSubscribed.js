@@ -36,7 +36,7 @@ const ContentDoingJavaScriptEmailSubscribed = ({
 		<PageContainer small className="wysiwyg my-12">
 			<p>
 				You’re on the waiting list for{' '}
-				<Link to="/doing-javascript">Doing JavaScript</Link>. Enjoy
+				<Link to="/doing-javascript/">Doing JavaScript</Link>. Enjoy
 				early access, monthly updates, and a discount on launch.
 			</p>
 			<p>See you (in your inbox) soon!</p>

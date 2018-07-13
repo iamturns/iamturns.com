@@ -36,7 +36,7 @@ const ContentJavascriptReportEmailSubscribed = ({
 		<PageContainer small className="wysiwyg my-12">
 			<p>
 				Nice one! You‘ll be the first to know when the{' '}
-				<Link to="/javascript-report">JavaScript report</Link> kicks
+				<Link to="/javascript-report/">JavaScript report</Link> kicks
 				off.
 			</p>
 
