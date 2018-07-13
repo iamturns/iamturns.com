@@ -12,7 +12,7 @@ import DisqusContent from '../DisqusContent/';
 import type { HeadTagsProps } from '../HeadTags';
 import HeadTagsContent from '../HeadTagsContent';
 import PageContainer from '../PageContainer';
-import LayoutContentEmail from './Email';
+import PitchIntro from '../PitchIntro';
 import LayoutContentFootnotes from './Footnotes';
 import LayoutContentHeaderAuthor from './HeaderAuthor';
 
@@ -43,7 +43,7 @@ const LayoutContent = ({
 		<LayoutContentHeaderAuthor content={currentContent} />
 		<PageContainer small>
 			{children}
-			<LayoutContentEmail currentContent={currentContent} />
+			<PitchIntro />
 			<div className="mt-12">
 				<DisqusContent content={currentContent} />
 			</div>
