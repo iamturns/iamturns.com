@@ -92,10 +92,13 @@ const ContentJavascriptRoundup = ({
 				The secret sauce: the JavaScript community itself filters the
 				endless flood of news for me. I‘ve stopped wasting time
 				refreshing Hacker News twice a day. My inbox feels lighter after
-				ditching a bunch of newsletters. I ignore the noise, use my time
-				wisely, and focus on the report.
+				ditching a bunch of newsletters. I ignore the noise and simply
+				focus on the report.
 			</p>
-			<p>I’ve decided to share this weekly report. I call it:</p>
+			<p>
+				Guess what? I’ve decided to publish this report every week! I
+				call it:
+			</p>
 		</PageContainer>
 
 		<PageContainer className="my-4 mt-12 p-6 bg-denim-white text-center">
@@ -107,7 +110,7 @@ const ContentJavascriptRoundup = ({
 
 		<PageContainer small className="wysiwyg">
 			<p>
-				I know, newsletters suck. But this one is unique:
+				I know, emails suck. But this one is unique:
 				<ul>
 					<li>
 						Powered entirely by the JavaScript community itself.
@@ -129,7 +132,7 @@ const ContentJavascriptRoundup = ({
 						</div>
 					</li>
 					<li>
-						Covers all of JavaScript <em>and</em> its friends.
+						Thoroughly covers JavaScript <em>and</em> its friends.
 						<div className="text-sm">
 							(like React, Vue, Node, GraphQL, and Serverless)
 						</div>
