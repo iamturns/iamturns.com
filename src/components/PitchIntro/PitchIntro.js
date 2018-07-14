@@ -21,7 +21,7 @@ const PitchIntro = () => (
 		<p>So I developed a system that easily keeps me up-to-date.</p>
 		<p>
 			<Link
-				to="/javascript-report"
+				to="/javascript-roundup"
 				className="button inline-flex items-center"
 			>
 				<ArrowRight className="w-4 h-4 mr-1" />
