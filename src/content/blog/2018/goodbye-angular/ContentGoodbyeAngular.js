@@ -62,15 +62,26 @@ export default ContentGoodbyeAngular;
 const Article = (props: ContentProps) => (
 	<div className="wysiwyg">
 		<p>
-			I dreaded returning to programming during a recent holiday. After
-			all these years, it seemed my passion had dried up. Time for
-			something new.
+			I had a feeling of dread I couldn’t shake during a long holiday. To
+			sum it up in a single sentence: “I don’t want to code anymore.”
 		</p>
+
+		<p>
+			Maybe my passion finally dried up after all these years of
+			programming? Time for something new.
+		</p>
+
+		<p>
+			But after returning home, and returning to programming, I realised
+			the dread was more specific: “I don’t want to code in Angular
+			anymore.”
+		</p>
+
 		<p>
 			I’ve been deep diving into{' '}
 			<Link to="https://angular.io/">Angular</Link> (v1 and 2+) for three
-			years now. It turns out I’m not done with programming; I’m just done
-			with Angular.
+			years now, and I’ve had enough. After much thinking and many
+			discussions, my conclusion:
 		</p>
 
 		<h2>There’s no need for Angular in 2018</h2>
@@ -80,8 +91,9 @@ const Article = (props: ContentProps) => (
 			Angular project.”
 		</blockquote>
 		<p>
-			This is a myth. Starting with Angular does not guarantee the entire
-			project remains purely Angular. Every project becomes custom.
+			This is a myth. All decent-sized projects I’ve seen slowly become
+			custom and unique over time. Starting with Angular does not
+			guarantee the entire project remains purely Angular.
 		</p>
 		<p>
 			If a 3rd-party library is better than the Angular offering,
@@ -90,7 +102,8 @@ const Article = (props: ContentProps) => (
 			the community hadn’t already swarmed React.
 		</p>
 		<p>
-			My last Angular project exploded to include a Redux store, HTTP
+			My last Angular project exploded to include a Redux store with{' '}
+			<Link to="https://github.com/reduxjs/reselect">reselect</Link>, HTTP
 			requests piped through{' '}
 			<Link to="https://github.com/ngrx/effects">@ngrx/effects</Link>, and
 			composing smaller utility functions instead of creating full-blown
@@ -158,11 +171,7 @@ const Article = (props: ContentProps) => (
 		</p>
 		<p>
 			I can get into the flow and just code. Less uphill battles, more
-			“just doing it.” Yep, I’m living the Nike slogan now, but on a
-			computer.{' '}
-			<span className="text-sm">
-				And with <em>slightly</em> less sweat.
-			</span>
+			“just doing it.”
 		</p>
 		<p>
 			React is light in all the right places, and complex only when I need
