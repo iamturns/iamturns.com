@@ -28,8 +28,7 @@ const Info = () => (
 					Matt Turnbull
 				</Link>
 			</h1>
-			<div className="mt-4">I make websites &amp; apps</div>
-			<div className="text-sm">and dish out sweet high fives</div>
+			<div className="mt-4">I make websites &amp; apps.</div>
 		</div>
 		<div className="self-end">
 			<InfoLink />

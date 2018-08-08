@@ -11,7 +11,7 @@ import { prefixSiteUrl } from './url';
 const DEFAULT_HEAD_TAGS: HeadTagsProps = {
 	pageTitle: 'I Am Turns',
 	pageDescription:
-		"Hey, I'm Matt Turnbull. I make websites & apps, and dish out sweet high fives.",
+		"Hey, I'm Matt Turnbull. I make websites & apps.",
 	siteTitle: 'I Am Turns',
 	siteUrl: SITE_URL,
 	siteLogo,
