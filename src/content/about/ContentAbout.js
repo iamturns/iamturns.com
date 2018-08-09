@@ -213,6 +213,13 @@ const ContentAbout = ({
 					</EmojiText>
 				</li>
 				<li>
+					<EmojiText emoji="🐾">
+						<Link to="https://www.instagram.com/helloiamalfie/">
+							Spoiling my furry son Alfie
+						</Link>
+					</EmojiText>
+				</li>
+				<li>
 					<EmojiText emoji="🤘">
 						Rocking out on drums &amp; guitar
 					</EmojiText>
