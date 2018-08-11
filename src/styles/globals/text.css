@@ -28,3 +28,7 @@ sup {
 	top: -0.5rem;
 	left: 1px;
 }
+
+pre, code {
+	@apply .font-mono .leading-tight;
+}
