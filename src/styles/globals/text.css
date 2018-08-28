@@ -29,6 +29,7 @@ sup {
 	left: 1px;
 }
 
-pre, code {
+pre,
+code {
 	@apply .font-mono .leading-tight;
 }

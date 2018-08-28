@@ -1,4 +1,6 @@
 {
+	// Settings recommended by Flow extension:
+	"javascript.validate.enable": false,
 	"flow.useNPMPackagedFlow": true,
 	"files.associations": {
 		"*.css": "postcss"

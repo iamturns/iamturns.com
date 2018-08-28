@@ -16,7 +16,10 @@ export default function getContentHeadTags(
 	content: Content,
 	props?: HeadTagsProps = {},
 ): HeadTagsProps {
-	const contentHeadTags: ContentHeadTags = { ...props, content };
+	const contentHeadTags: ContentHeadTags = {
+		...props,
+		content,
+	};
 	return _flow([
 		setContentHeadTags,
 		setContentImage,
