@@ -45,12 +45,12 @@ const ContentJavascriptRoundup = ({
 		<PageContainer small className="wysiwyg">
 			<h2>It’s impossible to keep up with JavaScript.</h2>
 			<p>
-				A popular dev tweets “<em>Why aren’t you using Vue yet?!</em>”.
-				Meanwhile, your buddy Slacks you a blog post: “<em>
-					What’s New In React This Month
-				</em>”. And your inbox is jam-packed with fresh articles: “<em>
-					You Must Learn Redux Now!
-				</em>” and “<em>Redux Is Dead!</em>”.
+				A popular dev tweets “<em>Why aren’t you using Vue yet?!</em>
+				”. Meanwhile, your buddy Slacks you a blog post: “
+				<em>What’s New In React This Month</em>
+				”. And your inbox is jam-packed with fresh articles: “
+				<em>You Must Learn Redux Now!</em>” and “<em>Redux Is Dead!</em>
+				”.
 			</p>
 			<p>
 				You’re doing your best to keep up — this fast-paced JavaScript

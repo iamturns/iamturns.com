@@ -236,7 +236,8 @@ const Article = (props: ContentProps) => (
 			I call them…{' '}
 			<strong>
 				<mark>the perfectionists</mark>
-			</strong>!
+			</strong>
+			!
 		</p>
 		<p>
 			<Emoji label="Applause">👏</Emoji> for apple.com, forbes.com,
@@ -295,7 +296,8 @@ const Article = (props: ContentProps) => (
 			following advice directly from the{' '}
 			<Link to="https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/summary-card-with-large-image">
 				Twitter documentation
-			</Link>.
+			</Link>
+			.
 		</p>
 
 		<h2
@@ -424,5 +426,5 @@ const Article = (props: ContentProps) => (
 );
 
 function toPercent(amount: number, total: number): string {
-	return `${Math.round(amount / total * 100)}%`;
+	return `${Math.round((amount / total) * 100)}%`;
 }

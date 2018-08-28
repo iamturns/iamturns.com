@@ -150,9 +150,10 @@ const Article = (props: ContentProps) => (
 			<span className="text-sm">
 				(the non-TS version of Angular is still undocumented all these
 				years later)
-			</span>. RxJS observables for HTTP requests is also mandatory, but
-			using Promises might be a better fit. Factories, providers,
-			services, ngModules, zone.js, AOT compilation, the list goes on.
+			</span>
+			. RxJS observables for HTTP requests is also mandatory, but using
+			Promises might be a better fit. Factories, providers, services,
+			ngModules, zone.js, AOT compilation, the list goes on.
 		</p>
 		<p>
 			Many projects succeed without this baggage. Is it necessary? It’s a
@@ -167,7 +168,8 @@ const Article = (props: ContentProps) => (
 		<h2>React reignites the passion</h2>
 		<p>
 			In the past weeks I’ve used React to build this website (powered by{' '}
-			<Link to="https://www.gatsbyjs.org/">Gatsby</Link>).
+			<Link to="https://www.gatsbyjs.org/">Gatsby</Link>
+			).
 		</p>
 		<p>
 			I can get into the flow and just code. Less uphill battles, more

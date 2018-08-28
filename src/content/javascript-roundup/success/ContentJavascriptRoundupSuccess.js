@@ -37,7 +37,9 @@ const ContentJavascriptRoundupSuccess = ({
 			<p className="subtitle">You‘re in!</p>
 			<p>See you in your inbox soon.</p>
 			<p>
-				Love,<br />Matt
+				Love,
+				<br />
+				Matt
 			</p>
 			<p className="mt-8">
 				<Link to="/" className="button inline-flex items-center">

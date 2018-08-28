@@ -41,7 +41,9 @@ const ContentDoingJavaScriptEmailSubscribed = ({
 			</p>
 			<p>See you (in your inbox) soon!</p>
 			<p>
-				Love,<br />Matt
+				Love,
+				<br />
+				Matt
 			</p>
 			<p className="p mt-8">
 				<Link to="/" className="button inline-flex items-center">

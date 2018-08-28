@@ -326,7 +326,8 @@ const Article = (props: ContentProps) => (
 			the readme for{' '}
 			<Link to="https://github.com/facebook/create-react-app">
 				create-react-app
-			</Link>:
+			</Link>
+			:
 		</p>
 
 		<ImgBlock

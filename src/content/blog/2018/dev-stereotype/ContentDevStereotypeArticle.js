@@ -17,7 +17,8 @@ const ContentDevStereotypeArticle = (props: Props) => (
 			the 100,000 devs who participated in the{' '}
 			<Link to="https://insights.stackoverflow.com/survey/2018/">
 				2018 Stack Overflow Developer Survey
-			</Link>.
+			</Link>
+			.
 		</p>
 		<p>Maybe you know someone like Joe?</p>
 		<p>Maybe you see yourself in Joe?</p>
@@ -185,7 +186,8 @@ const ContentDevStereotypeArticle = (props: Props) => (
 				),
 			})}{' '}
 			I spend between 9 and 12 hours on my computer, so it’s gotta be
-			comfortable.{props.createFootnoteLink({
+			comfortable.
+			{props.createFootnoteLink({
 				key: 'computer-usage',
 				node: (
 					<div>
@@ -274,7 +276,8 @@ const ContentDevStereotypeArticle = (props: Props) => (
 			<Link to="https://en.wikipedia.org/wiki/JavaScript">
 				JavaScript
 			</Link>{' '}
-			combo.{props.createFootnoteLink({
+			combo.
+			{props.createFootnoteLink({
 				key: 'languages',
 				node: (
 					<div>
@@ -314,7 +317,8 @@ const ContentDevStereotypeArticle = (props: Props) => (
 						<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-frameworks-libraries-and-tools" />
 					</div>
 				),
-			})}, and for the back-end I use{' '}
+			})}
+			, and for the back-end I use{' '}
 			<Link to="https://en.wikipedia.org/wiki/Node.js">Node.js</Link>
 			{props.createFootnoteLink({
 				key: 'frameworks-back-end',
@@ -336,9 +340,11 @@ const ContentDevStereotypeArticle = (props: Props) => (
 						<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-frameworks-libraries-and-tools" />
 					</div>
 				),
-			})}. I stick to a{' '}
+			})}
+			. I stick to a{' '}
 			<Link to="https://en.wikipedia.org/wiki/MySQL">MySQL</Link>{' '}
-			database,{props.createFootnoteLink({
+			database,
+			{props.createFootnoteLink({
 				key: 'database',
 				node: (
 					<div>
@@ -352,7 +358,8 @@ const ContentDevStereotypeArticle = (props: Props) => (
 			<Link to="https://en.wikipedia.org/wiki/Redis">Redis</Link> and{' '}
 			<Link to="https://en.wikipedia.org/wiki/PostgreSQL">
 				PostgreSQL
-			</Link>.
+			</Link>
+			.
 			{props.createFootnoteLink({
 				key: 'database-love',
 				node: (
@@ -385,14 +392,16 @@ const ContentDevStereotypeArticle = (props: Props) => (
 						<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-platforms" />
 					</div>
 				),
-			})}, but my co-workers rave about{' '}
+			})}
+			, but my co-workers rave about{' '}
 			<Link to="https://en.wikipedia.org/wiki/Serverless_computing">
 				Serverless
 			</Link>{' '}
 			and{' '}
 			<Link to="https://en.wikipedia.org/wiki/Amazon_Web_Services">
 				AWS
-			</Link>.
+			</Link>
+			.
 			{props.createFootnoteLink({
 				key: 'platform-love',
 				node: (
@@ -436,22 +445,29 @@ const ContentDevStereotypeArticle = (props: Props) => (
 			like{' '}
 			<Link to="https://en.wikipedia.org/wiki/Rust_(programming_language)">
 				Rust
-			</Link>,{' '}
+			</Link>
+			,{' '}
 			<Link to="https://en.wikipedia.org/wiki/Kotlin_(programming_language)">
 				Kotlin
-			</Link>,{' '}
+			</Link>
+			,{' '}
 			<Link to="https://en.wikipedia.org/wiki/Python_(programming_language)">
 				Python
-			</Link>,{' '}
+			</Link>
+			,{' '}
 			<Link to="https://en.wikipedia.org/wiki/TypeScript">
 				TypeScript
-			</Link>,{' '}
+			</Link>
+			,{' '}
 			<Link to="https://en.wikipedia.org/wiki/Go_(programming_language)">
 				Go
-			</Link>, and{' '}
+			</Link>
+			, and{' '}
 			<Link to="https://en.wikipedia.org/wiki/Swift_(programming_language)">
 				Swift
-			</Link>.{props.createFootnoteLink({
+			</Link>
+			.
+			{props.createFootnoteLink({
 				key: 'loved',
 				node: (
 					<div>
@@ -467,27 +483,29 @@ const ContentDevStereotypeArticle = (props: Props) => (
 			<Link to="https://en.wikipedia.org/wiki/Torch_(machine_learning)">
 				Torch
 			</Link>{' '}
-			/ <Link to="https://en.wikipedia.org/wiki/PyTorch">PyTorch</Link>.{props.createFootnoteLink(
-				{
-					key: 'loved-ml',
-					node: (
-						<div>
-							The majority of developers love TensorFlow (73.5%)
-							and Torch / PyTorch (68%).
-							<br />
-							<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-frameworks-libraries-and-tools" />
-						</div>
-					),
-				},
-			)}{' '}
+			/ <Link to="https://en.wikipedia.org/wiki/PyTorch">PyTorch</Link>.
+			{props.createFootnoteLink({
+				key: 'loved-ml',
+				node: (
+					<div>
+						The majority of developers love TensorFlow (73.5%) and
+						Torch / PyTorch (68%).
+						<br />
+						<Link to="https://insights.stackoverflow.com/survey/2018/#technology-most-loved-dreaded-and-wanted-frameworks-libraries-and-tools" />
+					</div>
+				),
+			})}{' '}
 			Just keep me the hell away from{' '}
 			<Link to="https://en.wikipedia.org/wiki/Visual_Basic">VB6</Link>,{' '}
 			<Link to="https://en.wikipedia.org/wiki/Oracle_Database">
 				Oracle
-			</Link>, and{' '}
+			</Link>
+			, and{' '}
 			<Link to="https://en.wikipedia.org/wiki/Apache_Cordova">
 				Cordova
-			</Link>,{props.createFootnoteLink({
+			</Link>
+			,
+			{props.createFootnoteLink({
 				key: 'dreaded',
 				node: (
 					<div>
@@ -501,8 +519,8 @@ const ContentDevStereotypeArticle = (props: Props) => (
 			and I ain’t touching{' '}
 			<Link to="https://en.wikipedia.org/wiki/SharePoint">
 				SharePoint
-			</Link>,{' '}
-			<Link to="https://en.wikipedia.org/wiki/Drupal">Drupal</Link> or{' '}
+			</Link>
+			, <Link to="https://en.wikipedia.org/wiki/Drupal">Drupal</Link> or{' '}
 			<Link to="https://en.wikipedia.org/wiki/Salesforce.com">
 				Salesforce
 			</Link>{' '}
@@ -520,20 +538,20 @@ const ContentDevStereotypeArticle = (props: Props) => (
 			})}
 		</p>
 		<p>
-			How did I get here? Well… I started coding about four years ago.{props.createFootnoteLink(
-				{
-					key: 'started',
-					node: (
-						<div>
-							The majority of developers (24.8%) learned to code 3
-							- 5 years ago.
-							<br />
-							<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-years-since-learning-to-code" />
-						</div>
-					),
-				},
-			)}{' '}
-			Got a Bachelor{props.createFootnoteLink({
+			How did I get here? Well… I started coding about four years ago.
+			{props.createFootnoteLink({
+				key: 'started',
+				node: (
+					<div>
+						The majority of developers (24.8%) learned to code 3 - 5
+						years ago.
+						<br />
+						<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-years-since-learning-to-code" />
+					</div>
+				),
+			})}{' '}
+			Got a Bachelor
+			{props.createFootnoteLink({
 				key: 'education-bachelor',
 				node: (
 					<div>
@@ -544,7 +562,8 @@ const ContentDevStereotypeArticle = (props: Props) => (
 					</div>
 				),
 			})}{' '}
-			of Computer Science{props.createFootnoteLink({
+			of Computer Science
+			{props.createFootnoteLink({
 				key: 'education-compsci',
 				node: (
 					<div>
@@ -558,8 +577,9 @@ const ContentDevStereotypeArticle = (props: Props) => (
 			and haven’t stopped since. I’m playing with{' '}
 			<Link to="https://en.wikipedia.org/wiki/Python_(programming_language)">
 				Python
-			</Link>,{' '}
-			<Link to="https://en.wikipedia.org/wiki/MongoDB">MongoDB</Link> and{' '}
+			</Link>
+			, <Link to="https://en.wikipedia.org/wiki/MongoDB">MongoDB</Link>{' '}
+			and{' '}
 			<Link to="https://en.wikipedia.org/wiki/Android_software_development">
 				Android
 			</Link>
@@ -574,7 +594,8 @@ const ContentDevStereotypeArticle = (props: Props) => (
 					</div>
 				),
 			})}{' '}
-			at home for fun{props.createFootnoteLink({
+			at home for fun
+			{props.createFootnoteLink({
 				key: 'hobby',
 				node: (
 					<div>
@@ -585,23 +606,23 @@ const ContentDevStereotypeArticle = (props: Props) => (
 				),
 			})}{' '}
 			by reading the official docs and using{' '}
-			<Link to="https://stackoverflow.com/">Stack Overflow</Link>.{props.createFootnoteLink(
-				{
-					key: 'learn-methods',
-					node: (
-						<div>
-							The majority of developers learn by official
-							documentation (83%) and Stack Overflow (82.7%).
-							<br />
-							<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-ways-developers-learn-on-their-own" />
-						</div>
-					),
-				},
-			)}
+			<Link to="https://stackoverflow.com/">Stack Overflow</Link>.
+			{props.createFootnoteLink({
+				key: 'learn-methods',
+				node: (
+					<div>
+						The majority of developers learn by official
+						documentation (83%) and Stack Overflow (82.7%).
+						<br />
+						<Link to="https://insights.stackoverflow.com/survey/2018/#developer-profile-ways-developers-learn-on-their-own" />
+					</div>
+				),
+			})}
 		</p>
 		<p>
 			One day I might start my own company, but I want to stay techy over
-			the next five years.{props.createFootnoteLink({
+			the next five years.
+			{props.createFootnoteLink({
 				key: 'future',
 				node: (
 					<div>

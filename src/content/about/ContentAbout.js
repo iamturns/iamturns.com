@@ -136,14 +136,15 @@ const ContentAbout = ({
 					)}
 				>
 					<p>
-						Some of my favourite languages and tools ({currentContent
-							.frontmatter.dateUpdated && (
+						Some of my favourite languages and tools (
+						{currentContent.frontmatter.dateUpdated && (
 							<DateTime
 								dateTime={
 									currentContent.frontmatter.dateUpdated
 								}
 							/>
-						)}):
+						)}
+						):
 					</p>
 
 					<ul>
