@@ -41,6 +41,16 @@
 
 	code:not([class]) {
 		@apply .code-highlight .code-highlight--inline;
+
+		a:not([class]) {
+			@apply .border-0 .pb-0;
+			@apply .text-black;
+			@apply .underline;
+
+			&:visited {
+				@apply .text-black;
+			}
+		}
 	}
 
 	ul ul:not([class]) {
