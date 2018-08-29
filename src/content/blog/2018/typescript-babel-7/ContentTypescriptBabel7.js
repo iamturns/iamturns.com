@@ -18,7 +18,7 @@ const IMG_CONSOLE = createImage(ImgConsole, 372, 340);
 export const frontmatter = {
 	title: "TypeScript With Babel 7: A Beautiful Marriage",
 	description:
-		"TypeScript has never been easier thanks to the TypeScript plugin for Babel 7. Discover 4 reasons why TypeScript + Babel are a perfect pair, and follow a step-by-step guide to upgrade your Babel project with TypeScript in 10 minutes.",
+		"TypeScript has never been easier thanks to the TypeScript plugin for Babel 7. Discover 4 reasons why TypeScript + Babel are a perfect pair, and follow a step-by-step guide to upgrade your project with TypeScript in 10 minutes.",
 	slug: "/typescript-babel-7",
 	dateCreated: "2018-08-29",
 	dateUpdated: "2018-08-29",
@@ -165,7 +165,7 @@ const Article = (props: ContentProps) => (
 			(<code>@babel/preset-typescript</code>
 			), an official year-long collaboration between the TypeScript and Babel teams. Discover 4
 			reasons why TypeScript and Babel are a perfect pair, and follow a step-by-step guide to
-			upgrade your Babel project with TypeScript.
+			upgrade your project with TypeScript in 10 minutes.
 		</p>
 
 		<h2>Huh? What? Why?</h2>
