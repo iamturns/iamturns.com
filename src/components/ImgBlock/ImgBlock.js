@@ -39,7 +39,7 @@ const ImgBlock = ({
 		{...rest}
 	>
 		<ImgBlockImage image={image} alt={alt} linkTo={linkTo} />
-		<figcaption className="my-2 text-sm text-center text-turtle-darker">{children}</figcaption>
+		<figcaption className="my-2 text-xs text-center text-turtle-darker">{children}</figcaption>
 	</figure>
 );
 
