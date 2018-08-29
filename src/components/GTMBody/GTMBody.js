@@ -7,8 +7,8 @@ type GTMBodyProps = {
 };
 
 const GTMBody = ({ id }: GTMBodyProps) => (
-	// eslint-disable-next-line react/no-danger
 	<noscript
+		// eslint-disable-next-line react/no-danger
 		dangerouslySetInnerHTML={{
 			__html: generateInnerHtml(id),
 		}}
