@@ -203,8 +203,8 @@ const Article = (props: ContentProps) => (
 		</p>
 		<p>
 			The TypeScript compiler has a similar feature, enabled by setting <code>target</code> to
-			something like <code>"ES5"</code> or <code>"ES6"</code>. But the Babel configuration improves
-			on this with <Link to="https://babeljs.io/docs/en/babel-preset-env/">babel-preset-env</Link>.
+			something like <code>ES5</code> or <code>ES6</code>. But the Babel configuration improves on
+			this with <Link to="https://babeljs.io/docs/en/babel-preset-env/">babel-preset-env</Link>.
 			Instead of locking in a specific set of JavaScript features (ES5, ES6, etc), you list the
 			environments you need to support:
 		</p>
@@ -481,6 +481,7 @@ const Article = (props: ContentProps) => (
 		</p>
 		<CodeBlock
 			language="bash"
+			// eslint-disable-next-line
 			code={`find src -name "*.js" -exec sh -c 'mv "$0" "\${0%.js}.ts"' {} \;`}
 		/>
 		<p>
@@ -515,10 +516,10 @@ const Article = (props: ContentProps) => (
 			config file.
 		</p>
 		<p>
-			If you use Babel CLI, add <code>--extensions '.ts'</code>
+			If you use Babel CLI, add <code>--extensions &apos;.ts&apos;</code>
 		</p>
 		<p>
-			If you use Webpack, add <code>'ts'</code> to <code>resolve.extensions</code> array.
+			If you use Webpack, add <code>&apos;ts&apos;</code> to <code>resolve.extensions</code> array.
 		</p>
 		<p>
 			<strong>3) Add ‘check-types’ command</strong>
@@ -662,7 +663,7 @@ const Article = (props: ContentProps) => (
 			<Link to="https://github.com/eslint/typescript-eslint-parser">typescript-eslint-parser</Link>{" "}
 			with{" "}
 			<Link to="https://github.com/nzakas/eslint-plugin-typescript">eslint-plugin-typescript</Link>{" "}
-			to add TypeScript rules. I haven’t tried this combination — please let me know in the comments
+			to add TypeScript rules. I haven’t tried this combination — please let me know in the comments
 			if this works better than tslint.
 		</p>
 		<p>
