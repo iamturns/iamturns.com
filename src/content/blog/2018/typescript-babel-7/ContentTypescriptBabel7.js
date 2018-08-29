@@ -16,9 +16,9 @@ import ImgConsole from "./console.gif";
 const IMG_CONSOLE = createImage(ImgConsole, 372, 340);
 
 export const frontmatter = {
-	title: "TypeScript and Babel 7: a beautiful marriage",
+	title: "TypeScript With Babel 7: A Beautiful Marriage",
 	description:
-		"Babel 7 and TypeScript are a great match. Learn 4 reasons why, and a step-by-step guide to try it out.",
+		"TypeScript has never been easier thanks to the TypeScript plugin for Babel 7. Discover 4 reasons why TypeScript + Babel are a perfect pair, and follow a step-by-step guide to upgrade your Babel project with TypeScript in 10 minutes.",
 	slug: "/typescript-babel-7",
 	dateCreated: "2018-08-29",
 	dateUpdated: "2018-08-29",
@@ -155,16 +155,21 @@ export default ContentTypescriptBabel7;
 const Article = (props: ContentProps) => (
 	<div className="wysiwyg">
 		<ImgBlock image={props.data.imgBabelTypescript} alt="Babel and TypeScript" />
+
 		<p>
-			<Link to="https://babeljs.io/blog/2018/08/27/7.0.0">Babel 7</Link> has landed with an official
-			collaboration between the TypeScript and Babel teams:{" "}
+			<Link to="https://www.typescriptlang.org/">TypeScript</Link> has never been easier thanks to
+			the{" "}
 			<Link to="https://babeljs.io/docs/en/babel-preset-typescript.html">
-				@babel/preset-typescript
-			</Link>
-			.
+				TypeScript plugin for Babel 7
+			</Link>{" "}
+			(<code>@babel/preset-typescript</code>
+			), an official year-long collaboration between the TypeScript and Babel teams. Discover 4
+			reasons why TypeScript and Babel are a perfect pair, and follow a step-by-step guide to
+			upgrade your Babel project with TypeScript.
 		</p>
+
 		<h2>Huh? What? Why?</h2>
-		<p>I didn’t understand the need for this preset at first.</p>
+		<p>I didn’t understand the need for this new preset at first.</p>
 		<p>
 			Aren’t Babel and TypeScript two completely different things? How can Babel handle the
 			TypeScript type checking? TypeScript can already output to ES5 just like Babel can, so what’s
@@ -217,9 +222,9 @@ const Article = (props: ContentProps) => (
 			which JavaScript features to convert and polyfill for those specific target environments.
 		</p>
 		<ImgBlock image={props.data.imgCompatTable} alt="compat-table">
-			Take a moment to appreciate the genius who named this project '
+			Take a moment to appreciate the genius who named this project ‘
 			<Link to="https://kangax.github.io/compat-table/">compat-table</Link>
-			'.
+			’.
 		</ImgBlock>
 		<p>
 			An interesting technique used by{" "}
@@ -456,25 +461,33 @@ const Article = (props: ContentProps) => (
 		<p>
 			In all my years of TypeScriptin’ I’ve never come across this. Who codes this way? Stop it!
 		</p>
-		<h2>I want to add TypeScript to Babel 7.</h2>
+		<h2>Ok, I’m ready to try TypeScript with Babel 7.</h2>
 		<ImgBlock image={props.data.imgYeah} alt="Yeah!">
 			Photo by{" "}
 			<Link to="https://www.rawpixel.com/image/384992/yeah-text-paper-and-colorful-party-confetti-background-party-concept">
 				rawpixel.com
 			</Link>
 		</ImgBlock>
-		<p>Let’s do this.</p>
+		<p>Let’s do this! It should only take about 10 minutes.</p>
 		<p>
 			I’m assuming you have Babel 7 setup. If not, see the{" "}
 			<Link to="https://babeljs.io/docs/en/v7-migration.html">Babel Migration Guide</Link>.
 		</p>
 		<p>
-			<strong>Install dependencies</strong>
+			<strong>1) Rename .js files to .ts</strong>
 		</p>
-		<CodeBlock code="npm install --save-dev typescript @babel/preset-typescript @babel/proposal-class-properties @babel/proposal-object-rest-spread" />
 		<p>
-			<strong>Configure Babel</strong>
+			Assuming your files are in <code>/src</code>:
 		</p>
+		<CodeBlock
+			language="bash"
+			code={`find src -name "*.js" -exec sh -c 'mv "$0" "\${0%.js}.ts"' {} \;`}
+		/>
+		<p>
+			<strong>2) Add TypeScript to Babel</strong>
+		</p>
+		<p>A few dependencies:</p>
+		<CodeBlock code="npm install --save-dev @babel/preset-typescript @babel/proposal-class-properties @babel/proposal-object-rest-spread" />
 		<p>
 			In your Babel config file (<code>.babelrc</code> or <code>babel.config.js</code>
 			):
@@ -494,14 +507,44 @@ const Article = (props: ContentProps) => (
 			`}
 		/>
 		<p>
-			TypeScript has a couple of extra features which Babel needs to know about via those two
-			proposal plugins.
+			TypeScript has a couple of extra features which Babel needs to know about (via those two
+			plugins listed above).
 		</p>
 		<p>
-			<strong>Configure TypeScript</strong>
+			Babel looks for .js files by default, and sadly this is not configurable within the Babel
+			config file.
 		</p>
 		<p>
-			Create a <code>tsconfig.json</code> file in the root directory:
+			If you use Babel CLI, add <code>--extensions '.ts'</code>
+		</p>
+		<p>
+			If you use Webpack, add <code>'ts'</code> to <code>resolve.extensions</code> array.
+		</p>
+		<p>
+			<strong>3) Add ‘check-types’ command</strong>
+		</p>
+		<p>
+			In <code>package.json</code>:
+		</p>
+		<CodeBlock
+			language="json"
+			code={`
+				"scripts": {
+					"check-types": "tsc"
+				}
+			`}
+		/>
+		<p>
+			This command simply invokes the TypeScript compiler (<code>tsc</code>
+			).
+		</p>
+		<p>
+			Where does <code>tsc</code> come from? We need to install TypeScript:
+		</p>
+		<CodeBlock code={`npm install --save-dev typescript`} />
+		<p>
+			To configure TypeScript (and <code>tsc</code>
+			), we need a <code>tsconfig.json</code> file in the root directory:
 		</p>
 		<CodeBlock
 			language="json"
@@ -530,46 +573,7 @@ const Article = (props: ContentProps) => (
 			`}
 		/>
 		<p>
-			<strong>Add ‘check-types’ command</strong>
-		</p>
-		<p>
-			The command simply invokes the TypeScript compiler (<code>tsc</code>
-			), which reads from the config defined above.
-		</p>
-		<p>
-			In <code>package.json </code>
-			file:
-		</p>
-		<CodeBlock
-			language="json"
-			code={`
-				"scripts": {
-					"check-types": "tsc"
-				}
-			`}
-		/>
-		<p>
-			<strong>Rename .js files to .ts</strong>
-		</p>
-		<CodeBlock
-			language="bash"
-			code={`find src -name "*.js" -exec sh -c 'mv "$0" "\${0%.js}.ts"' {} \;`}
-		/>
-		<p>
-			<strong>Modify Babel to look for .ts files</strong>
-		</p>
-		<p>
-			Babel looks for .js files by default, and sadly this is not configurable within the Babel
-			config file.
-		</p>
-		<p>
-			If you use Babel CLI, add <code>--extensions '.ts'</code>
-		</p>
-		<p>
-			If you use Webpack, add <code>'ts'</code> to <code>resolve.extensions</code> array.
-		</p>
-		<p>
-			<strong>Done!</strong>
+			<strong>Done.</strong>
 		</p>
 		<p>
 			Well, the <em>setup</em> is done. Now run <code>npm run check-types</code> (watch mode:{" "}
@@ -639,7 +643,7 @@ const Article = (props: ContentProps) => (
 			`}
 		/>
 		<p>
-			That’s it! Now call <code>npm run lint</code> to lint your project. If you're using VS Code,
+			That’s it! Now call <code>npm run lint</code> to lint your project. If you’re using VS Code,
 			install the <Link to="https://github.com/Microsoft/vscode-tslint/">vscode-lint</Link>{" "}
 			extension for red squiggly lines.
 		</p>
