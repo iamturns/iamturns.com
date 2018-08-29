@@ -1,5 +1,5 @@
 // @flow
 
-import Hey from './Hey';
+import Hey from "./Hey";
 
 export default Hey;

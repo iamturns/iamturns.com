@@ -1,9 +1,9 @@
 // @flow
 
-import LinkInternal from 'gatsby-link';
-import * as React from 'react';
+import LinkInternal from "gatsby-link";
+import * as React from "react";
 
-import { isUrlExternal } from '../../utils/url';
+import { isUrlExternal } from "../../utils/url";
 
 type LinkProps = {
 	to: string,
@@ -15,7 +15,7 @@ const Link = ({ children, to, ...rest }: LinkProps) => {
 	const Tag = isExternal ? LinkExternal : LinkInternal;
 
 	return (
-		<Tag to={to} target={isExternal ? '_blank' : ''} {...rest}>
+		<Tag to={to} target={isExternal ? "_blank" : ""} {...rest}>
 			{children || to}
 		</Tag>
 	);

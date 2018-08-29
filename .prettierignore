@@ -1,2 +1,6 @@
-/package.json
+/.cache
+/build
+/public
+/vendor
+/package-lock.json
 /tailwind.js

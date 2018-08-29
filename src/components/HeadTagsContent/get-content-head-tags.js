@@ -1,12 +1,12 @@
 // @flow
 
-import _flow from 'lodash/flow';
+import _flow from "lodash/flow";
 
-import type { HeadTagsProps } from '../../components/HeadTags';
-import type { Content } from '../../types/Content';
-import getHeadTags from '../../utils/head-tags';
-import { getImageDimensions, getImageSrc } from '../../utils/image';
-import { prefixSiteUrl } from '../../utils/url';
+import type { HeadTagsProps } from "../../components/HeadTags";
+import type { Content } from "../../types/Content";
+import getHeadTags from "../../utils/head-tags";
+import { getImageDimensions, getImageSrc } from "../../utils/image";
+import { prefixSiteUrl } from "../../utils/url";
 
 type ContentHeadTags = HeadTagsProps & {
 	content: Content,
@@ -20,18 +20,15 @@ export default function getContentHeadTags(
 		...props,
 		content,
 	};
-	return _flow([
-		setContentHeadTags,
-		setContentImage,
-		clearContentFromProps,
-		getHeadTags,
-	])(contentHeadTags);
+	return _flow([setContentHeadTags, setContentImage, clearContentFromProps, getHeadTags])(
+		contentHeadTags,
+	);
 }
 
 function setContentHeadTags(props: ContentHeadTags): ContentHeadTags {
 	const contentHeadTags = {};
 
-	contentHeadTags.isArticle = props.content.frontmatter.type === 'article';
+	contentHeadTags.isArticle = props.content.frontmatter.type === "article";
 	contentHeadTags.pageUrl = prefixSiteUrl(props.content.fields.slug);
 	contentHeadTags.pageTitle = props.content.frontmatter.title;
 
@@ -39,12 +36,10 @@ function setContentHeadTags(props: ContentHeadTags): ContentHeadTags {
 		contentHeadTags.pageDescription = props.content.frontmatter.description;
 	}
 	if (props.content.frontmatter.dateCreated) {
-		contentHeadTags.articleDatePublished =
-			props.content.frontmatter.dateCreated;
+		contentHeadTags.articleDatePublished = props.content.frontmatter.dateCreated;
 	}
 	if (props.content.frontmatter.dateUpdated) {
-		contentHeadTags.articleDateModified =
-			props.content.frontmatter.dateUpdated;
+		contentHeadTags.articleDateModified = props.content.frontmatter.dateUpdated;
 	}
 
 	return {

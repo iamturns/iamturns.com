@@ -1,5 +1,5 @@
 // @flow
 
-import FaceLink from './FaceLink';
+import FaceLink from "./FaceLink";
 
 export default FaceLink;

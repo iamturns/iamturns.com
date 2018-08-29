@@ -1,11 +1,11 @@
 // @flow
 
-import classNames from 'classnames';
-import * as React from 'react';
+import classNames from "classnames";
+import * as React from "react";
 
-import ImgFace from '../../assets/images/matt-turnbull-cartoon-120.png';
-import ImgFace2x from '../../assets/images/matt-turnbull-cartoon-240.png';
-import Link from '../Link/';
+import ImgFace from "../../assets/images/matt-turnbull-cartoon-120.png";
+import ImgFace2x from "../../assets/images/matt-turnbull-cartoon-240.png";
+import Link from "../Link/";
 
 type FaceLinkProps = {
 	size?: number,
@@ -20,9 +20,9 @@ const FaceLink = ({ size = 120 }: FaceLinkProps) => (
 			width={size}
 			height={size}
 			className={classNames(
-				'block rounded-full',
-				'border-2 border-turtle-darker',
-				'hover:grow-sm transition-slow',
+				"block rounded-full",
+				"border-2 border-turtle-darker",
+				"hover:grow-sm transition-slow",
 			)}
 		/>
 	</Link>

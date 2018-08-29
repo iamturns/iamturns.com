@@ -1,9 +1,9 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import type { Content } from '../../types/Content';
-import Card from '../Card';
+import type { Content } from "../../types/Content";
+import Card from "../Card";
 
 type ContentCardProps = {
 	content: Content,

@@ -1,10 +1,10 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import ImgFace from '../../assets/images/matt-turnbull-cartoon-120.png';
-import LastUpdated from '../LastUpdated';
-import Link from '../Link';
+import ImgFace from "../../assets/images/matt-turnbull-cartoon-120.png";
+import LastUpdated from "../LastUpdated";
+import Link from "../Link";
 
 type AuthorProps = {
 	date: string,
@@ -48,7 +48,7 @@ const Pic = () => (
 
 const Name = () => (
 	<div>
-		by{' '}
+		by{" "}
 		<Link to="/about/" className="text-turtle-darkest hover:underline">
 			Matt Turnbull
 		</Link>

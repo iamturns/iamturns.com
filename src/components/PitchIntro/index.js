@@ -1,5 +1,5 @@
 // @flow
 
-import PitchIntro from './PitchIntro';
+import PitchIntro from "./PitchIntro";
 
 export default PitchIntro;

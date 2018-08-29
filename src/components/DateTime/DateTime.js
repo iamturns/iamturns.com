@@ -1,7 +1,7 @@
 // @flow
 
-import moment from 'moment';
-import * as React from 'react';
+import moment from "moment";
+import * as React from "react";
 
 type DateTimeProps = {
 	dateTime: string, // ISO 8601
@@ -12,8 +12,8 @@ type DateTimeProps = {
 
 const DateTime = ({
 	dateTime,
-	format = 'MMM D, YYYY',
-	formatSameYear = 'MMM D',
+	format = "MMM D, YYYY",
+	formatSameYear = "MMM D",
 	...wrapperProps
 }: DateTimeProps) => {
 	if (!dateTime) {

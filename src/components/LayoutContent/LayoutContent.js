@@ -1,20 +1,20 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import type { Content } from '../../types/Content';
-import type { Footnote } from '../../types/Footnote';
-import type { Result } from '../../types/Result';
-import { getResultAsArray } from '../../utils/result';
-import ContentHeader from '../ContentHeader/ContentHeader';
-import ContentListing from '../ContentListing/ContentListing';
-import DisqusContent from '../DisqusContent/';
-import type { HeadTagsProps } from '../HeadTags';
-import HeadTagsContent from '../HeadTagsContent';
-import PageContainer from '../PageContainer';
-import PitchIntro from '../PitchIntro';
-import LayoutContentFootnotes from './Footnotes';
-import LayoutContentHeaderAuthor from './HeaderAuthor';
+import type { Content } from "../../types/Content";
+import type { Footnote } from "../../types/Footnote";
+import type { Result } from "../../types/Result";
+import { getResultAsArray } from "../../utils/result";
+import ContentHeader from "../ContentHeader/ContentHeader";
+import ContentListing from "../ContentListing/ContentListing";
+import DisqusContent from "../DisqusContent/";
+import type { HeadTagsProps } from "../HeadTags";
+import HeadTagsContent from "../HeadTagsContent";
+import PageContainer from "../PageContainer";
+import PitchIntro from "../PitchIntro";
+import LayoutContentFootnotes from "./Footnotes";
+import LayoutContentHeaderAuthor from "./HeaderAuthor";
 
 type LayoutContentProps = {
 	children: React.Node,
@@ -32,10 +32,7 @@ const LayoutContent = ({
 	footnotes = [],
 }: LayoutContentProps) => (
 	<div>
-		<HeadTagsContent
-			content={currentContent}
-			overrideTags={additionalHeadTags}
-		/>
+		<HeadTagsContent content={currentContent} overrideTags={additionalHeadTags} />
 		<ContentHeader
 			image={currentContent.frontmatter.cover}
 			title={currentContent.frontmatter.title}

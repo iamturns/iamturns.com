@@ -1,8 +1,8 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import Link from '../Link';
+import Link from "../Link";
 
 type Props = {
 	link: string,

@@ -1,5 +1,5 @@
 // @flow
 
-import CardGroup from './CardGroup';
+import CardGroup from "./CardGroup";
 
 export default CardGroup;

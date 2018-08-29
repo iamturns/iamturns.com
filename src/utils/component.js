@@ -1,10 +1,8 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-export function getDisplayName(
-	WrappedComponent: React.ComponentType<any>,
-): string {
+export function getDisplayName(WrappedComponent: React.ComponentType<any>): string {
 	// $FlowFixMe
-	return WrappedComponent.displayName || WrappedComponent.name || 'Component';
+	return WrappedComponent.displayName || WrappedComponent.name || "Component";
 }

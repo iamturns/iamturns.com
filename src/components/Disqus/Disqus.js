@@ -1,7 +1,7 @@
 // @flow
 
-import DisqusVendor from 'disqus-react';
-import * as React from 'react';
+import DisqusVendor from "disqus-react";
+import * as React from "react";
 
 type DisqusProps = {
 	config: Object,

@@ -1,36 +1,36 @@
 // @flow
 
-import classNames from 'classnames';
-import * as React from 'react';
+import classNames from "classnames";
+import * as React from "react";
 
-import ImgFace from '../../assets/images/matt-turnbull-face-120.jpg';
-import ImgFace2x from '../../assets/images/matt-turnbull-face-240.jpg';
-import ContentListing from '../../components/ContentListing';
-import DateTime from '../../components/DateTime';
-import EmailPleaseBox from '../../components/EmailPleaseBox';
-import EmojiText from '../../components/EmojiText';
-import HeadingBrick from '../../components/HeadingBrick';
-import HeadTagsContent from '../../components/HeadTagsContent';
-import ImgBlock from '../../components/ImgBlock';
-import LastUpdated from '../../components/LastUpdated';
-import Link from '../../components/Link';
-import PageContainer from '../../components/PageContainer';
-import type { Content } from '../../types/Content';
-import type { Image } from '../../types/Image';
-import type { Result } from '../../types/Result';
-import { createImage } from '../../utils/image';
-import { getResultAsArray } from '../../utils/result';
-import ImgCheers from './cheers.gif';
-import ImgTouch from './touch.gif';
+import ImgFace from "../../assets/images/matt-turnbull-face-120.jpg";
+import ImgFace2x from "../../assets/images/matt-turnbull-face-240.jpg";
+import ContentListing from "../../components/ContentListing";
+import DateTime from "../../components/DateTime";
+import EmailPleaseBox from "../../components/EmailPleaseBox";
+import EmojiText from "../../components/EmojiText";
+import HeadingBrick from "../../components/HeadingBrick";
+import HeadTagsContent from "../../components/HeadTagsContent";
+import ImgBlock from "../../components/ImgBlock";
+import LastUpdated from "../../components/LastUpdated";
+import Link from "../../components/Link";
+import PageContainer from "../../components/PageContainer";
+import type { Content } from "../../types/Content";
+import type { Image } from "../../types/Image";
+import type { Result } from "../../types/Result";
+import { createImage } from "../../utils/image";
+import { getResultAsArray } from "../../utils/result";
+import ImgCheers from "./cheers.gif";
+import ImgTouch from "./touch.gif";
 
 const IMG_CHEERS = createImage(ImgCheers, 576, 432);
 const IMG_TOUCH = createImage(ImgTouch, 480, 196);
 
 export const frontmatter = {
-	title: 'About Matt Turnbull',
-	dateCreated: '2018-03-19',
-	dateUpdated: '2018-08-11',
-	type: 'article',
+	title: "About Matt Turnbull",
+	dateCreated: "2018-03-19",
+	dateUpdated: "2018-08-11",
+	type: "article",
 	unlisted: true,
 };
 
@@ -81,37 +81,31 @@ const ContentAbout = ({
 			<p>And I have a confession to make…</p>
 		</PageContainer>
 		<PageContainer className="my-8 p-6 bg-denim-white text-center">
-			<h2 className="text-xl text-denim-black">
-				I love making websites &amp; apps
-			</h2>
+			<h2 className="text-xl text-denim-black">I love making websites &amp; apps</h2>
 		</PageContainer>
 		<PageContainer small className="wysiwyg">
 			<p>It gets me out of bed, and keeps me up at night.</p>
 
 			<h3 className="h3 mt-12">Blame it on crabs</h3>
 			<ImgBlock image={imgCrab} alt="Hermit crab" />
-			<p>
-				It all started with building a website about hermit crabs at the
-				age of 13.
-			</p>
+			<p>It all started with building a website about hermit crabs at the age of 13.</p>
 			<p>20 years later this passion has driven me to:</p>
 			<ul className="list list-reset my-6">
 				<li>
 					<EmojiText emoji="🛠️">
-						Create exceptional websites &amp; apps with
-						award-winning agencies in London and Melbourne
+						Create exceptional websites &amp; apps with award-winning agencies in London and
+						Melbourne
 					</EmojiText>
 				</li>
 				<li>
 					<EmojiText emoji="🤝">
-						Collaborate with talented teams in Berlin, Tel Aviv, and
-						Guangzhou
+						Collaborate with talented teams in Berlin, Tel Aviv, and Guangzhou
 					</EmojiText>
 				</li>
 				<li>
 					<EmojiText emoji="📈">
-						Deliver a range of digital solutions, from prototypes
-						&amp; MVPs to large-scale enterprise systems
+						Deliver a range of digital solutions, from prototypes &amp; MVPs to large-scale
+						enterprise systems
 					</EmojiText>
 				</li>
 			</ul>
@@ -121,28 +115,24 @@ const ContentAbout = ({
 			<HeadingBrick>Nerds Only</HeadingBrick>
 			<div
 				className={classNames(
-					'mt-12',
-					'max-w-md mx-auto',
-					'bg-turtle-white',
-					'border-turtle-darker sm:border',
+					"mt-12",
+					"max-w-md mx-auto",
+					"bg-turtle-white",
+					"border-turtle-darker sm:border",
 				)}
 			>
 				<div
 					className={classNames(
-						'bg-turtle-white text-turtle-black',
-						'font-mono leading-tight text-sm',
-						'my-8 mx-4 sm:mx-8 overflow-auto',
-						'wysiwyg',
+						"bg-turtle-white text-turtle-black",
+						"font-mono leading-tight text-sm",
+						"my-8 mx-4 sm:mx-8 overflow-auto",
+						"wysiwyg",
 					)}
 				>
 					<p>
 						Some of my favourite languages and tools (
 						{currentContent.frontmatter.dateUpdated && (
-							<DateTime
-								dateTime={
-									currentContent.frontmatter.dateUpdated
-								}
-							/>
+							<DateTime dateTime={currentContent.frontmatter.dateUpdated} />
 						)}
 						):
 					</p>
@@ -177,15 +167,11 @@ const ContentAbout = ({
 				</li>
 				<li>
 					<EmojiText emoji="🐾">
-						<Link to="https://www.instagram.com/helloiamalfie/">
-							Spoiling my furry son Alfie
-						</Link>
+						<Link to="https://www.instagram.com/helloiamalfie/">Spoiling my furry son Alfie</Link>
 					</EmojiText>
 				</li>
 				<li>
-					<EmojiText emoji="🤘">
-						Rocking out on drums &amp; guitar
-					</EmojiText>
+					<EmojiText emoji="🤘">Rocking out on drums &amp; guitar</EmojiText>
 				</li>
 				<li>
 					<EmojiText emoji="📚">Learning all the things</EmojiText>
@@ -204,34 +190,23 @@ const ContentAbout = ({
 					<Link to="mailto:matt@iamturns.com">matt@iamturns.com</Link>
 				</li>
 				<li>
-					<Link to="https://twitter.com/iamturns">
-						twitter.com/iamturns
-					</Link>
+					<Link to="https://twitter.com/iamturns">twitter.com/iamturns</Link>
 				</li>
 				<li>
-					<Link to="https://www.instagram.com/iamturns/">
-						instagram.com/iamturns
-					</Link>
+					<Link to="https://www.instagram.com/iamturns/">instagram.com/iamturns</Link>
 				</li>
 				<li>
-					<Link to="https://github.com/iamturns">
-						github.com/iamturns
-					</Link>
+					<Link to="https://github.com/iamturns">github.com/iamturns</Link>
 				</li>
 				<li>
-					<Link to="https://www.linkedin.com/in/iamturns/">
-						linkedin.com/in/iamturns
-					</Link>
+					<Link to="https://www.linkedin.com/in/iamturns/">linkedin.com/in/iamturns</Link>
 				</li>
 			</ul>
 
 			<h2>Now</h2>
 
 			{currentContent.frontmatter.dateUpdated && (
-				<LastUpdated
-					dateTime={currentContent.frontmatter.dateUpdated}
-					className="text-xs"
-				/>
+				<LastUpdated dateTime={currentContent.frontmatter.dateUpdated} className="text-xs" />
 			)}
 
 			<ul className="list list-reset my-6">
@@ -268,7 +243,7 @@ export default ContentAbout;
 const Hey = () => (
 	<div className="py-12 flex items-center justify-center">
 		<div className="flex flex-col sm:flex-row items-center">
-			<div className="flex-none" style={{ width: '120px' }}>
+			<div className="flex-none" style={{ width: "120px" }}>
 				<img
 					src={ImgFace}
 					srcSet={`${ImgFace2x} 2x`}

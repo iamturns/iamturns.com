@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
 export type Footnote = {
 	key: string,

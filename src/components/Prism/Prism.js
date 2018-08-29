@@ -1,8 +1,8 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-require('../../../vendor/prismjs/prism');
+require("../../../vendor/prismjs/prism");
 
 type PrismProps = {
 	children: React.Node,

@@ -1,9 +1,9 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import type { Footnote } from '../types/Footnote';
-import { getDisplayName } from '../utils/component';
+import type { Footnote } from "../types/Footnote";
+import { getDisplayName } from "../utils/component";
 
 type Props = {};
 
@@ -15,9 +15,7 @@ export function withFootnotesParent(
 	WrappedComponent: React.ComponentType<any>,
 ): React.ComponentType<Props> {
 	return class WithFootnotesParent extends React.Component<Props, State> {
-		displayName = `WithFootnotesParent(${getDisplayName(
-			WrappedComponent,
-		)})`;
+		displayName = `WithFootnotesParent(${getDisplayName(WrappedComponent)})`;
 
 		constructor(props: Props) {
 			super(props);

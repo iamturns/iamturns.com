@@ -1,12 +1,12 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
-import type { Image } from '../../types/Image';
-import DateTime from '../DateTime';
-import Img from '../Img';
-import Link from '../Link';
+import ArrowRight from "../../../vendor/feather-icons-react/ArrowRight";
+import type { Image } from "../../types/Image";
+import DateTime from "../DateTime";
+import Img from "../Img";
+import Link from "../Link";
 
 type CardProps = {
 	linkTo: string,

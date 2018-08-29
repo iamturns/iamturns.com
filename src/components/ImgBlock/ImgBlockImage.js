@@ -1,10 +1,10 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import type { Image } from '../../types/Image';
-import Img from '../Img';
-import Link from '../Link';
+import type { Image } from "../../types/Image";
+import Img from "../Img";
+import Link from "../Link";
 
 type ImgBlockImageProps = {
 	image: Image,

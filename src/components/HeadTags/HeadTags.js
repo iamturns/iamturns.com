@@ -1,7 +1,7 @@
 // @flow
 
-import * as React from 'react';
-import Helmet from 'react-helmet';
+import * as React from "react";
+import Helmet from "react-helmet";
 
 export type HeadTagsProps = {
 	pageUrl?: string,
@@ -37,78 +37,48 @@ const HeadTags = (props: HeadTagsProps) => (
 		{/* Basic */}
 
 		{props.pageTitle && <title>{props.pageTitle}</title>}
-		{props.pageDescription && (
-			<meta name="description" content={props.pageDescription} />
-		)}
+		{props.pageDescription && <meta name="description" content={props.pageDescription} />}
 
 		{props.pageUrl && <link rel="canonical" href={props.pageUrl} />}
 		<meta name="robots" content="index, follow" />
 
 		{/* Open Graph (Facebook, Pinterest, LinkedIn, Reddit, Google+, etc) */}
 
-		<meta
-			property="og:type"
-			content={props.isArticle ? 'article' : 'website'}
-		/>
+		<meta property="og:type" content={props.isArticle ? "article" : "website"} />
 
 		{props.pageUrl && <meta property="og:url" content={props.pageUrl} />}
 
-		{props.pageTitle && (
-			<meta property="og:title" content={props.pageTitle} />
-		)}
+		{props.pageTitle && <meta property="og:title" content={props.pageTitle} />}
 
-		{props.pageDescription && (
-			<meta property="og:description" content={props.pageDescription} />
-		)}
+		{props.pageDescription && <meta property="og:description" content={props.pageDescription} />}
 
-		{props.pageImage && (
-			<meta property="og:image" content={props.pageImage} />
-		)}
+		{props.pageImage && <meta property="og:image" content={props.pageImage} />}
 
-		{props.pageImageWidth && (
-			<meta property="og:image:width" content={props.pageImageWidth} />
-		)}
+		{props.pageImageWidth && <meta property="og:image:width" content={props.pageImageWidth} />}
 
-		{props.pageImageHeight && (
-			<meta property="og:image:height" content={props.pageImageHeight} />
-		)}
+		{props.pageImageHeight && <meta property="og:image:height" content={props.pageImageHeight} />}
 
-		{props.siteTitle && (
-			<meta property="og:site_name" content={props.siteTitle} />
-		)}
+		{props.siteTitle && <meta property="og:site_name" content={props.siteTitle} />}
 
 		{/* Open Graph - Article */}
 
 		{props.articleDatePublished && (
-			<meta
-				property="article:published_time"
-				content={props.articleDatePublished}
-			/>
+			<meta property="article:published_time" content={props.articleDatePublished} />
 		)}
 
 		{props.articleDateModified && (
-			<meta
-				property="article:modified_time"
-				content={props.articleDateModified}
-			/>
+			<meta property="article:modified_time" content={props.articleDateModified} />
 		)}
 
-		{props.articleSection && (
-			<meta property="article:section" content={props.articleSection} />
-		)}
+		{props.articleSection && <meta property="article:section" content={props.articleSection} />}
 
 		{props.articleTags &&
-			props.articleTags.map(tag => (
-				<meta key={tag} property="article:tag" content={tag} />
-			))}
+			props.articleTags.map(tag => <meta key={tag} property="article:tag" content={tag} />)}
 
 		{/* Open Graph - Facebook */}
 
 		{props.articleAuthorFacebook && (
-			<meta
-				property="article:author"
-				content={props.articleAuthorFacebook}
-			/>
+			<meta property="article:author" content={props.articleAuthorFacebook} />
 		)}
 
 		{props.siteFacebookAdmins &&
@@ -120,9 +90,7 @@ const HeadTags = (props: HeadTagsProps) => (
 
 		<meta name="twitter:card" content="summary_large_image" />
 
-		{props.siteTwitter && (
-			<meta name="twitter:site" content={props.siteTwitter} />
-		)}
+		{props.siteTwitter && <meta name="twitter:site" content={props.siteTwitter} />}
 
 		{props.articleAuthorTwitter && (
 			<meta name="twitter:creator" content={props.articleAuthorTwitter} />
@@ -133,7 +101,7 @@ const HeadTags = (props: HeadTagsProps) => (
 		<script type="application/ld+json">
 			{`
 					${JSON.stringify({
-						'@context': 'http://schema.org',
+						"@context": "http://schema.org",
 						...schema(props),
 					})}
 				`}
@@ -144,16 +112,16 @@ const HeadTags = (props: HeadTagsProps) => (
 export default HeadTags;
 
 function htmlPrefix(props: HeadTagsProps): string {
-	const result = ['og: http://ogp.me/ns#'];
+	const result = ["og: http://ogp.me/ns#"];
 	if (props.isArticle) {
-		result.push('article: http://ogp.me/ns/article#');
+		result.push("article: http://ogp.me/ns/article#");
 	}
-	return result.join(' ');
+	return result.join(" ");
 }
 
 function schemaOrganization(props: HeadTagsProps): Object {
 	const result: Object = {
-		'@type': 'Organization',
+		"@type": "Organization",
 	};
 
 	if (props.siteTitle) {
@@ -180,7 +148,7 @@ function schemaOrganization(props: HeadTagsProps): Object {
 
 function schemaAuthor(props: HeadTagsProps): Object {
 	const result: Object = {
-		'@type': 'Person',
+		"@type": "Person",
 	};
 
 	if (props.articleAuthorName) {
@@ -199,7 +167,7 @@ function schemaAuthor(props: HeadTagsProps): Object {
 
 function schemaArticle(props: HeadTagsProps): Object {
 	const result: Object = {
-		'@type': 'NewsArticle',
+		"@type": "NewsArticle",
 	};
 
 	if (props.pageUrl) {

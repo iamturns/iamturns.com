@@ -1,12 +1,12 @@
 // @flow
 
-import classNames from 'classnames';
-import * as React from 'react';
+import classNames from "classnames";
+import * as React from "react";
 
-import type { Image } from '../../types/Image';
-import ImgBlockImage from './ImgBlockImage';
+import type { Image } from "../../types/Image";
+import ImgBlockImage from "./ImgBlockImage";
 
-type ImgBlockType = 'default' | 'fullwidth' | 'fullscreen';
+type ImgBlockType = "default" | "fullwidth" | "fullscreen";
 
 type ImgBlockProps = {
 	image: Image,
@@ -22,7 +22,7 @@ type ImgBlockProps = {
 const ImgBlock = ({
 	image,
 	linkTo,
-	type = 'default',
+	type = "default",
 	className,
 	children,
 	alt,
@@ -31,17 +31,15 @@ const ImgBlock = ({
 }: ImgBlockProps) => (
 	<figure
 		className={classNames(
-			'my-8 mx-auto text-center',
-			type === 'fullscreen' ? 'fullscreen' : '',
+			"my-8 mx-auto text-center",
+			type === "fullscreen" ? "fullscreen" : "",
 			className,
 		)}
 		style={processStyle(style, image, type)}
 		{...rest}
 	>
 		<ImgBlockImage image={image} alt={alt} linkTo={linkTo} />
-		<figcaption className="my-2 text-sm text-center text-turtle-darker">
-			{children}
-		</figcaption>
+		<figcaption className="my-2 text-sm text-center text-turtle-darker">{children}</figcaption>
 	</figure>
 );
 
@@ -51,7 +49,7 @@ function processStyle(style: Object, image: Image, type: ImgBlockType): Object {
 		return style;
 	}
 
-	if (['fullwidth', 'fullscreen'].includes(type)) {
+	if (["fullwidth", "fullscreen"].includes(type)) {
 		// Default behaviour is to keep stretching, so leave it
 		return style;
 	}
@@ -68,13 +66,9 @@ function processStyle(style: Object, image: Image, type: ImgBlockType): Object {
 }
 
 function getMaxWidth(image: Image): ?string {
-	if (
-		image.childImageSharp &&
-		image.childImageSharp.sizes &&
-		image.childImageSharp.sizes.sizes
-	) {
+	if (image.childImageSharp && image.childImageSharp.sizes && image.childImageSharp.sizes.sizes) {
 		// $FlowFixMe
-		const sizeParts = image.childImageSharp.sizes.sizes.split(' ');
+		const sizeParts = image.childImageSharp.sizes.sizes.split(" ");
 		return sizeParts[sizeParts.length - 1];
 	}
 	return null;

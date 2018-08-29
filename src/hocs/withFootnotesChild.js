@@ -1,11 +1,11 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import FootnoteLink from '../components/FootnoteLink';
-import type { Footnote } from '../types/Footnote';
-import { getDisplayName } from '../utils/component';
-import { generateFootnoteHash } from '../utils/footnote';
+import FootnoteLink from "../components/FootnoteLink";
+import type { Footnote } from "../types/Footnote";
+import { getDisplayName } from "../utils/component";
+import { generateFootnoteHash } from "../utils/footnote";
 
 type Props = {
 	addFootnote: (footnote: Footnote) => number,
@@ -32,21 +32,13 @@ export function withFootnotesChild(
 		createFootnoteLink(footnote: Footnote): FootnoteLink {
 			this.footnotes.push(footnote);
 			return (
-				<FootnoteLink
-					link={`#${generateFootnoteHash(footnote)}`}
-					id={this.footnotes.length}
-				/>
+				<FootnoteLink link={`#${generateFootnoteHash(footnote)}`} id={this.footnotes.length} />
 			);
 		}
 
 		render() {
 			this.footnotes = [];
-			return (
-				<WrappedComponent
-					createFootnoteLink={this.createFootnoteLink}
-					{...this.props}
-				/>
-			);
+			return <WrappedComponent createFootnoteLink={this.createFootnoteLink} {...this.props} />;
 		}
 	};
 }

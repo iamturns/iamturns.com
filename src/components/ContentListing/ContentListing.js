@@ -1,13 +1,13 @@
 // @flow
 
-import classNames from 'classnames';
-import * as React from 'react';
+import classNames from "classnames";
+import * as React from "react";
 
-import type { Content } from '../../types/Content';
-import CardGroup from '../CardGroup';
-import ContentCard from '../ContentCard';
-import HeadingBrick from '../HeadingBrick';
-import PageContainer from '../PageContainer';
+import type { Content } from "../../types/Content";
+import CardGroup from "../CardGroup";
+import ContentCard from "../ContentCard";
+import HeadingBrick from "../HeadingBrick";
+import PageContainer from "../PageContainer";
 
 type ContentListingProps = {
 	contentList: Array<Content>,
@@ -29,17 +29,12 @@ const ContentListing = ({
 		return null;
 	}
 	return (
-		<div className={classNames('py-12', className)} {...wrapperProps}>
+		<div className={classNames("py-12", className)} {...wrapperProps}>
 			<PageContainer>
-				{title && (
-					<HeadingBrick className="mb-12">{title}</HeadingBrick>
-				)}
+				{title && <HeadingBrick className="mb-12">{title}</HeadingBrick>}
 				<CardGroup>
 					{contentListFiltered.map(content => (
-						<ContentCard
-							key={content.fields.slug}
-							content={content}
-						/>
+						<ContentCard key={content.fields.slug} content={content} />
 					))}
 				</CardGroup>
 			</PageContainer>
@@ -47,10 +42,7 @@ const ContentListing = ({
 	);
 };
 
-function filterContentList(
-	contentList: Array<Content>,
-	currentContent: ?Content,
-): Array<Content> {
+function filterContentList(contentList: Array<Content>, currentContent: ?Content): Array<Content> {
 	return contentList.filter(content => {
 		if (!currentContent) {
 			return true;

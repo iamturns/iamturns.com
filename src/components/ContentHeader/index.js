@@ -1,5 +1,5 @@
 // @flow
 
-import ContentHeader from './ContentHeader';
+import ContentHeader from "./ContentHeader";
 
 export default ContentHeader;

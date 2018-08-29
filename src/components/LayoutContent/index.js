@@ -1,5 +1,5 @@
 // @flow
 
-import LayoutContent from './LayoutContent';
+import LayoutContent from "./LayoutContent";
 
 export default LayoutContent;

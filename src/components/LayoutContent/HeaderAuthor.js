@@ -1,9 +1,9 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import type { Content } from '../../types/Content';
-import Author from '../Author/Author';
+import type { Content } from "../../types/Content";
+import Author from "../Author/Author";
 
 type HeaderAuthorProps = {
 	content: Content,

@@ -1,9 +1,9 @@
 // @flow
 
-import classNames from 'classnames';
-import * as React from 'react';
+import classNames from "classnames";
+import * as React from "react";
 
-import Emoji from '../Emoji';
+import Emoji from "../Emoji";
 
 type EmojiTextProps = {
 	children: React.Node,
@@ -18,11 +18,11 @@ const EmojiText = ({
 	children,
 	emoji,
 	emojiLabel,
-	tag: Tag = 'div',
+	tag: Tag = "div",
 	className,
 	...rest
 }: EmojiTextProps) => (
-	<Tag className={classNames('flex items-center my-4', className)} {...rest}>
+	<Tag className={classNames("flex items-center my-4", className)} {...rest}>
 		<span>
 			<Emoji className="text-xl mt-1 mr-4" label={emojiLabel}>
 				{emoji}

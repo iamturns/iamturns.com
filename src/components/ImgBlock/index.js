@@ -1,5 +1,5 @@
 // @flow
 
-import ImgBlock from './ImgBlock';
+import ImgBlock from "./ImgBlock";
 
 export default ImgBlock;

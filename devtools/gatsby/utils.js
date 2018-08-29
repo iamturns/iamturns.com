@@ -1,5 +1,5 @@
-const path = require('path');
-const { createFilePath } = require('gatsby-source-filesystem');
+const path = require("path");
+const { createFilePath } = require("gatsby-source-filesystem");
 
 function calculateNodeSlug(node, getNode) {
 	if (node.frontmatter && node.frontmatter.slug) {
@@ -10,10 +10,10 @@ function calculateNodeSlug(node, getNode) {
 	const filePath = createFilePath({ node, getNode });
 
 	// Convert '/example/PageExample/' to '/example'
-	const filePathParts = filePath.split('/');
+	const filePathParts = filePath.split("/");
 	filePathParts.pop();
 	filePathParts.pop();
-	return filePathParts.join('/');
+	return filePathParts.join("/");
 }
 
 function processPageNode(node, getNode, boundActionCreators) {
@@ -21,13 +21,13 @@ function processPageNode(node, getNode, boundActionCreators) {
 
 	boundActionCreators.createNodeField({
 		node,
-		name: 'slug',
+		name: "slug",
 		value: addTrailingSlash(nodePath),
 	});
 }
 
 function addTrailingSlash(url) {
-	return url.replace(/\/?$/, '/');
+	return url.replace(/\/?$/, "/");
 }
 
 function getPages(graphql) {

@@ -1,5 +1,5 @@
 // @flow
 
-import EmailPleaseBox from './EmailPleaseBox';
+import EmailPleaseBox from "./EmailPleaseBox";
 
 export default EmailPleaseBox;

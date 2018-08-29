@@ -1,32 +1,32 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import Code from '../../components/Code';
-import CodeBlock from '../../components/CodeBlock';
-import Emoji from '../../components/Emoji';
-import EmojiText from '../../components/EmojiText';
-import ImgBlock from '../../components/ImgBlock';
-import LayoutContent from '../../components/LayoutContent';
-import Link from '../../components/Link';
-import type { Content } from '../../types/Content';
-import type { Image } from '../../types/Image';
-import type { Result } from '../../types/Result';
-import { createImage } from '../../utils/image';
-import { markUserAdmin } from '../../utils/user';
-import ImgSpongebob from './spongebob.gif';
+import Code from "../../components/Code";
+import CodeBlock from "../../components/CodeBlock";
+import Emoji from "../../components/Emoji";
+import EmojiText from "../../components/EmojiText";
+import ImgBlock from "../../components/ImgBlock";
+import LayoutContent from "../../components/LayoutContent";
+import Link from "../../components/Link";
+import type { Content } from "../../types/Content";
+import type { Image } from "../../types/Image";
+import type { Result } from "../../types/Result";
+import { createImage } from "../../utils/image";
+import { markUserAdmin } from "../../utils/user";
+import ImgSpongebob from "./spongebob.gif";
 
 const IMG_SPONGEBOB = createImage(ImgSpongebob, 500, 380);
 
 export const frontmatter = {
-	type: 'article', // 'page'
-	title: 'Example page',
-	description: 'Example description.',
-	dateCreated: '2017-01-01',
-	dateUpdated: '2018-01-01',
+	type: "article", // 'page'
+	title: "Example page",
+	description: "Example description.",
+	dateCreated: "2017-01-01",
+	dateUpdated: "2018-01-01",
 	unlisted: true,
-	cover: '../../assets/images/headers/fireworks.jpg',
-	shareImage: '../../assets/images/headers/celebrate.jpg',
+	cover: "../../assets/images/headers/fireworks.jpg",
+	shareImage: "../../assets/images/headers/celebrate.jpg",
 };
 
 declare var graphql: Function;
@@ -54,20 +54,14 @@ export const pageQuery = graphql`
 				}
 			}
 		}
-		imgBig: file(
-			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "example/big.jpg" }
-		) {
+		imgBig: file(sourceInstanceName: { eq: "content" }, relativePath: { eq: "example/big.jpg" }) {
 			childImageSharp {
 				sizes(maxWidth: 580) {
 					...GatsbyImageSharpSizes
 				}
 			}
 		}
-		imgFull: file(
-			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "example/big.jpg" }
-		) {
+		imgFull: file(sourceInstanceName: { eq: "content" }, relativePath: { eq: "example/big.jpg" }) {
 			childImageSharp {
 				sizes(maxWidth: 1920) {
 					...GatsbyImageSharpSizes
@@ -107,53 +101,45 @@ class ContentExample extends React.Component<ContentProps> {
 
 export default ContentExample;
 
-const Article = ({
-	data: { imgSetSize, imgSmall, imgBig, imgFull },
-}: ContentProps) => (
+const Article = ({ data: { imgSetSize, imgSmall, imgBig, imgFull } }: ContentProps) => (
 	<div className="wysiwyg">
 		<p className="subtitle">
-			This is a subtitle and it is a little bit longer so that it wraps
-			over a couple of lines you see.
+			This is a subtitle and it is a little bit longer so that it wraps over a couple of lines you
+			see.
 		</p>
 		<p>
-			<Emoji>😖</Emoji> Lorem ipsum <Link to="internal">dolor sit</Link>{' '}
-			amet, <Link to="http://external/">consectetur adipiscing</Link>{' '}
-			elit, sed do and{' '}
-			<Link to="https://google.com/">this link is visited</Link>. Ut
-			labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-			exercitation ullamco laboris nisi ut aliquip ex ea commodo
-			consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-			esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-			cupidatat non proident, sunt in culpa qui officia deserunt mollit
-			anim id est laborum.
+			<Emoji>😖</Emoji> Lorem ipsum <Link to="internal">dolor sit</Link> amet,{" "}
+			<Link to="http://external/">consectetur adipiscing</Link> elit, sed do and{" "}
+			<Link to="https://google.com/">this link is visited</Link>. Ut labore et dolore magna aliqua.
+			Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+			commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+			dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+			qui officia deserunt mollit anim id est laborum.
 		</p>
 		<h2>Heading level two</h2>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<h3>Heading level three</h3>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<ul>
 			<li>List item 1</li>
 			<li>
-				List item 2 consectetur adipiscing elit, sed do eiusmod tempor
-				incididunt ut labore et dolore magna aliqua
+				List item 2 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+				dolore magna aliqua
 			</li>
 			<li>List item 3</li>
 		</ul>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<ul className="list list-reset">
 			<li>
@@ -161,8 +147,8 @@ const Article = ({
 			</li>
 			<li>
 				<EmojiText emoji="☄">
-					Listem item 2 consectetur adipiscing elit, sed do eiusmod
-					tempor incididunt ut labore et dolore magna aliqua
+					Listem item 2 consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+					dolore magna aliqua
 				</EmojiText>
 			</li>
 			<li>
@@ -171,57 +157,51 @@ const Article = ({
 		</ul>
 		<blockquote>This is a quote.</blockquote>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<blockquote className="quote-pull">This is a pull quote.</blockquote>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<h3>Image set size</h3>
 		<ImgBlock image={imgSetSize} alt="Example alt text">
 			Example caption
 		</ImgBlock>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<h3>Image small</h3>
 		<ImgBlock image={imgSmall} alt="Example alt text">
 			Here is the caption with a <Link to="/">link inside</Link> - wow!
 		</ImgBlock>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<h3>Image big</h3>
 		<ImgBlock image={imgBig} alt="Example alt text">
 			Example caption
 		</ImgBlock>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<h3>Image full</h3>
 		<ImgBlock image={imgFull} alt="Example alt text" type="fullscreen">
 			Example caption
 		</ImgBlock>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<h3>Image gif</h3>
 		<ImgBlock image={IMG_SPONGEBOB} alt="Example alt text">
@@ -232,10 +212,9 @@ const Article = ({
 			Inline code <Code language="js" code="const a = 'b'" />
 		</p>
 		<p>
-			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-			eiusmod tempor incididunt ut labore et dolore magna aliqua Ut enim
-			ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-			aliquip ex ea commodo consequat.
+			Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
+			labore et dolore magna aliqua Ut enim ad minim veniam, quis nostrud exercitation ullamco
+			laboris nisi ut aliquip ex ea commodo consequat.
 		</p>
 		<CodeBlock
 			language="jsx"

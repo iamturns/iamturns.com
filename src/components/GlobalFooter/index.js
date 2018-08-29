@@ -1,5 +1,5 @@
 // @flow
 
-import GlobalFooter from './GlobalFooter';
+import GlobalFooter from "./GlobalFooter";
 
 export default GlobalFooter;

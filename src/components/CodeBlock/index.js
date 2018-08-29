@@ -1,5 +1,5 @@
 // @flow
 
-import CodeBlock from './CodeBlock';
+import CodeBlock from "./CodeBlock";
 
 export default CodeBlock;

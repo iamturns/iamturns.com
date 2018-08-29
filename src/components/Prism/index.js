@@ -1,5 +1,5 @@
 // @flow
 
-import Prism from './Prism';
+import Prism from "./Prism";
 
 export default Prism;

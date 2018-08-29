@@ -1,11 +1,11 @@
 // @flow
 
-import LogRocket from 'logrocket';
+import LogRocket from "logrocket";
 
-import { LOG_ROCKET_LIVE } from '../config';
-import { isEnvLive } from '../utils/env';
-import { isUserAdmin } from '../utils/user';
-import { isHostnameLive } from './url';
+import { LOG_ROCKET_LIVE } from "../config";
+import { isEnvLive } from "../utils/env";
+import { isUserAdmin } from "../utils/user";
+import { isHostnameLive } from "./url";
 
 // Delay prevents bots from wasting a session
 const DELAY = 3000;

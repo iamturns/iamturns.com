@@ -1,6 +1,6 @@
 // @flow
 
-import type { Result } from '../types/Result';
+import type { Result } from "../types/Result";
 
 export function isResultEmpty(result: Result<any>): boolean {
 	return !result || !result.edges || result.edges.length === 0;

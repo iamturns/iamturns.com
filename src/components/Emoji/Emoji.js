@@ -1,6 +1,6 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
 type EmojiProps = {
 	children: React.Node,
@@ -8,7 +8,7 @@ type EmojiProps = {
 	// ...wrapperProps
 };
 
-const Emoji = ({ label = '', children, ...wrapperProps }: EmojiProps) => (
+const Emoji = ({ label = "", children, ...wrapperProps }: EmojiProps) => (
 	<span role="img" aria-label={label} {...wrapperProps}>
 		{children}
 	</span>

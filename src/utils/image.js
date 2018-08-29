@@ -1,6 +1,6 @@
 // @flow
 
-import type { Image } from '../types/Image';
+import type { Image } from "../types/Image";
 
 // $FlowFixMe - Flow is terrible dealing with union types
 

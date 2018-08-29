@@ -1,17 +1,17 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import ArrowLeft from '../../../../vendor/feather-icons-react/ArrowLeft';
-import ContentHeader from '../../../components/ContentHeader';
-import HeadTagsContent from '../../../components/HeadTagsContent';
-import Link from '../../../components/Link';
-import PageContainer from '../../../components/PageContainer';
-import type { Content } from '../../../types/Content';
+import ArrowLeft from "../../../../vendor/feather-icons-react/ArrowLeft";
+import ContentHeader from "../../../components/ContentHeader";
+import HeadTagsContent from "../../../components/HeadTagsContent";
+import Link from "../../../components/Link";
+import PageContainer from "../../../components/PageContainer";
+import type { Content } from "../../../types/Content";
 
 export const frontmatter = {
-	title: 'The JavaScript Roundup',
-	cover: '../../../assets/images/headers/fireworks.jpg',
+	title: "The JavaScript Roundup",
+	cover: "../../../assets/images/headers/fireworks.jpg",
 };
 
 declare var graphql: Function;
@@ -27,9 +27,7 @@ type ContentProps = {
 	},
 };
 
-const ContentJavascriptRoundupSuccess = ({
-	data: { currentContent },
-}: ContentProps) => (
+const ContentJavascriptRoundupSuccess = ({ data: { currentContent } }: ContentProps) => (
 	<div>
 		<HeadTagsContent content={currentContent} />
 		<ContentHeader image={currentContent.frontmatter.cover} />

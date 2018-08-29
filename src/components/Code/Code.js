@@ -1,10 +1,10 @@
 // @flow
 
-import classNames from 'classnames';
-import * as React from 'react';
+import classNames from "classnames";
+import * as React from "react";
 
-import stripIndent from '../../../vendor/strip-indent';
-import Prism from '../Prism';
+import stripIndent from "../../../vendor/strip-indent";
+import Prism from "../Prism";
 
 type CodeProps = {
 	code: string,
@@ -13,16 +13,11 @@ type CodeProps = {
 	// ...wrapperProps
 };
 
-const Code = ({
-	language = 'bash',
-	code,
-	className,
-	...wrapperProps
-}: CodeProps) => (
+const Code = ({ language = "bash", code, className, ...wrapperProps }: CodeProps) => (
 	<Prism>
 		<code
 			className={classNames(
-				'code-highlight code-highlight--inline',
+				"code-highlight code-highlight--inline",
 				`language-${language}`,
 				className,
 			)}

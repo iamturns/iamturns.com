@@ -1,5 +1,5 @@
 // @flow
 
-import Code from './Code';
+import Code from "./Code";
 
 export default Code;

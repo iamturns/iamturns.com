@@ -1,10 +1,10 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
-import FaceLink from '../FaceLink';
-import Link from '../Link';
+import ArrowRight from "../../../vendor/feather-icons-react/ArrowRight";
+import FaceLink from "../FaceLink";
+import Link from "../Link";
 
 const Hey = () => (
 	<div className="text-center">
@@ -23,7 +23,7 @@ const Info = () => (
 	<div className="flex flex-col">
 		<div className="text-center pb-4">
 			<h1 className="text-lg">
-				Hey, I’m{' '}
+				Hey, I’m{" "}
 				<Link to="/about/" className="link-border">
 					Matt Turnbull
 				</Link>

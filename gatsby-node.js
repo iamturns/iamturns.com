@@ -4,14 +4,10 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 
-const {
-	createPageFromNode,
-	getPages,
-	processPageNode,
-} = require('./devtools/gatsby/utils');
+const { createPageFromNode, getPages, processPageNode } = require("./devtools/gatsby/utils");
 
 exports.onCreateNode = ({ node, getNode, boundActionCreators }) => {
-	if (node.internal.type === 'JavascriptFrontmatter') {
+	if (node.internal.type === "JavascriptFrontmatter") {
 		processPageNode(node, getNode, boundActionCreators);
 	}
 };

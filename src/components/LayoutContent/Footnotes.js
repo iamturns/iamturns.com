@@ -1,9 +1,9 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import type { Footnote } from '../../types/Footnote';
-import { generateFootnoteHash } from '../../utils/footnote';
+import type { Footnote } from "../../types/Footnote";
+import { generateFootnoteHash } from "../../utils/footnote";
 
 type Props = {
 	footnotes: Array<Footnote>,

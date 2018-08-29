@@ -1,46 +1,46 @@
 /* Tailwind preflight: normalize.css and additional base styles */
 
-@import 'tailwindcss/preflight';
+@import "tailwindcss/preflight";
 
 /* Mixins */
 
-@import 'mixins/a.css';
-@import 'mixins/button.css';
-@import 'mixins/link-border.css';
-@import 'mixins/quote-pull.css';
-@import 'mixins/quote.css';
-@import 'mixins/visited.css';
+@import "mixins/a.css";
+@import "mixins/button.css";
+@import "mixins/link-border.css";
+@import "mixins/quote-pull.css";
+@import "mixins/quote.css";
+@import "mixins/visited.css";
 
 /* Globals */
 
-@import 'globals/a.css';
-@import 'globals/atoms.css';
-@import 'globals/code-highlight.css';
-@import 'globals/colors.css';
-@import 'globals/layout.css';
-@import 'globals/text.css';
-@import 'globals/wysiwyg.css';
+@import "globals/a.css";
+@import "globals/atoms.css";
+@import "globals/code-highlight.css";
+@import "globals/colors.css";
+@import "globals/layout.css";
+@import "globals/text.css";
+@import "globals/wysiwyg.css";
 
 /* Tailwind components: plugins added to plugin system */
 
-@import 'tailwindcss/components';
+@import "tailwindcss/components";
 
 /* Tailwind utilities: generated based on tailwind config */
 
-@import 'tailwindcss/utilities';
+@import "tailwindcss/utilities";
 
 /* Custom utilities */
 
-@import 'utils/bg-pattern.css';
-@import 'utils/content-empty.css';
-@import 'utils/darken.css';
-@import 'utils/debug.css';
-@import 'utils/fullscreen.css';
-@import 'utils/hover-darken.css';
-@import 'utils/hover-dim.css';
-@import 'utils/hover-fly.css';
-@import 'utils/hover-grow.css';
-@import 'utils/link-border.css';
-@import 'utils/text-highlight.css';
-@import 'utils/transition.css';
-@import 'utils/visited.css';
+@import "utils/bg-pattern.css";
+@import "utils/content-empty.css";
+@import "utils/darken.css";
+@import "utils/debug.css";
+@import "utils/fullscreen.css";
+@import "utils/hover-darken.css";
+@import "utils/hover-dim.css";
+@import "utils/hover-fly.css";
+@import "utils/hover-grow.css";
+@import "utils/link-border.css";
+@import "utils/text-highlight.css";
+@import "utils/transition.css";
+@import "utils/visited.css";

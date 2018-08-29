@@ -1,24 +1,24 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import Code from '../../../../components/Code';
-import CodeBlock from '../../../../components/CodeBlock';
-import Emoji from '../../../../components/Emoji';
-import LayoutContent from '../../../../components/LayoutContent';
-import type { Content } from '../../../../types/Content';
-import type { Result } from '../../../../types/Result';
+import Code from "../../../../components/Code";
+import CodeBlock from "../../../../components/CodeBlock";
+import Emoji from "../../../../components/Emoji";
+import LayoutContent from "../../../../components/LayoutContent";
+import type { Content } from "../../../../types/Content";
+import type { Result } from "../../../../types/Result";
 
 export const frontmatter = {
-	title: 'Catch, Recover, and Continue RxJS Streams After An Error',
+	title: "Catch, Recover, and Continue RxJS Streams After An Error",
 	description:
-		'RxJS automatically kills streams when errors occur. This is hard coded. The solution: use disposable streams.',
-	slug: '/continue-rxjs-streams-when-errors-occur',
-	dateCreated: '2017-05-07',
-	dateUpdated: '2018-03-19',
-	type: 'article',
-	cover: './meatballs.jpg',
-	shareImage: './meatballs.jpg',
+		"RxJS automatically kills streams when errors occur. This is hard coded. The solution: use disposable streams.",
+	slug: "/continue-rxjs-streams-when-errors-occur",
+	dateCreated: "2017-05-07",
+	dateUpdated: "2018-03-19",
+	type: "article",
+	cover: "./meatballs.jpg",
+	shareImage: "./meatballs.jpg",
 };
 
 declare var graphql: Function;
@@ -49,9 +49,7 @@ export default ContentRxjsErrors;
 
 const Article = () => (
 	<div className="wysiwyg">
-		<p>
-			I assumed RxJS streams worked like Promises, and I was very wrong.
-		</p>
+		<p>I assumed RxJS streams worked like Promises, and I was very wrong.</p>
 
 		<p>Here’s a stream of stuff, with meatballs!</p>
 
@@ -99,8 +97,7 @@ const Article = () => (
 		/>
 
 		<p>
-			Where’s the meatballs?! It seems the error killed the stream. Let’s
-			stop that from happening.
+			Where’s the meatballs?! It seems the error killed the stream. Let’s stop that from happening.
 		</p>
 
 		<h2>Attempt #1: Defensive coding</h2>
@@ -134,19 +131,14 @@ const Article = () => (
 		<h3>Hold up…</h3>
 
 		<p>
-			Maybe the “stream of stuff” is actually a response from a server.
-			You expect to receive nicely structured JSON. Then one day, you
-			don’t.
+			Maybe the “stream of stuff” is actually a response from a server. You expect to receive nicely
+			structured JSON. Then one day, you don’t.
 		</p>
 
-		<p>
-			Maybe you’re passing the “stuff” into a 3rd party library, and it
-			throws an error.
-		</p>
+		<p>Maybe you’re passing the “stuff” into a 3rd party library, and it throws an error.</p>
 
 		<p>
-			Errors will always happen. You can’t code defensively for every
-			unpredictable possibility.
+			Errors will always happen. You can’t code defensively for every unpredictable possibility.
 		</p>
 
 		<p>Let’s try something else.</p>
@@ -230,15 +222,11 @@ const Article = () => (
 			`}
 		/>
 
-		<p>
-			The error was caught, but the stream completes before the meatballs
-			had a chance.
-		</p>
+		<p>The error was caught, but the stream completes before the meatballs had a chance.</p>
 
 		<p>
-			<Emoji>🤔</Emoji> Hmm. The catch operator is returning a bran new
-			stream. Maybe the original stream is completing because it’s
-			replaced?
+			<Emoji>🤔</Emoji> Hmm. The catch operator is returning a bran new stream. Maybe the original
+			stream is completing because it’s replaced?
 		</p>
 
 		<h2>Attempt #4: Materialize / dematerialize</h2>
@@ -260,14 +248,13 @@ const Article = () => (
 		/>
 
 		<p>
-			This looks complex, but it’s behaving similar to the catch operator
-			above. We are watching for an error notification, and then
-			converting it into a next / success notification instead.
+			This looks complex, but it’s behaving similar to the catch operator above. We are watching for
+			an error notification, and then converting it into a next / success notification instead.
 		</p>
 
 		<p>
-			It’s pretty low level, but this time we have no catch operator
-			replacing the main stream. Should be fine.
+			It’s pretty low level, but this time we have no catch operator replacing the main stream.
+			Should be fine.
 		</p>
 
 		<CodeBlock
@@ -289,23 +276,21 @@ const Article = () => (
 		<h2>Deep in RxJS Land</h2>
 
 		<p>
-			RxJS is internally wrapping code in operators (like{' '}
-			<Code code="map" />, <Code code="filter" />, etc) with a{' '}
-			<Code code="try / catch" />. If an error is caught, it will notify
-			subscribers, and then <strong>unsubscribe</strong> the stream. This
-			is <em>hard coded</em> — you have no choice!
+			RxJS is internally wrapping code in operators (like <Code code="map" />,{" "}
+			<Code code="filter" />, etc) with a <Code code="try / catch" />. If an error is caught, it
+			will notify subscribers, and then <strong>unsubscribe</strong> the stream. This is{" "}
+			<em>hard coded</em> — you have no choice!
 		</p>
 
 		<blockquote className="quote-pull">
-			If an error is thrown within an operator, the stream will always
-			complete.
+			If an error is thrown within an operator, the stream will always complete.
 		</blockquote>
 
 		<h2>Solution</h2>
 
 		<p>
-			Create a disposable stream. If an error occurs only the disposable
-			stream dies, and the main stream lives on.
+			Create a disposable stream. If an error occurs only the disposable stream dies, and the main
+			stream lives on.
 		</p>
 
 		<CodeBlock
@@ -353,10 +338,7 @@ const Article = () => (
 
 		<ul>
 			<li>Processing a response from the server</li>
-			<li>
-				Keeping the main stream alive (so future responses are processed
-				after an error)
-			</li>
+			<li>Keeping the main stream alive (so future responses are processed after an error)</li>
 			<li>Performing error handling in the main stream</li>
 		</ul>
 

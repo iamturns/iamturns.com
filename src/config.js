@@ -1,11 +1,11 @@
 // @flow
 
-import stripIndent from '../vendor/strip-indent';
+import stripIndent from "../vendor/strip-indent";
 
-export const SITE_URL = 'https://iamturns.com/';
-export const LIVE_HOSTNAME = 'iamturns.com';
+export const SITE_URL = "https://iamturns.com/";
+export const LIVE_HOSTNAME = "iamturns.com";
 
-export const GTM_ID = 'GTM-PG68LQN';
+export const GTM_ID = "GTM-PG68LQN";
 
 export const GTM_LIVE = stripIndent(`
 	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -23,6 +23,6 @@ export const GTM_DEVELOP = stripIndent(`
 	})(window,document,'script','dataLayer','GTM-PG68LQN');
 `);
 
-export const LOG_ROCKET_LIVE = 'gbbnsg/i-am-turns';
+export const LOG_ROCKET_LIVE = "gbbnsg/i-am-turns";
 
-export const LOG_ROCKET_DEVELOP = 'gbbnsg/i-am-live-develop';
+export const LOG_ROCKET_DEVELOP = "gbbnsg/i-am-live-develop";

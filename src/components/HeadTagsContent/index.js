@@ -1,5 +1,5 @@
 // @flow
 
-import HeadTagsContent from './HeadTagsContent';
+import HeadTagsContent from "./HeadTagsContent";
 
 export default HeadTagsContent;

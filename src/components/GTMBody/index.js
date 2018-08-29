@@ -1,5 +1,5 @@
 // @flow
 
-import GTMBody from './GTMBody';
+import GTMBody from "./GTMBody";
 
 export default GTMBody;

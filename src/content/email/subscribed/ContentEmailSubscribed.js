@@ -1,17 +1,17 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import ArrowLeft from '../../../../vendor/feather-icons-react/ArrowLeft';
-import ContentHeader from '../../../components/ContentHeader';
-import HeadTagsContent from '../../../components/HeadTagsContent';
-import Link from '../../../components/Link';
-import PageContainer from '../../../components/PageContainer';
-import type { Content } from '../../../types/Content';
+import ArrowLeft from "../../../../vendor/feather-icons-react/ArrowLeft";
+import ContentHeader from "../../../components/ContentHeader";
+import HeadTagsContent from "../../../components/HeadTagsContent";
+import Link from "../../../components/Link";
+import PageContainer from "../../../components/PageContainer";
+import type { Content } from "../../../types/Content";
 
 export const frontmatter = {
-	title: 'Yes!',
-	cover: '../../../assets/images/headers/celebrate.jpg',
+	title: "Yes!",
+	cover: "../../../assets/images/headers/celebrate.jpg",
 };
 
 declare var graphql: Function;

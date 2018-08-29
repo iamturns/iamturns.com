@@ -1,5 +1,5 @@
 // @flow
 
-import Emoji from './Emoji';
+import Emoji from "./Emoji";
 
 export default Emoji;

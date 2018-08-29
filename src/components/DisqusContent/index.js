@@ -1,5 +1,5 @@
 // @flow
 
-import DisqusContent from './DisqusContent';
+import DisqusContent from "./DisqusContent";
 
 export default DisqusContent;

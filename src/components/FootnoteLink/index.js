@@ -1,5 +1,5 @@
 // @flow
 
-import FootnoteLink from './FootnoteLink';
+import FootnoteLink from "./FootnoteLink";
 
 export default FootnoteLink;

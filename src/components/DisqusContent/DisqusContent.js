@@ -1,10 +1,10 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import type { Content } from '../../types/Content';
-import { prefixSiteUrl } from '../../utils/url';
-import Disqus from '../Disqus/';
+import type { Content } from "../../types/Content";
+import { prefixSiteUrl } from "../../utils/url";
+import Disqus from "../Disqus/";
 
 type DisqusProps = {
 	content: Content,

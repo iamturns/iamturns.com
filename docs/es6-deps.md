@@ -30,4 +30,4 @@ This will be fixed in Gatsby v2 so hopefully is not an issue for long.
 
 ## Affected
 
-*   /vendor/strip-indents
+- /vendor/strip-indents

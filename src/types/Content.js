@@ -1,6 +1,6 @@
 // @flow
 
-import type { Image } from './Image';
+import type { Image } from "./Image";
 
 export type Content = {
 	+fields: {
@@ -8,7 +8,7 @@ export type Content = {
 	},
 	+frontmatter: {
 		+title: string,
-		+type?: 'page' | 'article',
+		+type?: "page" | "article",
 		+description?: string,
 		+dateCreated?: string,
 		+dateUpdated?: string,

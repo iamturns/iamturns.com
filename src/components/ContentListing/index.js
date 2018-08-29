@@ -1,5 +1,5 @@
 // @flow
 
-import ContentListing from './ContentListing';
+import ContentListing from "./ContentListing";
 
 export default ContentListing;

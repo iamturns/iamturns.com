@@ -1,10 +1,10 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import ArrowRight from '../../../vendor/feather-icons-react/ArrowRight';
+import ArrowRight from "../../../vendor/feather-icons-react/ArrowRight";
 
-type EmailList = 'default' | 'doing-javascript' | 'javascript-roundup';
+type EmailList = "default" | "doing-javascript" | "javascript-roundup";
 
 type EmailPleaseProps = {
 	list?: EmailList,
@@ -12,17 +12,9 @@ type EmailPleaseProps = {
 	hideFooter?: boolean,
 };
 
-const EmailPlease = ({
-	list = 'default',
-	id,
-	hideFooter = false,
-}: EmailPleaseProps) => (
+const EmailPlease = ({ list = "default", id, hideFooter = false }: EmailPleaseProps) => (
 	<div>
-		<form
-			action={getFormAction(list)}
-			method="post"
-			className="flex items-center mt-4"
-		>
+		<form action={getFormAction(list)} method="post" className="flex items-center mt-4">
 			<div className="flex-1">
 				<input
 					type="email"
@@ -46,8 +38,7 @@ const EmailPlease = ({
 		</form>
 		{!hideFooter && (
 			<div className="text-xs text-center pt-2 text-turtle-darker">
-				I know, emails suck. I promise to send only quality stuff. And
-				if not, just unsubscribe!
+				I know, emails suck. I promise to send only quality stuff. And if not, just unsubscribe!
 			</div>
 		)}
 	</div>
@@ -62,12 +53,12 @@ function getFormAction(list: EmailList): string {
 
 function getListId(list: EmailList): string {
 	switch (list) {
-		case 'doing-javascript':
-			return 'bdea2a1aea';
-		case 'javascript-roundup':
-			return '970fb402d2';
-		case 'default':
+		case "doing-javascript":
+			return "bdea2a1aea";
+		case "javascript-roundup":
+			return "970fb402d2";
+		case "default":
 		default:
-			return '46266d5c5e';
+			return "46266d5c5e";
 	}
 }

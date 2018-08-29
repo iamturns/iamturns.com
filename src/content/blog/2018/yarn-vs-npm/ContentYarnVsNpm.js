@@ -1,30 +1,29 @@
 // @flow
 
-import * as React from 'react';
+import * as React from "react";
 
-import CodeBlock from '../../../../components/CodeBlock';
-import Emoji from '../../../../components/Emoji';
-import ImgBlock from '../../../../components/ImgBlock';
-import LayoutContent from '../../../../components/LayoutContent';
-import Link from '../../../../components/Link';
-import type { Content } from '../../../../types/Content';
-import type { Image } from '../../../../types/Image';
-import type { Result } from '../../../../types/Result';
-import { createImage } from '../../../../utils/image';
-import ImgN from './n.gif';
+import CodeBlock from "../../../../components/CodeBlock";
+import Emoji from "../../../../components/Emoji";
+import ImgBlock from "../../../../components/ImgBlock";
+import LayoutContent from "../../../../components/LayoutContent";
+import Link from "../../../../components/Link";
+import type { Content } from "../../../../types/Content";
+import type { Image } from "../../../../types/Image";
+import type { Result } from "../../../../types/Result";
+import { createImage } from "../../../../utils/image";
+import ImgN from "./n.gif";
 
 const IMG_N = createImage(ImgN, 640, 428);
 
 export const frontmatter = {
-	title: 'Why Are You Still Using Yarn in 2018?',
-	description:
-		'Simplify your dev tools — it‘s time to give npm another chance.',
-	slug: '/yarn-vs-npm-2018',
-	dateCreated: '2018-07-04',
-	dateUpdated: '2018-07-04',
-	type: 'article',
-	cover: './yarn.jpg',
-	shareImage: './yarn.jpg',
+	title: "Why Are You Still Using Yarn in 2018?",
+	description: "Simplify your dev tools — it‘s time to give npm another chance.",
+	slug: "/yarn-vs-npm-2018",
+	dateCreated: "2018-07-04",
+	dateUpdated: "2018-07-04",
+	type: "article",
+	cover: "./yarn.jpg",
+	shareImage: "./yarn.jpg",
 };
 
 declare var graphql: Function;
@@ -44,9 +43,7 @@ export const pageQuery = graphql`
 		}
 		imgYarnNpmCRA: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: {
-				eq: "blog/2018/yarn-vs-npm/yarn-npm-create-react-app.png"
-			}
+			relativePath: { eq: "blog/2018/yarn-vs-npm/yarn-npm-create-react-app.png" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 376) {
@@ -66,9 +63,7 @@ export const pageQuery = graphql`
 		}
 		imgYarnUpgradeInteractive: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: {
-				eq: "blog/2018/yarn-vs-npm/yarn-upgrade-interactive.png"
-			}
+			relativePath: { eq: "blog/2018/yarn-vs-npm/yarn-upgrade-interactive.png" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 580) {
@@ -116,14 +111,12 @@ const Article = (props: ContentProps) => (
 	<div className="wysiwyg">
 		<h2>I remember when Yarn exploded onto the scene.</h2>
 		<p>
-			It was super fast. It saved minutes with every{' '}
-			<code>yarn install</code>.
+			It was super fast. It saved minutes with every <code>yarn install</code>.
 		</p>
 		<p>
-			It ensured your <code>/node_modules</code> exactly matched the{' '}
-			<code>/node_modules</code> of your buddy next to you. And the{' '}
-			<code>/node_modules</code> on the server too. No more “it works for
-			me ¯\_(ツ)_/¯”.
+			It ensured your <code>/node_modules</code> exactly matched the <code>/node_modules</code> of
+			your buddy next to you. And the <code>/node_modules</code> on the server too. No more “it
+			works for me ¯\_(ツ)_/¯”.
 		</p>
 		<p>
 			And, emojis everywhere! <Emoji label="fire">🔥</Emoji>
@@ -136,20 +129,15 @@ const Article = (props: ContentProps) => (
 		</p>
 
 		<p>
-			And npm made an epic comeback with v5, bringing speed improvements
-			and consistent <code>/node_modules</code>. Yep, all those reasons we
-			switched to Yarn in the first place.
+			And npm made an epic comeback with v5, bringing speed improvements and consistent{" "}
+			<code>/node_modules</code>. Yep, all those reasons we switched to Yarn in the first place.
 		</p>
 
 		<p>Many devs are now wondering:</p>
 
-		<blockquote className="quote-pull">
-			“Is Yarn still necessary?”
-		</blockquote>
+		<blockquote className="quote-pull">“Is Yarn still necessary?”</blockquote>
 
-		<p>
-			I think it’s time to switch back to good ol’ npm. Let’s take a look.
-		</p>
+		<p>I think it’s time to switch back to good ol’ npm. Let’s take a look.</p>
 
 		<h2>npm is just as fast as Yarn.</h2>
 
@@ -197,36 +185,29 @@ const Article = (props: ContentProps) => (
 		<h2>You can easily switch npm versions.</h2>
 
 		<p>
-			Bob has Yarn v1.1 installed, and Brenda has Yarn v1.2. As they
-			install and remove dependencies on a project, Yarn writes to a{' '}
-			<code>yarn.lock</code> file. But the lock file format is{' '}
-			<em>slightly</em> different between Yarn v1.1 and Yarn v1.2. Not fun
-			for Bob and Brenda.
+			Bob has Yarn v1.1 installed, and Brenda has Yarn v1.2. As they install and remove dependencies
+			on a project, Yarn writes to a <code>yarn.lock</code> file. But the lock file format is{" "}
+			<em>slightly</em> different between Yarn v1.1 and Yarn v1.2. Not fun for Bob and Brenda.
 		</p>
 
 		<p>
-			You can specify which Yarn version(s) are compatible with your
-			project using{' '}
-			<Link to="https://yarnpkg.com/lang/en/docs/package-json/#toc-engines">
-				engines
-			</Link>{' '}
-			in <code>package.json</code>.
+			You can specify which Yarn version(s) are compatible with your project using{" "}
+			<Link to="https://yarnpkg.com/lang/en/docs/package-json/#toc-engines">engines</Link> in{" "}
+			<code>package.json</code>.
 		</p>
 
 		<p>
 			<strong>
-				But what if you need to shift between projects regularly, each
-				requiring different Yarn versions?
+				But what if you need to shift between projects regularly, each requiring different Yarn
+				versions?
 			</strong>
 		</p>
 
 		<p>
-			You need to stop using brew (<code>brew uninstall yarn</code>) and
-			revert back to an npm install. Run{' '}
-			<code>npm install yarn@1.1 --global</code> and{' '}
-			<code>npm install yarn@1.2 --global</code> as you switch between
-			projects. Yep, re-installing Yarn in its entirety every single time
-			you flip between projects. What a nightmare!
+			You need to stop using brew (<code>brew uninstall yarn</code>) and revert back to an npm
+			install. Run <code>npm install yarn@1.1 --global</code> and{" "}
+			<code>npm install yarn@1.2 --global</code> as you switch between projects. Yep, re-installing
+			Yarn in its entirety every single time you flip between projects. What a nightmare!
 		</p>
 
 		<p>
@@ -234,9 +215,9 @@ const Article = (props: ContentProps) => (
 		</p>
 
 		<p>
-			Use <Link to="https://github.com/creationix/nvm">nvm</Link> or{' '}
-			<Link to="https://github.com/tj/n">n</Link> and switch versions
-			instantly with one command. Boom.
+			Use <Link to="https://github.com/creationix/nvm">nvm</Link> or{" "}
+			<Link to="https://github.com/tj/n">n</Link> and switch versions instantly with one command.
+			Boom.
 		</p>
 
 		<ImgBlock image={IMG_N} alt="Example of n" />
@@ -244,15 +225,11 @@ const Article = (props: ContentProps) => (
 		<h2>Use Lerna to manage your workspaces.</h2>
 
 		<p>
-			If you’re using Yarn for the{' '}
-			<Link to="https://yarnpkg.com/lang/en/docs/workspaces/">
-				workspaces
-			</Link>{' '}
-			feature, consider using{' '}
-			<Link to="https://github.com/lerna/lerna/">Lerna</Link> instead. It
-			does everything Yarn offers with additional features, eg: managing
-			workspace versions, running commands within each workspace, and
-			publishing workspaces.
+			If you’re using Yarn for the{" "}
+			<Link to="https://yarnpkg.com/lang/en/docs/workspaces/">workspaces</Link> feature, consider
+			using <Link to="https://github.com/lerna/lerna/">Lerna</Link> instead. It does everything Yarn
+			offers with additional features, eg: managing workspace versions, running commands within each
+			workspace, and publishing workspaces.
 		</p>
 
 		<h2>Use npm-check to upgrade interactively.</h2>
@@ -261,15 +238,11 @@ const Article = (props: ContentProps) => (
 			The <code>yarn upgrade-interactive</code> command is awesome:
 		</p>
 
-		<ImgBlock
-			image={props.data.imgYarnUpgradeInteractive}
-			alt="yarn upgrade-interactive example"
-		/>
+		<ImgBlock image={props.data.imgYarnUpgradeInteractive} alt="yarn upgrade-interactive example" />
 
 		<p>
-			The popular{' '}
-			<Link to="https://github.com/dylang/npm-check">npm-check</Link>{' '}
-			module does the same thing:
+			The popular <Link to="https://github.com/dylang/npm-check">npm-check</Link> module does the
+			same thing:
 		</p>
 
 		<ImgBlock image={props.data.imgNpmCheck} alt="npm-check example" />
@@ -303,31 +276,21 @@ const Article = (props: ContentProps) => (
 		<h2>Yarn complicates.</h2>
 
 		<p>
-			From the <Link to="https://github.com/facebook/jest">Jest</Link>{' '}
-			readme:
+			From the <Link to="https://github.com/facebook/jest">Jest</Link> readme:
 		</p>
 
-		<ImgBlock
-			image={props.data.imgYarnNpmJest}
-			alt="Jest readme with yarn commands"
-		/>
+		<ImgBlock image={props.data.imgYarnNpmJest} alt="Jest readme with yarn commands" />
 
 		<p>
-			You don’t need Yarn to use Jest. But here it is, pushed on you. Now
-			I need to convert <code>yarn test</code> into an <code>npm</code>{' '}
-			command… ok, is it <code>npm test</code> or{' '}
-			<code>npm run test</code>? I can’t quite remember. This is what the
-			readme should tell me!
+			You don’t need Yarn to use Jest. But here it is, pushed on you. Now I need to convert{" "}
+			<code>yarn test</code> into an <code>npm</code> command… ok, is it <code>npm test</code> or{" "}
+			<code>npm run test</code>? I can’t quite remember. This is what the readme should tell me!
 		</p>
 
 		<p>
-			Even if the readme shows both <code>yarn</code> and <code>npm</code>{' '}
-			commands, it unnecessarily adds to the noise. For example, here is
-			the readme for{' '}
-			<Link to="https://github.com/facebook/create-react-app">
-				create-react-app
-			</Link>
-			:
+			Even if the readme shows both <code>yarn</code> and <code>npm</code> commands, it
+			unnecessarily adds to the noise. For example, here is the readme for{" "}
+			<Link to="https://github.com/facebook/create-react-app">create-react-app</Link>:
 		</p>
 
 		<ImgBlock
@@ -337,57 +300,46 @@ const Article = (props: ContentProps) => (
 
 		<p>What benefit is Yarn bringing here? None.</p>
 		<p>
-			It’s confusing for brand new React developers who are already
-			overwhelmed with learning a new framework. “Which command do I run?
-			What is this Yarn one? Do I need it? Argh!”
+			It’s confusing for brand new React developers who are already overwhelmed with learning a new
+			framework. “Which command do I run? What is this Yarn one? Do I need it? Argh!”
 		</p>
 
 		<p>
-			I’ve also seen tooling and CI code check for the{' '}
-			<code>yarn.lock</code> file, and run a different set of commands if
-			detected.
+			I’ve also seen tooling and CI code check for the <code>yarn.lock</code> file, and run a
+			different set of commands if detected.
 		</p>
 
 		<p>
-			Choosing to use Yarn on a project means the rest of your dev team,
-			including future contributors, must also use Yarn (to maintain the
-			yarn.lock file).
+			Choosing to use Yarn on a project means the rest of your dev team, including future
+			contributors, must also use Yarn (to maintain the yarn.lock file).
 		</p>
 
-		<p>
-			The JavaScript ecosystem is complex enough. Do we really need Yarn
-			in the mix too?
-		</p>
+		<p>The JavaScript ecosystem is complex enough. Do we really need Yarn in the mix too?</p>
 
 		<p>
-			I wish the Yarn team would contribute their improvements into npm
-			itself to simplify our lives.
+			I wish the Yarn team would contribute their improvements into npm itself to simplify our
+			lives.
 		</p>
 
 		<h2>npm rocks!</h2>
 
 		<p>
-			After switching back to npm, I realised my shell setup autocompletes{' '}
-			<code>npm run</code> commands by scanning package.json scripts:
+			After switching back to npm, I realised my shell setup autocompletes <code>npm run</code>{" "}
+			commands by scanning package.json scripts:
 		</p>
 
-		<ImgBlock
-			image={props.data.imgAutocomplete}
-			alt="Shell autocompleting npm run command"
-		/>
+		<ImgBlock image={props.data.imgAutocomplete} alt="Shell autocompleting npm run command" />
 
 		<p>
-			Sure, Yarn might eventually have this support (and possibly already
-			does). But npm has the advantage of years and years of community
-			support and tooling.
+			Sure, Yarn might eventually have this support (and possibly already does). But npm has the
+			advantage of years and years of community support and tooling.
 		</p>
 
 		<p>
-			npm are also bringing out some killer features. Run{' '}
-			<code>npm audit</code> to scan your project for vulnerabilities. Use{' '}
-			<code>npx</code> to run one-off commands (eg:{' '}
-			<code>npx create-react-app</code> instead of installing{' '}
-			<code>create-react-app</code> globally).
+			npm are also bringing out some killer features. Run <code>npm audit</code> to scan your
+			project for vulnerabilities. Use <code>npx</code> to run one-off commands (eg:{" "}
+			<code>npx create-react-app</code> instead of installing <code>create-react-app</code>{" "}
+			globally).
 		</p>
 
 		<p>
@@ -395,20 +347,16 @@ const Article = (props: ContentProps) => (
 		</p>
 
 		<p>
-			It’s fast. It’s battle-tested. It‘s regularly updated. It has years
-			of community support and tooling (like{' '}
-			<Link to="https://github.com/creationix/nvm">nvm</Link>,{' '}
-			<Link to="https://github.com/tj/n">n</Link>, and the shell
-			autocomplete above). Popular modules like{' '}
-			<Link to="https://github.com/lerna/lerna">Lerna</Link> and{' '}
-			<Link to="https://github.com/dylang/npm-check">npm-check</Link>{' '}
-			achieve Yarn’s extra features.
+			It’s fast. It’s battle-tested. It‘s regularly updated. It has years of community support and
+			tooling (like <Link to="https://github.com/creationix/nvm">nvm</Link>,{" "}
+			<Link to="https://github.com/tj/n">n</Link>, and the shell autocomplete above). Popular
+			modules like <Link to="https://github.com/lerna/lerna">Lerna</Link> and{" "}
+			<Link to="https://github.com/dylang/npm-check">npm-check</Link> achieve Yarn’s extra features.
 		</p>
 
 		<p>
-			If you’re writing javascript then you already have npm installed.
-			Simplify your dev tools and use npm again. And if you miss Yarn, let
-			me know why in the comments below!
+			If you’re writing javascript then you already have npm installed. Simplify your dev tools and
+			use npm again. And if you miss Yarn, let me know why in the comments below!
 		</p>
 	</div>
 );
