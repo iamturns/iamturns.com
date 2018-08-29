@@ -259,7 +259,7 @@ const Article = (props: ContentProps) => (
 		<p>Add a script to package.json:</p>
 
 		<CodeBlock
-			language="bash"
+			language="json"
 			code={`
 				{
 					"scripts": {
