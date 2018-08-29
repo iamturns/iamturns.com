@@ -16,10 +16,10 @@ import ImgConsole from "./console.gif";
 const IMG_CONSOLE = createImage(ImgConsole, 372, 340);
 
 export const frontmatter = {
-	title: "TypeScript With Babel 7: A Beautiful Marriage",
+	title: "TypeScript With Babel: A Beautiful Marriage",
 	description:
-		"TypeScript has never been easier thanks to the TypeScript plugin for Babel 7. Discover 4 reasons why TypeScript + Babel are a perfect pair, and follow a step-by-step guide to upgrade your project with TypeScript in 10 minutes.",
-	slug: "/typescript-babel-7",
+		"TypeScript has never been easier thanks to the TypeScript plugin for Babel. Discover 4 reasons why TypeScript + Babel are a perfect pair, and follow a step-by-step guide to upgrade to TypeScript in 10 minutes.",
+	slug: "/typescript-babel",
 	dateCreated: "2018-08-29",
 	dateUpdated: "2018-08-29",
 	type: "article",
@@ -29,12 +29,12 @@ export const frontmatter = {
 
 declare var graphql: Function;
 export const pageQuery = graphql`
-	query ContentTypescriptBabel7Query($slug: String!) {
+	query ContentTypescriptBabelQuery($slug: String!) {
 		...CurrentContent
 		...ContentList
 		imgBabelSupport: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "blog/2018/typescript-babel-7/babel-support.png" }
+			relativePath: { eq: "blog/2018/typescript-babel/babel-support.png" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 476) {
@@ -44,7 +44,7 @@ export const pageQuery = graphql`
 		}
 		imgBabelTypescript: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "blog/2018/typescript-babel-7/babel-typescript.png" }
+			relativePath: { eq: "blog/2018/typescript-babel/babel-typescript.png" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 576) {
@@ -54,7 +54,7 @@ export const pageQuery = graphql`
 		}
 		imgCompatTable: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "blog/2018/typescript-babel-7/compat-table.png" }
+			relativePath: { eq: "blog/2018/typescript-babel/compat-table.png" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 576) {
@@ -64,7 +64,7 @@ export const pageQuery = graphql`
 		}
 		imgCRABrowserlist: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "blog/2018/typescript-babel-7/create-react-app-browserlist.png" }
+			relativePath: { eq: "blog/2018/typescript-babel/create-react-app-browserlist.png" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 226) {
@@ -74,7 +74,7 @@ export const pageQuery = graphql`
 		}
 		imgDevSurvey: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "blog/2018/typescript-babel-7/dev-survey.png" }
+			relativePath: { eq: "blog/2018/typescript-babel/dev-survey.png" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 536) {
@@ -84,7 +84,7 @@ export const pageQuery = graphql`
 		}
 		imgLove: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "blog/2018/typescript-babel-7/love.jpg" }
+			relativePath: { eq: "blog/2018/typescript-babel/love.jpg" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 576) {
@@ -94,7 +94,7 @@ export const pageQuery = graphql`
 		}
 		imgOptionalChaining: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "blog/2018/typescript-babel-7/optional-chaining.png" }
+			relativePath: { eq: "blog/2018/typescript-babel/optional-chaining.png" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 356) {
@@ -104,7 +104,7 @@ export const pageQuery = graphql`
 		}
 		imgSimplyConfigureTypescript: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "blog/2018/typescript-babel-7/simply-configure-typescript.jpg" }
+			relativePath: { eq: "blog/2018/typescript-babel/simply-configure-typescript.jpg" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 568) {
@@ -114,7 +114,7 @@ export const pageQuery = graphql`
 		}
 		imgYeah: file(
 			sourceInstanceName: { eq: "content" }
-			relativePath: { eq: "blog/2018/typescript-babel-7/yeah.jpg" }
+			relativePath: { eq: "blog/2018/typescript-babel/yeah.jpg" }
 		) {
 			childImageSharp {
 				sizes(maxWidth: 576) {
@@ -141,7 +141,7 @@ type ContentProps = {
 	},
 };
 
-const ContentTypescriptBabel7 = (props: ContentProps) => (
+const ContentTypescriptBabel = (props: ContentProps) => (
 	<LayoutContent
 		currentContent={props.data.currentContent}
 		contentListResult={props.data.contentListResult}
@@ -150,7 +150,7 @@ const ContentTypescriptBabel7 = (props: ContentProps) => (
 	</LayoutContent>
 );
 
-export default ContentTypescriptBabel7;
+export default ContentTypescriptBabel;
 
 const Article = (props: ContentProps) => (
 	<div className="wysiwyg">
@@ -160,12 +160,12 @@ const Article = (props: ContentProps) => (
 			<Link to="https://www.typescriptlang.org/">TypeScript</Link> has never been easier thanks to
 			the{" "}
 			<Link to="https://babeljs.io/docs/en/babel-preset-typescript.html">
-				TypeScript plugin for Babel 7
+				TypeScript plugin for Babel
 			</Link>{" "}
 			(<code>@babel/preset-typescript</code>
 			), an official year-long collaboration between the TypeScript and Babel teams. Discover 4
 			reasons why TypeScript and Babel are a perfect pair, and follow a step-by-step guide to
-			upgrade your project with TypeScript in 10 minutes.
+			upgrade to TypeScript in 10 minutes.
 		</p>
 
 		<h2>Huh? What? Why?</h2>
@@ -362,7 +362,7 @@ const Article = (props: ContentProps) => (
 			<mark>Warning!</mark> You might want to sit down for this bit.
 		</p>
 		<p>
-			How does Babel 7 handle TypeScript code? <strong>It removes it.</strong>
+			How does Babel handle TypeScript code? <strong>It removes it.</strong>
 		</p>
 		<p>
 			Yep, it strips out all the TypeScript, turns it into “regular” JavaScript, and continues on
@@ -383,7 +383,7 @@ const Article = (props: ContentProps) => (
 			It’s hard to blame the TypeScript compiler, it’s doing a lot of work. It’s scanning for type
 			definition files (<code>*.d.ts</code>
 			), including within <code>node_modules</code>, and ensuring your code is used correctly. This
-			is why many fork the Typescript type checking into a separate process. However the Babel 7 +
+			is why many fork the Typescript type checking into a separate process. However the Babel +
 			TypeScript combo still provides faster compilation thanks to Babel’s superior caching and
 			single-file emit architecture.
 		</p>
@@ -419,8 +419,8 @@ const Article = (props: ContentProps) => (
 			<Link to="https://blogs.msdn.microsoft.com/typescript/2018/08/27/typescript-and-babel-7/">
 				announcement post
 			</Link>
-			, there are four TypeScript features that do not compile in Babel 7 due to its single-file
-			emit architecture.
+			, there are four TypeScript features that do not compile in Babel due to its single-file emit
+			architecture.
 		</p>
 		<p>
 			Don’t worry, it ain’t so bad. And TypeScript will warn against these issues when the{" "}
@@ -461,7 +461,7 @@ const Article = (props: ContentProps) => (
 		<p>
 			In all my years of TypeScriptin’ I’ve never come across this. Who codes this way? Stop it!
 		</p>
-		<h2>Ok, I’m ready to try TypeScript with Babel 7.</h2>
+		<h2>Ok, I’m ready to try TypeScript with Babel!</h2>
 		<ImgBlock image={props.data.imgYeah} alt="Yeah!">
 			Photo by{" "}
 			<Link to="https://www.rawpixel.com/image/384992/yeah-text-paper-and-colorful-party-confetti-background-party-concept">
@@ -590,7 +590,7 @@ const Article = (props: ContentProps) => (
 			<Link to="https://github.com/Microsoft/TypeScript-Babel-Starter">
 				TypeScript-Babel-Starter
 			</Link>{" "}
-			guide contains additional setup instructions, including installing Babel 7 from scratch,
+			guide contains additional setup instructions, including installing Babel from scratch,
 			generating type definition (d.ts) files, and using it with React.
 		</p>
 		<h3>I’m using create-react-app.</h3>
@@ -702,7 +702,7 @@ const Article = (props: ContentProps) => (
 		<p>I predict TypeScript will crack the top 10 by next year.</p>
 		<p>
 			You can start with vanilla JavaScript and easily upgrade to TypeScript if you feel the need.
-			The barrier to entry has been smashed thanks to Babel 7.
+			The barrier to entry has been smashed thanks to Babel.
 		</p>
 		<p>
 			The TypeScript team are working hard to spread the love. This Babel preset was a year long
