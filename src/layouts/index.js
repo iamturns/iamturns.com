@@ -8,7 +8,8 @@ import GlobalHeader from "../components/GlobalHeader";
 import GTMBody from "../components/GTMBody";
 import { GTM_DEVELOP, GTM_ID, GTM_LIVE } from "../config";
 import { isEnvLive } from "../utils/env";
-import { initLogRocket } from "../utils/log-rocket";
+// Temporarily disabled
+// import { initLogRocket } from "../utils/log-rocket";
 
 /**
  * IMPORT MAIN.CSS
@@ -21,7 +22,8 @@ import { initLogRocket } from "../utils/log-rocket";
 require("../../build/styles/main.css");
 /* eslint-enable import/no-unresolved */
 
-initLogRocket();
+// Temporarily disable
+// initLogRocket();
 
 declare var graphql: Function;
 export const pageQuery = graphql`
