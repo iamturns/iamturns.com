@@ -488,7 +488,7 @@ const Article = (props: ContentProps) => (
 			<strong>2) Add TypeScript to Babel</strong>
 		</p>
 		<p>A few dependencies:</p>
-		<CodeBlock code="npm install --save-dev @babel/preset-typescript @babel/proposal-class-properties @babel/proposal-object-rest-spread" />
+		<CodeBlock code="npm install --save-dev @babel/preset-typescript @babel/plugin-proposal-class-properties @babel/plugin-proposal-object-rest-spread" />
 		<p>
 			In your Babel config file (<code>.babelrc</code> or <code>babel.config.js</code>
 			):
