@@ -3,10 +3,10 @@
 import * as React from "react";
 
 import ContentListing from "../components/ContentListing";
-import EmailPleaseBox from "../components/EmailPleaseBox";
 import HeadTags from "../components/HeadTags";
 import Hey from "../components/Hey";
 import PageContainer from "../components/PageContainer";
+import PitchIntroContainer from "../components/PitchIntroContainer";
 import type { Content } from "../types/Content";
 import type { Result } from "../types/Result";
 import getHeadTags from "../utils/head-tags";
@@ -41,9 +41,7 @@ const PageIndex = ({ data: { contentListResult }, location: { pathname } }: Page
 			<Hey />
 		</PageContainer>
 		<ContentListing contentList={getResultAsArray(contentListResult)} className="pt-16" />
-		<PageContainer className="py-12 bg-denim-white">
-			<EmailPleaseBox id="footer-home" />
-		</PageContainer>
+		<PitchIntroContainer />
 	</div>
 );
 

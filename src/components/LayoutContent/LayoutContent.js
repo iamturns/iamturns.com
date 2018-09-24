@@ -40,7 +40,11 @@ const LayoutContent = ({
 		<LayoutContentHeaderAuthor content={currentContent} />
 		<PageContainer small>
 			{children}
-			<PitchIntro />
+			<aside>
+				<hr className="hr-dash my-6" />
+				<PitchIntro />
+				<hr className="hr-dash my-6" />
+			</aside>
 			<div className="mt-12">
 				<DisqusContent content={currentContent} />
 			</div>

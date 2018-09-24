@@ -7,13 +7,13 @@ import ImgFace from "../../assets/images/matt-turnbull-face-120.jpg";
 import ImgFace2x from "../../assets/images/matt-turnbull-face-240.jpg";
 import ContentListing from "../../components/ContentListing";
 import DateTime from "../../components/DateTime";
-import EmailPleaseBox from "../../components/EmailPleaseBox";
 import EmojiText from "../../components/EmojiText";
 import HeadingBrick from "../../components/HeadingBrick";
 import HeadTagsContent from "../../components/HeadTagsContent";
 import ImgBlock from "../../components/ImgBlock";
 import Link from "../../components/Link";
 import PageContainer from "../../components/PageContainer";
+import PitchIntroContainer from "../../components/PitchIntroContainer";
 import type { Content } from "../../types/Content";
 import type { Image } from "../../types/Image";
 import type { Result } from "../../types/Result";
@@ -205,13 +205,11 @@ const ContentAbout = ({
 			<h2>Cheers!</h2>
 			<ImgBlock image={IMG_CHEERS} type="fullwidth" />
 		</PageContainer>
-		<PageContainer className="mt-12 py-12 bg-denim-white">
-			<EmailPleaseBox id={`footer-${currentContent.fields.slug}`} />
-		</PageContainer>
 		<ContentListing
 			contentList={getResultAsArray(contentListResult)}
 			currentContent={currentContent}
 		/>
+		<PitchIntroContainer />
 	</div>
 );
 

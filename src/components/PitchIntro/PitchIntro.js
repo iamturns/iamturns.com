@@ -6,8 +6,7 @@ import ArrowRight from "../../../vendor/feather-icons-react/ArrowRight";
 import Link from "../Link";
 
 const PitchIntro = () => (
-	<aside className="wysiwyg">
-		<hr className="hr-dash my-6" />
+	<div className="wysiwyg">
 		<h2 className="h3 mt-0">It’s impossible to keep up with JavaScript.</h2>
 		<p>
 			You’re catching up every chance you get. Scrolling… reading… refreshing… skimming. You’re lost
@@ -24,8 +23,7 @@ const PitchIntro = () => (
 				Find out more
 			</Link>
 		</p>
-		<hr className="hr-dash my-6" />
-	</aside>
+	</div>
 );
 
 export default PitchIntro;
