@@ -203,28 +203,6 @@ const ContentAbout = ({
 				</li>
 			</ul>
 
-			<h2>Now</h2>
-
-			{currentContent.frontmatter.dateUpdated && (
-				<LastUpdated dateTime={currentContent.frontmatter.dateUpdated} className="text-xs" />
-			)}
-
-			<ul className="list list-reset my-6">
-				<li>
-					<EmojiText emoji="📍" emojiLabel="Current location: ">
-						Melbourne, Australia
-					</EmojiText>
-				</li>
-				<li>
-					<EmojiText emoji="👨‍💻" emojiLabel="Employment: ">
-						Open to part-time work
-					</EmojiText>
-				</li>
-				<li>
-					<EmojiText emoji="📃">CV available on request</EmojiText>
-				</li>
-			</ul>
-
 			<h2>Cheers!</h2>
 			<ImgBlock image={IMG_CHEERS} type="fullwidth" />
 		</PageContainer>
