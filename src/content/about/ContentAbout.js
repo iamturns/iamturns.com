@@ -12,7 +12,6 @@ import EmojiText from "../../components/EmojiText";
 import HeadingBrick from "../../components/HeadingBrick";
 import HeadTagsContent from "../../components/HeadTagsContent";
 import ImgBlock from "../../components/ImgBlock";
-import LastUpdated from "../../components/LastUpdated";
 import Link from "../../components/Link";
 import PageContainer from "../../components/PageContainer";
 import type { Content } from "../../types/Content";
