@@ -10,7 +10,7 @@ import PageContainer from "../../../components/PageContainer";
 import type { Content } from "../../../types/Content";
 
 export const frontmatter = {
-	title: "The JavaScript Roundup",
+	title: "JavaScript Roundup",
 	cover: "../../../assets/images/headers/fireworks.jpg",
 };
 
