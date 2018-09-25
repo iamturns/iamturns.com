@@ -15,6 +15,7 @@ import PageContainer from "../PageContainer";
 import PitchIntro from "../PitchIntro";
 import LayoutContentFootnotes from "./Footnotes";
 import LayoutContentHeaderAuthor from "./HeaderAuthor";
+import PitchIntroContainer from "../PitchIntroContainer";
 
 type LayoutContentProps = {
 	children: React.Node,
@@ -54,6 +55,7 @@ const LayoutContent = ({
 			contentList={getResultAsArray(contentListResult)}
 			currentContent={currentContent}
 		/>
+		<PitchIntroContainer />
 	</div>
 );
 
