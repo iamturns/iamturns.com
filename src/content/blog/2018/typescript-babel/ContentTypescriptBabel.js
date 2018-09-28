@@ -645,7 +645,7 @@ const Article = (props: ContentProps) => (
 		/>
 		<p>
 			That’s it! Now call <code>npm run lint</code> to lint your project. If you’re using VS Code,
-			install the <Link to="https://github.com/Microsoft/vscode-tslint/">vscode-lint</Link>{" "}
+			install the <Link to="https://github.com/Microsoft/vscode-tslint/">vscode-tslint</Link>{" "}
 			extension for red squiggly lines.
 		</p>
 		<p>
