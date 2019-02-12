@@ -664,69 +664,24 @@ const Article = (props: ContentProps) => (
 		</p>
 		<h2>What about linting?</h2>
 		<p>
-			Use <Link to="https://palantir.github.io/tslint/">tslint</Link>.
-		</p>
-		<CodeBlock code={`npm install --save-dev tslint`} />
-		<p>
-			Create a <code>tslint.json</code> file in the root directory:
-		</p>
-		<CodeBlock
-			language="json"
-			code={`
-				{
-					"defaultSeverity": "error",
-					"extends": [
-						"tslint:latest",
-					],
-					"jsRules": {},
-					"rules": {},
-					"rulesDirectory": [],
-					"linterOptions": {
-						"exclude": ["**/node_modules/**"]
-					}
-				}
-			`}
-		/>
-		<p>
-			Setup a lint command in <code>package.json</code> file:
-		</p>
-		<CodeBlock
-			language="json"
-			code={`
-				"scripts": {
-					"lint": "tslint '**/*.ts'"
-				}
-			`}
-		/>
-		<p>
-			That’s it! Now call <code>npm run lint</code> to lint your project. If you’re using VS Code,
-			install the <Link to="https://github.com/Microsoft/vscode-tslint/">vscode-tslint</Link>{" "}
-			extension for red squiggly lines.
+			<strike>
+				Use <Link to="https://palantir.github.io/tslint/">tslint</Link>.
+			</strike>
 		</p>
 		<p>
-			If you use <Link to="https://github.com/prettier/prettier">Prettier</Link> to automatically
-			format your code, keep using it! It has built-in support for TypeScript files. Integrate with
-			linting using{" "}
-			<Link to="https://github.com/alexjoverm/tslint-config-prettier">tslint-config-prettier</Link>.
+			<strong>Update</strong> (Feb 2019): Use ESlint! The TypeScript team are{" "}
+			<Link to="https://github.com/Microsoft/TypeScript/issues/29288">
+				focusing on ESLint integration
+			</Link>{" "}
+			since January. It’s easy to configure ESLint thanks to the{" "}
+			<Link to="https://github.com/typescript-eslint/typescript-eslint">@typesript-eslint</Link>{" "}
+			project. For inspiration, check out my{" "}
+			<Link to="https://github.com/iamturns/create-exposed-app/blob/master/.eslintrc.js">
+				mega ESLint config
+			</Link>{" "}
+			which includes TypeScript, Airbnb, Prettier, and React.
 		</p>
-		<p>
-			If you use React, you might enjoy some React rules provided by{" "}
-			<Link to="https://github.com/palantir/tslint-react">tslint-react</Link>.
-		</p>
-		<p>
-			Alternatively, you can keep <Link to="https://eslint.org/">eslint</Link> and use{" "}
-			<Link to="https://github.com/eslint/typescript-eslint-parser">typescript-eslint-parser</Link>{" "}
-			with{" "}
-			<Link to="https://github.com/nzakas/eslint-plugin-typescript">eslint-plugin-typescript</Link>{" "}
-			to add TypeScript rules. I haven’t tried this combination — please let me know in the comments
-			if this works better than tslint.
-		</p>
-		<p>
-			There’s also the <Link to="https://github.com/google/ts-style">Google TypeScript style</Link>{" "}
-			project which combines zero config linting and formatting (like Prettier, but uses
-			clang-format). I haven’t tried this either, and would love to know your thoughts in the
-			comments.
-		</p>
+
 		<h2>Babel + TypeScript = Beautiful Marriage.</h2>
 		<ImgBlock image={props.data.imgLove} alt="Love hearts">
 			Photo by <Link to="https://unsplash.com/photos/1GRvY9WUu08">Akshar Dave</Link>
@@ -756,14 +711,17 @@ const Article = (props: ContentProps) => (
 		<ImgBlock image={props.data.imgDevSurvey} alt="Developer survey results" />
 		<p>I predict TypeScript will crack the top 10 by next year.</p>
 		<p>
-			You can start with vanilla JavaScript and easily upgrade to TypeScript if you feel the need.
-			The barrier to entry has been smashed thanks to Babel.
+			The TypeScript team are working hard to spread the love. This Babel preset was a year long
+			collaboration, and their new focus is on{" "}
+			<Link to="https://github.com/Microsoft/TypeScript/issues/29288">
+				improving ESLint integration
+			</Link>
+			. This is a smart move — leverage the features, community, and plugins of existing tools. To
+			develop competing compilers and linters is wasted effort.
 		</p>
 		<p>
-			The TypeScript team are working hard to spread the love. This Babel preset was a year long
-			collaboration, and they’ve contributed heavily to{" "}
-			<Link to="https://github.com/eslint/typescript-eslint-parser">typescript-eslint-parser</Link>,
-			which powers <Link to="https://prettier.io/">Prettier’s</Link> TypeScript support.
+			The path to TypeScript is paved by simply tweaking the config of our favourite tools. The
+			barrier to entry has been smashed.
 		</p>
 		<p>
 			With the rise in popularity of <Link to="https://code.visualstudio.com/">VS Code</Link>,
@@ -771,18 +729,11 @@ const Article = (props: ContentProps) => (
 			will bring tears of joy.
 		</p>
 		<p>
-			It’s also{" "}
-			<Link to="https://github.com/facebook/create-react-app/issues/4146">
-				likely to be integrated
-			</Link>{" "}
-			into <Link to="https://github.com/facebook/create-react-app">create-react-app</Link> itself,
-			thanks to support from <Link to="https://twitter.com/jaredpalmer">Jared Palmer</Link> (creator
-			of <Link to="https://github.com/jaredpalmer/formik">Formik</Link>,{" "}
-			<Link to="https://github.com/jaredpalmer/razzle">Razzle</Link>, and{" "}
-			<Link to="https://github.com/jaredpalmer/backpack/">Backpack</Link>
-			). There’s a{" "}
-			<Link to="https://github.com/facebook/create-react-app/pull/4837">pending pull request</Link>,
-			and if accepted will expose TypeScript to an audience of 200k downloads per month.
+			It’s also now integrated into{" "}
+			<Link to="https://reactjs.org/blog/2018/10/01/create-react-app-v2.html">
+				create-react-app v2.0
+			</Link>
+			, exposing TypeScript to an audience of 200k downloads per month.
 		</p>
 		<p>
 			If you’ve been put off by TypeScript because it’s difficult to setup, it’s no longer an
