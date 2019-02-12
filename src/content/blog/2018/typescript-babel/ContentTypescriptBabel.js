@@ -514,12 +514,15 @@ const Article = (props: ContentProps) => (
 			Solution: Use <code>x as newtype</code> instead.
 		</p>
 		<p>
-			<strong>3) Enums that span multiple declarations (i.e. enum merging).</strong>
+			<strong>
+				3){" "}
+				<Link to="https://www.typescriptlang.org/docs/handbook/enums.html#const-enums">
+					Const enums
+				</Link>
+				.
+			</strong>
 		</p>
-		<p>
-			I’m not sure what this is. I have searched online for “enum merging” and found nothing. Can
-			anyone help? Please let me know in the comments!
-		</p>
+		<p>This is a shame. Need to resort to regular enums for now.</p>
 		<p>
 			<strong>4) Legacy-style import / export syntax.</strong>
 		</p>
