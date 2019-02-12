@@ -648,20 +648,6 @@ const Article = (props: ContentProps) => (
 			guide contains additional setup instructions, including installing Babel from scratch,
 			generating type definition (d.ts) files, and using it with React.
 		</p>
-		<h3>I’m using create-react-app.</h3>
-		<p>
-			It’s a little fiddly, but still possible! First,{" "}
-			<Link to="https://github.com/facebook/create-react-app/issues/3815">
-				upgrade to create-react-app v2.0 (beta)
-			</Link>
-			. Then setup <Link to="https://github.com/timarney/react-app-rewired">react-app-rewired</Link>
-			, which lets you override parts of the configuration. And finally, install this rewired
-			plugin:{" "}
-			<Link to="https://github.com/strothj/react-app-rewire-typescript-babel-preset">
-				react-app-rewire-typescript-babel-preset
-			</Link>
-			.
-		</p>
 		<h2>What about linting?</h2>
 		<p>
 			<strike>
