@@ -181,11 +181,7 @@ const Article = (props: ContentProps) => (
 			<strong>TypeScript and Babel are a beautiful marriage.</strong>
 		</p>
 		<p>Let me show you.</p>
-		<h2>
-			Reason #1:
-			<br />
-			You already use Babel (or should).
-		</h2>
+		<h2>1) You already use Babel (or should).</h2>
 		<p>You’re in one of these three categories:</p>
 		<ol>
 			<li>
@@ -344,11 +340,7 @@ const Article = (props: ContentProps) => (
 			<Link to="https://github.com/mattphillips/babel-plugin-console#macros">scope.macro</Link>
 		</ImgBlock>
 
-		<h2>
-			Reason #2:
-			<br />
-			It’s easier to manage ONE compiler.
-		</h2>
+		<h2>2) It’s easier to manage ONE compiler.</h2>
 		<p>
 			TypeScript requires it’s own compiler — it’s what provides the amazing type checking
 			superpowers.
@@ -417,11 +409,7 @@ const Article = (props: ContentProps) => (
 		<ImgBlock image={props.data.imgBabelSupport} alt="Babel and TypeScript">
 			<Link to="https://babeljs.io/en/setup">Babel has you covered.</Link>
 		</ImgBlock>
-		<h2>
-			Reason #3:
-			<br />
-			It’s faster to compile.
-		</h2>
+		<h2>3) It’s faster to compile.</h2>
 		<p>
 			<mark>Warning!</mark> You might want to sit down for this bit.
 		</p>
@@ -455,11 +443,7 @@ const Article = (props: ContentProps) => (
 			So, if Babel strips out TypeScript code, what’s the point in writing TypeScript? That brings
 			us to the second advantage…
 		</p>
-		<h2>
-			Reason #4:
-			<br />
-			Check for type errors only when you’re ready.
-		</h2>
+		<h2>4) Check for type errors only when you’re ready.</h2>
 		<p>
 			You’re hacking some code together, quickly bashing out a solution to see if your idea has
 			legs. You save the file, and TypeScript screams at you:
