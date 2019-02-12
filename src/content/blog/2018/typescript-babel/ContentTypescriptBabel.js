@@ -21,7 +21,7 @@ export const frontmatter = {
 		"TypeScript has never been easier thanks to the TypeScript plugin for Babel. Discover 4 reasons why TypeScript + Babel are a perfect pair, and follow a step-by-step guide to upgrade to TypeScript in 10 minutes.",
 	slug: "/typescript-babel",
 	dateCreated: "2018-08-29",
-	dateUpdated: "2018-08-29",
+	dateUpdated: "2019-02-12",
 	type: "article",
 	cover: "./header.jpg",
 	shareImage: "./header.jpg",
@@ -181,7 +181,11 @@ const Article = (props: ContentProps) => (
 			<strong>TypeScript and Babel are a beautiful marriage.</strong>
 		</p>
 		<p>Let me show you.</p>
-		<h2>You already use Babel (or should).</h2>
+		<h2>
+			Reason #1:
+			<br />
+			You already use Babel (or should).
+		</h2>
 		<p>You’re in one of these three categories:</p>
 		<ol>
 			<li>
@@ -236,59 +240,115 @@ const Article = (props: ContentProps) => (
 		</p>
 		<h3>Babel is super configurable.</h3>
 		<p>
-			Want React with JSX? Flow? TypeScript? The shiny new{" "}
-			<Link to="https://github.com/tc39/proposal-optional-chaining">optional chaining</Link>{" "}
-			proposal? Just install a plugin and let Babel handle it.
+			Want JSX? Flow? TypeScript? Just install a plugin and Babel can handle it. There’s a huge
+			selection of <Link to="https://babeljs.io/docs/en/plugins">official plugins</Link>, mostly
+			covering upcoming JavaScript syntax. And there’s plenty of third-party plugins too:{" "}
+			<Link to="https://github.com/lodash/babel-plugin-lodash">improve lodash imports</Link>,{" "}
+			<Link to="https://github.com/mattphillips/babel-plugin-console">enhance console.log</Link>, or{" "}
+			<Link to="https://github.com/betaorbust/babel-plugin-groundskeeper-willie">
+				strip console.log
+			</Link>
+			. Find more on the <Link to="https://github.com/babel/awesome-babel">awesome-babel</Link>{" "}
+			list.
+		</p>
+		<p>
+			But be careful. If the plugin alters the syntax significantly, then TypeScript may be unable
+			to parse it. For example, the highly anticipated{" "}
+			<Link to="https://github.com/tc39/proposal-optional-chaining">
+				optional chaining proposal
+			</Link>{" "}
+			has a Babel plugin:
 		</p>
 		<ImgBlock image={props.data.imgOptionalChaining} alt="Optional chaining">
 			<Link to="https://babeljs.io/docs/en/babel-plugin-proposal-optional-chaining.html">
 				@babel/plugin-proposal-optional-chaining
 			</Link>
 		</ImgBlock>
-		<p>
-			There’s also a great selection of third-party Babel plugins. Using Styled Components? Improve{" "}
-			<Link to="https://github.com/styled-components/babel-plugin-styled-components">
-				server side rendering
-			</Link>
-			. Using Ramda?{" "}
-			<Link to="https://github.com/haskellcamargo/babel-plugin-function-composition">
-				Easily compose functions
-			</Link>
-			. Want more?{" "}
-			<Link to="https://github.com/ember-cli/babel-plugin-feature-flags">Manage feature flags</Link>
-			, <Link to="https://github.com/lodash/babel-plugin-lodash">improve lodash imports</Link>,{" "}
-			<Link to="https://github.com/mattphillips/babel-plugin-console">enhance console.log</Link>, or{" "}
-			<Link to="https://github.com/betaorbust/babel-plugin-groundskeeper-willie">
-				strip console.log
-			</Link>
-			. Whatever floats your boat, you’ll find it on this mega list:{" "}
-			<Link to="https://github.com/babel/awesome-babel">awesome-babel</Link>.
-		</p>
-		<ImgBlock image={IMG_CONSOLE} alt="Improved console.log">
-			Better than console.log:{" "}
-			<Link to="https://github.com/mattphillips/babel-plugin-console">babel-plugin-console</Link>
-		</ImgBlock>
-		<h3>Macros!</h3>
+		<p>But unfortunately TypeScript is unable to understand this updated syntax.</p>
+
+		<p>Don’t stress, there’s an alternative…</p>
+		<p />
+
+		<h3>Babel Macros</h3>
 		<p>
 			You know <Link to="https://twitter.com/kentcdodds">Kent C Dodds</Link>? He’s created a
 			game-changing Babel plugin:{" "}
 			<Link to="https://github.com/kentcdodds/babel-plugin-macros">babel-plugin-macros</Link>.
 		</p>
 		<p>
-			Instead of adding plugins to your Babel config file, you import macros directly in your
-			JavaScript code. At build time, the macro kicks in and modifies the code. Check out{" "}
+			Instead of adding plugins to your Babel config file, you install the macro as a dependency and
+			import it within your code. The macro kicks in when Babel is compiling, and modifies the code
+			however it likes.
+		</p>
+		<p>
+			Here’s an example. Using <Link to="https://www.npmjs.com/package/idx.macro">idx.macro</Link>{" "}
+			to scratch our itch until{" "}
+			<Link to="https://github.com/tc39/proposal-optional-chaining">
+				optional chaining proposal
+			</Link>{" "}
+			arrives.
+		</p>
+		<CodeBlock
+			language="js"
+			code={`
+				import idx from 'idx.macro';
+
+				const friends = idx(
+					props,
+					_ => _.user.friends[0].friends
+				);
+			`}
+		/>
+		<p>Compiles to:</p>
+		<CodeBlock
+			language="js"
+			code={`
+				const friends =
+					props.user == null ? props.user :
+					props.user.friends == null ? props.user.friends :
+					props.user.friends[0] == null ? props.user.friends[0] :
+					props.user.friends[0].friends
+			`}
+		/>
+
+		<p>
+			Macros are pretty new, but quickly gaining traction. Especially since landing in{" "}
+			<Link to="https://reactjs.org/blog/2018/10/01/create-react-app-v2.html">
+				create-react-app v2.0
+			</Link>
+			. CSS in JS is covered:{" "}
+			<Link to="https://www.npmjs.com/package/styled-jsx#using-resolve-as-a-babel-macro">
+				styled-jsx
+			</Link>
+			,{" "}
+			<Link to="https://www.styled-components.com/docs/tooling#babel-macro">styled-components</Link>
+			, and <Link to="https://emotion.sh/docs/babel-plugin-emotion#babel-macros">emotion</Link>.
+			Webpack plugins are being ported over:{" "}
+			<Link to="https://github.com/pveyes/raw.macro">raw-loader</Link>,{" "}
+			<Link to="https://github.com/Andarist/data-uri.macro">url-loader</Link>, and{" "}
+			<Link to="https://www.npmjs.com/package/filesize.macro">filesize-loader</Link>. And many more
+			listed on{" "}
+			<Link to="https://github.com/jgierer12/awesome-babel-macros">awesome-babel-macros</Link>.
+		</p>
+
+		<p>
+			Here’s the best part: unlike Babel plugins, <em>all</em> Babel macros are compatible with
+			TypeScript. They can also help reduce run-time dependencies, avoid client-side computation,
+			and catch errors earlier at build-time. Check out{" "}
 			<Link to="https://babeljs.io/blog/2017/09/11/zero-config-with-babel-macros">this post</Link>{" "}
 			for more details.
 		</p>
-		<p>
-			I think Babel macros will explode this year. Not only is it an amazing concept, but it’s
-			already integrated into{" "}
-			<Link to="https://github.com/facebook/create-react-app/issues/3815">
-				create-react-app v2.0 (beta)
-			</Link>
-			, which pushes the community support.
-		</p>
-		<h2>It’s easier to manage ONE compiler.</h2>
+
+		<ImgBlock image={IMG_CONSOLE} alt="Improved console.log">
+			A better console.log:{" "}
+			<Link to="https://github.com/mattphillips/babel-plugin-console#macros">scope.macro</Link>
+		</ImgBlock>
+
+		<h2>
+			Reason #2:
+			<br />
+			It’s easier to manage ONE compiler.
+		</h2>
 		<p>
 			TypeScript requires it’s own compiler — it’s what provides the amazing type checking
 			superpowers.
@@ -357,7 +417,11 @@ const Article = (props: ContentProps) => (
 		<ImgBlock image={props.data.imgBabelSupport} alt="Babel and TypeScript">
 			<Link to="https://babeljs.io/en/setup">Babel has you covered.</Link>
 		</ImgBlock>
-		<h2>It’s faster to compile.</h2>
+		<h2>
+			Reason #3:
+			<br />
+			It’s faster to compile.
+		</h2>
 		<p>
 			<mark>Warning!</mark> You might want to sit down for this bit.
 		</p>
@@ -391,7 +455,11 @@ const Article = (props: ContentProps) => (
 			So, if Babel strips out TypeScript code, what’s the point in writing TypeScript? That brings
 			us to the second advantage…
 		</p>
-		<h2>Check for type errors only when you’re ready.</h2>
+		<h2>
+			Reason #4:
+			<br />
+			Check for type errors only when you’re ready.
+		</h2>
 		<p>
 			You’re hacking some code together, quickly bashing out a solution to see if your idea has
 			legs. You save the file, and TypeScript screams at you:
