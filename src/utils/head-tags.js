@@ -15,12 +15,7 @@ const DEFAULT_HEAD_TAGS: HeadTagsProps = {
 	siteUrl: SITE_URL,
 	siteLogo,
 	siteTwitter: "@iamturns",
-	siteSocialProfiles: [
-		"https://twitter.com/iamturns",
-		"https://www.instagram.com/iamturns/",
-		"https://www.facebook.com/iamturns",
-		"https://github.com/iamturns",
-	],
+	siteSocialProfiles: ["https://twitter.com/iamturns", "https://github.com/iamturns"],
 	siteFacebookAdmins: ["650078615"],
 	siteAdditional: {
 		founder: {

@@ -4,7 +4,6 @@ import classNames from "classnames";
 import * as React from "react";
 
 import Github from "../../../vendor/feather-icons-react/Github";
-import Instagram from "../../../vendor/feather-icons-react/Instagram";
 import Mail from "../../../vendor/feather-icons-react/Mail";
 import Twitter from "../../../vendor/feather-icons-react/Twitter";
 import Link from "../Link";
@@ -33,7 +32,6 @@ const GlobalFooter = (props: GlobalFooterProps) => (
 		</div>
 		<div className="flex items-center leading-0">
 			<FooterIcon icon="twitter" href="https://twitter.com/iamturns" />
-			<FooterIcon icon="instagram" href="https://www.instagram.com/iamturns/" />
 			<FooterIcon icon="github" href="https://github.com/iamturns" />
 			<FooterIcon icon="mail" href="mailto:matt@iamturns.com" />
 		</div>
@@ -69,13 +67,12 @@ const FooterLink = (props: FooterLinkProps) => {
 
 type FooterIconProps = {
 	href: string,
-	icon: "twitter" | "instagram" | "github" | "mail",
+	icon: "twitter" | "github" | "mail",
 };
 
 const FooterIcon = (props: FooterIconProps) => {
 	const components = {
 		twitter: Twitter,
-		instagram: Instagram,
 		github: Github,
 		mail: Mail,
 	};

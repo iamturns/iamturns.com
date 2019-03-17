@@ -166,7 +166,7 @@ const ContentAbout = ({
 				</li>
 				<li>
 					<EmojiText emoji="🐾">
-						<Link to="https://www.instagram.com/helloiamalfie/">Spoiling my furry son Alfie</Link>
+						<Link to="https://www.instagram.com/helloiamalfie/">Spoiling our furry son Alfie</Link>
 					</EmojiText>
 				</li>
 				<li>
@@ -190,9 +190,6 @@ const ContentAbout = ({
 				</li>
 				<li>
 					<Link to="https://twitter.com/iamturns">twitter.com/iamturns</Link>
-				</li>
-				<li>
-					<Link to="https://www.instagram.com/iamturns/">instagram.com/iamturns</Link>
 				</li>
 				<li>
 					<Link to="https://github.com/iamturns">github.com/iamturns</Link>
