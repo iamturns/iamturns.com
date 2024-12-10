@@ -144,8 +144,7 @@ const ContentAbout = ({
 						<li>PostCSS (with SASS style plugins), Tailwind CSS</li>
 						<li>AWS, Netlify, Docker</li>
 						<li>Gatsby, Puppeteer</li>
-						<li>Functional programming, Agile</li>
-						<li>VSCode, Fish shell</li>
+						<li>agile</li>
 					</ul>
 				</div>
 			</div>
@@ -154,32 +153,6 @@ const ContentAbout = ({
 		<PageContainer small className="wysiwyg">
 			<ImgBlock image={imgCartoon} alt="Matt Turnbull" />
 
-			<p>Away from the keyboard I love:</p>
-
-			<ul className="list list-reset">
-				<li>
-					<EmojiText emoji="🌏">
-						<Link to="https://www.instagram.com/whereareweguys/">
-							Exploring the world with my partner
-						</Link>
-					</EmojiText>
-				</li>
-				<li>
-					<EmojiText emoji="🐾">
-						<Link to="https://www.instagram.com/helloiamalfie/">Spoiling our furry son Alfie</Link>
-					</EmojiText>
-				</li>
-				<li>
-					<EmojiText emoji="🤘">Rocking out on drums &amp; guitar</EmojiText>
-				</li>
-				<li>
-					<EmojiText emoji="📚">Learning all the things</EmojiText>
-				</li>
-				<li>
-					<EmojiText emoji="🙃">Anything ridiculous</EmojiText>
-				</li>
-			</ul>
-
 			<h2>Get in touch</h2>
 
 			<ImgBlock image={IMG_TOUCH} type="fullwidth" />
@@ -187,9 +160,6 @@ const ContentAbout = ({
 			<ul>
 				<li>
 					<Link to="mailto:matt@iamturns.com">matt@iamturns.com</Link>
-				</li>
-				<li>
-					<Link to="https://twitter.com/iamturns">twitter.com/iamturns</Link>
 				</li>
 				<li>
 					<Link to="https://github.com/iamturns">github.com/iamturns</Link>
